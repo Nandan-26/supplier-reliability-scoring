@@ -49,6 +49,8 @@ def validate_payload(cursor: sqlite3.Cursor, table_name: str, payload: dict) -> 
                 errors.append(f"Orphaned foreign key: supplier_id '{sup_id}' does not exist.")
         if not payload.get("signal_date"):
             errors.append("Mandatory field missing: signal_date is null.")
+        if not payload.get("source") or not str(payload.get("source")).strip():
+            errors.append("Mandatory field missing: source provenance is blank.")
 
     return errors
 
@@ -453,13 +455,13 @@ def generate_synthetic_data(
             category = rng.choice(["Compliance", "Disruption"])
             severity = rng.choice(["Medium", "High", "Critical"])
             desc = f"Reported {category.lower()} issue."
-            risk_signals_data.append((signal_id, sup_id, signal_date, category, severity, desc, signal_date))
+            risk_signals_data.append((signal_id, sup_id, signal_date, category, severity, desc, "synthetic_generator", signal_date))
             risk_counter += 1
 
     if risk_signals_data:
         with conn:
             cursor.executemany(
-                "INSERT INTO risk_signals (risk_signal_id, supplier_id, signal_date, category, severity, description, system_available_at) VALUES (?, ?, ?, ?, ?, ?, ?);",
+                "INSERT INTO risk_signals (risk_signal_id, supplier_id, signal_date, category, severity, description, source, system_available_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?);",
                 risk_signals_data
             )
 
@@ -475,7 +477,7 @@ def generate_synthetic_data(
         },
         {
             "source_table": "risk_signals",
-            "raw_payload": {"risk_signal_id": "MAL-3", "supplier_id": "NON-EXISTENT", "signal_date": None, "category": "Compliance", "severity": "High", "description": "Missing fields"},
+            "raw_payload": {"risk_signal_id": "MAL-3", "supplier_id": "NON-EXISTENT", "signal_date": None, "category": "Compliance", "severity": "High", "description": "Missing fields", "source": None},
         }
     ]
 
