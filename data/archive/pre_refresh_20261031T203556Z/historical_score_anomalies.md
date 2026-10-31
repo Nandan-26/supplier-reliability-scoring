@@ -33,6 +33,8 @@ The archived score export contains four scoring runs with 1,000 supplier rows ea
 
 Examples include delivery scores of 112.50 and 109.09 and a final score of 100.03. The three later runs have no scores outside 0–100. The latest archived scoring run passes its score-range check, but historical score validation and overall validation fail.
 
+The machine-readable counts are preserved in [historical_audit_summary.json](historical_audit_summary.json).
+
 ## Preservation and remediation decision
 
 - The original database, exports, ground-truth file, malformed-case file, validation summary, and source manifest are preserved together in this archive.
