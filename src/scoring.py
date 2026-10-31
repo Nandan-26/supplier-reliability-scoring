@@ -265,7 +265,7 @@ def calculate_supplier_scores(
         # Keep the required human-readable score key unique across appended
         # scoring runs while preserving older historical SCR-* identifiers.
         cursor.execute("""
-            SELECT COALESCE(MAX(CAST(SUBSTR(score_id, 13) AS INTEGER)), 0)
+            SELECT COALESCE(MAX(CAST(SUBSTR(score_id, 12) AS INTEGER)), 0)
             FROM supplier_scores
             WHERE score_id GLOB 'SCORE-2026-[0-9]*';
         """)
