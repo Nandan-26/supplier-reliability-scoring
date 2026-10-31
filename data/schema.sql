@@ -97,6 +97,15 @@ BEGIN
       AND NEW.actual_delivery_date < shipments.dispatch_date;
 END;
 
+CREATE TRIGGER IF NOT EXISTS trg_check_delivery_date_after_dispatch_update
+BEFORE UPDATE OF actual_delivery_date, shipment_id ON delivery_events
+BEGIN
+    SELECT RAISE(ABORT, 'Delivery date cannot be earlier than shipment dispatch date.')
+    FROM shipments
+    WHERE shipments.shipment_id = NEW.shipment_id
+      AND NEW.actual_delivery_date < shipments.dispatch_date;
+END;
+
 -- 8. Inspections (Checks defective vs inspected quantity logic)
 CREATE TABLE IF NOT EXISTS inspections (
     inspection_id TEXT PRIMARY KEY,
@@ -113,6 +122,15 @@ CREATE TABLE IF NOT EXISTS inspections (
 -- Trigger: Ensure inspection date is not before delivery event date
 CREATE TRIGGER IF NOT EXISTS trg_check_inspection_after_delivery
 BEFORE INSERT ON inspections
+BEGIN
+    SELECT RAISE(ABORT, 'Inspection date cannot be earlier than delivery event date.')
+    FROM delivery_events
+    WHERE delivery_events.delivery_event_id = NEW.delivery_event_id
+      AND NEW.inspection_date < delivery_events.actual_delivery_date;
+END;
+
+CREATE TRIGGER IF NOT EXISTS trg_check_inspection_date_after_delivery_update
+BEFORE UPDATE OF inspection_date, delivery_event_id ON inspections
 BEGIN
     SELECT RAISE(ABORT, 'Inspection date cannot be earlier than delivery event date.')
     FROM delivery_events
@@ -325,6 +343,34 @@ END;
 
 CREATE TRIGGER IF NOT EXISTS trg_check_invoice_date_after_delivery
 BEFORE INSERT ON invoices
+BEGIN
+    SELECT RAISE(ABORT, 'Invoice date cannot be earlier than the latest delivery on the PO.')
+    WHERE (
+        SELECT MAX(de.actual_delivery_date)
+        FROM shipments s
+        JOIN delivery_events de ON de.shipment_id = s.shipment_id
+        WHERE s.po_id = NEW.po_id
+    ) IS NOT NULL
+    AND NEW.invoice_date < (
+        SELECT MAX(de.actual_delivery_date)
+        FROM shipments s
+        JOIN delivery_events de ON de.shipment_id = s.shipment_id
+        WHERE s.po_id = NEW.po_id
+    );
+END;
+
+CREATE TRIGGER IF NOT EXISTS trg_prevent_invoice_for_cancelled_po
+BEFORE INSERT ON invoices
+BEGIN
+    SELECT RAISE(ABORT, 'Cancelled purchase orders cannot be invoiced.')
+    WHERE EXISTS (
+        SELECT 1 FROM purchase_orders
+        WHERE po_id = NEW.po_id AND status = 'Cancelled'
+    );
+END;
+
+CREATE TRIGGER IF NOT EXISTS trg_check_invoice_date_after_delivery_update
+BEFORE UPDATE OF invoice_date, po_id ON invoices
 BEGIN
     SELECT RAISE(ABORT, 'Invoice date cannot be earlier than the latest delivery on the PO.')
     WHERE (
