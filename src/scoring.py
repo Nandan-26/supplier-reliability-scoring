@@ -116,7 +116,10 @@ def calculate_supplier_scores(
                     SUM(CASE WHEN de.actual_delivery_date <= pl.requested_delivery_date THEN de.delivered_qty ELSE 0 END) as delivered_on_time_qty
                 FROM purchase_orders po
                 JOIN po_lines pl ON po.po_id = pl.po_id
-                LEFT JOIN shipments s ON pl.po_line_id = s.po_line_id AND s.system_available_at <= ?
+                LEFT JOIN shipments s
+                  ON pl.po_line_id = s.po_line_id
+                 AND pl.po_id = s.po_id
+                 AND s.system_available_at <= ?
                 LEFT JOIN delivery_events de ON s.shipment_id = de.shipment_id AND de.actual_delivery_date <= ? AND de.system_available_at <= ?
                 WHERE po.status != 'Cancelled'
                   AND po.order_date <= ?
