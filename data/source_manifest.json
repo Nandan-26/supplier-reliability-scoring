@@ -1,7 +1,7 @@
 {
-  "created_at_utc": "2026-10-31T22:28:10.397448+00:00",
+  "created_at_utc": "2026-10-31T22:29:09.272520+00:00",
   "database": "data/supplier_scoring.db",
-  "database_sha256": "fafd6a299038a57cc53728b3879560418acd3484daa0b0213d024d03c48ea4eb",
+  "database_sha256": "a7de320ba47b42100abe28f08b72f4876190bbbf5bff2f465654c563ab0d17e3",
   "configured_default_seed": 20261022,
   "seed_note": "score_runs.random_seed records the generation seed when known; NULL means the scorer could not verify it. configured_default_seed is the generator default, not proof that an older database used that seed.",
   "table_row_counts": {
@@ -21,10 +21,10 @@
     "suppliers": 1000
   },
   "source_files": {
-    "src/generator.py": "a7b997284dd9ed276856a7a8a4eae730242759a6ae67f0ca5dea2cce94863ce4",
+    "src/generator.py": "bcd6bd179490a84da9b7e11dcf81e8ad7e10e7953d9ec46889f5836ed6ae006f",
     "src/scoring.py": "794e84a20fffa009c4362b5266d3bd5d26296bf3744cca57b211112b956b2842",
     "src/export_artifacts.py": "31e8eb9d18b1c633353db8ad5109b8c13974f634b283763effdac1b3d82ba784",
-    "data/schema.sql": "96e0d6ba20728cd7bddce838889e4f05c45508b447e9e642589e4f1100f08ecf"
+    "data/schema.sql": "29150d50aaeb0a895bf6d9a164c06f4a53717d6d6b4d2f8ba57440a0a8afd6ca"
   },
   "csv_exports": [
     "data/exports/contracts.csv",
@@ -44,6 +44,6 @@
   ],
   "validation_summary": "data/validation_summary.json",
   "generation_metadata": "data/generation_metadata.json",
-  "generation_metadata_sha256": "c23d89f1d15b59fb13384fdf0d2ef79b2a5d11bc5d941c849f95cedaa1cd9914",
-  "historical_snapshot": "data/archive/pre_refresh_20261031T222806Z"
+  "generation_metadata_sha256": "47eb5074a1ecfe70ad8284c39ba62e63e17dac787425de728a198b38837c572e",
+  "historical_snapshot": "data/archive/pre_refresh_20261031T222907Z"
 }

@@ -37,11 +37,13 @@
       "signal_date": null,
       "category": "Compliance",
       "severity": "High",
-      "description": "Missing fields"
+      "description": "Missing fields",
+      "source": null
     },
     "detected_reasons": [
       "Orphaned foreign key: supplier_id 'NON-EXISTENT' does not exist.",
-      "Mandatory field missing: signal_date is null."
+      "Mandatory field missing: signal_date is null.",
+      "Mandatory field missing: source provenance is blank."
     ]
   }
 ]
