@@ -165,6 +165,50 @@ def main():
             for table, expected in EXPECTED_COUNTS.items()
         }
 
+        # Cross-table business checks complement SQLite's structural checks.
+        business_checks = {
+            "cancelled_purchase_orders_have_no_shipments": con.execute("""
+                SELECT COUNT(*)
+                FROM shipments s
+                JOIN purchase_orders po ON po.po_id = s.po_id
+                WHERE po.status = 'Cancelled'
+            """).fetchone()[0],
+            "inspection_quantity_over_delivery": con.execute("""
+                SELECT COUNT(*)
+                FROM (
+                    SELECT de.delivery_event_id
+                    FROM delivery_events de
+                    JOIN inspections ins ON ins.delivery_event_id = de.delivery_event_id
+                    GROUP BY de.delivery_event_id, de.delivered_qty
+                    HAVING SUM(ins.inspected_qty) > de.delivered_qty + 0.000001
+                )
+            """).fetchone()[0],
+            "invoice_quantity_over_delivery": con.execute("""
+                SELECT COUNT(*)
+                FROM (
+                    SELECT il.invoice_line_id
+                    FROM invoice_lines il
+                    JOIN shipments s
+                      ON s.po_line_id = il.po_line_id AND s.po_id = il.po_id
+                    JOIN delivery_events de ON de.shipment_id = s.shipment_id
+                    GROUP BY il.invoice_line_id, il.invoiced_qty
+                    HAVING il.invoiced_qty > SUM(de.delivered_qty) + 0.000001
+                )
+            """).fetchone()[0],
+            "invoice_before_latest_delivery": con.execute("""
+                SELECT COUNT(*)
+                FROM (
+                    SELECT i.invoice_id
+                    FROM invoices i
+                    JOIN shipments s ON s.po_id = i.po_id
+                    JOIN delivery_events de ON de.shipment_id = s.shipment_id
+                    GROUP BY i.invoice_id, i.invoice_date
+                    HAVING i.invoice_date < MAX(de.actual_delivery_date)
+                )
+            """).fetchone()[0],
+        }
+        business_checks_passed = all(value == 0 for value in business_checks.values())
+
         score_checks = []
         latest_run_id = None
         timestamp_column = None
@@ -228,6 +272,8 @@ def main():
             "foreign_key_violation_count": len(foreign_key_violations),
             "foreign_key_check_passed": len(foreign_key_violations) == 0,
             "expected_record_counts": expected_checks,
+            "business_rule_violation_counts": business_checks,
+            "business_rule_checks_passed": business_checks_passed,
             "score_range_checks": score_checks,
             "latest_run_id": latest_run_id,
             "latest_run_timestamp_column": timestamp_column,
@@ -244,6 +290,7 @@ def main():
             validation["sqlite_integrity_passed"],
             validation["foreign_key_check_passed"],
             all(item["passed"] for item in expected_checks.values()),
+            validation["business_rule_checks_passed"],
             validation["historical_score_checks_passed"],
         ])
 
