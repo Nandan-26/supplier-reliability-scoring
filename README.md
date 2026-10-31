@@ -8,7 +8,7 @@ A Python and SQLite assessment project that generates synthetic procurement data
 
 1. Generates synthetic suppliers, sites, contracts, purchase orders, shipments, delivery events, inspections, invoices, and risk signals.
 2. Stores valid baseline records in SQLite with relational constraints.
-3. Exports deliberately malformed challenge examples separately to `data/malformed_cases.json`.
+3. Detects representative malformed challenge examples, records them in `quarantine_log`, and exports the annotated payloads to `data/malformed_cases.json`.
 4. Calculates supplier scores for a requested as-of date.
 5. Persists each scoring run and its supplier-level results.
 6. Exports CSV tables, a validation summary, and a source manifest.
@@ -70,7 +70,7 @@ python -m pytest -v
 python scripts/validate_full_dataset.py
 ```
 
-The full-dataset validator generates the 1,000-supplier dataset in a temporary directory, checks business rules, profile-level ground truth, relational integrity, score ranges, and the CSV/manifest/validation exporter. It then audits the archived pre-refresh database separately. Temporary validation files are removed; the active committed database and archive are not overwritten by this test.
+The full-dataset validator generates the 1,000-supplier dataset in a temporary directory, checks business rules, profile-level ground truth, relational integrity, score ranges, and the CSV/manifest/validation exporter. It then audits the active committed database and the archived pre-refresh database independently. Temporary validation files are removed; neither committed database is modified by this test.
 
 The tests cover schema constraints, requested generation counts, reproducibility, shipment relationships, malformed-case detection, scoring ranges, missing history, point-in-time leakage, capacity aggregation, inspection aggregation, and delivery scoring. A test result applies only to the code and environment in which it was actually run.
 
