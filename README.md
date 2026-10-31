@@ -28,7 +28,7 @@ Scores are intended to remain between 0 and 100. Cost measures adherence to the 
 
 ## 3. Point-in-time scoring
 
-The scoring function accepts an explicit `YYYY-MM-DD` as-of date. Business-event dates and `system_available_at` timestamps are both used to limit evidence to information that had occurred and was available by that date. Historical score runs are retained; the project does not silently rewrite old scores when scoring logic changes.
+The scoring function accepts an explicit `YYYY-MM-DD` as-of date. Business-event dates and `system_available_at` timestamps are both used to limit evidence to information that had occurred and was available by that date. Scoring appends a new run to the database being scored. A full data regeneration resets that database; the automated refresh workflow archives the previous database and its exports before publishing a replacement.
 
 ## 4. Data-generation rules
 
