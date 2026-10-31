@@ -170,6 +170,7 @@ CREATE TABLE IF NOT EXISTS risk_signals (
     category TEXT CHECK(category IN ('Compliance', 'Disruption')),
     severity TEXT CHECK(severity IN ('Low', 'Medium', 'High', 'Critical')),
     description TEXT,
+    source TEXT NOT NULL CHECK(length(trim(source)) > 0),
     system_available_at TEXT NOT NULL,
     FOREIGN KEY (supplier_id) REFERENCES suppliers(supplier_id) ON DELETE CASCADE
 );
