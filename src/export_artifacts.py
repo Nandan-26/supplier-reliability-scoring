@@ -101,15 +101,37 @@ def count_invalid_scores(con, column, run_id=None):
     return con.execute(query, parameters).fetchone()[0]
 
 
-def main():
-    if not DB.exists():
+def main(
+    db_path: str | Path = DB,
+    exports_dir: str | Path = EXPORTS,
+    validation_path: str | Path | None = None,
+    manifest_path: str | Path | None = None,
+):
+    db_path = Path(db_path)
+    exports_dir = Path(exports_dir)
+    validation_path = (
+        Path(validation_path) if validation_path is not None
+        else db_path.parent / "validation_summary.json"
+    )
+    manifest_path = (
+        Path(manifest_path) if manifest_path is not None
+        else db_path.parent / "source_manifest.json"
+    )
+
+    def display_path(path):
+        try:
+            return str(Path(path).relative_to(ROOT))
+        except ValueError:
+            return str(Path(path))
+
+    if not db_path.exists():
         raise FileNotFoundError(
-            f"Database not found: {DB}. Generate the dataset first."
+            f"Database not found: {db_path}. Generate the dataset first."
         )
 
-    EXPORTS.mkdir(parents=True, exist_ok=True)
+    exports_dir.mkdir(parents=True, exist_ok=True)
 
-    con = sqlite3.connect(DB)
+    con = sqlite3.connect(db_path)
     con.execute("PRAGMA foreign_keys = ON")
 
     try:
@@ -141,7 +163,7 @@ def main():
             ]
 
             rows = con.execute(f'SELECT * FROM "{table}"')
-            csv_path = EXPORTS / f"{table}.csv"
+            csv_path = exports_dir / f"{table}.csv"
 
             with csv_path.open(
                 "w", newline="", encoding="utf-8-sig"
@@ -155,7 +177,7 @@ def main():
             ).fetchone()[0]
 
             row_counts[table] = count
-            exported_files.append(str(csv_path.relative_to(ROOT)))
+            exported_files.append(display_path(csv_path))
 
         expected_checks = {
             table: {
@@ -335,7 +357,7 @@ def main():
 
         validation = {
             "created_at_utc": datetime.now(timezone.utc).isoformat(),
-            "database": str(DB.relative_to(ROOT)),
+            "database": display_path(db_path),
             "sqlite_integrity_check": integrity,
             "sqlite_integrity_passed": integrity == "ok",
             "foreign_key_violation_count": len(foreign_key_violations),
@@ -363,7 +385,6 @@ def main():
             validation["historical_score_checks_passed"],
         ])
 
-        validation_path = DATA / "validation_summary.json"
         validation_path.write_text(
             json.dumps(validation, indent=2),
             encoding="utf-8",
@@ -371,8 +392,8 @@ def main():
 
         source_manifest = {
             "created_at_utc": datetime.now(timezone.utc).isoformat(),
-            "database": str(DB.relative_to(ROOT)),
-            "database_sha256": sha256(DB),
+            "database": display_path(db_path),
+            "database_sha256": sha256(db_path),
             "configured_default_seed": 20261022,
             "seed_note": (
                 "The generator's default seed is documented here. "
@@ -386,11 +407,10 @@ def main():
             },
             "csv_exports": exported_files,
             "validation_summary": str(
-                validation_path.relative_to(ROOT)
+                display_path(validation_path)
             ),
         }
 
-        manifest_path = DATA / "source_manifest.json"
         manifest_path.write_text(
             json.dumps(source_manifest, indent=2),
             encoding="utf-8",
