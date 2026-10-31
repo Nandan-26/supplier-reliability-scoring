@@ -274,7 +274,7 @@ Reproducibility and supplier-profile behavior. - Detection of malformed
 challenge cases. - Weight validation, score bounds, and score
 persistence. - Sparse or missing history. - As-of-date leakage
 protection. - Capacity and inspection aggregation. - Partial-delivery
-evaluation.
+evaluation. - Delivery-score bounds with multiple delivery events.
 
 Passing tests provides evidence for tested behaviors only; it does not
 prove production readiness or guarantee that all possible data-quality
