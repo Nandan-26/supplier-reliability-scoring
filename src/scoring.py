@@ -19,6 +19,14 @@ DEFAULT_WEIGHTS = {
     "disruption": 0.10
 }
 
+SEVERITY_PENALTIES = {
+    "Low": 10.0,
+    "Medium": 25.0,
+    "High": 50.0,
+    "Critical": 100.0,
+}
+NO_DATA_SCORE = 50.0
+
 def validate_weights(weights: dict[str, float]) -> None:
     """Validate that weights contain exactly the 6 required dimensions, are non-negative, finite, and sum to 1.0."""
     required_keys = set(DEFAULT_WEIGHTS.keys())
@@ -37,7 +45,7 @@ def calculate_supplier_scores(
     as_of_date: str,
     db_path: str | Path = ROOT_DIR / "data" / "supplier_scoring.db",
     weights: dict[str, float] = DEFAULT_WEIGHTS,
-    config_version: str = "v1.0"
+    config_version: str = "v1.1"
 ) -> str:
     """
     Calculate supplier reliability scores as of a specific date using vectorized set-based queries
@@ -58,8 +66,16 @@ def calculate_supplier_scores(
 
         run_id = f"RUN-{uuid.uuid4().hex[:8]}"
         run_timestamp = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S")
-        config_hash = hashlib.sha256(json.dumps(weights, sort_keys=True).encode("utf-8")).hexdigest()[:12]
-        generator_version = "1.0.0"
+        config_payload = {
+            "weights": weights,
+            "severity_penalties": SEVERITY_PENALTIES,
+            "no_data_score": NO_DATA_SCORE,
+            "scoring_method": "supplier-score-v1.1",
+        }
+        config_hash = hashlib.sha256(
+            json.dumps(config_payload, sort_keys=True).encode("utf-8")
+        ).hexdigest()[:12]
+        generator_version = "1.1.0"
 
         # Record Score Run (ensuring interrupted runs don't corrupt prior history)
         cursor.execute(
@@ -67,7 +83,9 @@ def calculate_supplier_scores(
             INSERT INTO score_runs (run_id, run_timestamp, as_of_date, config_version, config_hash, generator_version, random_seed)
             VALUES (?, ?, ?, ?, ?, ?, ?);
             """,
-            (run_id, run_timestamp, as_of_date, config_version, config_hash, generator_version, 20261022)
+            # The scoring function cannot infer which seed produced an
+            # arbitrary existing database. Store NULL rather than a false claim.
+            (run_id, run_timestamp, as_of_date, config_version, config_hash, generator_version, None)
         )
 
         # Score only suppliers that existed and were visible to the system by
@@ -236,7 +254,7 @@ def calculate_supplier_scores(
             risk_map.setdefault(sup, []).append((row["category"], row["severity"]))
 
         scores_data = []
-        severity_penalties = {"Low": 10.0, "Medium": 25.0, "High": 50.0, "Critical": 100.0}
+        severity_penalties = SEVERITY_PENALTIES
 
         for sup_id in suppliers:
             # --- DELIVERY SCORE ---
