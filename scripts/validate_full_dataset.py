@@ -2,8 +2,12 @@
 import json
 import re
 import sqlite3
+import sys
 import tempfile
 from pathlib import Path
+
+# Add the repository root when this file is executed by path from CI.
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from src.generator import generate_synthetic_data
 from src.scoring import calculate_supplier_scores
