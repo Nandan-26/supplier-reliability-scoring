@@ -470,3 +470,11 @@ def test_risk_dimension_confidence_uses_sample_size():
         conn.close()
 
     assert row == (5, "High", 1, "Low (Sparse Data)")
+
+
+@pytest.mark.parametrize("bad_weight", [float("nan"), float("inf"), True])
+def test_weights_reject_non_finite_and_boolean_values(bad_weight):
+    invalid = dict(DEFAULT_WEIGHTS)
+    invalid["delivery"] = bad_weight
+    with pytest.raises(ValueError):
+        validate_weights(invalid)
