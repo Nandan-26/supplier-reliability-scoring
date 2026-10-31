@@ -42,9 +42,6 @@ SOURCE_FILES = [
     ROOT / "src" / "scoring.py",
     ROOT / "src" / "export_artifacts.py",
     ROOT / "data" / "schema.sql",
-    ROOT / "scripts" / "validate_full_dataset.py",
-    ROOT / "scripts" / "refresh_dataset.py",
-    ROOT / "data" / "DATA_DICTIONARY.md",
 ]
 
 
