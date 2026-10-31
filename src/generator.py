@@ -280,14 +280,15 @@ def generate_synthetic_data(
 
         expected_dt = req_dt
 
-        if profile == "reliable":
+        # Generate delivery timing from the documented profile-level
+        # ground-truth rate, so the synthetic labels describe observable data.
+        expected_on_time_rate = ground_truth[sup_id]["expected_on_time_rate"]
+        if rng.random() < expected_on_time_rate:
             actual_dt = dispatch_dt + timedelta(days=rng.randint(1, 3))
-        elif profile == "worsening_delivery":
-            actual_dt = expected_dt + timedelta(days=rng.randint(3, 15))
-        elif profile == "quality_issues":
-            actual_dt = dispatch_dt + timedelta(days=rng.randint(2, 4))
+            if actual_dt > expected_dt:
+                actual_dt = expected_dt
         else:
-            actual_dt = expected_dt + timedelta(days=rng.randint(-1, 2))
+            actual_dt = expected_dt + timedelta(days=rng.randint(1, 15))
 
         if actual_dt < dispatch_dt:
             actual_dt = dispatch_dt
