@@ -435,3 +435,38 @@ def test_delivery_join_respects_composite_po_line_key():
         conn.close()
 
     assert row == (50.0, 2)
+
+
+def test_risk_dimension_confidence_uses_sample_size():
+    conn = get_connection(TEST_DB_PATH)
+    try:
+        conn.executemany(
+            "INSERT INTO risk_signals VALUES (?, ?, ?, ?, ?, ?, ?);",
+            [
+                (f"RS-TEST-{i}", "SUP-0001", "2026-01-20",
+                 "Compliance", "Low", "Test compliance signal", "2026-01-20")
+                for i in range(1, 6)
+            ] + [
+                ("RS-TEST-D", "SUP-0001", "2026-01-20",
+                 "Disruption", "Low", "Test disruption signal", "2026-01-20")
+            ]
+        )
+        conn.commit()
+    finally:
+        conn.close()
+
+    run_id = calculate_supplier_scores(
+        as_of_date="2026-12-31", db_path=TEST_DB_PATH
+    )
+    conn = get_connection(TEST_DB_PATH)
+    try:
+        row = conn.execute("""
+            SELECT compliance_sample_count, compliance_confidence,
+                   disruption_sample_count, disruption_confidence
+            FROM supplier_scores
+            WHERE run_id=? AND supplier_id='SUP-0001';
+        """, (run_id,)).fetchone()
+    finally:
+        conn.close()
+
+    assert row == (5, "High", 1, "Low (Sparse Data)")
