@@ -1,369 +1,115 @@
-﻿logo
-more
-question-ai-logo
-managemanage
-managemanage
-useruser
-fullfull
-closeclose
-Chat AI
-Hello! Is there any question I can help you with?
-What is the purpose of student government in the United States?
-What is the highest peak in the United States?
+# Supplier Reliability & Risk Scoring Engine
 
-Ask AI
-logo
-more
+A Python and SQLite assessment project that generates synthetic procurement data and calculates point-in-time supplier scores across delivery, quality, cost, capacity, compliance, and disruption.
 
+> **Scope:** This is a synthetic assessment project, not a production procurement system. Scoring weights, thresholds, and fallback values are illustrative assumptions and require business validation before operational use.
 
+## 1. What the project does
 
+1. Generates synthetic suppliers, sites, contracts, purchase orders, shipments, delivery events, inspections, invoices, and risk signals.
+2. Stores valid baseline records in SQLite with relational constraints.
+3. Exports deliberately malformed challenge examples separately to `data/malformed_cases.json`.
+4. Calculates supplier scores for a requested as-of date.
+5. Persists each scoring run and its supplier-level results.
+6. Exports CSV tables, a validation summary, and a source manifest.
 
+## 2. Scoring dimensions
 
+| Dimension | Weight | Intended meaning |
+|---|---:|---|
+| Delivery | 25% | Share of eligible PO lines fulfilled on time |
+| Quality | 25% | Defect-free share of inspected quantity |
+| Cost | 15% | Invoice unit-price adherence to the PO line price |
+| Capacity | 15% | Delivered quantity relative to ordered quantity |
+| Compliance | 10% | Penalties for recorded compliance risk signals |
+| Disruption | 10% | Penalties for recorded disruption risk signals |
 
+Scores are intended to remain between 0 and 100. Cost measures adherence to the agreed PO price, not whether a supplier is inexpensive. Missing evidence is not proof of good performance: dimension scores must be interpreted together with sample counts and confidence labels. Compliance and disruption use a neutral 50-point fallback with `No Data` confidence when no relevant signals are recorded.
 
+## 3. Point-in-time scoring
 
+The scoring function accepts an explicit `YYYY-MM-DD` as-of date. Business-event dates and `system_available_at` timestamps are both used to limit evidence to information that had occurred and was available by that date. Historical score runs are retained; the project does not silently rewrite old scores when scoring logic changes.
 
+## 4. Data-generation rules
 
+- Purchase orders are either cancelled or initially issued. Cancelled orders are excluded from shipment generation.
+- Fulfilled status is derived after shipment generation when every PO line has been shipped in full. Incomplete non-cancelled orders remain issued.
+- Shipment quantities are cumulative per PO line and do not exceed the ordered quantity.
+- Inspection records are treated as disjoint inspection lots. For each delivery event, the sum of inspected quantities is limited to the received quantity.
+- Invoices are generated only for non-cancelled POs with delivery evidence. Invoice lines use delivered quantities, and the invoice date is no earlier than the latest delivery on that PO.
+- Malformed challenge examples are exported separately; the generator does not currently populate `quarantine_log`.
 
+The requested inspection count is distributed across generated delivery events. When more inspections than deliveries are requested, each delivery is split into multiple quantity lots rather than inspected repeatedly at its full quantity.
 
+## 5. Setup
 
+Python 3.10 or newer is recommended.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Supplier Reliability & Risk Scoring Engine
-A Python and SQLite project for generating synthetic procurement data
-and calculating point-in-time supplier reliability scores across
-delivery, quality, cost, capacity, compliance, and disruption.
-
-Scope: This is an assessment project using synthetic data, not a
-production procurement system. The default weights and rules are
-starting assumptions, not calibrated business policy.
-
-1. Overview
-The project generates a synthetic supplier/procurement dataset, checks
-selected data-integrity rules, calculates supplier scores for a
-specified as-of date, and persists scoring results in SQLite. Malformed
-challenge examples are kept separate from the valid baseline data.
-
-Main capabilities: - Reproducible synthetic data generation. -
-Relational schema and integrity constraints. - Supplier scoring across
-six dimensions. - Point-in-time filters intended to prevent future-data
-leakage. - Persisted score runs and automated tests. - Separate
-synthetic ground-truth labels for evaluation.
-
-2. Architecture
-Synthetic data generator
-        |
-        v
-SQLite schema and generated records
-        |
-        +--> Integrity and relationship checks
-        |
-        +--> Malformed cases --> data/malformed_cases.json
-        |
-        v
-Point-in-time scoring engine
-        |
-        v
-Persisted supplier score results
-        |
-        v
-Automated tests and SQL inspection
-Main files
-src/generator.py --- generates the synthetic dataset and
-supporting artifacts.
-src/db.py --- database helpers.
-src/scoring.py --- calculates and stores supplier scores for an
-as-of date.
-data/schema.sql --- SQLite schema and constraints.
-data/supplier_scoring.db --- generated SQLite database, if
-included in the checkout.
-data/ground_truth.json --- separate synthetic reference labels.
-data/malformed_cases.json --- malformed challenge examples
-exported by the generator.
-tests/ --- database, generator, and scoring tests.
-3. Scoring model
-Default composite-score weights:
-
-Dimension Weight Intended meaning
-
-Delivery 25% Delivery timeliness and fulfillment behavior
-Quality 25% Inspection outcomes and defect performance
-Cost 15% Adherence to the relevant PO or contract price
-Capacity 15% Ability to fulfill ordered quantities
-Compliance 10% Recorded compliance-related signals
-Disruption 10% Recorded disruption-related signals
-
-The composite score is intended to be on a 0--100 scale. Dimension
-calculations use source records rather than the separate ground-truth
-labels.
-
-Interpretation notes
-Cost is price adherence, not cheapness. The current rule checks
-billed unit price against the purchase-order line price.
-Capacity is distinct from delivery timing. Capacity should
-reflect quantity fulfillment rather than count the same timing
-behavior again.
-Missing history matters. A default dimension value when no
-evidence exists is not proof of strong observed performance. Review
-sample counts and confidence metadata alongside scores.
-Scores are point-in-time results. The as-of date limits which
-business events and system-available records can contribute.
-Weights and thresholds are assumptions and should be calibrated with
-domain experts before real procurement decisions rely on them.
-4. Point-in-time scoring
-The implementation applies business-event timing and system-availability
-timing when filtering evidence. This is intended to prevent information
-learned after the selected as-of date from influencing a historical
-score.
-
-The tests include an as-of-date leakage check comparing results with
-future information present against results from data truncated to the
-relevant point in time.
-
-A historical score must distinguish: - when a business event occurred;
-and - when the system learned or recorded that event.
-
-5. Data generation and reproducibility
-The generator creates synthetic records with deterministic behavior for
-a fixed seed and configuration. Dataset profiles are intended to
-represent differing patterns, including reliable suppliers,
-deteriorating delivery performance, quality incidents, and incomplete
-performance history.
-
-Malformed challenge cases are kept separate from the valid baseline so
-invalid records do not need to violate core database constraints.
-
-Generate the dataset from the repository root:
-
-python -c "from src.generator import generate_synthetic_data; generate_synthetic_data()"
-The generator writes the database and supporting artifacts under
-data/. Check the terminal output and generated files after running it.
-
-For reproducible comparisons, use the same code version, seed, and
-configuration. Output may differ if those inputs change.
-
-6. Setup and run
-Python 3.10 or newer is recommended. The current development environment
-used Python 3.13.
-
-Create a virtual environment (recommended):
-
+```powershell
 python -m venv .venv
-Windows PowerShell activation:
-
 .\.venv\Scripts\Activate.ps1
-Install dependencies:
-
 python -m pip install -r requirements.txt
-Generate data if it is not already present:
+```
 
-python -c "from src.generator import generate_synthetic_data; generate_synthetic_data()"
-Run scoring for an explicit as-of date:
+## 6. Generate data and score suppliers
 
+Run commands from the repository root.
+
+```powershell
+python -c "from src.generator import generate_synthetic_data; print(generate_synthetic_data())"
 python -c "from src.scoring import calculate_supplier_scores; print(calculate_supplier_scores(as_of_date='2026-12-31'))"
-The scoring function returns a run identifier. Use that identifier to
-inspect the corresponding score rows in SQLite.
+python -m src.export_artifacts
+```
 
-7. Tests and validation
-Run the test suite:
+**Important:** the generator resets the tables in the database path passed to it. Back up any database you need to retain before running generation. The default path is `data/supplier_scoring.db`.
 
+## 7. Run tests
+
+```powershell
 python -m pytest -v
-The tests cover: - SQLite foreign-key enforcement and expected tables. -
-Supplier/site/contract and invoice/order-line relationships. -
-Inspection quantity constraints. - Requested generation counts and
-invalid configurations. - Shipment-to-purchase-order-line consistency. -
-Reproducibility and supplier-profile behavior. - Detection of malformed
-challenge cases. - Weight validation, score bounds, and score
-persistence. - Sparse or missing history. - As-of-date leakage
-protection. - Capacity and inspection aggregation. - Partial-delivery
-evaluation. - Delivery-score bounds with multiple delivery events.
+```
 
-Passing tests provides evidence for tested behaviors only; it does not
-prove production readiness or guarantee that all possible data-quality
-issues are detected.
+The tests cover schema constraints, requested generation counts, reproducibility, shipment relationships, malformed-case detection, scoring ranges, missing history, point-in-time leakage, capacity aggregation, inspection aggregation, and delivery scoring. A test result applies only to the code and environment in which it was actually run.
 
-8. Database and data-quality notes
-The schema defines constraints for key relationships and selected
-business rules, including checks on date ordering and inspection
-quantities. The tests exercise a subset of these constraints.
+## 8. Validation artifacts
 
-The schema defines a quarantine_log table for quarantine-related
-records. The current generator exports malformed challenge cases to
-data/malformed_cases.json; it does not actively insert those cases
-into quarantine_log. Do not treat the table as a populated
-quarantine workflow unless that behavior is implemented and tested.
+`python -m src.export_artifacts` writes:
+- `data/exports/*.csv` — CSV exports of database tables.
+- `data/validation_summary.json` — SQLite integrity, foreign-key, expected-count, and score-range checks.
+- `data/source_manifest.json` — source hashes, database hash, counts, and export paths.
 
-The ground-truth artifact is intended for evaluating synthetic challenge
-cases. It should not be used as an input to the scoring calculation.
+Historical score anomalies are retained for traceability. A latest scoring run can pass while the overall historical validation remains failed; inspect the individual checks rather than treating the latest-run result as a complete pass.
 
-9. Project structure
-supplier_scoring/
-â”œâ”€â”€ data/
-â”‚   â”œâ”€â”€ ground_truth.json
-â”‚   â”œâ”€â”€ malformed_cases.json
-â”‚   â”œâ”€â”€ schema.sql
-â”‚   â””â”€â”€ supplier_scoring.db
-â”œâ”€â”€ src/
-â”‚   â”œâ”€â”€ __init__.py
-â”‚   â”œâ”€â”€ db.py
-â”‚   â”œâ”€â”€ generator.py
-â”‚   â””â”€â”€ scoring.py
-â”œâ”€â”€ tests/
-â”‚   â”œâ”€â”€ __init__.py
-â”‚   â”œâ”€â”€ test_db.py
-â”‚   â”œâ”€â”€ test_generator.py
-â”‚   â””â”€â”€ test_scoring.py
-â”œâ”€â”€ requirements.txt
-â””â”€â”€ README.md
-This describes the expected layout. If the SQLite database is excluded
-from version control, recreate it with the generation command above.
+## 9. Repository layout
 
-10. Dependencies
-The current requirements.txt lists: - pytest --- automated tests. -
-pandas --- data handling.
+```text
+supplier-reliability-scoring/
+├── data/
+│   ├── exports/
+│   ├── schema.sql
+│   ├── ground_truth.json
+│   ├── malformed_cases.json
+│   ├── supplier_scoring.db
+│   ├── validation_summary.json
+│   └── source_manifest.json
+├── src/
+│   ├── db.py
+│   ├── generator.py
+│   ├── scoring.py
+│   └── export_artifacts.py
+├── tests/
+│   ├── test_db.py
+│   ├── test_generator.py
+│   └── test_scoring.py
+├── requirements.txt
+└── README.md
+```
 
-SQLite support is available through Python's standard library in typical
-Python installations.
+## 10. Limitations
 
-11. Limitations and next improvements
-The data is synthetic and cannot establish real-world supplier
-performance.
-Weights, defaults, confidence thresholds, and business rules need
-stakeholder review and calibration.
-A default score for a dimension with no evidence should be read
-together with sample counts and confidence, not as demonstrated
-strong performance.
-The quarantine table exists in the schema, but the current
-malformed-case export path writes JSON rather than populating that
-table.
-A production version would need operational monitoring, access
-controls, retention rules, documented policy ownership, and review
-of how scores affect supplier decisions.
-Add validation tests whenever new record types, lifecycle
-transitions, or scoring rules are introduced.
-12. Design priorities
-Reproducibility: use a consistent seed and configuration.
-Traceability: retain source entities and persisted score-run
-results.
-Point-in-time correctness: avoid using information unavailable
-at the selected scoring date.
-Data integrity: use relational constraints and tests to catch
-invalid relationships.
-Explicit limitations: distinguish observed evidence from
-defaults and synthetic evaluation labels.
-Quick start
-python -m pip install -r requirements.txt
-python -c "from src.generator import generate_synthetic_data; generate_synthetic_data()"
-python -m pytest -v
-python -c "from src.scoring import calculate_supplier_scores; print(calculate_supplier_scores(as_of_date='2026-12-31'))"
-
-### Current validation results
-
-The latest scoring run (`RUN-ba968b47`) passed the score-range checks: all 1,000 supplier scores were within the expected 0–100 range. SQLite integrity and foreign-key checks also passed, and the expected supplier, purchase-order, shipment, and inspection record counts were verified.
-
-The validation report also identifies historical out-of-range scores from earlier runs: 58 delivery-score values and 2 final-score values. These historical records have been retained rather than silently modified. Therefore, the latest scoring run passes validation, but the overall database validation report remains failed until the historical anomalies are investigated.
-
-The malformed challenge cases are maintained separately in `data/malformed_cases.json`; the current generator does not insert them into `quarantine_log`.
-
-To regenerate the CSV exports and validation artifacts, run `python -m src.export_artifacts`.
-
-Review `data/validation_summary.json` for detailed validation results and `data/source_manifest.json` for dataset counts and source-file hashes.
-
+- All source records are synthetic; they do not establish real supplier performance.
+- The scoring weights and penalty values are assumptions, not calibrated policy.
+- Confidence is a simple heuristic and should not be treated as a statistical confidence interval.
+- The current quarantine table is defined in the schema, but malformed examples are written to JSON rather than inserted into that table.
+- The invoice model is simplified and does not represent every real-world advance-billing, credit-note, or multi-stage payment workflow.
+- A production implementation would need access controls, audit logging, data-retention policies, monitoring, policy ownership, and human review of consequential supplier decisions.
