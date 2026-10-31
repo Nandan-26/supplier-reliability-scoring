@@ -1,1001 +1,1001 @@
 ﻿supplier_id,name,category,country,status,created_at,system_available_at
-SUP-0001,Supplier_1,Packaging,Mexico,Active,2026-01-06,2026-01-06
-SUP-0002,Supplier_2,Raw Materials,Germany,Active,2026-01-05,2026-01-05
-SUP-0003,Supplier_3,Raw Materials,Germany,Active,2026-01-04,2026-01-06
-SUP-0004,Supplier_4,Raw Materials,Germany,Active,2026-01-07,2026-01-09
-SUP-0005,Supplier_5,Logistics,USA,Active,2026-01-12,2026-01-12
-SUP-0006,Supplier_6,Machinery,Japan,Active,2026-01-02,2026-01-02
-SUP-0007,Supplier_7,Raw Materials,India,Active,2026-01-04,2026-01-06
-SUP-0008,Supplier_8,Raw Materials,Mexico,Probation,2026-01-11,2026-01-11
-SUP-0009,Supplier_9,Raw Materials,India,Active,2026-01-14,2026-01-14
-SUP-0010,Supplier_10,Logistics,India,Active,2026-01-02,2026-01-02
-SUP-0011,Supplier_11,Logistics,Mexico,Active,2026-01-02,2026-01-02
-SUP-0012,Supplier_12,Packaging,USA,Active,2026-01-07,2026-01-07
-SUP-0013,Supplier_13,Electronics,USA,Active,2026-01-16,2026-01-17
-SUP-0014,Supplier_14,Electronics,Mexico,Inactive,2026-01-02,2026-01-03
-SUP-0015,Supplier_15,Electronics,Mexico,Probation,2026-01-13,2026-01-13
-SUP-0016,Supplier_16,Logistics,USA,Active,2026-01-01,2026-01-03
-SUP-0017,Supplier_17,Raw Materials,Japan,Inactive,2026-01-12,2026-01-14
-SUP-0018,Supplier_18,Electronics,Japan,Active,2026-01-04,2026-01-04
-SUP-0019,Supplier_19,Packaging,Mexico,Active,2026-01-02,2026-01-04
-SUP-0020,Supplier_20,Machinery,USA,Active,2026-01-09,2026-01-10
-SUP-0021,Supplier_21,Electronics,India,Active,2026-01-07,2026-01-09
-SUP-0022,Supplier_22,Packaging,Mexico,Active,2026-01-16,2026-01-17
-SUP-0023,Supplier_23,Packaging,Japan,Active,2026-01-13,2026-01-15
-SUP-0024,Supplier_24,Machinery,Japan,Active,2026-01-12,2026-01-12
-SUP-0025,Supplier_25,Raw Materials,Mexico,Active,2026-01-10,2026-01-11
-SUP-0026,Supplier_26,Raw Materials,USA,Active,2026-01-15,2026-01-17
-SUP-0027,Supplier_27,Machinery,Japan,Active,2026-01-08,2026-01-10
-SUP-0028,Supplier_28,Electronics,India,Active,2026-01-05,2026-01-05
-SUP-0029,Supplier_29,Logistics,Germany,Probation,2026-01-01,2026-01-03
-SUP-0030,Supplier_30,Logistics,Mexico,Active,2026-01-03,2026-01-03
-SUP-0031,Supplier_31,Logistics,Japan,Inactive,2026-01-11,2026-01-11
-SUP-0032,Supplier_32,Machinery,Germany,Active,2026-01-09,2026-01-11
-SUP-0033,Supplier_33,Packaging,India,Active,2026-01-15,2026-01-15
-SUP-0034,Supplier_34,Machinery,Mexico,Active,2026-01-08,2026-01-09
-SUP-0035,Supplier_35,Raw Materials,India,Probation,2026-01-04,2026-01-04
-SUP-0036,Supplier_36,Logistics,Germany,Probation,2026-01-05,2026-01-06
-SUP-0037,Supplier_37,Logistics,Japan,Active,2026-01-13,2026-01-14
-SUP-0038,Supplier_38,Machinery,Japan,Inactive,2026-01-02,2026-01-02
-SUP-0039,Supplier_39,Logistics,Mexico,Active,2026-01-05,2026-01-05
-SUP-0040,Supplier_40,Packaging,Germany,Active,2026-01-16,2026-01-17
-SUP-0041,Supplier_41,Packaging,India,Active,2026-01-08,2026-01-10
-SUP-0042,Supplier_42,Raw Materials,Mexico,Probation,2026-01-08,2026-01-09
-SUP-0043,Supplier_43,Machinery,Mexico,Active,2026-01-03,2026-01-04
-SUP-0044,Supplier_44,Machinery,Mexico,Active,2026-01-03,2026-01-03
-SUP-0045,Supplier_45,Electronics,USA,Probation,2026-01-15,2026-01-15
-SUP-0046,Supplier_46,Raw Materials,Mexico,Probation,2026-01-10,2026-01-10
-SUP-0047,Supplier_47,Machinery,Japan,Active,2026-01-06,2026-01-08
-SUP-0048,Supplier_48,Packaging,Mexico,Probation,2026-01-02,2026-01-02
-SUP-0049,Supplier_49,Machinery,Mexico,Active,2026-01-10,2026-01-10
-SUP-0050,Supplier_50,Packaging,Japan,Active,2026-01-03,2026-01-03
-SUP-0051,Supplier_51,Machinery,Germany,Inactive,2026-01-14,2026-01-16
-SUP-0052,Supplier_52,Raw Materials,Japan,Active,2026-01-11,2026-01-12
-SUP-0053,Supplier_53,Raw Materials,Mexico,Inactive,2026-01-02,2026-01-02
-SUP-0054,Supplier_54,Electronics,Mexico,Active,2026-01-12,2026-01-13
-SUP-0055,Supplier_55,Packaging,Germany,Active,2026-01-07,2026-01-08
-SUP-0056,Supplier_56,Logistics,USA,Active,2026-01-12,2026-01-12
-SUP-0057,Supplier_57,Machinery,India,Active,2026-01-01,2026-01-02
-SUP-0058,Supplier_58,Packaging,USA,Probation,2026-01-09,2026-01-09
-SUP-0059,Supplier_59,Logistics,India,Active,2026-01-10,2026-01-10
-SUP-0060,Supplier_60,Raw Materials,Mexico,Active,2026-01-05,2026-01-05
-SUP-0061,Supplier_61,Electronics,USA,Active,2026-01-09,2026-01-09
-SUP-0062,Supplier_62,Packaging,Japan,Active,2026-01-06,2026-01-08
-SUP-0063,Supplier_63,Raw Materials,India,Active,2026-01-01,2026-01-02
-SUP-0064,Supplier_64,Electronics,Japan,Active,2026-01-15,2026-01-16
-SUP-0065,Supplier_65,Raw Materials,Japan,Active,2026-01-02,2026-01-03
-SUP-0066,Supplier_66,Packaging,India,Active,2026-01-12,2026-01-12
-SUP-0067,Supplier_67,Packaging,Japan,Active,2026-01-11,2026-01-13
-SUP-0068,Supplier_68,Electronics,USA,Active,2026-01-09,2026-01-09
-SUP-0069,Supplier_69,Electronics,Japan,Active,2026-01-08,2026-01-09
-SUP-0070,Supplier_70,Electronics,USA,Active,2026-01-06,2026-01-06
-SUP-0071,Supplier_71,Electronics,Germany,Active,2026-01-14,2026-01-16
-SUP-0072,Supplier_72,Electronics,Mexico,Active,2026-01-02,2026-01-03
-SUP-0073,Supplier_73,Packaging,India,Active,2026-01-06,2026-01-07
-SUP-0074,Supplier_74,Machinery,Germany,Active,2026-01-15,2026-01-17
-SUP-0075,Supplier_75,Machinery,Mexico,Active,2026-01-14,2026-01-16
-SUP-0076,Supplier_76,Packaging,Germany,Active,2026-01-09,2026-01-10
-SUP-0077,Supplier_77,Electronics,USA,Active,2026-01-06,2026-01-06
-SUP-0078,Supplier_78,Packaging,Germany,Active,2026-01-02,2026-01-03
-SUP-0079,Supplier_79,Electronics,Japan,Active,2026-01-01,2026-01-03
-SUP-0080,Supplier_80,Raw Materials,Japan,Active,2026-01-06,2026-01-08
-SUP-0081,Supplier_81,Logistics,Germany,Active,2026-01-06,2026-01-07
-SUP-0082,Supplier_82,Packaging,Germany,Active,2026-01-03,2026-01-03
-SUP-0083,Supplier_83,Raw Materials,USA,Active,2026-01-10,2026-01-10
-SUP-0084,Supplier_84,Raw Materials,Germany,Active,2026-01-03,2026-01-03
-SUP-0085,Supplier_85,Packaging,India,Active,2026-01-06,2026-01-06
-SUP-0086,Supplier_86,Logistics,Japan,Active,2026-01-13,2026-01-13
-SUP-0087,Supplier_87,Raw Materials,Mexico,Probation,2026-01-07,2026-01-09
-SUP-0088,Supplier_88,Machinery,Germany,Active,2026-01-01,2026-01-01
-SUP-0089,Supplier_89,Logistics,Japan,Inactive,2026-01-15,2026-01-15
-SUP-0090,Supplier_90,Packaging,Japan,Probation,2026-01-06,2026-01-08
-SUP-0091,Supplier_91,Electronics,Mexico,Probation,2026-01-13,2026-01-14
-SUP-0092,Supplier_92,Raw Materials,Mexico,Active,2026-01-16,2026-01-17
-SUP-0093,Supplier_93,Raw Materials,India,Active,2026-01-05,2026-01-06
-SUP-0094,Supplier_94,Electronics,Japan,Active,2026-01-12,2026-01-14
-SUP-0095,Supplier_95,Logistics,Japan,Active,2026-01-08,2026-01-09
-SUP-0096,Supplier_96,Electronics,Germany,Active,2026-01-08,2026-01-10
-SUP-0097,Supplier_97,Raw Materials,India,Active,2026-01-02,2026-01-02
-SUP-0098,Supplier_98,Electronics,India,Active,2026-01-08,2026-01-09
-SUP-0099,Supplier_99,Electronics,Mexico,Active,2026-01-08,2026-01-08
-SUP-0100,Supplier_100,Raw Materials,Japan,Active,2026-01-10,2026-01-11
-SUP-0101,Supplier_101,Raw Materials,Germany,Active,2026-01-13,2026-01-15
-SUP-0102,Supplier_102,Logistics,Germany,Active,2026-01-06,2026-01-06
-SUP-0103,Supplier_103,Packaging,Mexico,Active,2026-01-08,2026-01-10
-SUP-0104,Supplier_104,Packaging,Mexico,Active,2026-01-08,2026-01-08
-SUP-0105,Supplier_105,Raw Materials,India,Probation,2026-01-08,2026-01-08
-SUP-0106,Supplier_106,Raw Materials,Mexico,Active,2026-01-09,2026-01-10
-SUP-0107,Supplier_107,Logistics,Mexico,Active,2026-01-13,2026-01-13
-SUP-0108,Supplier_108,Machinery,India,Active,2026-01-15,2026-01-16
-SUP-0109,Supplier_109,Raw Materials,USA,Inactive,2026-01-02,2026-01-02
-SUP-0110,Supplier_110,Electronics,Japan,Active,2026-01-07,2026-01-09
-SUP-0111,Supplier_111,Packaging,India,Active,2026-01-09,2026-01-10
-SUP-0112,Supplier_112,Packaging,Mexico,Inactive,2026-01-12,2026-01-14
-SUP-0113,Supplier_113,Machinery,Germany,Inactive,2026-01-09,2026-01-10
-SUP-0114,Supplier_114,Machinery,India,Active,2026-01-05,2026-01-06
-SUP-0115,Supplier_115,Raw Materials,Japan,Active,2026-01-06,2026-01-08
-SUP-0116,Supplier_116,Raw Materials,Mexico,Active,2026-01-05,2026-01-05
-SUP-0117,Supplier_117,Packaging,Mexico,Active,2026-01-12,2026-01-12
-SUP-0118,Supplier_118,Electronics,Mexico,Inactive,2026-01-07,2026-01-07
-SUP-0119,Supplier_119,Logistics,USA,Active,2026-01-16,2026-01-18
-SUP-0120,Supplier_120,Raw Materials,Mexico,Active,2026-01-03,2026-01-03
-SUP-0121,Supplier_121,Machinery,USA,Active,2026-01-10,2026-01-10
-SUP-0122,Supplier_122,Raw Materials,USA,Active,2026-01-11,2026-01-11
-SUP-0123,Supplier_123,Electronics,Mexico,Active,2026-01-04,2026-01-06
-SUP-0124,Supplier_124,Electronics,Japan,Active,2026-01-03,2026-01-05
-SUP-0125,Supplier_125,Raw Materials,USA,Active,2026-01-13,2026-01-13
-SUP-0126,Supplier_126,Packaging,USA,Active,2026-01-02,2026-01-02
-SUP-0127,Supplier_127,Electronics,Japan,Active,2026-01-02,2026-01-02
-SUP-0128,Supplier_128,Logistics,Germany,Active,2026-01-09,2026-01-11
-SUP-0129,Supplier_129,Packaging,Mexico,Active,2026-01-03,2026-01-03
-SUP-0130,Supplier_130,Electronics,India,Active,2026-01-15,2026-01-16
-SUP-0131,Supplier_131,Electronics,Japan,Active,2026-01-13,2026-01-13
-SUP-0132,Supplier_132,Raw Materials,Germany,Active,2026-01-15,2026-01-16
-SUP-0133,Supplier_133,Electronics,Germany,Active,2026-01-08,2026-01-08
-SUP-0134,Supplier_134,Electronics,Mexico,Inactive,2026-01-02,2026-01-03
-SUP-0135,Supplier_135,Packaging,India,Inactive,2026-01-08,2026-01-08
-SUP-0136,Supplier_136,Machinery,USA,Inactive,2026-01-02,2026-01-03
-SUP-0137,Supplier_137,Logistics,Germany,Active,2026-01-10,2026-01-12
-SUP-0138,Supplier_138,Raw Materials,Germany,Active,2026-01-07,2026-01-07
-SUP-0139,Supplier_139,Machinery,Germany,Active,2026-01-16,2026-01-18
-SUP-0140,Supplier_140,Logistics,Germany,Active,2026-01-14,2026-01-14
-SUP-0141,Supplier_141,Electronics,Mexico,Probation,2026-01-01,2026-01-02
-SUP-0142,Supplier_142,Raw Materials,Germany,Active,2026-01-02,2026-01-04
-SUP-0143,Supplier_143,Logistics,Germany,Active,2026-01-16,2026-01-18
-SUP-0144,Supplier_144,Electronics,Japan,Active,2026-01-02,2026-01-02
-SUP-0145,Supplier_145,Raw Materials,USA,Active,2026-01-09,2026-01-09
-SUP-0146,Supplier_146,Logistics,Mexico,Active,2026-01-03,2026-01-03
-SUP-0147,Supplier_147,Packaging,Germany,Inactive,2026-01-01,2026-01-02
-SUP-0148,Supplier_148,Electronics,India,Active,2026-01-15,2026-01-16
-SUP-0149,Supplier_149,Electronics,India,Active,2026-01-05,2026-01-07
-SUP-0150,Supplier_150,Machinery,Japan,Active,2026-01-15,2026-01-16
-SUP-0151,Supplier_151,Raw Materials,Germany,Active,2026-01-05,2026-01-07
-SUP-0152,Supplier_152,Electronics,Germany,Active,2026-01-01,2026-01-03
-SUP-0153,Supplier_153,Raw Materials,USA,Active,2026-01-02,2026-01-02
-SUP-0154,Supplier_154,Raw Materials,India,Active,2026-01-05,2026-01-05
-SUP-0155,Supplier_155,Logistics,USA,Active,2026-01-12,2026-01-13
-SUP-0156,Supplier_156,Machinery,Japan,Probation,2026-01-08,2026-01-09
-SUP-0157,Supplier_157,Raw Materials,Germany,Active,2026-01-16,2026-01-17
-SUP-0158,Supplier_158,Packaging,USA,Active,2026-01-04,2026-01-04
-SUP-0159,Supplier_159,Machinery,USA,Inactive,2026-01-09,2026-01-11
-SUP-0160,Supplier_160,Electronics,Germany,Active,2026-01-06,2026-01-06
-SUP-0161,Supplier_161,Packaging,India,Active,2026-01-08,2026-01-10
-SUP-0162,Supplier_162,Electronics,Mexico,Active,2026-01-14,2026-01-16
-SUP-0163,Supplier_163,Raw Materials,Mexico,Active,2026-01-08,2026-01-10
-SUP-0164,Supplier_164,Packaging,Mexico,Probation,2026-01-05,2026-01-06
-SUP-0165,Supplier_165,Raw Materials,Germany,Active,2026-01-13,2026-01-15
-SUP-0166,Supplier_166,Electronics,India,Probation,2026-01-03,2026-01-03
-SUP-0167,Supplier_167,Machinery,India,Active,2026-01-15,2026-01-16
-SUP-0168,Supplier_168,Raw Materials,Germany,Active,2026-01-01,2026-01-02
-SUP-0169,Supplier_169,Machinery,India,Active,2026-01-03,2026-01-04
-SUP-0170,Supplier_170,Machinery,Japan,Active,2026-01-06,2026-01-06
-SUP-0171,Supplier_171,Machinery,India,Active,2026-01-16,2026-01-16
-SUP-0172,Supplier_172,Electronics,Germany,Active,2026-01-02,2026-01-03
-SUP-0173,Supplier_173,Machinery,India,Active,2026-01-14,2026-01-14
-SUP-0174,Supplier_174,Logistics,India,Active,2026-01-03,2026-01-03
-SUP-0175,Supplier_175,Machinery,Germany,Active,2026-01-16,2026-01-17
-SUP-0176,Supplier_176,Electronics,Germany,Active,2026-01-09,2026-01-10
-SUP-0177,Supplier_177,Raw Materials,India,Active,2026-01-16,2026-01-16
-SUP-0178,Supplier_178,Machinery,Germany,Active,2026-01-16,2026-01-17
-SUP-0179,Supplier_179,Electronics,Mexico,Active,2026-01-16,2026-01-16
-SUP-0180,Supplier_180,Logistics,India,Active,2026-01-13,2026-01-14
-SUP-0181,Supplier_181,Raw Materials,Japan,Active,2026-01-04,2026-01-04
-SUP-0182,Supplier_182,Logistics,Germany,Active,2026-01-11,2026-01-11
-SUP-0183,Supplier_183,Logistics,India,Active,2026-01-13,2026-01-15
-SUP-0184,Supplier_184,Raw Materials,Japan,Active,2026-01-03,2026-01-03
-SUP-0185,Supplier_185,Machinery,Japan,Active,2026-01-12,2026-01-13
-SUP-0186,Supplier_186,Packaging,Mexico,Active,2026-01-14,2026-01-16
-SUP-0187,Supplier_187,Raw Materials,India,Active,2026-01-13,2026-01-15
-SUP-0188,Supplier_188,Machinery,Mexico,Inactive,2026-01-14,2026-01-14
-SUP-0189,Supplier_189,Raw Materials,USA,Active,2026-01-05,2026-01-06
-SUP-0190,Supplier_190,Raw Materials,Mexico,Active,2026-01-03,2026-01-04
-SUP-0191,Supplier_191,Packaging,Germany,Active,2026-01-07,2026-01-09
-SUP-0192,Supplier_192,Electronics,Mexico,Active,2026-01-11,2026-01-11
-SUP-0193,Supplier_193,Raw Materials,India,Inactive,2026-01-16,2026-01-18
-SUP-0194,Supplier_194,Packaging,Germany,Active,2026-01-05,2026-01-06
-SUP-0195,Supplier_195,Raw Materials,Germany,Active,2026-01-07,2026-01-07
-SUP-0196,Supplier_196,Machinery,India,Inactive,2026-01-07,2026-01-09
-SUP-0197,Supplier_197,Packaging,Mexico,Active,2026-01-02,2026-01-04
-SUP-0198,Supplier_198,Raw Materials,USA,Active,2026-01-14,2026-01-14
-SUP-0199,Supplier_199,Packaging,USA,Active,2026-01-02,2026-01-02
-SUP-0200,Supplier_200,Electronics,Germany,Probation,2026-01-05,2026-01-07
-SUP-0201,Supplier_201,Electronics,Germany,Inactive,2026-01-16,2026-01-18
-SUP-0202,Supplier_202,Logistics,USA,Active,2026-01-04,2026-01-04
-SUP-0203,Supplier_203,Logistics,Germany,Active,2026-01-01,2026-01-01
-SUP-0204,Supplier_204,Machinery,Germany,Active,2026-01-05,2026-01-05
-SUP-0205,Supplier_205,Packaging,Germany,Active,2026-01-02,2026-01-04
-SUP-0206,Supplier_206,Logistics,USA,Active,2026-01-15,2026-01-15
-SUP-0207,Supplier_207,Raw Materials,Germany,Inactive,2026-01-02,2026-01-03
-SUP-0208,Supplier_208,Raw Materials,Mexico,Active,2026-01-10,2026-01-10
-SUP-0209,Supplier_209,Raw Materials,Japan,Active,2026-01-16,2026-01-18
-SUP-0210,Supplier_210,Machinery,Japan,Inactive,2026-01-15,2026-01-15
-SUP-0211,Supplier_211,Electronics,Mexico,Active,2026-01-07,2026-01-08
-SUP-0212,Supplier_212,Electronics,USA,Active,2026-01-15,2026-01-15
-SUP-0213,Supplier_213,Raw Materials,Mexico,Active,2026-01-08,2026-01-09
-SUP-0214,Supplier_214,Raw Materials,Germany,Inactive,2026-01-16,2026-01-16
-SUP-0215,Supplier_215,Machinery,Japan,Inactive,2026-01-12,2026-01-12
-SUP-0216,Supplier_216,Raw Materials,Japan,Active,2026-01-14,2026-01-14
-SUP-0217,Supplier_217,Raw Materials,Japan,Active,2026-01-06,2026-01-07
-SUP-0218,Supplier_218,Packaging,Germany,Active,2026-01-08,2026-01-08
-SUP-0219,Supplier_219,Packaging,USA,Active,2026-01-13,2026-01-15
-SUP-0220,Supplier_220,Logistics,Mexico,Active,2026-01-12,2026-01-13
-SUP-0221,Supplier_221,Logistics,Mexico,Active,2026-01-15,2026-01-16
-SUP-0222,Supplier_222,Raw Materials,Germany,Active,2026-01-02,2026-01-03
-SUP-0223,Supplier_223,Logistics,Japan,Active,2026-01-15,2026-01-16
-SUP-0224,Supplier_224,Electronics,India,Active,2026-01-03,2026-01-05
-SUP-0225,Supplier_225,Logistics,India,Inactive,2026-01-07,2026-01-09
-SUP-0226,Supplier_226,Raw Materials,Japan,Active,2026-01-02,2026-01-04
-SUP-0227,Supplier_227,Packaging,Japan,Active,2026-01-11,2026-01-12
-SUP-0228,Supplier_228,Raw Materials,Japan,Active,2026-01-12,2026-01-12
-SUP-0229,Supplier_229,Packaging,Germany,Active,2026-01-05,2026-01-05
-SUP-0230,Supplier_230,Machinery,Japan,Probation,2026-01-07,2026-01-08
-SUP-0231,Supplier_231,Logistics,USA,Inactive,2026-01-15,2026-01-16
-SUP-0232,Supplier_232,Logistics,Germany,Active,2026-01-11,2026-01-12
-SUP-0233,Supplier_233,Raw Materials,Japan,Active,2026-01-02,2026-01-02
-SUP-0234,Supplier_234,Logistics,USA,Active,2026-01-14,2026-01-16
-SUP-0235,Supplier_235,Packaging,Mexico,Probation,2026-01-16,2026-01-18
-SUP-0236,Supplier_236,Packaging,Germany,Active,2026-01-05,2026-01-06
-SUP-0237,Supplier_237,Electronics,India,Active,2026-01-11,2026-01-11
-SUP-0238,Supplier_238,Raw Materials,Germany,Active,2026-01-06,2026-01-06
-SUP-0239,Supplier_239,Logistics,Mexico,Active,2026-01-06,2026-01-06
-SUP-0240,Supplier_240,Packaging,India,Active,2026-01-07,2026-01-09
-SUP-0241,Supplier_241,Machinery,India,Active,2026-01-05,2026-01-05
-SUP-0242,Supplier_242,Electronics,USA,Active,2026-01-13,2026-01-14
-SUP-0243,Supplier_243,Logistics,Mexico,Active,2026-01-02,2026-01-02
-SUP-0244,Supplier_244,Machinery,Mexico,Probation,2026-01-16,2026-01-16
-SUP-0245,Supplier_245,Electronics,Japan,Probation,2026-01-04,2026-01-05
-SUP-0246,Supplier_246,Raw Materials,USA,Active,2026-01-05,2026-01-07
-SUP-0247,Supplier_247,Raw Materials,India,Probation,2026-01-10,2026-01-12
-SUP-0248,Supplier_248,Packaging,USA,Active,2026-01-10,2026-01-12
-SUP-0249,Supplier_249,Packaging,USA,Inactive,2026-01-05,2026-01-07
-SUP-0250,Supplier_250,Electronics,Germany,Active,2026-01-15,2026-01-15
-SUP-0251,Supplier_251,Logistics,India,Active,2026-01-07,2026-01-07
-SUP-0252,Supplier_252,Logistics,India,Active,2026-01-04,2026-01-05
-SUP-0253,Supplier_253,Raw Materials,Mexico,Active,2026-01-04,2026-01-04
-SUP-0254,Supplier_254,Machinery,Mexico,Active,2026-01-16,2026-01-18
-SUP-0255,Supplier_255,Packaging,Mexico,Active,2026-01-12,2026-01-13
-SUP-0256,Supplier_256,Packaging,India,Active,2026-01-03,2026-01-04
-SUP-0257,Supplier_257,Raw Materials,India,Inactive,2026-01-06,2026-01-06
-SUP-0258,Supplier_258,Machinery,USA,Active,2026-01-11,2026-01-12
-SUP-0259,Supplier_259,Packaging,Germany,Active,2026-01-08,2026-01-10
-SUP-0260,Supplier_260,Packaging,USA,Active,2026-01-15,2026-01-15
-SUP-0261,Supplier_261,Machinery,Mexico,Active,2026-01-14,2026-01-14
-SUP-0262,Supplier_262,Electronics,Germany,Active,2026-01-03,2026-01-04
-SUP-0263,Supplier_263,Packaging,Germany,Inactive,2026-01-05,2026-01-05
-SUP-0264,Supplier_264,Packaging,Japan,Inactive,2026-01-06,2026-01-06
-SUP-0265,Supplier_265,Machinery,India,Active,2026-01-05,2026-01-07
-SUP-0266,Supplier_266,Raw Materials,India,Inactive,2026-01-07,2026-01-07
-SUP-0267,Supplier_267,Electronics,Japan,Active,2026-01-05,2026-01-06
-SUP-0268,Supplier_268,Machinery,Germany,Probation,2026-01-11,2026-01-12
-SUP-0269,Supplier_269,Machinery,Germany,Active,2026-01-05,2026-01-07
-SUP-0270,Supplier_270,Machinery,Mexico,Active,2026-01-07,2026-01-08
-SUP-0271,Supplier_271,Raw Materials,Japan,Active,2026-01-12,2026-01-13
-SUP-0272,Supplier_272,Electronics,Mexico,Active,2026-01-01,2026-01-03
-SUP-0273,Supplier_273,Raw Materials,Japan,Active,2026-01-07,2026-01-09
-SUP-0274,Supplier_274,Electronics,Mexico,Probation,2026-01-11,2026-01-11
-SUP-0275,Supplier_275,Machinery,Mexico,Active,2026-01-12,2026-01-14
-SUP-0276,Supplier_276,Logistics,Japan,Active,2026-01-03,2026-01-03
-SUP-0277,Supplier_277,Electronics,Japan,Active,2026-01-09,2026-01-11
-SUP-0278,Supplier_278,Machinery,Japan,Active,2026-01-11,2026-01-12
-SUP-0279,Supplier_279,Packaging,Germany,Active,2026-01-08,2026-01-09
-SUP-0280,Supplier_280,Packaging,India,Active,2026-01-09,2026-01-09
-SUP-0281,Supplier_281,Electronics,Japan,Active,2026-01-09,2026-01-09
-SUP-0282,Supplier_282,Electronics,Japan,Active,2026-01-10,2026-01-11
-SUP-0283,Supplier_283,Raw Materials,USA,Active,2026-01-14,2026-01-16
-SUP-0284,Supplier_284,Electronics,India,Active,2026-01-09,2026-01-11
-SUP-0285,Supplier_285,Electronics,USA,Inactive,2026-01-08,2026-01-09
-SUP-0286,Supplier_286,Electronics,Germany,Probation,2026-01-06,2026-01-07
-SUP-0287,Supplier_287,Machinery,Mexico,Active,2026-01-11,2026-01-12
-SUP-0288,Supplier_288,Logistics,India,Active,2026-01-15,2026-01-17
-SUP-0289,Supplier_289,Raw Materials,India,Active,2026-01-06,2026-01-08
-SUP-0290,Supplier_290,Machinery,India,Active,2026-01-04,2026-01-05
-SUP-0291,Supplier_291,Packaging,USA,Active,2026-01-11,2026-01-12
-SUP-0292,Supplier_292,Electronics,Germany,Active,2026-01-08,2026-01-10
-SUP-0293,Supplier_293,Machinery,India,Active,2026-01-14,2026-01-15
-SUP-0294,Supplier_294,Raw Materials,Mexico,Inactive,2026-01-06,2026-01-06
-SUP-0295,Supplier_295,Packaging,India,Active,2026-01-13,2026-01-14
-SUP-0296,Supplier_296,Electronics,India,Active,2026-01-02,2026-01-03
-SUP-0297,Supplier_297,Packaging,Germany,Active,2026-01-13,2026-01-14
-SUP-0298,Supplier_298,Raw Materials,India,Active,2026-01-03,2026-01-05
-SUP-0299,Supplier_299,Packaging,Germany,Inactive,2026-01-14,2026-01-15
-SUP-0300,Supplier_300,Raw Materials,India,Active,2026-01-13,2026-01-15
-SUP-0301,Supplier_301,Electronics,USA,Active,2026-01-13,2026-01-13
-SUP-0302,Supplier_302,Packaging,India,Active,2026-01-01,2026-01-02
-SUP-0303,Supplier_303,Logistics,Mexico,Inactive,2026-01-09,2026-01-09
-SUP-0304,Supplier_304,Raw Materials,USA,Active,2026-01-02,2026-01-02
-SUP-0305,Supplier_305,Raw Materials,India,Probation,2026-01-14,2026-01-15
-SUP-0306,Supplier_306,Raw Materials,India,Active,2026-01-13,2026-01-14
-SUP-0307,Supplier_307,Logistics,India,Active,2026-01-05,2026-01-05
-SUP-0308,Supplier_308,Logistics,Mexico,Inactive,2026-01-13,2026-01-15
-SUP-0309,Supplier_309,Machinery,Japan,Active,2026-01-16,2026-01-16
-SUP-0310,Supplier_310,Packaging,India,Active,2026-01-06,2026-01-07
-SUP-0311,Supplier_311,Logistics,Germany,Active,2026-01-12,2026-01-14
-SUP-0312,Supplier_312,Electronics,Mexico,Active,2026-01-08,2026-01-08
-SUP-0313,Supplier_313,Machinery,Japan,Active,2026-01-11,2026-01-11
-SUP-0314,Supplier_314,Raw Materials,Germany,Inactive,2026-01-14,2026-01-14
-SUP-0315,Supplier_315,Logistics,Japan,Active,2026-01-05,2026-01-06
-SUP-0316,Supplier_316,Machinery,Mexico,Active,2026-01-12,2026-01-12
-SUP-0317,Supplier_317,Packaging,India,Active,2026-01-16,2026-01-16
-SUP-0318,Supplier_318,Raw Materials,Germany,Active,2026-01-16,2026-01-18
-SUP-0319,Supplier_319,Machinery,Germany,Active,2026-01-16,2026-01-17
-SUP-0320,Supplier_320,Machinery,Japan,Active,2026-01-05,2026-01-07
-SUP-0321,Supplier_321,Raw Materials,Germany,Active,2026-01-12,2026-01-14
-SUP-0322,Supplier_322,Raw Materials,USA,Probation,2026-01-08,2026-01-09
-SUP-0323,Supplier_323,Packaging,Japan,Active,2026-01-14,2026-01-16
-SUP-0324,Supplier_324,Packaging,India,Active,2026-01-10,2026-01-10
-SUP-0325,Supplier_325,Electronics,Mexico,Active,2026-01-03,2026-01-04
-SUP-0326,Supplier_326,Packaging,Japan,Active,2026-01-03,2026-01-04
-SUP-0327,Supplier_327,Raw Materials,USA,Active,2026-01-04,2026-01-06
-SUP-0328,Supplier_328,Machinery,Japan,Active,2026-01-04,2026-01-06
-SUP-0329,Supplier_329,Machinery,Mexico,Active,2026-01-14,2026-01-15
-SUP-0330,Supplier_330,Machinery,Mexico,Active,2026-01-13,2026-01-15
-SUP-0331,Supplier_331,Packaging,India,Active,2026-01-10,2026-01-11
-SUP-0332,Supplier_332,Raw Materials,Mexico,Active,2026-01-02,2026-01-04
-SUP-0333,Supplier_333,Logistics,India,Active,2026-01-08,2026-01-09
-SUP-0334,Supplier_334,Packaging,Mexico,Active,2026-01-15,2026-01-16
-SUP-0335,Supplier_335,Machinery,USA,Probation,2026-01-14,2026-01-16
-SUP-0336,Supplier_336,Electronics,Mexico,Inactive,2026-01-08,2026-01-10
-SUP-0337,Supplier_337,Electronics,India,Inactive,2026-01-01,2026-01-03
-SUP-0338,Supplier_338,Electronics,Japan,Probation,2026-01-16,2026-01-17
-SUP-0339,Supplier_339,Logistics,Germany,Inactive,2026-01-06,2026-01-07
-SUP-0340,Supplier_340,Logistics,India,Active,2026-01-16,2026-01-16
-SUP-0341,Supplier_341,Packaging,USA,Active,2026-01-01,2026-01-01
-SUP-0342,Supplier_342,Electronics,Germany,Inactive,2026-01-11,2026-01-13
-SUP-0343,Supplier_343,Raw Materials,Mexico,Active,2026-01-07,2026-01-08
-SUP-0344,Supplier_344,Raw Materials,India,Inactive,2026-01-10,2026-01-12
-SUP-0345,Supplier_345,Electronics,India,Active,2026-01-04,2026-01-05
-SUP-0346,Supplier_346,Packaging,India,Active,2026-01-10,2026-01-10
-SUP-0347,Supplier_347,Raw Materials,USA,Active,2026-01-15,2026-01-16
-SUP-0348,Supplier_348,Packaging,USA,Active,2026-01-07,2026-01-09
-SUP-0349,Supplier_349,Electronics,India,Active,2026-01-12,2026-01-13
-SUP-0350,Supplier_350,Raw Materials,USA,Active,2026-01-11,2026-01-12
-SUP-0351,Supplier_351,Raw Materials,India,Active,2026-01-14,2026-01-15
-SUP-0352,Supplier_352,Packaging,India,Active,2026-01-12,2026-01-13
-SUP-0353,Supplier_353,Electronics,Germany,Active,2026-01-11,2026-01-12
-SUP-0354,Supplier_354,Packaging,USA,Active,2026-01-09,2026-01-11
-SUP-0355,Supplier_355,Electronics,Japan,Probation,2026-01-09,2026-01-11
-SUP-0356,Supplier_356,Electronics,USA,Active,2026-01-08,2026-01-09
-SUP-0357,Supplier_357,Packaging,Mexico,Active,2026-01-16,2026-01-18
-SUP-0358,Supplier_358,Logistics,India,Probation,2026-01-16,2026-01-18
-SUP-0359,Supplier_359,Raw Materials,Mexico,Active,2026-01-14,2026-01-16
-SUP-0360,Supplier_360,Electronics,Japan,Active,2026-01-03,2026-01-05
-SUP-0361,Supplier_361,Electronics,India,Active,2026-01-08,2026-01-10
-SUP-0362,Supplier_362,Machinery,Japan,Inactive,2026-01-08,2026-01-09
-SUP-0363,Supplier_363,Logistics,Japan,Active,2026-01-04,2026-01-06
-SUP-0364,Supplier_364,Packaging,USA,Active,2026-01-04,2026-01-04
-SUP-0365,Supplier_365,Raw Materials,Germany,Inactive,2026-01-14,2026-01-15
-SUP-0366,Supplier_366,Packaging,Japan,Active,2026-01-11,2026-01-13
-SUP-0367,Supplier_367,Machinery,India,Active,2026-01-12,2026-01-12
-SUP-0368,Supplier_368,Packaging,Germany,Active,2026-01-13,2026-01-13
-SUP-0369,Supplier_369,Raw Materials,Germany,Active,2026-01-03,2026-01-03
-SUP-0370,Supplier_370,Packaging,India,Active,2026-01-04,2026-01-04
-SUP-0371,Supplier_371,Machinery,India,Active,2026-01-10,2026-01-10
-SUP-0372,Supplier_372,Machinery,Mexico,Active,2026-01-09,2026-01-09
-SUP-0373,Supplier_373,Electronics,India,Active,2026-01-08,2026-01-10
-SUP-0374,Supplier_374,Logistics,Mexico,Probation,2026-01-09,2026-01-09
-SUP-0375,Supplier_375,Electronics,India,Active,2026-01-02,2026-01-04
-SUP-0376,Supplier_376,Machinery,Japan,Inactive,2026-01-13,2026-01-15
-SUP-0377,Supplier_377,Raw Materials,Mexico,Active,2026-01-04,2026-01-05
-SUP-0378,Supplier_378,Electronics,USA,Active,2026-01-10,2026-01-11
-SUP-0379,Supplier_379,Packaging,India,Probation,2026-01-07,2026-01-07
-SUP-0380,Supplier_380,Electronics,USA,Active,2026-01-01,2026-01-02
-SUP-0381,Supplier_381,Packaging,India,Active,2026-01-12,2026-01-13
-SUP-0382,Supplier_382,Electronics,Japan,Active,2026-01-09,2026-01-11
-SUP-0383,Supplier_383,Packaging,Japan,Active,2026-01-05,2026-01-06
-SUP-0384,Supplier_384,Raw Materials,Japan,Active,2026-01-16,2026-01-18
-SUP-0385,Supplier_385,Machinery,Germany,Active,2026-01-16,2026-01-17
-SUP-0386,Supplier_386,Electronics,India,Active,2026-01-07,2026-01-07
-SUP-0387,Supplier_387,Electronics,Germany,Active,2026-01-09,2026-01-11
-SUP-0388,Supplier_388,Electronics,Mexico,Active,2026-01-15,2026-01-15
-SUP-0389,Supplier_389,Packaging,Mexico,Active,2026-01-01,2026-01-02
-SUP-0390,Supplier_390,Machinery,USA,Active,2026-01-02,2026-01-03
-SUP-0391,Supplier_391,Electronics,Mexico,Active,2026-01-09,2026-01-11
-SUP-0392,Supplier_392,Logistics,India,Inactive,2026-01-02,2026-01-03
-SUP-0393,Supplier_393,Electronics,Germany,Inactive,2026-01-03,2026-01-03
-SUP-0394,Supplier_394,Packaging,Mexico,Active,2026-01-06,2026-01-07
-SUP-0395,Supplier_395,Packaging,USA,Active,2026-01-09,2026-01-11
-SUP-0396,Supplier_396,Packaging,Mexico,Active,2026-01-02,2026-01-04
-SUP-0397,Supplier_397,Logistics,USA,Inactive,2026-01-06,2026-01-06
-SUP-0398,Supplier_398,Packaging,Germany,Active,2026-01-06,2026-01-06
-SUP-0399,Supplier_399,Packaging,India,Active,2026-01-05,2026-01-05
-SUP-0400,Supplier_400,Machinery,Mexico,Active,2026-01-07,2026-01-09
-SUP-0401,Supplier_401,Raw Materials,Germany,Active,2026-01-08,2026-01-08
-SUP-0402,Supplier_402,Packaging,USA,Inactive,2026-01-02,2026-01-02
-SUP-0403,Supplier_403,Machinery,Mexico,Active,2026-01-16,2026-01-17
-SUP-0404,Supplier_404,Electronics,Mexico,Inactive,2026-01-14,2026-01-16
-SUP-0405,Supplier_405,Raw Materials,USA,Probation,2026-01-14,2026-01-16
-SUP-0406,Supplier_406,Raw Materials,India,Active,2026-01-12,2026-01-13
-SUP-0407,Supplier_407,Raw Materials,India,Active,2026-01-15,2026-01-16
-SUP-0408,Supplier_408,Machinery,Germany,Active,2026-01-08,2026-01-10
-SUP-0409,Supplier_409,Raw Materials,India,Active,2026-01-10,2026-01-11
-SUP-0410,Supplier_410,Logistics,Mexico,Probation,2026-01-15,2026-01-16
-SUP-0411,Supplier_411,Machinery,Japan,Active,2026-01-05,2026-01-06
-SUP-0412,Supplier_412,Machinery,Germany,Active,2026-01-10,2026-01-12
-SUP-0413,Supplier_413,Logistics,Germany,Active,2026-01-11,2026-01-11
-SUP-0414,Supplier_414,Packaging,Mexico,Active,2026-01-05,2026-01-06
-SUP-0415,Supplier_415,Electronics,India,Active,2026-01-03,2026-01-05
-SUP-0416,Supplier_416,Raw Materials,Japan,Active,2026-01-02,2026-01-02
-SUP-0417,Supplier_417,Logistics,Japan,Probation,2026-01-14,2026-01-15
-SUP-0418,Supplier_418,Raw Materials,USA,Active,2026-01-11,2026-01-13
-SUP-0419,Supplier_419,Logistics,Japan,Active,2026-01-07,2026-01-09
-SUP-0420,Supplier_420,Electronics,India,Active,2026-01-14,2026-01-15
-SUP-0421,Supplier_421,Machinery,Mexico,Active,2026-01-05,2026-01-07
-SUP-0422,Supplier_422,Packaging,Mexico,Active,2026-01-08,2026-01-10
-SUP-0423,Supplier_423,Packaging,Germany,Active,2026-01-13,2026-01-15
-SUP-0424,Supplier_424,Electronics,Japan,Active,2026-01-08,2026-01-10
-SUP-0425,Supplier_425,Raw Materials,USA,Active,2026-01-02,2026-01-02
-SUP-0426,Supplier_426,Electronics,Mexico,Probation,2026-01-08,2026-01-09
-SUP-0427,Supplier_427,Machinery,Germany,Inactive,2026-01-15,2026-01-15
-SUP-0428,Supplier_428,Electronics,Germany,Active,2026-01-06,2026-01-08
-SUP-0429,Supplier_429,Logistics,Mexico,Inactive,2026-01-07,2026-01-07
-SUP-0430,Supplier_430,Packaging,Japan,Active,2026-01-14,2026-01-14
-SUP-0431,Supplier_431,Logistics,Japan,Inactive,2026-01-10,2026-01-10
-SUP-0432,Supplier_432,Packaging,Japan,Active,2026-01-08,2026-01-10
-SUP-0433,Supplier_433,Machinery,Mexico,Active,2026-01-03,2026-01-03
-SUP-0434,Supplier_434,Logistics,Japan,Active,2026-01-03,2026-01-05
-SUP-0435,Supplier_435,Electronics,USA,Active,2026-01-01,2026-01-01
-SUP-0436,Supplier_436,Electronics,USA,Active,2026-01-04,2026-01-04
-SUP-0437,Supplier_437,Raw Materials,USA,Active,2026-01-01,2026-01-02
-SUP-0438,Supplier_438,Packaging,India,Inactive,2026-01-06,2026-01-08
-SUP-0439,Supplier_439,Machinery,Mexico,Active,2026-01-02,2026-01-04
-SUP-0440,Supplier_440,Logistics,India,Active,2026-01-16,2026-01-16
-SUP-0441,Supplier_441,Logistics,Japan,Active,2026-01-04,2026-01-05
-SUP-0442,Supplier_442,Logistics,India,Probation,2026-01-16,2026-01-17
-SUP-0443,Supplier_443,Electronics,India,Active,2026-01-02,2026-01-04
-SUP-0444,Supplier_444,Raw Materials,Mexico,Active,2026-01-10,2026-01-10
-SUP-0445,Supplier_445,Logistics,India,Active,2026-01-01,2026-01-03
-SUP-0446,Supplier_446,Packaging,India,Active,2026-01-02,2026-01-03
-SUP-0447,Supplier_447,Machinery,India,Active,2026-01-05,2026-01-07
-SUP-0448,Supplier_448,Logistics,Mexico,Inactive,2026-01-10,2026-01-10
-SUP-0449,Supplier_449,Raw Materials,Mexico,Active,2026-01-01,2026-01-03
-SUP-0450,Supplier_450,Raw Materials,Germany,Active,2026-01-09,2026-01-09
-SUP-0451,Supplier_451,Packaging,Mexico,Active,2026-01-03,2026-01-05
-SUP-0452,Supplier_452,Machinery,India,Active,2026-01-12,2026-01-13
-SUP-0453,Supplier_453,Machinery,Mexico,Active,2026-01-14,2026-01-15
-SUP-0454,Supplier_454,Electronics,Germany,Inactive,2026-01-12,2026-01-14
-SUP-0455,Supplier_455,Machinery,Germany,Active,2026-01-13,2026-01-13
-SUP-0456,Supplier_456,Electronics,Germany,Active,2026-01-04,2026-01-04
-SUP-0457,Supplier_457,Machinery,Mexico,Active,2026-01-12,2026-01-12
-SUP-0458,Supplier_458,Logistics,Germany,Active,2026-01-14,2026-01-16
-SUP-0459,Supplier_459,Electronics,India,Probation,2026-01-04,2026-01-06
-SUP-0460,Supplier_460,Raw Materials,USA,Probation,2026-01-07,2026-01-08
-SUP-0461,Supplier_461,Logistics,India,Inactive,2026-01-16,2026-01-17
-SUP-0462,Supplier_462,Raw Materials,Germany,Active,2026-01-10,2026-01-11
-SUP-0463,Supplier_463,Raw Materials,India,Active,2026-01-10,2026-01-12
-SUP-0464,Supplier_464,Machinery,Mexico,Active,2026-01-14,2026-01-14
-SUP-0465,Supplier_465,Machinery,Japan,Active,2026-01-12,2026-01-12
-SUP-0466,Supplier_466,Logistics,USA,Active,2026-01-01,2026-01-03
-SUP-0467,Supplier_467,Packaging,Germany,Active,2026-01-16,2026-01-17
-SUP-0468,Supplier_468,Logistics,USA,Active,2026-01-01,2026-01-03
-SUP-0469,Supplier_469,Packaging,USA,Active,2026-01-08,2026-01-10
-SUP-0470,Supplier_470,Electronics,India,Active,2026-01-09,2026-01-10
-SUP-0471,Supplier_471,Logistics,Mexico,Active,2026-01-07,2026-01-08
-SUP-0472,Supplier_472,Raw Materials,Mexico,Active,2026-01-01,2026-01-01
-SUP-0473,Supplier_473,Machinery,Mexico,Active,2026-01-04,2026-01-04
-SUP-0474,Supplier_474,Raw Materials,India,Probation,2026-01-15,2026-01-15
-SUP-0475,Supplier_475,Machinery,USA,Active,2026-01-13,2026-01-14
-SUP-0476,Supplier_476,Machinery,Mexico,Active,2026-01-15,2026-01-17
-SUP-0477,Supplier_477,Electronics,Germany,Active,2026-01-13,2026-01-13
-SUP-0478,Supplier_478,Logistics,Germany,Active,2026-01-03,2026-01-03
-SUP-0479,Supplier_479,Raw Materials,Mexico,Active,2026-01-10,2026-01-10
-SUP-0480,Supplier_480,Packaging,India,Active,2026-01-11,2026-01-12
-SUP-0481,Supplier_481,Machinery,Japan,Probation,2026-01-16,2026-01-17
-SUP-0482,Supplier_482,Raw Materials,Germany,Active,2026-01-05,2026-01-06
-SUP-0483,Supplier_483,Electronics,USA,Active,2026-01-07,2026-01-09
-SUP-0484,Supplier_484,Raw Materials,Germany,Inactive,2026-01-16,2026-01-16
-SUP-0485,Supplier_485,Logistics,India,Active,2026-01-03,2026-01-05
-SUP-0486,Supplier_486,Logistics,USA,Active,2026-01-16,2026-01-16
-SUP-0487,Supplier_487,Logistics,Germany,Active,2026-01-01,2026-01-02
-SUP-0488,Supplier_488,Machinery,India,Active,2026-01-07,2026-01-07
-SUP-0489,Supplier_489,Logistics,USA,Probation,2026-01-12,2026-01-12
-SUP-0490,Supplier_490,Machinery,Mexico,Active,2026-01-08,2026-01-09
-SUP-0491,Supplier_491,Packaging,Mexico,Active,2026-01-07,2026-01-07
-SUP-0492,Supplier_492,Machinery,USA,Active,2026-01-03,2026-01-05
-SUP-0493,Supplier_493,Electronics,Germany,Active,2026-01-09,2026-01-11
-SUP-0494,Supplier_494,Packaging,Japan,Active,2026-01-16,2026-01-16
-SUP-0495,Supplier_495,Logistics,USA,Active,2026-01-13,2026-01-14
-SUP-0496,Supplier_496,Packaging,Mexico,Active,2026-01-16,2026-01-18
-SUP-0497,Supplier_497,Raw Materials,USA,Active,2026-01-02,2026-01-04
-SUP-0498,Supplier_498,Logistics,India,Active,2026-01-12,2026-01-12
-SUP-0499,Supplier_499,Logistics,India,Active,2026-01-09,2026-01-11
-SUP-0500,Supplier_500,Packaging,Mexico,Probation,2026-01-03,2026-01-04
-SUP-0501,Supplier_501,Raw Materials,Germany,Active,2026-01-12,2026-01-12
-SUP-0502,Supplier_502,Machinery,Mexico,Active,2026-01-09,2026-01-09
-SUP-0503,Supplier_503,Logistics,Mexico,Active,2026-01-06,2026-01-06
-SUP-0504,Supplier_504,Logistics,Mexico,Active,2026-01-01,2026-01-02
-SUP-0505,Supplier_505,Logistics,Germany,Active,2026-01-16,2026-01-18
-SUP-0506,Supplier_506,Raw Materials,India,Inactive,2026-01-10,2026-01-11
-SUP-0507,Supplier_507,Raw Materials,Mexico,Probation,2026-01-09,2026-01-11
-SUP-0508,Supplier_508,Packaging,USA,Probation,2026-01-10,2026-01-10
-SUP-0509,Supplier_509,Electronics,Mexico,Inactive,2026-01-14,2026-01-16
-SUP-0510,Supplier_510,Electronics,Germany,Active,2026-01-05,2026-01-05
-SUP-0511,Supplier_511,Raw Materials,USA,Active,2026-01-03,2026-01-05
-SUP-0512,Supplier_512,Packaging,Japan,Active,2026-01-15,2026-01-17
-SUP-0513,Supplier_513,Electronics,Japan,Probation,2026-01-01,2026-01-01
-SUP-0514,Supplier_514,Raw Materials,India,Active,2026-01-16,2026-01-17
-SUP-0515,Supplier_515,Machinery,USA,Active,2026-01-11,2026-01-12
-SUP-0516,Supplier_516,Raw Materials,Mexico,Active,2026-01-16,2026-01-17
-SUP-0517,Supplier_517,Raw Materials,USA,Active,2026-01-08,2026-01-10
-SUP-0518,Supplier_518,Machinery,USA,Active,2026-01-06,2026-01-07
-SUP-0519,Supplier_519,Logistics,USA,Active,2026-01-01,2026-01-02
-SUP-0520,Supplier_520,Logistics,Germany,Active,2026-01-14,2026-01-15
-SUP-0521,Supplier_521,Logistics,Germany,Active,2026-01-07,2026-01-09
-SUP-0522,Supplier_522,Machinery,USA,Active,2026-01-02,2026-01-04
-SUP-0523,Supplier_523,Raw Materials,Japan,Active,2026-01-12,2026-01-14
-SUP-0524,Supplier_524,Logistics,Mexico,Active,2026-01-07,2026-01-08
-SUP-0525,Supplier_525,Packaging,India,Active,2026-01-11,2026-01-11
-SUP-0526,Supplier_526,Packaging,Mexico,Probation,2026-01-02,2026-01-03
-SUP-0527,Supplier_527,Electronics,India,Active,2026-01-10,2026-01-10
-SUP-0528,Supplier_528,Packaging,USA,Active,2026-01-05,2026-01-06
-SUP-0529,Supplier_529,Raw Materials,USA,Active,2026-01-15,2026-01-16
-SUP-0530,Supplier_530,Logistics,India,Active,2026-01-05,2026-01-07
-SUP-0531,Supplier_531,Packaging,USA,Inactive,2026-01-01,2026-01-01
-SUP-0532,Supplier_532,Raw Materials,USA,Active,2026-01-07,2026-01-07
-SUP-0533,Supplier_533,Electronics,Mexico,Active,2026-01-09,2026-01-10
-SUP-0534,Supplier_534,Raw Materials,USA,Active,2026-01-04,2026-01-06
-SUP-0535,Supplier_535,Electronics,Mexico,Active,2026-01-03,2026-01-03
-SUP-0536,Supplier_536,Machinery,USA,Active,2026-01-03,2026-01-05
-SUP-0537,Supplier_537,Electronics,India,Active,2026-01-11,2026-01-12
-SUP-0538,Supplier_538,Raw Materials,Japan,Active,2026-01-13,2026-01-14
-SUP-0539,Supplier_539,Packaging,Germany,Inactive,2026-01-04,2026-01-06
-SUP-0540,Supplier_540,Raw Materials,Japan,Active,2026-01-04,2026-01-04
-SUP-0541,Supplier_541,Packaging,Japan,Active,2026-01-12,2026-01-14
-SUP-0542,Supplier_542,Machinery,Mexico,Active,2026-01-01,2026-01-02
-SUP-0543,Supplier_543,Packaging,Japan,Active,2026-01-10,2026-01-10
-SUP-0544,Supplier_544,Electronics,India,Active,2026-01-16,2026-01-18
-SUP-0545,Supplier_545,Machinery,USA,Active,2026-01-07,2026-01-09
-SUP-0546,Supplier_546,Logistics,Japan,Active,2026-01-13,2026-01-15
-SUP-0547,Supplier_547,Logistics,Japan,Active,2026-01-09,2026-01-09
-SUP-0548,Supplier_548,Packaging,Japan,Active,2026-01-11,2026-01-13
-SUP-0549,Supplier_549,Machinery,USA,Active,2026-01-02,2026-01-03
-SUP-0550,Supplier_550,Logistics,USA,Active,2026-01-01,2026-01-01
-SUP-0551,Supplier_551,Raw Materials,Japan,Active,2026-01-11,2026-01-11
-SUP-0552,Supplier_552,Packaging,Germany,Active,2026-01-13,2026-01-13
-SUP-0553,Supplier_553,Packaging,USA,Inactive,2026-01-01,2026-01-01
-SUP-0554,Supplier_554,Machinery,Mexico,Inactive,2026-01-11,2026-01-12
-SUP-0555,Supplier_555,Machinery,India,Active,2026-01-01,2026-01-01
-SUP-0556,Supplier_556,Packaging,Germany,Active,2026-01-09,2026-01-09
-SUP-0557,Supplier_557,Logistics,USA,Active,2026-01-12,2026-01-14
-SUP-0558,Supplier_558,Machinery,Germany,Active,2026-01-12,2026-01-12
-SUP-0559,Supplier_559,Machinery,Germany,Active,2026-01-14,2026-01-15
-SUP-0560,Supplier_560,Electronics,Mexico,Active,2026-01-13,2026-01-14
-SUP-0561,Supplier_561,Packaging,India,Active,2026-01-14,2026-01-14
-SUP-0562,Supplier_562,Raw Materials,USA,Active,2026-01-11,2026-01-13
-SUP-0563,Supplier_563,Logistics,Mexico,Active,2026-01-08,2026-01-10
-SUP-0564,Supplier_564,Electronics,USA,Active,2026-01-10,2026-01-11
-SUP-0565,Supplier_565,Electronics,India,Active,2026-01-11,2026-01-13
-SUP-0566,Supplier_566,Raw Materials,Japan,Active,2026-01-08,2026-01-08
-SUP-0567,Supplier_567,Raw Materials,USA,Active,2026-01-08,2026-01-08
-SUP-0568,Supplier_568,Packaging,India,Probation,2026-01-02,2026-01-02
-SUP-0569,Supplier_569,Raw Materials,India,Probation,2026-01-07,2026-01-08
-SUP-0570,Supplier_570,Machinery,India,Active,2026-01-02,2026-01-03
-SUP-0571,Supplier_571,Electronics,Mexico,Active,2026-01-14,2026-01-16
-SUP-0572,Supplier_572,Logistics,Germany,Active,2026-01-15,2026-01-15
-SUP-0573,Supplier_573,Electronics,Japan,Probation,2026-01-03,2026-01-04
-SUP-0574,Supplier_574,Logistics,Mexico,Active,2026-01-10,2026-01-11
-SUP-0575,Supplier_575,Raw Materials,India,Active,2026-01-12,2026-01-13
-SUP-0576,Supplier_576,Machinery,India,Active,2026-01-12,2026-01-14
-SUP-0577,Supplier_577,Packaging,Germany,Inactive,2026-01-04,2026-01-04
-SUP-0578,Supplier_578,Electronics,Mexico,Active,2026-01-07,2026-01-09
-SUP-0579,Supplier_579,Machinery,Mexico,Active,2026-01-09,2026-01-11
-SUP-0580,Supplier_580,Packaging,Mexico,Active,2026-01-05,2026-01-06
-SUP-0581,Supplier_581,Raw Materials,India,Active,2026-01-11,2026-01-12
-SUP-0582,Supplier_582,Packaging,Japan,Active,2026-01-03,2026-01-04
-SUP-0583,Supplier_583,Raw Materials,Germany,Active,2026-01-12,2026-01-14
-SUP-0584,Supplier_584,Electronics,Mexico,Active,2026-01-03,2026-01-05
-SUP-0585,Supplier_585,Machinery,USA,Active,2026-01-16,2026-01-17
-SUP-0586,Supplier_586,Raw Materials,Mexico,Active,2026-01-12,2026-01-14
-SUP-0587,Supplier_587,Packaging,USA,Active,2026-01-07,2026-01-09
-SUP-0588,Supplier_588,Logistics,India,Active,2026-01-03,2026-01-05
-SUP-0589,Supplier_589,Packaging,India,Active,2026-01-10,2026-01-10
-SUP-0590,Supplier_590,Packaging,USA,Active,2026-01-15,2026-01-15
-SUP-0591,Supplier_591,Packaging,Mexico,Active,2026-01-03,2026-01-03
-SUP-0592,Supplier_592,Machinery,Germany,Active,2026-01-03,2026-01-04
-SUP-0593,Supplier_593,Logistics,USA,Active,2026-01-07,2026-01-07
-SUP-0594,Supplier_594,Machinery,Mexico,Active,2026-01-13,2026-01-15
-SUP-0595,Supplier_595,Packaging,USA,Probation,2026-01-15,2026-01-15
-SUP-0596,Supplier_596,Logistics,India,Active,2026-01-08,2026-01-10
-SUP-0597,Supplier_597,Logistics,India,Active,2026-01-04,2026-01-06
-SUP-0598,Supplier_598,Packaging,Mexico,Inactive,2026-01-11,2026-01-11
-SUP-0599,Supplier_599,Machinery,Japan,Active,2026-01-16,2026-01-16
-SUP-0600,Supplier_600,Logistics,Mexico,Inactive,2026-01-05,2026-01-07
-SUP-0601,Supplier_601,Machinery,Mexico,Active,2026-01-01,2026-01-03
-SUP-0602,Supplier_602,Packaging,USA,Inactive,2026-01-11,2026-01-11
-SUP-0603,Supplier_603,Machinery,India,Active,2026-01-06,2026-01-07
-SUP-0604,Supplier_604,Raw Materials,Mexico,Active,2026-01-08,2026-01-08
-SUP-0605,Supplier_605,Raw Materials,USA,Active,2026-01-03,2026-01-03
-SUP-0606,Supplier_606,Electronics,Mexico,Active,2026-01-04,2026-01-04
-SUP-0607,Supplier_607,Machinery,USA,Active,2026-01-04,2026-01-06
-SUP-0608,Supplier_608,Electronics,India,Active,2026-01-07,2026-01-08
-SUP-0609,Supplier_609,Machinery,Japan,Active,2026-01-11,2026-01-13
-SUP-0610,Supplier_610,Packaging,USA,Active,2026-01-06,2026-01-08
-SUP-0611,Supplier_611,Logistics,Japan,Inactive,2026-01-04,2026-01-06
-SUP-0612,Supplier_612,Electronics,India,Active,2026-01-15,2026-01-17
-SUP-0613,Supplier_613,Logistics,Japan,Active,2026-01-08,2026-01-08
-SUP-0614,Supplier_614,Electronics,USA,Probation,2026-01-05,2026-01-07
-SUP-0615,Supplier_615,Packaging,Germany,Active,2026-01-04,2026-01-04
-SUP-0616,Supplier_616,Packaging,Mexico,Active,2026-01-12,2026-01-12
-SUP-0617,Supplier_617,Raw Materials,India,Active,2026-01-16,2026-01-16
-SUP-0618,Supplier_618,Packaging,USA,Active,2026-01-04,2026-01-04
-SUP-0619,Supplier_619,Raw Materials,USA,Active,2026-01-12,2026-01-14
-SUP-0620,Supplier_620,Packaging,USA,Inactive,2026-01-16,2026-01-18
-SUP-0621,Supplier_621,Packaging,USA,Active,2026-01-12,2026-01-14
-SUP-0622,Supplier_622,Machinery,India,Probation,2026-01-15,2026-01-17
-SUP-0623,Supplier_623,Packaging,Mexico,Active,2026-01-06,2026-01-08
-SUP-0624,Supplier_624,Electronics,Germany,Active,2026-01-09,2026-01-09
-SUP-0625,Supplier_625,Packaging,Germany,Active,2026-01-02,2026-01-02
-SUP-0626,Supplier_626,Packaging,USA,Active,2026-01-10,2026-01-10
-SUP-0627,Supplier_627,Logistics,USA,Probation,2026-01-13,2026-01-13
-SUP-0628,Supplier_628,Raw Materials,India,Active,2026-01-03,2026-01-03
-SUP-0629,Supplier_629,Machinery,USA,Active,2026-01-08,2026-01-09
-SUP-0630,Supplier_630,Raw Materials,Mexico,Active,2026-01-12,2026-01-12
-SUP-0631,Supplier_631,Logistics,Germany,Active,2026-01-09,2026-01-11
-SUP-0632,Supplier_632,Logistics,Germany,Active,2026-01-02,2026-01-04
-SUP-0633,Supplier_633,Packaging,Japan,Active,2026-01-16,2026-01-16
-SUP-0634,Supplier_634,Machinery,USA,Active,2026-01-01,2026-01-01
-SUP-0635,Supplier_635,Packaging,Japan,Active,2026-01-09,2026-01-10
-SUP-0636,Supplier_636,Logistics,Mexico,Active,2026-01-07,2026-01-07
-SUP-0637,Supplier_637,Machinery,Japan,Active,2026-01-15,2026-01-17
-SUP-0638,Supplier_638,Logistics,Germany,Active,2026-01-02,2026-01-03
-SUP-0639,Supplier_639,Packaging,USA,Active,2026-01-10,2026-01-10
-SUP-0640,Supplier_640,Raw Materials,India,Active,2026-01-09,2026-01-11
-SUP-0641,Supplier_641,Logistics,USA,Active,2026-01-11,2026-01-11
-SUP-0642,Supplier_642,Logistics,Germany,Inactive,2026-01-03,2026-01-03
-SUP-0643,Supplier_643,Machinery,USA,Active,2026-01-10,2026-01-10
-SUP-0644,Supplier_644,Logistics,Japan,Active,2026-01-12,2026-01-13
-SUP-0645,Supplier_645,Packaging,Mexico,Active,2026-01-06,2026-01-08
-SUP-0646,Supplier_646,Raw Materials,Germany,Inactive,2026-01-08,2026-01-10
-SUP-0647,Supplier_647,Packaging,India,Active,2026-01-09,2026-01-10
-SUP-0648,Supplier_648,Packaging,Mexico,Active,2026-01-14,2026-01-15
-SUP-0649,Supplier_649,Packaging,India,Inactive,2026-01-12,2026-01-13
-SUP-0650,Supplier_650,Raw Materials,India,Probation,2026-01-05,2026-01-05
-SUP-0651,Supplier_651,Electronics,Mexico,Active,2026-01-05,2026-01-07
-SUP-0652,Supplier_652,Machinery,Germany,Active,2026-01-06,2026-01-06
-SUP-0653,Supplier_653,Logistics,India,Active,2026-01-02,2026-01-03
-SUP-0654,Supplier_654,Packaging,USA,Active,2026-01-08,2026-01-08
-SUP-0655,Supplier_655,Packaging,USA,Probation,2026-01-10,2026-01-11
-SUP-0656,Supplier_656,Packaging,Japan,Active,2026-01-01,2026-01-02
-SUP-0657,Supplier_657,Logistics,India,Active,2026-01-03,2026-01-03
-SUP-0658,Supplier_658,Packaging,Japan,Active,2026-01-16,2026-01-18
-SUP-0659,Supplier_659,Machinery,Mexico,Active,2026-01-14,2026-01-14
-SUP-0660,Supplier_660,Machinery,Germany,Active,2026-01-15,2026-01-15
-SUP-0661,Supplier_661,Machinery,Japan,Active,2026-01-15,2026-01-17
-SUP-0662,Supplier_662,Raw Materials,Germany,Active,2026-01-08,2026-01-10
-SUP-0663,Supplier_663,Electronics,India,Active,2026-01-12,2026-01-13
-SUP-0664,Supplier_664,Raw Materials,Japan,Active,2026-01-12,2026-01-14
-SUP-0665,Supplier_665,Logistics,USA,Active,2026-01-12,2026-01-14
-SUP-0666,Supplier_666,Packaging,Germany,Inactive,2026-01-02,2026-01-03
-SUP-0667,Supplier_667,Raw Materials,India,Active,2026-01-14,2026-01-15
-SUP-0668,Supplier_668,Packaging,Mexico,Active,2026-01-02,2026-01-04
-SUP-0669,Supplier_669,Raw Materials,Japan,Inactive,2026-01-09,2026-01-10
-SUP-0670,Supplier_670,Machinery,USA,Inactive,2026-01-04,2026-01-05
-SUP-0671,Supplier_671,Packaging,USA,Active,2026-01-15,2026-01-15
-SUP-0672,Supplier_672,Machinery,India,Active,2026-01-11,2026-01-12
-SUP-0673,Supplier_673,Electronics,Mexico,Active,2026-01-02,2026-01-03
-SUP-0674,Supplier_674,Logistics,Japan,Active,2026-01-06,2026-01-08
-SUP-0675,Supplier_675,Machinery,Germany,Active,2026-01-13,2026-01-15
-SUP-0676,Supplier_676,Raw Materials,USA,Active,2026-01-05,2026-01-06
-SUP-0677,Supplier_677,Logistics,Mexico,Active,2026-01-01,2026-01-03
-SUP-0678,Supplier_678,Packaging,Japan,Inactive,2026-01-04,2026-01-04
-SUP-0679,Supplier_679,Raw Materials,Japan,Probation,2026-01-16,2026-01-17
-SUP-0680,Supplier_680,Raw Materials,Mexico,Active,2026-01-03,2026-01-04
-SUP-0681,Supplier_681,Raw Materials,India,Active,2026-01-04,2026-01-05
-SUP-0682,Supplier_682,Logistics,USA,Active,2026-01-12,2026-01-13
-SUP-0683,Supplier_683,Raw Materials,Mexico,Active,2026-01-02,2026-01-04
-SUP-0684,Supplier_684,Packaging,USA,Active,2026-01-12,2026-01-13
-SUP-0685,Supplier_685,Packaging,USA,Active,2026-01-09,2026-01-09
-SUP-0686,Supplier_686,Electronics,India,Active,2026-01-08,2026-01-10
-SUP-0687,Supplier_687,Machinery,India,Active,2026-01-13,2026-01-13
-SUP-0688,Supplier_688,Packaging,Germany,Active,2026-01-15,2026-01-15
-SUP-0689,Supplier_689,Raw Materials,Mexico,Inactive,2026-01-09,2026-01-11
-SUP-0690,Supplier_690,Raw Materials,Mexico,Active,2026-01-12,2026-01-13
-SUP-0691,Supplier_691,Packaging,USA,Active,2026-01-16,2026-01-17
-SUP-0692,Supplier_692,Packaging,Japan,Active,2026-01-16,2026-01-17
-SUP-0693,Supplier_693,Machinery,Japan,Inactive,2026-01-01,2026-01-03
-SUP-0694,Supplier_694,Packaging,Japan,Active,2026-01-11,2026-01-12
-SUP-0695,Supplier_695,Raw Materials,Mexico,Active,2026-01-10,2026-01-12
-SUP-0696,Supplier_696,Logistics,USA,Active,2026-01-12,2026-01-14
-SUP-0697,Supplier_697,Electronics,India,Active,2026-01-15,2026-01-16
-SUP-0698,Supplier_698,Packaging,Mexico,Active,2026-01-09,2026-01-09
-SUP-0699,Supplier_699,Logistics,Germany,Active,2026-01-12,2026-01-13
-SUP-0700,Supplier_700,Packaging,Japan,Inactive,2026-01-14,2026-01-16
-SUP-0701,Supplier_701,Raw Materials,USA,Active,2026-01-06,2026-01-07
-SUP-0702,Supplier_702,Electronics,Japan,Active,2026-01-06,2026-01-07
-SUP-0703,Supplier_703,Packaging,Germany,Active,2026-01-10,2026-01-12
-SUP-0704,Supplier_704,Electronics,Japan,Active,2026-01-09,2026-01-10
-SUP-0705,Supplier_705,Electronics,Germany,Probation,2026-01-05,2026-01-05
-SUP-0706,Supplier_706,Packaging,Japan,Active,2026-01-08,2026-01-10
-SUP-0707,Supplier_707,Electronics,Germany,Active,2026-01-03,2026-01-04
-SUP-0708,Supplier_708,Machinery,USA,Inactive,2026-01-04,2026-01-06
-SUP-0709,Supplier_709,Electronics,USA,Active,2026-01-03,2026-01-04
-SUP-0710,Supplier_710,Packaging,Mexico,Active,2026-01-06,2026-01-08
-SUP-0711,Supplier_711,Packaging,Germany,Inactive,2026-01-10,2026-01-12
-SUP-0712,Supplier_712,Machinery,Japan,Active,2026-01-07,2026-01-07
-SUP-0713,Supplier_713,Packaging,India,Active,2026-01-11,2026-01-12
-SUP-0714,Supplier_714,Logistics,Germany,Active,2026-01-05,2026-01-07
-SUP-0715,Supplier_715,Machinery,Germany,Active,2026-01-14,2026-01-15
-SUP-0716,Supplier_716,Electronics,USA,Active,2026-01-15,2026-01-16
-SUP-0717,Supplier_717,Raw Materials,Germany,Active,2026-01-06,2026-01-07
-SUP-0718,Supplier_718,Logistics,India,Probation,2026-01-11,2026-01-11
-SUP-0719,Supplier_719,Machinery,India,Active,2026-01-07,2026-01-09
-SUP-0720,Supplier_720,Raw Materials,Japan,Inactive,2026-01-08,2026-01-09
-SUP-0721,Supplier_721,Electronics,USA,Active,2026-01-07,2026-01-07
-SUP-0722,Supplier_722,Raw Materials,Germany,Active,2026-01-16,2026-01-18
-SUP-0723,Supplier_723,Electronics,Mexico,Active,2026-01-04,2026-01-06
-SUP-0724,Supplier_724,Raw Materials,USA,Active,2026-01-11,2026-01-11
-SUP-0725,Supplier_725,Packaging,Mexico,Active,2026-01-13,2026-01-15
-SUP-0726,Supplier_726,Raw Materials,India,Active,2026-01-05,2026-01-06
-SUP-0727,Supplier_727,Logistics,India,Active,2026-01-01,2026-01-01
-SUP-0728,Supplier_728,Packaging,Japan,Active,2026-01-08,2026-01-09
-SUP-0729,Supplier_729,Raw Materials,USA,Active,2026-01-11,2026-01-13
-SUP-0730,Supplier_730,Packaging,Germany,Active,2026-01-06,2026-01-07
-SUP-0731,Supplier_731,Raw Materials,Japan,Active,2026-01-14,2026-01-16
-SUP-0732,Supplier_732,Machinery,India,Inactive,2026-01-08,2026-01-09
-SUP-0733,Supplier_733,Raw Materials,India,Active,2026-01-09,2026-01-09
-SUP-0734,Supplier_734,Logistics,USA,Active,2026-01-03,2026-01-04
-SUP-0735,Supplier_735,Raw Materials,Mexico,Probation,2026-01-15,2026-01-15
-SUP-0736,Supplier_736,Raw Materials,Germany,Active,2026-01-06,2026-01-08
-SUP-0737,Supplier_737,Logistics,Germany,Probation,2026-01-09,2026-01-11
-SUP-0738,Supplier_738,Packaging,India,Active,2026-01-04,2026-01-06
-SUP-0739,Supplier_739,Logistics,Germany,Active,2026-01-01,2026-01-02
-SUP-0740,Supplier_740,Logistics,Japan,Probation,2026-01-04,2026-01-05
-SUP-0741,Supplier_741,Electronics,Germany,Probation,2026-01-16,2026-01-18
-SUP-0742,Supplier_742,Electronics,USA,Active,2026-01-02,2026-01-03
-SUP-0743,Supplier_743,Machinery,Japan,Active,2026-01-03,2026-01-03
-SUP-0744,Supplier_744,Packaging,India,Probation,2026-01-13,2026-01-13
-SUP-0745,Supplier_745,Machinery,India,Active,2026-01-07,2026-01-08
-SUP-0746,Supplier_746,Logistics,India,Active,2026-01-01,2026-01-01
-SUP-0747,Supplier_747,Electronics,Mexico,Active,2026-01-05,2026-01-05
-SUP-0748,Supplier_748,Machinery,India,Probation,2026-01-12,2026-01-12
-SUP-0749,Supplier_749,Logistics,India,Active,2026-01-07,2026-01-09
-SUP-0750,Supplier_750,Machinery,Mexico,Active,2026-01-08,2026-01-08
-SUP-0751,Supplier_751,Machinery,USA,Probation,2026-01-05,2026-01-05
-SUP-0752,Supplier_752,Logistics,Japan,Active,2026-01-13,2026-01-15
-SUP-0753,Supplier_753,Electronics,India,Active,2026-01-14,2026-01-14
-SUP-0754,Supplier_754,Electronics,India,Active,2026-01-01,2026-01-02
-SUP-0755,Supplier_755,Packaging,India,Active,2026-01-03,2026-01-05
-SUP-0756,Supplier_756,Packaging,USA,Inactive,2026-01-02,2026-01-03
-SUP-0757,Supplier_757,Raw Materials,USA,Active,2026-01-16,2026-01-17
-SUP-0758,Supplier_758,Packaging,India,Probation,2026-01-08,2026-01-09
-SUP-0759,Supplier_759,Raw Materials,Germany,Active,2026-01-14,2026-01-16
-SUP-0760,Supplier_760,Logistics,Germany,Active,2026-01-10,2026-01-11
-SUP-0761,Supplier_761,Raw Materials,USA,Active,2026-01-09,2026-01-09
-SUP-0762,Supplier_762,Packaging,USA,Active,2026-01-06,2026-01-07
-SUP-0763,Supplier_763,Logistics,USA,Active,2026-01-04,2026-01-05
-SUP-0764,Supplier_764,Logistics,USA,Active,2026-01-13,2026-01-13
-SUP-0765,Supplier_765,Logistics,USA,Active,2026-01-14,2026-01-14
-SUP-0766,Supplier_766,Machinery,India,Active,2026-01-11,2026-01-13
-SUP-0767,Supplier_767,Packaging,Germany,Active,2026-01-15,2026-01-15
-SUP-0768,Supplier_768,Electronics,Germany,Inactive,2026-01-14,2026-01-15
-SUP-0769,Supplier_769,Raw Materials,Germany,Active,2026-01-07,2026-01-09
-SUP-0770,Supplier_770,Electronics,Mexico,Inactive,2026-01-10,2026-01-12
-SUP-0771,Supplier_771,Logistics,Japan,Active,2026-01-01,2026-01-01
-SUP-0772,Supplier_772,Machinery,Mexico,Active,2026-01-03,2026-01-05
-SUP-0773,Supplier_773,Packaging,USA,Inactive,2026-01-01,2026-01-03
-SUP-0774,Supplier_774,Raw Materials,Japan,Probation,2026-01-11,2026-01-11
-SUP-0775,Supplier_775,Machinery,Germany,Active,2026-01-04,2026-01-06
-SUP-0776,Supplier_776,Raw Materials,India,Active,2026-01-07,2026-01-09
-SUP-0777,Supplier_777,Logistics,Mexico,Active,2026-01-05,2026-01-07
-SUP-0778,Supplier_778,Packaging,Japan,Active,2026-01-06,2026-01-06
-SUP-0779,Supplier_779,Electronics,India,Probation,2026-01-12,2026-01-13
-SUP-0780,Supplier_780,Raw Materials,USA,Active,2026-01-02,2026-01-04
-SUP-0781,Supplier_781,Raw Materials,Germany,Active,2026-01-02,2026-01-03
-SUP-0782,Supplier_782,Packaging,Japan,Active,2026-01-15,2026-01-17
-SUP-0783,Supplier_783,Logistics,Japan,Active,2026-01-16,2026-01-17
-SUP-0784,Supplier_784,Electronics,India,Probation,2026-01-12,2026-01-14
-SUP-0785,Supplier_785,Machinery,India,Inactive,2026-01-06,2026-01-07
-SUP-0786,Supplier_786,Electronics,USA,Active,2026-01-15,2026-01-17
-SUP-0787,Supplier_787,Electronics,Germany,Active,2026-01-14,2026-01-15
-SUP-0788,Supplier_788,Electronics,Germany,Active,2026-01-15,2026-01-16
-SUP-0789,Supplier_789,Electronics,USA,Active,2026-01-01,2026-01-01
-SUP-0790,Supplier_790,Packaging,Japan,Probation,2026-01-10,2026-01-12
-SUP-0791,Supplier_791,Packaging,Japan,Active,2026-01-14,2026-01-16
-SUP-0792,Supplier_792,Electronics,Germany,Active,2026-01-11,2026-01-13
-SUP-0793,Supplier_793,Logistics,Germany,Probation,2026-01-04,2026-01-04
-SUP-0794,Supplier_794,Machinery,Germany,Probation,2026-01-12,2026-01-14
-SUP-0795,Supplier_795,Electronics,USA,Probation,2026-01-03,2026-01-04
-SUP-0796,Supplier_796,Raw Materials,USA,Active,2026-01-12,2026-01-12
-SUP-0797,Supplier_797,Packaging,USA,Active,2026-01-05,2026-01-06
-SUP-0798,Supplier_798,Raw Materials,Mexico,Active,2026-01-01,2026-01-02
-SUP-0799,Supplier_799,Packaging,Japan,Active,2026-01-12,2026-01-13
-SUP-0800,Supplier_800,Packaging,Mexico,Active,2026-01-12,2026-01-13
-SUP-0801,Supplier_801,Raw Materials,USA,Active,2026-01-16,2026-01-17
-SUP-0802,Supplier_802,Packaging,USA,Active,2026-01-13,2026-01-15
-SUP-0803,Supplier_803,Logistics,USA,Probation,2026-01-05,2026-01-07
-SUP-0804,Supplier_804,Logistics,Japan,Active,2026-01-06,2026-01-07
-SUP-0805,Supplier_805,Packaging,USA,Active,2026-01-06,2026-01-08
-SUP-0806,Supplier_806,Raw Materials,Mexico,Active,2026-01-15,2026-01-17
-SUP-0807,Supplier_807,Electronics,India,Inactive,2026-01-03,2026-01-03
-SUP-0808,Supplier_808,Electronics,Japan,Active,2026-01-01,2026-01-03
-SUP-0809,Supplier_809,Electronics,Japan,Probation,2026-01-03,2026-01-03
-SUP-0810,Supplier_810,Packaging,Japan,Active,2026-01-12,2026-01-13
-SUP-0811,Supplier_811,Machinery,Mexico,Active,2026-01-15,2026-01-15
-SUP-0812,Supplier_812,Packaging,Mexico,Active,2026-01-02,2026-01-04
-SUP-0813,Supplier_813,Packaging,India,Active,2026-01-15,2026-01-17
-SUP-0814,Supplier_814,Raw Materials,India,Active,2026-01-11,2026-01-11
-SUP-0815,Supplier_815,Electronics,Japan,Active,2026-01-02,2026-01-04
-SUP-0816,Supplier_816,Logistics,Germany,Probation,2026-01-09,2026-01-09
-SUP-0817,Supplier_817,Logistics,Mexico,Active,2026-01-16,2026-01-16
-SUP-0818,Supplier_818,Raw Materials,Mexico,Probation,2026-01-07,2026-01-08
-SUP-0819,Supplier_819,Logistics,Japan,Active,2026-01-08,2026-01-10
-SUP-0820,Supplier_820,Packaging,Japan,Active,2026-01-02,2026-01-02
-SUP-0821,Supplier_821,Logistics,Germany,Active,2026-01-14,2026-01-14
-SUP-0822,Supplier_822,Packaging,Mexico,Active,2026-01-11,2026-01-12
-SUP-0823,Supplier_823,Raw Materials,India,Active,2026-01-10,2026-01-10
-SUP-0824,Supplier_824,Electronics,Mexico,Active,2026-01-08,2026-01-10
-SUP-0825,Supplier_825,Machinery,Mexico,Active,2026-01-14,2026-01-16
-SUP-0826,Supplier_826,Electronics,Japan,Active,2026-01-10,2026-01-12
-SUP-0827,Supplier_827,Electronics,Japan,Probation,2026-01-01,2026-01-03
-SUP-0828,Supplier_828,Packaging,Japan,Active,2026-01-03,2026-01-03
-SUP-0829,Supplier_829,Electronics,Germany,Active,2026-01-09,2026-01-09
-SUP-0830,Supplier_830,Electronics,India,Probation,2026-01-08,2026-01-10
-SUP-0831,Supplier_831,Raw Materials,India,Active,2026-01-09,2026-01-10
-SUP-0832,Supplier_832,Electronics,USA,Active,2026-01-07,2026-01-07
-SUP-0833,Supplier_833,Electronics,USA,Active,2026-01-16,2026-01-17
-SUP-0834,Supplier_834,Raw Materials,India,Inactive,2026-01-11,2026-01-13
-SUP-0835,Supplier_835,Logistics,Mexico,Active,2026-01-04,2026-01-04
-SUP-0836,Supplier_836,Machinery,USA,Active,2026-01-07,2026-01-08
-SUP-0837,Supplier_837,Electronics,Germany,Active,2026-01-07,2026-01-07
-SUP-0838,Supplier_838,Machinery,Mexico,Active,2026-01-11,2026-01-11
-SUP-0839,Supplier_839,Packaging,India,Active,2026-01-05,2026-01-05
-SUP-0840,Supplier_840,Raw Materials,Mexico,Inactive,2026-01-02,2026-01-02
-SUP-0841,Supplier_841,Raw Materials,Germany,Active,2026-01-14,2026-01-15
-SUP-0842,Supplier_842,Machinery,Mexico,Probation,2026-01-04,2026-01-04
-SUP-0843,Supplier_843,Raw Materials,USA,Active,2026-01-08,2026-01-08
-SUP-0844,Supplier_844,Raw Materials,India,Active,2026-01-02,2026-01-03
-SUP-0845,Supplier_845,Raw Materials,India,Active,2026-01-03,2026-01-05
-SUP-0846,Supplier_846,Electronics,USA,Active,2026-01-15,2026-01-16
-SUP-0847,Supplier_847,Raw Materials,Mexico,Inactive,2026-01-01,2026-01-01
-SUP-0848,Supplier_848,Logistics,USA,Active,2026-01-03,2026-01-04
-SUP-0849,Supplier_849,Raw Materials,Japan,Active,2026-01-13,2026-01-15
-SUP-0850,Supplier_850,Logistics,Germany,Active,2026-01-13,2026-01-15
-SUP-0851,Supplier_851,Machinery,Japan,Active,2026-01-12,2026-01-12
-SUP-0852,Supplier_852,Logistics,Germany,Probation,2026-01-12,2026-01-14
-SUP-0853,Supplier_853,Packaging,Germany,Active,2026-01-06,2026-01-08
-SUP-0854,Supplier_854,Machinery,India,Active,2026-01-05,2026-01-06
-SUP-0855,Supplier_855,Packaging,Japan,Active,2026-01-15,2026-01-15
-SUP-0856,Supplier_856,Raw Materials,India,Active,2026-01-11,2026-01-11
-SUP-0857,Supplier_857,Logistics,Mexico,Active,2026-01-09,2026-01-10
-SUP-0858,Supplier_858,Logistics,Japan,Active,2026-01-14,2026-01-14
-SUP-0859,Supplier_859,Machinery,Japan,Active,2026-01-03,2026-01-03
-SUP-0860,Supplier_860,Machinery,Japan,Active,2026-01-06,2026-01-06
-SUP-0861,Supplier_861,Logistics,India,Probation,2026-01-09,2026-01-11
-SUP-0862,Supplier_862,Logistics,Japan,Inactive,2026-01-12,2026-01-14
-SUP-0863,Supplier_863,Packaging,Germany,Active,2026-01-10,2026-01-12
-SUP-0864,Supplier_864,Machinery,USA,Active,2026-01-07,2026-01-09
-SUP-0865,Supplier_865,Raw Materials,Mexico,Active,2026-01-14,2026-01-16
-SUP-0866,Supplier_866,Machinery,USA,Active,2026-01-05,2026-01-05
-SUP-0867,Supplier_867,Raw Materials,India,Active,2026-01-10,2026-01-10
-SUP-0868,Supplier_868,Packaging,Mexico,Inactive,2026-01-12,2026-01-13
-SUP-0869,Supplier_869,Logistics,India,Active,2026-01-14,2026-01-15
-SUP-0870,Supplier_870,Packaging,Mexico,Probation,2026-01-02,2026-01-03
-SUP-0871,Supplier_871,Raw Materials,Germany,Active,2026-01-15,2026-01-17
-SUP-0872,Supplier_872,Raw Materials,Japan,Active,2026-01-13,2026-01-14
-SUP-0873,Supplier_873,Raw Materials,Germany,Inactive,2026-01-03,2026-01-04
-SUP-0874,Supplier_874,Raw Materials,India,Active,2026-01-15,2026-01-16
-SUP-0875,Supplier_875,Machinery,Mexico,Active,2026-01-14,2026-01-14
-SUP-0876,Supplier_876,Logistics,Japan,Active,2026-01-10,2026-01-12
-SUP-0877,Supplier_877,Packaging,Mexico,Active,2026-01-10,2026-01-10
-SUP-0878,Supplier_878,Electronics,India,Active,2026-01-13,2026-01-13
-SUP-0879,Supplier_879,Packaging,Japan,Active,2026-01-03,2026-01-04
-SUP-0880,Supplier_880,Raw Materials,Mexico,Active,2026-01-11,2026-01-12
-SUP-0881,Supplier_881,Electronics,USA,Active,2026-01-02,2026-01-03
-SUP-0882,Supplier_882,Packaging,Mexico,Active,2026-01-09,2026-01-10
-SUP-0883,Supplier_883,Logistics,USA,Active,2026-01-06,2026-01-08
-SUP-0884,Supplier_884,Logistics,USA,Active,2026-01-12,2026-01-13
-SUP-0885,Supplier_885,Packaging,Mexico,Active,2026-01-02,2026-01-03
-SUP-0886,Supplier_886,Electronics,USA,Probation,2026-01-07,2026-01-09
-SUP-0887,Supplier_887,Packaging,India,Active,2026-01-07,2026-01-09
-SUP-0888,Supplier_888,Machinery,Germany,Active,2026-01-02,2026-01-02
-SUP-0889,Supplier_889,Machinery,Mexico,Active,2026-01-05,2026-01-07
-SUP-0890,Supplier_890,Logistics,Germany,Active,2026-01-12,2026-01-14
-SUP-0891,Supplier_891,Logistics,India,Active,2026-01-07,2026-01-07
-SUP-0892,Supplier_892,Electronics,Germany,Inactive,2026-01-06,2026-01-08
-SUP-0893,Supplier_893,Machinery,USA,Probation,2026-01-04,2026-01-05
-SUP-0894,Supplier_894,Packaging,India,Probation,2026-01-12,2026-01-12
-SUP-0895,Supplier_895,Electronics,India,Inactive,2026-01-06,2026-01-06
-SUP-0896,Supplier_896,Machinery,India,Active,2026-01-13,2026-01-15
-SUP-0897,Supplier_897,Logistics,India,Inactive,2026-01-03,2026-01-03
-SUP-0898,Supplier_898,Electronics,USA,Active,2026-01-16,2026-01-18
-SUP-0899,Supplier_899,Packaging,Mexico,Active,2026-01-04,2026-01-04
-SUP-0900,Supplier_900,Packaging,Germany,Active,2026-01-13,2026-01-13
-SUP-0901,Supplier_901,Machinery,Germany,Active,2026-01-03,2026-01-04
-SUP-0902,Supplier_902,Packaging,India,Probation,2026-01-08,2026-01-10
-SUP-0903,Supplier_903,Electronics,Mexico,Inactive,2026-01-11,2026-01-12
-SUP-0904,Supplier_904,Machinery,USA,Active,2026-01-10,2026-01-10
-SUP-0905,Supplier_905,Machinery,Mexico,Inactive,2026-01-02,2026-01-03
-SUP-0906,Supplier_906,Machinery,Mexico,Active,2026-01-16,2026-01-18
-SUP-0907,Supplier_907,Raw Materials,Mexico,Probation,2026-01-06,2026-01-08
-SUP-0908,Supplier_908,Electronics,USA,Active,2026-01-06,2026-01-06
-SUP-0909,Supplier_909,Raw Materials,Germany,Active,2026-01-11,2026-01-13
-SUP-0910,Supplier_910,Raw Materials,India,Probation,2026-01-15,2026-01-16
-SUP-0911,Supplier_911,Machinery,Japan,Active,2026-01-05,2026-01-06
-SUP-0912,Supplier_912,Machinery,USA,Inactive,2026-01-02,2026-01-04
-SUP-0913,Supplier_913,Logistics,Japan,Active,2026-01-14,2026-01-14
-SUP-0914,Supplier_914,Machinery,Germany,Active,2026-01-16,2026-01-17
-SUP-0915,Supplier_915,Machinery,Japan,Active,2026-01-08,2026-01-10
-SUP-0916,Supplier_916,Packaging,Japan,Active,2026-01-10,2026-01-10
-SUP-0917,Supplier_917,Packaging,USA,Active,2026-01-04,2026-01-04
-SUP-0918,Supplier_918,Machinery,Germany,Active,2026-01-13,2026-01-15
-SUP-0919,Supplier_919,Raw Materials,Mexico,Inactive,2026-01-16,2026-01-17
-SUP-0920,Supplier_920,Raw Materials,Mexico,Active,2026-01-05,2026-01-05
-SUP-0921,Supplier_921,Machinery,India,Active,2026-01-14,2026-01-16
-SUP-0922,Supplier_922,Machinery,India,Active,2026-01-14,2026-01-14
-SUP-0923,Supplier_923,Electronics,India,Active,2026-01-15,2026-01-15
-SUP-0924,Supplier_924,Machinery,Germany,Active,2026-01-02,2026-01-04
-SUP-0925,Supplier_925,Machinery,Germany,Active,2026-01-02,2026-01-03
-SUP-0926,Supplier_926,Raw Materials,Germany,Active,2026-01-10,2026-01-12
-SUP-0927,Supplier_927,Raw Materials,India,Active,2026-01-03,2026-01-04
-SUP-0928,Supplier_928,Logistics,India,Inactive,2026-01-08,2026-01-08
-SUP-0929,Supplier_929,Machinery,Germany,Active,2026-01-01,2026-01-03
-SUP-0930,Supplier_930,Electronics,Mexico,Probation,2026-01-02,2026-01-04
-SUP-0931,Supplier_931,Electronics,India,Active,2026-01-12,2026-01-12
-SUP-0932,Supplier_932,Raw Materials,Germany,Active,2026-01-10,2026-01-12
-SUP-0933,Supplier_933,Machinery,India,Active,2026-01-13,2026-01-15
-SUP-0934,Supplier_934,Logistics,Japan,Probation,2026-01-04,2026-01-04
-SUP-0935,Supplier_935,Raw Materials,Japan,Active,2026-01-07,2026-01-09
-SUP-0936,Supplier_936,Packaging,India,Active,2026-01-07,2026-01-08
-SUP-0937,Supplier_937,Raw Materials,Japan,Active,2026-01-09,2026-01-09
-SUP-0938,Supplier_938,Electronics,Mexico,Active,2026-01-16,2026-01-17
-SUP-0939,Supplier_939,Packaging,Japan,Active,2026-01-10,2026-01-10
-SUP-0940,Supplier_940,Packaging,India,Active,2026-01-15,2026-01-17
-SUP-0941,Supplier_941,Raw Materials,Germany,Active,2026-01-11,2026-01-13
-SUP-0942,Supplier_942,Machinery,India,Active,2026-01-13,2026-01-15
-SUP-0943,Supplier_943,Machinery,Japan,Active,2026-01-03,2026-01-03
-SUP-0944,Supplier_944,Raw Materials,India,Active,2026-01-12,2026-01-13
-SUP-0945,Supplier_945,Machinery,Germany,Active,2026-01-16,2026-01-17
-SUP-0946,Supplier_946,Packaging,India,Active,2026-01-14,2026-01-15
-SUP-0947,Supplier_947,Electronics,India,Active,2026-01-06,2026-01-06
-SUP-0948,Supplier_948,Logistics,Japan,Active,2026-01-01,2026-01-02
-SUP-0949,Supplier_949,Packaging,India,Probation,2026-01-14,2026-01-14
-SUP-0950,Supplier_950,Raw Materials,Germany,Active,2026-01-11,2026-01-11
-SUP-0951,Supplier_951,Raw Materials,USA,Active,2026-01-08,2026-01-10
-SUP-0952,Supplier_952,Packaging,USA,Active,2026-01-04,2026-01-05
-SUP-0953,Supplier_953,Electronics,USA,Active,2026-01-02,2026-01-04
-SUP-0954,Supplier_954,Packaging,India,Active,2026-01-09,2026-01-09
-SUP-0955,Supplier_955,Packaging,Germany,Active,2026-01-03,2026-01-05
-SUP-0956,Supplier_956,Logistics,USA,Probation,2026-01-05,2026-01-06
-SUP-0957,Supplier_957,Electronics,USA,Inactive,2026-01-04,2026-01-05
-SUP-0958,Supplier_958,Machinery,USA,Probation,2026-01-08,2026-01-09
-SUP-0959,Supplier_959,Logistics,Germany,Active,2026-01-12,2026-01-12
-SUP-0960,Supplier_960,Electronics,Japan,Active,2026-01-08,2026-01-08
-SUP-0961,Supplier_961,Raw Materials,India,Active,2026-01-04,2026-01-04
-SUP-0962,Supplier_962,Packaging,Mexico,Active,2026-01-06,2026-01-08
-SUP-0963,Supplier_963,Machinery,Mexico,Inactive,2026-01-08,2026-01-10
-SUP-0964,Supplier_964,Machinery,Mexico,Inactive,2026-01-04,2026-01-04
-SUP-0965,Supplier_965,Raw Materials,USA,Active,2026-01-05,2026-01-07
-SUP-0966,Supplier_966,Electronics,Japan,Active,2026-01-08,2026-01-10
-SUP-0967,Supplier_967,Electronics,Germany,Active,2026-01-02,2026-01-02
-SUP-0968,Supplier_968,Packaging,Japan,Active,2026-01-06,2026-01-06
-SUP-0969,Supplier_969,Raw Materials,India,Active,2026-01-01,2026-01-03
-SUP-0970,Supplier_970,Logistics,USA,Probation,2026-01-05,2026-01-06
-SUP-0971,Supplier_971,Electronics,Mexico,Active,2026-01-06,2026-01-08
-SUP-0972,Supplier_972,Packaging,Germany,Active,2026-01-09,2026-01-11
-SUP-0973,Supplier_973,Machinery,USA,Active,2026-01-04,2026-01-04
-SUP-0974,Supplier_974,Electronics,India,Active,2026-01-11,2026-01-13
-SUP-0975,Supplier_975,Electronics,Germany,Active,2026-01-15,2026-01-16
-SUP-0976,Supplier_976,Packaging,USA,Active,2026-01-11,2026-01-12
-SUP-0977,Supplier_977,Logistics,USA,Active,2026-01-16,2026-01-18
-SUP-0978,Supplier_978,Logistics,Mexico,Active,2026-01-09,2026-01-11
-SUP-0979,Supplier_979,Logistics,USA,Active,2026-01-06,2026-01-06
-SUP-0980,Supplier_980,Packaging,Mexico,Active,2026-01-04,2026-01-06
-SUP-0981,Supplier_981,Logistics,India,Active,2026-01-10,2026-01-12
-SUP-0982,Supplier_982,Machinery,USA,Active,2026-01-08,2026-01-10
-SUP-0983,Supplier_983,Packaging,India,Active,2026-01-16,2026-01-17
-SUP-0984,Supplier_984,Raw Materials,India,Active,2026-01-14,2026-01-14
-SUP-0985,Supplier_985,Packaging,Germany,Inactive,2026-01-01,2026-01-01
-SUP-0986,Supplier_986,Packaging,India,Active,2026-01-01,2026-01-03
-SUP-0987,Supplier_987,Raw Materials,Japan,Probation,2026-01-07,2026-01-09
-SUP-0988,Supplier_988,Packaging,Japan,Active,2026-01-08,2026-01-08
-SUP-0989,Supplier_989,Electronics,Germany,Active,2026-01-14,2026-01-15
-SUP-0990,Supplier_990,Machinery,USA,Active,2026-01-15,2026-01-17
-SUP-0991,Supplier_991,Raw Materials,Japan,Inactive,2026-01-09,2026-01-11
-SUP-0992,Supplier_992,Logistics,Germany,Active,2026-01-06,2026-01-08
-SUP-0993,Supplier_993,Logistics,USA,Active,2026-01-02,2026-01-02
-SUP-0994,Supplier_994,Packaging,USA,Active,2026-01-05,2026-01-07
-SUP-0995,Supplier_995,Machinery,Mexico,Active,2026-01-07,2026-01-09
-SUP-0996,Supplier_996,Raw Materials,Germany,Inactive,2026-01-06,2026-01-08
-SUP-0997,Supplier_997,Packaging,Mexico,Active,2026-01-04,2026-01-06
-SUP-0998,Supplier_998,Logistics,Mexico,Probation,2026-01-08,2026-01-09
-SUP-0999,Supplier_999,Machinery,India,Active,2026-01-16,2026-01-16
-SUP-1000,Supplier_1000,Electronics,Mexico,Active,2026-01-10,2026-01-10
+SUP-000001,Supplier_1,Packaging,Mexico,Active,2026-01-06,2026-01-06
+SUP-000002,Supplier_2,Raw Materials,Germany,Active,2026-01-05,2026-01-05
+SUP-000003,Supplier_3,Raw Materials,Germany,Active,2026-01-04,2026-01-06
+SUP-000004,Supplier_4,Raw Materials,Germany,Active,2026-01-07,2026-01-09
+SUP-000005,Supplier_5,Logistics,USA,Active,2026-01-12,2026-01-12
+SUP-000006,Supplier_6,Machinery,Japan,Active,2026-01-02,2026-01-02
+SUP-000007,Supplier_7,Raw Materials,India,Active,2026-01-04,2026-01-06
+SUP-000008,Supplier_8,Raw Materials,Mexico,Probation,2026-01-11,2026-01-11
+SUP-000009,Supplier_9,Raw Materials,India,Active,2026-01-14,2026-01-14
+SUP-000010,Supplier_10,Logistics,India,Active,2026-01-02,2026-01-02
+SUP-000011,Supplier_11,Logistics,Mexico,Active,2026-01-02,2026-01-02
+SUP-000012,Supplier_12,Packaging,USA,Active,2026-01-07,2026-01-07
+SUP-000013,Supplier_13,Electronics,USA,Active,2026-01-16,2026-01-17
+SUP-000014,Supplier_14,Electronics,Mexico,Inactive,2026-01-02,2026-01-03
+SUP-000015,Supplier_15,Electronics,Mexico,Probation,2026-01-13,2026-01-13
+SUP-000016,Supplier_16,Logistics,USA,Active,2026-01-01,2026-01-03
+SUP-000017,Supplier_17,Raw Materials,Japan,Inactive,2026-01-12,2026-01-14
+SUP-000018,Supplier_18,Electronics,Japan,Active,2026-01-04,2026-01-04
+SUP-000019,Supplier_19,Packaging,Mexico,Active,2026-01-02,2026-01-04
+SUP-000020,Supplier_20,Machinery,USA,Active,2026-01-09,2026-01-10
+SUP-000021,Supplier_21,Electronics,India,Active,2026-01-07,2026-01-09
+SUP-000022,Supplier_22,Packaging,Mexico,Active,2026-01-16,2026-01-17
+SUP-000023,Supplier_23,Packaging,Japan,Active,2026-01-13,2026-01-15
+SUP-000024,Supplier_24,Machinery,Japan,Active,2026-01-12,2026-01-12
+SUP-000025,Supplier_25,Raw Materials,Mexico,Active,2026-01-10,2026-01-11
+SUP-000026,Supplier_26,Raw Materials,USA,Active,2026-01-15,2026-01-17
+SUP-000027,Supplier_27,Machinery,Japan,Active,2026-01-08,2026-01-10
+SUP-000028,Supplier_28,Electronics,India,Active,2026-01-05,2026-01-05
+SUP-000029,Supplier_29,Logistics,Germany,Probation,2026-01-01,2026-01-03
+SUP-000030,Supplier_30,Logistics,Mexico,Active,2026-01-03,2026-01-03
+SUP-000031,Supplier_31,Logistics,Japan,Inactive,2026-01-11,2026-01-11
+SUP-000032,Supplier_32,Machinery,Germany,Active,2026-01-09,2026-01-11
+SUP-000033,Supplier_33,Packaging,India,Active,2026-01-15,2026-01-15
+SUP-000034,Supplier_34,Machinery,Mexico,Active,2026-01-08,2026-01-09
+SUP-000035,Supplier_35,Raw Materials,India,Probation,2026-01-04,2026-01-04
+SUP-000036,Supplier_36,Logistics,Germany,Probation,2026-01-05,2026-01-06
+SUP-000037,Supplier_37,Logistics,Japan,Active,2026-01-13,2026-01-14
+SUP-000038,Supplier_38,Machinery,Japan,Inactive,2026-01-02,2026-01-02
+SUP-000039,Supplier_39,Logistics,Mexico,Active,2026-01-05,2026-01-05
+SUP-000040,Supplier_40,Packaging,Germany,Active,2026-01-16,2026-01-17
+SUP-000041,Supplier_41,Packaging,India,Active,2026-01-08,2026-01-10
+SUP-000042,Supplier_42,Raw Materials,Mexico,Probation,2026-01-08,2026-01-09
+SUP-000043,Supplier_43,Machinery,Mexico,Active,2026-01-03,2026-01-04
+SUP-000044,Supplier_44,Machinery,Mexico,Active,2026-01-03,2026-01-03
+SUP-000045,Supplier_45,Electronics,USA,Probation,2026-01-15,2026-01-15
+SUP-000046,Supplier_46,Raw Materials,Mexico,Probation,2026-01-10,2026-01-10
+SUP-000047,Supplier_47,Machinery,Japan,Active,2026-01-06,2026-01-08
+SUP-000048,Supplier_48,Packaging,Mexico,Probation,2026-01-02,2026-01-02
+SUP-000049,Supplier_49,Machinery,Mexico,Active,2026-01-10,2026-01-10
+SUP-000050,Supplier_50,Packaging,Japan,Active,2026-01-03,2026-01-03
+SUP-000051,Supplier_51,Machinery,Germany,Inactive,2026-01-14,2026-01-16
+SUP-000052,Supplier_52,Raw Materials,Japan,Active,2026-01-11,2026-01-12
+SUP-000053,Supplier_53,Raw Materials,Mexico,Inactive,2026-01-02,2026-01-02
+SUP-000054,Supplier_54,Electronics,Mexico,Active,2026-01-12,2026-01-13
+SUP-000055,Supplier_55,Packaging,Germany,Active,2026-01-07,2026-01-08
+SUP-000056,Supplier_56,Logistics,USA,Active,2026-01-12,2026-01-12
+SUP-000057,Supplier_57,Machinery,India,Active,2026-01-01,2026-01-02
+SUP-000058,Supplier_58,Packaging,USA,Probation,2026-01-09,2026-01-09
+SUP-000059,Supplier_59,Logistics,India,Active,2026-01-10,2026-01-10
+SUP-000060,Supplier_60,Raw Materials,Mexico,Active,2026-01-05,2026-01-05
+SUP-000061,Supplier_61,Electronics,USA,Active,2026-01-09,2026-01-09
+SUP-000062,Supplier_62,Packaging,Japan,Active,2026-01-06,2026-01-08
+SUP-000063,Supplier_63,Raw Materials,India,Active,2026-01-01,2026-01-02
+SUP-000064,Supplier_64,Electronics,Japan,Active,2026-01-15,2026-01-16
+SUP-000065,Supplier_65,Raw Materials,Japan,Active,2026-01-02,2026-01-03
+SUP-000066,Supplier_66,Packaging,India,Active,2026-01-12,2026-01-12
+SUP-000067,Supplier_67,Packaging,Japan,Active,2026-01-11,2026-01-13
+SUP-000068,Supplier_68,Electronics,USA,Active,2026-01-09,2026-01-09
+SUP-000069,Supplier_69,Electronics,Japan,Active,2026-01-08,2026-01-09
+SUP-000070,Supplier_70,Electronics,USA,Active,2026-01-06,2026-01-06
+SUP-000071,Supplier_71,Electronics,Germany,Active,2026-01-14,2026-01-16
+SUP-000072,Supplier_72,Electronics,Mexico,Active,2026-01-02,2026-01-03
+SUP-000073,Supplier_73,Packaging,India,Active,2026-01-06,2026-01-07
+SUP-000074,Supplier_74,Machinery,Germany,Active,2026-01-15,2026-01-17
+SUP-000075,Supplier_75,Machinery,Mexico,Active,2026-01-14,2026-01-16
+SUP-000076,Supplier_76,Packaging,Germany,Active,2026-01-09,2026-01-10
+SUP-000077,Supplier_77,Electronics,USA,Active,2026-01-06,2026-01-06
+SUP-000078,Supplier_78,Packaging,Germany,Active,2026-01-02,2026-01-03
+SUP-000079,Supplier_79,Electronics,Japan,Active,2026-01-01,2026-01-03
+SUP-000080,Supplier_80,Raw Materials,Japan,Active,2026-01-06,2026-01-08
+SUP-000081,Supplier_81,Logistics,Germany,Active,2026-01-06,2026-01-07
+SUP-000082,Supplier_82,Packaging,Germany,Active,2026-01-03,2026-01-03
+SUP-000083,Supplier_83,Raw Materials,USA,Active,2026-01-10,2026-01-10
+SUP-000084,Supplier_84,Raw Materials,Germany,Active,2026-01-03,2026-01-03
+SUP-000085,Supplier_85,Packaging,India,Active,2026-01-06,2026-01-06
+SUP-000086,Supplier_86,Logistics,Japan,Active,2026-01-13,2026-01-13
+SUP-000087,Supplier_87,Raw Materials,Mexico,Probation,2026-01-07,2026-01-09
+SUP-000088,Supplier_88,Machinery,Germany,Active,2026-01-01,2026-01-01
+SUP-000089,Supplier_89,Logistics,Japan,Inactive,2026-01-15,2026-01-15
+SUP-000090,Supplier_90,Packaging,Japan,Probation,2026-01-06,2026-01-08
+SUP-000091,Supplier_91,Electronics,Mexico,Probation,2026-01-13,2026-01-14
+SUP-000092,Supplier_92,Raw Materials,Mexico,Active,2026-01-16,2026-01-17
+SUP-000093,Supplier_93,Raw Materials,India,Active,2026-01-05,2026-01-06
+SUP-000094,Supplier_94,Electronics,Japan,Active,2026-01-12,2026-01-14
+SUP-000095,Supplier_95,Logistics,Japan,Active,2026-01-08,2026-01-09
+SUP-000096,Supplier_96,Electronics,Germany,Active,2026-01-08,2026-01-10
+SUP-000097,Supplier_97,Raw Materials,India,Active,2026-01-02,2026-01-02
+SUP-000098,Supplier_98,Electronics,India,Active,2026-01-08,2026-01-09
+SUP-000099,Supplier_99,Electronics,Mexico,Active,2026-01-08,2026-01-08
+SUP-000100,Supplier_100,Raw Materials,Japan,Active,2026-01-10,2026-01-11
+SUP-000101,Supplier_101,Raw Materials,Germany,Active,2026-01-13,2026-01-15
+SUP-000102,Supplier_102,Logistics,Germany,Active,2026-01-06,2026-01-06
+SUP-000103,Supplier_103,Packaging,Mexico,Active,2026-01-08,2026-01-10
+SUP-000104,Supplier_104,Packaging,Mexico,Active,2026-01-08,2026-01-08
+SUP-000105,Supplier_105,Raw Materials,India,Probation,2026-01-08,2026-01-08
+SUP-000106,Supplier_106,Raw Materials,Mexico,Active,2026-01-09,2026-01-10
+SUP-000107,Supplier_107,Logistics,Mexico,Active,2026-01-13,2026-01-13
+SUP-000108,Supplier_108,Machinery,India,Active,2026-01-15,2026-01-16
+SUP-000109,Supplier_109,Raw Materials,USA,Inactive,2026-01-02,2026-01-02
+SUP-000110,Supplier_110,Electronics,Japan,Active,2026-01-07,2026-01-09
+SUP-000111,Supplier_111,Packaging,India,Active,2026-01-09,2026-01-10
+SUP-000112,Supplier_112,Packaging,Mexico,Inactive,2026-01-12,2026-01-14
+SUP-000113,Supplier_113,Machinery,Germany,Inactive,2026-01-09,2026-01-10
+SUP-000114,Supplier_114,Machinery,India,Active,2026-01-05,2026-01-06
+SUP-000115,Supplier_115,Raw Materials,Japan,Active,2026-01-06,2026-01-08
+SUP-000116,Supplier_116,Raw Materials,Mexico,Active,2026-01-05,2026-01-05
+SUP-000117,Supplier_117,Packaging,Mexico,Active,2026-01-12,2026-01-12
+SUP-000118,Supplier_118,Electronics,Mexico,Inactive,2026-01-07,2026-01-07
+SUP-000119,Supplier_119,Logistics,USA,Active,2026-01-16,2026-01-18
+SUP-000120,Supplier_120,Raw Materials,Mexico,Active,2026-01-03,2026-01-03
+SUP-000121,Supplier_121,Machinery,USA,Active,2026-01-10,2026-01-10
+SUP-000122,Supplier_122,Raw Materials,USA,Active,2026-01-11,2026-01-11
+SUP-000123,Supplier_123,Electronics,Mexico,Active,2026-01-04,2026-01-06
+SUP-000124,Supplier_124,Electronics,Japan,Active,2026-01-03,2026-01-05
+SUP-000125,Supplier_125,Raw Materials,USA,Active,2026-01-13,2026-01-13
+SUP-000126,Supplier_126,Packaging,USA,Active,2026-01-02,2026-01-02
+SUP-000127,Supplier_127,Electronics,Japan,Active,2026-01-02,2026-01-02
+SUP-000128,Supplier_128,Logistics,Germany,Active,2026-01-09,2026-01-11
+SUP-000129,Supplier_129,Packaging,Mexico,Active,2026-01-03,2026-01-03
+SUP-000130,Supplier_130,Electronics,India,Active,2026-01-15,2026-01-16
+SUP-000131,Supplier_131,Electronics,Japan,Active,2026-01-13,2026-01-13
+SUP-000132,Supplier_132,Raw Materials,Germany,Active,2026-01-15,2026-01-16
+SUP-000133,Supplier_133,Electronics,Germany,Active,2026-01-08,2026-01-08
+SUP-000134,Supplier_134,Electronics,Mexico,Inactive,2026-01-02,2026-01-03
+SUP-000135,Supplier_135,Packaging,India,Inactive,2026-01-08,2026-01-08
+SUP-000136,Supplier_136,Machinery,USA,Inactive,2026-01-02,2026-01-03
+SUP-000137,Supplier_137,Logistics,Germany,Active,2026-01-10,2026-01-12
+SUP-000138,Supplier_138,Raw Materials,Germany,Active,2026-01-07,2026-01-07
+SUP-000139,Supplier_139,Machinery,Germany,Active,2026-01-16,2026-01-18
+SUP-000140,Supplier_140,Logistics,Germany,Active,2026-01-14,2026-01-14
+SUP-000141,Supplier_141,Electronics,Mexico,Probation,2026-01-01,2026-01-02
+SUP-000142,Supplier_142,Raw Materials,Germany,Active,2026-01-02,2026-01-04
+SUP-000143,Supplier_143,Logistics,Germany,Active,2026-01-16,2026-01-18
+SUP-000144,Supplier_144,Electronics,Japan,Active,2026-01-02,2026-01-02
+SUP-000145,Supplier_145,Raw Materials,USA,Active,2026-01-09,2026-01-09
+SUP-000146,Supplier_146,Logistics,Mexico,Active,2026-01-03,2026-01-03
+SUP-000147,Supplier_147,Packaging,Germany,Inactive,2026-01-01,2026-01-02
+SUP-000148,Supplier_148,Electronics,India,Active,2026-01-15,2026-01-16
+SUP-000149,Supplier_149,Electronics,India,Active,2026-01-05,2026-01-07
+SUP-000150,Supplier_150,Machinery,Japan,Active,2026-01-15,2026-01-16
+SUP-000151,Supplier_151,Raw Materials,Germany,Active,2026-01-05,2026-01-07
+SUP-000152,Supplier_152,Electronics,Germany,Active,2026-01-01,2026-01-03
+SUP-000153,Supplier_153,Raw Materials,USA,Active,2026-01-02,2026-01-02
+SUP-000154,Supplier_154,Raw Materials,India,Active,2026-01-05,2026-01-05
+SUP-000155,Supplier_155,Logistics,USA,Active,2026-01-12,2026-01-13
+SUP-000156,Supplier_156,Machinery,Japan,Probation,2026-01-08,2026-01-09
+SUP-000157,Supplier_157,Raw Materials,Germany,Active,2026-01-16,2026-01-17
+SUP-000158,Supplier_158,Packaging,USA,Active,2026-01-04,2026-01-04
+SUP-000159,Supplier_159,Machinery,USA,Inactive,2026-01-09,2026-01-11
+SUP-000160,Supplier_160,Electronics,Germany,Active,2026-01-06,2026-01-06
+SUP-000161,Supplier_161,Packaging,India,Active,2026-01-08,2026-01-10
+SUP-000162,Supplier_162,Electronics,Mexico,Active,2026-01-14,2026-01-16
+SUP-000163,Supplier_163,Raw Materials,Mexico,Active,2026-01-08,2026-01-10
+SUP-000164,Supplier_164,Packaging,Mexico,Probation,2026-01-05,2026-01-06
+SUP-000165,Supplier_165,Raw Materials,Germany,Active,2026-01-13,2026-01-15
+SUP-000166,Supplier_166,Electronics,India,Probation,2026-01-03,2026-01-03
+SUP-000167,Supplier_167,Machinery,India,Active,2026-01-15,2026-01-16
+SUP-000168,Supplier_168,Raw Materials,Germany,Active,2026-01-01,2026-01-02
+SUP-000169,Supplier_169,Machinery,India,Active,2026-01-03,2026-01-04
+SUP-000170,Supplier_170,Machinery,Japan,Active,2026-01-06,2026-01-06
+SUP-000171,Supplier_171,Machinery,India,Active,2026-01-16,2026-01-16
+SUP-000172,Supplier_172,Electronics,Germany,Active,2026-01-02,2026-01-03
+SUP-000173,Supplier_173,Machinery,India,Active,2026-01-14,2026-01-14
+SUP-000174,Supplier_174,Logistics,India,Active,2026-01-03,2026-01-03
+SUP-000175,Supplier_175,Machinery,Germany,Active,2026-01-16,2026-01-17
+SUP-000176,Supplier_176,Electronics,Germany,Active,2026-01-09,2026-01-10
+SUP-000177,Supplier_177,Raw Materials,India,Active,2026-01-16,2026-01-16
+SUP-000178,Supplier_178,Machinery,Germany,Active,2026-01-16,2026-01-17
+SUP-000179,Supplier_179,Electronics,Mexico,Active,2026-01-16,2026-01-16
+SUP-000180,Supplier_180,Logistics,India,Active,2026-01-13,2026-01-14
+SUP-000181,Supplier_181,Raw Materials,Japan,Active,2026-01-04,2026-01-04
+SUP-000182,Supplier_182,Logistics,Germany,Active,2026-01-11,2026-01-11
+SUP-000183,Supplier_183,Logistics,India,Active,2026-01-13,2026-01-15
+SUP-000184,Supplier_184,Raw Materials,Japan,Active,2026-01-03,2026-01-03
+SUP-000185,Supplier_185,Machinery,Japan,Active,2026-01-12,2026-01-13
+SUP-000186,Supplier_186,Packaging,Mexico,Active,2026-01-14,2026-01-16
+SUP-000187,Supplier_187,Raw Materials,India,Active,2026-01-13,2026-01-15
+SUP-000188,Supplier_188,Machinery,Mexico,Inactive,2026-01-14,2026-01-14
+SUP-000189,Supplier_189,Raw Materials,USA,Active,2026-01-05,2026-01-06
+SUP-000190,Supplier_190,Raw Materials,Mexico,Active,2026-01-03,2026-01-04
+SUP-000191,Supplier_191,Packaging,Germany,Active,2026-01-07,2026-01-09
+SUP-000192,Supplier_192,Electronics,Mexico,Active,2026-01-11,2026-01-11
+SUP-000193,Supplier_193,Raw Materials,India,Inactive,2026-01-16,2026-01-18
+SUP-000194,Supplier_194,Packaging,Germany,Active,2026-01-05,2026-01-06
+SUP-000195,Supplier_195,Raw Materials,Germany,Active,2026-01-07,2026-01-07
+SUP-000196,Supplier_196,Machinery,India,Inactive,2026-01-07,2026-01-09
+SUP-000197,Supplier_197,Packaging,Mexico,Active,2026-01-02,2026-01-04
+SUP-000198,Supplier_198,Raw Materials,USA,Active,2026-01-14,2026-01-14
+SUP-000199,Supplier_199,Packaging,USA,Active,2026-01-02,2026-01-02
+SUP-000200,Supplier_200,Electronics,Germany,Probation,2026-01-05,2026-01-07
+SUP-000201,Supplier_201,Electronics,Germany,Inactive,2026-01-16,2026-01-18
+SUP-000202,Supplier_202,Logistics,USA,Active,2026-01-04,2026-01-04
+SUP-000203,Supplier_203,Logistics,Germany,Active,2026-01-01,2026-01-01
+SUP-000204,Supplier_204,Machinery,Germany,Active,2026-01-05,2026-01-05
+SUP-000205,Supplier_205,Packaging,Germany,Active,2026-01-02,2026-01-04
+SUP-000206,Supplier_206,Logistics,USA,Active,2026-01-15,2026-01-15
+SUP-000207,Supplier_207,Raw Materials,Germany,Inactive,2026-01-02,2026-01-03
+SUP-000208,Supplier_208,Raw Materials,Mexico,Active,2026-01-10,2026-01-10
+SUP-000209,Supplier_209,Raw Materials,Japan,Active,2026-01-16,2026-01-18
+SUP-000210,Supplier_210,Machinery,Japan,Inactive,2026-01-15,2026-01-15
+SUP-000211,Supplier_211,Electronics,Mexico,Active,2026-01-07,2026-01-08
+SUP-000212,Supplier_212,Electronics,USA,Active,2026-01-15,2026-01-15
+SUP-000213,Supplier_213,Raw Materials,Mexico,Active,2026-01-08,2026-01-09
+SUP-000214,Supplier_214,Raw Materials,Germany,Inactive,2026-01-16,2026-01-16
+SUP-000215,Supplier_215,Machinery,Japan,Inactive,2026-01-12,2026-01-12
+SUP-000216,Supplier_216,Raw Materials,Japan,Active,2026-01-14,2026-01-14
+SUP-000217,Supplier_217,Raw Materials,Japan,Active,2026-01-06,2026-01-07
+SUP-000218,Supplier_218,Packaging,Germany,Active,2026-01-08,2026-01-08
+SUP-000219,Supplier_219,Packaging,USA,Active,2026-01-13,2026-01-15
+SUP-000220,Supplier_220,Logistics,Mexico,Active,2026-01-12,2026-01-13
+SUP-000221,Supplier_221,Logistics,Mexico,Active,2026-01-15,2026-01-16
+SUP-000222,Supplier_222,Raw Materials,Germany,Active,2026-01-02,2026-01-03
+SUP-000223,Supplier_223,Logistics,Japan,Active,2026-01-15,2026-01-16
+SUP-000224,Supplier_224,Electronics,India,Active,2026-01-03,2026-01-05
+SUP-000225,Supplier_225,Logistics,India,Inactive,2026-01-07,2026-01-09
+SUP-000226,Supplier_226,Raw Materials,Japan,Active,2026-01-02,2026-01-04
+SUP-000227,Supplier_227,Packaging,Japan,Active,2026-01-11,2026-01-12
+SUP-000228,Supplier_228,Raw Materials,Japan,Active,2026-01-12,2026-01-12
+SUP-000229,Supplier_229,Packaging,Germany,Active,2026-01-05,2026-01-05
+SUP-000230,Supplier_230,Machinery,Japan,Probation,2026-01-07,2026-01-08
+SUP-000231,Supplier_231,Logistics,USA,Inactive,2026-01-15,2026-01-16
+SUP-000232,Supplier_232,Logistics,Germany,Active,2026-01-11,2026-01-12
+SUP-000233,Supplier_233,Raw Materials,Japan,Active,2026-01-02,2026-01-02
+SUP-000234,Supplier_234,Logistics,USA,Active,2026-01-14,2026-01-16
+SUP-000235,Supplier_235,Packaging,Mexico,Probation,2026-01-16,2026-01-18
+SUP-000236,Supplier_236,Packaging,Germany,Active,2026-01-05,2026-01-06
+SUP-000237,Supplier_237,Electronics,India,Active,2026-01-11,2026-01-11
+SUP-000238,Supplier_238,Raw Materials,Germany,Active,2026-01-06,2026-01-06
+SUP-000239,Supplier_239,Logistics,Mexico,Active,2026-01-06,2026-01-06
+SUP-000240,Supplier_240,Packaging,India,Active,2026-01-07,2026-01-09
+SUP-000241,Supplier_241,Machinery,India,Active,2026-01-05,2026-01-05
+SUP-000242,Supplier_242,Electronics,USA,Active,2026-01-13,2026-01-14
+SUP-000243,Supplier_243,Logistics,Mexico,Active,2026-01-02,2026-01-02
+SUP-000244,Supplier_244,Machinery,Mexico,Probation,2026-01-16,2026-01-16
+SUP-000245,Supplier_245,Electronics,Japan,Probation,2026-01-04,2026-01-05
+SUP-000246,Supplier_246,Raw Materials,USA,Active,2026-01-05,2026-01-07
+SUP-000247,Supplier_247,Raw Materials,India,Probation,2026-01-10,2026-01-12
+SUP-000248,Supplier_248,Packaging,USA,Active,2026-01-10,2026-01-12
+SUP-000249,Supplier_249,Packaging,USA,Inactive,2026-01-05,2026-01-07
+SUP-000250,Supplier_250,Electronics,Germany,Active,2026-01-15,2026-01-15
+SUP-000251,Supplier_251,Logistics,India,Active,2026-01-07,2026-01-07
+SUP-000252,Supplier_252,Logistics,India,Active,2026-01-04,2026-01-05
+SUP-000253,Supplier_253,Raw Materials,Mexico,Active,2026-01-04,2026-01-04
+SUP-000254,Supplier_254,Machinery,Mexico,Active,2026-01-16,2026-01-18
+SUP-000255,Supplier_255,Packaging,Mexico,Active,2026-01-12,2026-01-13
+SUP-000256,Supplier_256,Packaging,India,Active,2026-01-03,2026-01-04
+SUP-000257,Supplier_257,Raw Materials,India,Inactive,2026-01-06,2026-01-06
+SUP-000258,Supplier_258,Machinery,USA,Active,2026-01-11,2026-01-12
+SUP-000259,Supplier_259,Packaging,Germany,Active,2026-01-08,2026-01-10
+SUP-000260,Supplier_260,Packaging,USA,Active,2026-01-15,2026-01-15
+SUP-000261,Supplier_261,Machinery,Mexico,Active,2026-01-14,2026-01-14
+SUP-000262,Supplier_262,Electronics,Germany,Active,2026-01-03,2026-01-04
+SUP-000263,Supplier_263,Packaging,Germany,Inactive,2026-01-05,2026-01-05
+SUP-000264,Supplier_264,Packaging,Japan,Inactive,2026-01-06,2026-01-06
+SUP-000265,Supplier_265,Machinery,India,Active,2026-01-05,2026-01-07
+SUP-000266,Supplier_266,Raw Materials,India,Inactive,2026-01-07,2026-01-07
+SUP-000267,Supplier_267,Electronics,Japan,Active,2026-01-05,2026-01-06
+SUP-000268,Supplier_268,Machinery,Germany,Probation,2026-01-11,2026-01-12
+SUP-000269,Supplier_269,Machinery,Germany,Active,2026-01-05,2026-01-07
+SUP-000270,Supplier_270,Machinery,Mexico,Active,2026-01-07,2026-01-08
+SUP-000271,Supplier_271,Raw Materials,Japan,Active,2026-01-12,2026-01-13
+SUP-000272,Supplier_272,Electronics,Mexico,Active,2026-01-01,2026-01-03
+SUP-000273,Supplier_273,Raw Materials,Japan,Active,2026-01-07,2026-01-09
+SUP-000274,Supplier_274,Electronics,Mexico,Probation,2026-01-11,2026-01-11
+SUP-000275,Supplier_275,Machinery,Mexico,Active,2026-01-12,2026-01-14
+SUP-000276,Supplier_276,Logistics,Japan,Active,2026-01-03,2026-01-03
+SUP-000277,Supplier_277,Electronics,Japan,Active,2026-01-09,2026-01-11
+SUP-000278,Supplier_278,Machinery,Japan,Active,2026-01-11,2026-01-12
+SUP-000279,Supplier_279,Packaging,Germany,Active,2026-01-08,2026-01-09
+SUP-000280,Supplier_280,Packaging,India,Active,2026-01-09,2026-01-09
+SUP-000281,Supplier_281,Electronics,Japan,Active,2026-01-09,2026-01-09
+SUP-000282,Supplier_282,Electronics,Japan,Active,2026-01-10,2026-01-11
+SUP-000283,Supplier_283,Raw Materials,USA,Active,2026-01-14,2026-01-16
+SUP-000284,Supplier_284,Electronics,India,Active,2026-01-09,2026-01-11
+SUP-000285,Supplier_285,Electronics,USA,Inactive,2026-01-08,2026-01-09
+SUP-000286,Supplier_286,Electronics,Germany,Probation,2026-01-06,2026-01-07
+SUP-000287,Supplier_287,Machinery,Mexico,Active,2026-01-11,2026-01-12
+SUP-000288,Supplier_288,Logistics,India,Active,2026-01-15,2026-01-17
+SUP-000289,Supplier_289,Raw Materials,India,Active,2026-01-06,2026-01-08
+SUP-000290,Supplier_290,Machinery,India,Active,2026-01-04,2026-01-05
+SUP-000291,Supplier_291,Packaging,USA,Active,2026-01-11,2026-01-12
+SUP-000292,Supplier_292,Electronics,Germany,Active,2026-01-08,2026-01-10
+SUP-000293,Supplier_293,Machinery,India,Active,2026-01-14,2026-01-15
+SUP-000294,Supplier_294,Raw Materials,Mexico,Inactive,2026-01-06,2026-01-06
+SUP-000295,Supplier_295,Packaging,India,Active,2026-01-13,2026-01-14
+SUP-000296,Supplier_296,Electronics,India,Active,2026-01-02,2026-01-03
+SUP-000297,Supplier_297,Packaging,Germany,Active,2026-01-13,2026-01-14
+SUP-000298,Supplier_298,Raw Materials,India,Active,2026-01-03,2026-01-05
+SUP-000299,Supplier_299,Packaging,Germany,Inactive,2026-01-14,2026-01-15
+SUP-000300,Supplier_300,Raw Materials,India,Active,2026-01-13,2026-01-15
+SUP-000301,Supplier_301,Electronics,USA,Active,2026-01-13,2026-01-13
+SUP-000302,Supplier_302,Packaging,India,Active,2026-01-01,2026-01-02
+SUP-000303,Supplier_303,Logistics,Mexico,Inactive,2026-01-09,2026-01-09
+SUP-000304,Supplier_304,Raw Materials,USA,Active,2026-01-02,2026-01-02
+SUP-000305,Supplier_305,Raw Materials,India,Probation,2026-01-14,2026-01-15
+SUP-000306,Supplier_306,Raw Materials,India,Active,2026-01-13,2026-01-14
+SUP-000307,Supplier_307,Logistics,India,Active,2026-01-05,2026-01-05
+SUP-000308,Supplier_308,Logistics,Mexico,Inactive,2026-01-13,2026-01-15
+SUP-000309,Supplier_309,Machinery,Japan,Active,2026-01-16,2026-01-16
+SUP-000310,Supplier_310,Packaging,India,Active,2026-01-06,2026-01-07
+SUP-000311,Supplier_311,Logistics,Germany,Active,2026-01-12,2026-01-14
+SUP-000312,Supplier_312,Electronics,Mexico,Active,2026-01-08,2026-01-08
+SUP-000313,Supplier_313,Machinery,Japan,Active,2026-01-11,2026-01-11
+SUP-000314,Supplier_314,Raw Materials,Germany,Inactive,2026-01-14,2026-01-14
+SUP-000315,Supplier_315,Logistics,Japan,Active,2026-01-05,2026-01-06
+SUP-000316,Supplier_316,Machinery,Mexico,Active,2026-01-12,2026-01-12
+SUP-000317,Supplier_317,Packaging,India,Active,2026-01-16,2026-01-16
+SUP-000318,Supplier_318,Raw Materials,Germany,Active,2026-01-16,2026-01-18
+SUP-000319,Supplier_319,Machinery,Germany,Active,2026-01-16,2026-01-17
+SUP-000320,Supplier_320,Machinery,Japan,Active,2026-01-05,2026-01-07
+SUP-000321,Supplier_321,Raw Materials,Germany,Active,2026-01-12,2026-01-14
+SUP-000322,Supplier_322,Raw Materials,USA,Probation,2026-01-08,2026-01-09
+SUP-000323,Supplier_323,Packaging,Japan,Active,2026-01-14,2026-01-16
+SUP-000324,Supplier_324,Packaging,India,Active,2026-01-10,2026-01-10
+SUP-000325,Supplier_325,Electronics,Mexico,Active,2026-01-03,2026-01-04
+SUP-000326,Supplier_326,Packaging,Japan,Active,2026-01-03,2026-01-04
+SUP-000327,Supplier_327,Raw Materials,USA,Active,2026-01-04,2026-01-06
+SUP-000328,Supplier_328,Machinery,Japan,Active,2026-01-04,2026-01-06
+SUP-000329,Supplier_329,Machinery,Mexico,Active,2026-01-14,2026-01-15
+SUP-000330,Supplier_330,Machinery,Mexico,Active,2026-01-13,2026-01-15
+SUP-000331,Supplier_331,Packaging,India,Active,2026-01-10,2026-01-11
+SUP-000332,Supplier_332,Raw Materials,Mexico,Active,2026-01-02,2026-01-04
+SUP-000333,Supplier_333,Logistics,India,Active,2026-01-08,2026-01-09
+SUP-000334,Supplier_334,Packaging,Mexico,Active,2026-01-15,2026-01-16
+SUP-000335,Supplier_335,Machinery,USA,Probation,2026-01-14,2026-01-16
+SUP-000336,Supplier_336,Electronics,Mexico,Inactive,2026-01-08,2026-01-10
+SUP-000337,Supplier_337,Electronics,India,Inactive,2026-01-01,2026-01-03
+SUP-000338,Supplier_338,Electronics,Japan,Probation,2026-01-16,2026-01-17
+SUP-000339,Supplier_339,Logistics,Germany,Inactive,2026-01-06,2026-01-07
+SUP-000340,Supplier_340,Logistics,India,Active,2026-01-16,2026-01-16
+SUP-000341,Supplier_341,Packaging,USA,Active,2026-01-01,2026-01-01
+SUP-000342,Supplier_342,Electronics,Germany,Inactive,2026-01-11,2026-01-13
+SUP-000343,Supplier_343,Raw Materials,Mexico,Active,2026-01-07,2026-01-08
+SUP-000344,Supplier_344,Raw Materials,India,Inactive,2026-01-10,2026-01-12
+SUP-000345,Supplier_345,Electronics,India,Active,2026-01-04,2026-01-05
+SUP-000346,Supplier_346,Packaging,India,Active,2026-01-10,2026-01-10
+SUP-000347,Supplier_347,Raw Materials,USA,Active,2026-01-15,2026-01-16
+SUP-000348,Supplier_348,Packaging,USA,Active,2026-01-07,2026-01-09
+SUP-000349,Supplier_349,Electronics,India,Active,2026-01-12,2026-01-13
+SUP-000350,Supplier_350,Raw Materials,USA,Active,2026-01-11,2026-01-12
+SUP-000351,Supplier_351,Raw Materials,India,Active,2026-01-14,2026-01-15
+SUP-000352,Supplier_352,Packaging,India,Active,2026-01-12,2026-01-13
+SUP-000353,Supplier_353,Electronics,Germany,Active,2026-01-11,2026-01-12
+SUP-000354,Supplier_354,Packaging,USA,Active,2026-01-09,2026-01-11
+SUP-000355,Supplier_355,Electronics,Japan,Probation,2026-01-09,2026-01-11
+SUP-000356,Supplier_356,Electronics,USA,Active,2026-01-08,2026-01-09
+SUP-000357,Supplier_357,Packaging,Mexico,Active,2026-01-16,2026-01-18
+SUP-000358,Supplier_358,Logistics,India,Probation,2026-01-16,2026-01-18
+SUP-000359,Supplier_359,Raw Materials,Mexico,Active,2026-01-14,2026-01-16
+SUP-000360,Supplier_360,Electronics,Japan,Active,2026-01-03,2026-01-05
+SUP-000361,Supplier_361,Electronics,India,Active,2026-01-08,2026-01-10
+SUP-000362,Supplier_362,Machinery,Japan,Inactive,2026-01-08,2026-01-09
+SUP-000363,Supplier_363,Logistics,Japan,Active,2026-01-04,2026-01-06
+SUP-000364,Supplier_364,Packaging,USA,Active,2026-01-04,2026-01-04
+SUP-000365,Supplier_365,Raw Materials,Germany,Inactive,2026-01-14,2026-01-15
+SUP-000366,Supplier_366,Packaging,Japan,Active,2026-01-11,2026-01-13
+SUP-000367,Supplier_367,Machinery,India,Active,2026-01-12,2026-01-12
+SUP-000368,Supplier_368,Packaging,Germany,Active,2026-01-13,2026-01-13
+SUP-000369,Supplier_369,Raw Materials,Germany,Active,2026-01-03,2026-01-03
+SUP-000370,Supplier_370,Packaging,India,Active,2026-01-04,2026-01-04
+SUP-000371,Supplier_371,Machinery,India,Active,2026-01-10,2026-01-10
+SUP-000372,Supplier_372,Machinery,Mexico,Active,2026-01-09,2026-01-09
+SUP-000373,Supplier_373,Electronics,India,Active,2026-01-08,2026-01-10
+SUP-000374,Supplier_374,Logistics,Mexico,Probation,2026-01-09,2026-01-09
+SUP-000375,Supplier_375,Electronics,India,Active,2026-01-02,2026-01-04
+SUP-000376,Supplier_376,Machinery,Japan,Inactive,2026-01-13,2026-01-15
+SUP-000377,Supplier_377,Raw Materials,Mexico,Active,2026-01-04,2026-01-05
+SUP-000378,Supplier_378,Electronics,USA,Active,2026-01-10,2026-01-11
+SUP-000379,Supplier_379,Packaging,India,Probation,2026-01-07,2026-01-07
+SUP-000380,Supplier_380,Electronics,USA,Active,2026-01-01,2026-01-02
+SUP-000381,Supplier_381,Packaging,India,Active,2026-01-12,2026-01-13
+SUP-000382,Supplier_382,Electronics,Japan,Active,2026-01-09,2026-01-11
+SUP-000383,Supplier_383,Packaging,Japan,Active,2026-01-05,2026-01-06
+SUP-000384,Supplier_384,Raw Materials,Japan,Active,2026-01-16,2026-01-18
+SUP-000385,Supplier_385,Machinery,Germany,Active,2026-01-16,2026-01-17
+SUP-000386,Supplier_386,Electronics,India,Active,2026-01-07,2026-01-07
+SUP-000387,Supplier_387,Electronics,Germany,Active,2026-01-09,2026-01-11
+SUP-000388,Supplier_388,Electronics,Mexico,Active,2026-01-15,2026-01-15
+SUP-000389,Supplier_389,Packaging,Mexico,Active,2026-01-01,2026-01-02
+SUP-000390,Supplier_390,Machinery,USA,Active,2026-01-02,2026-01-03
+SUP-000391,Supplier_391,Electronics,Mexico,Active,2026-01-09,2026-01-11
+SUP-000392,Supplier_392,Logistics,India,Inactive,2026-01-02,2026-01-03
+SUP-000393,Supplier_393,Electronics,Germany,Inactive,2026-01-03,2026-01-03
+SUP-000394,Supplier_394,Packaging,Mexico,Active,2026-01-06,2026-01-07
+SUP-000395,Supplier_395,Packaging,USA,Active,2026-01-09,2026-01-11
+SUP-000396,Supplier_396,Packaging,Mexico,Active,2026-01-02,2026-01-04
+SUP-000397,Supplier_397,Logistics,USA,Inactive,2026-01-06,2026-01-06
+SUP-000398,Supplier_398,Packaging,Germany,Active,2026-01-06,2026-01-06
+SUP-000399,Supplier_399,Packaging,India,Active,2026-01-05,2026-01-05
+SUP-000400,Supplier_400,Machinery,Mexico,Active,2026-01-07,2026-01-09
+SUP-000401,Supplier_401,Raw Materials,Germany,Active,2026-01-08,2026-01-08
+SUP-000402,Supplier_402,Packaging,USA,Inactive,2026-01-02,2026-01-02
+SUP-000403,Supplier_403,Machinery,Mexico,Active,2026-01-16,2026-01-17
+SUP-000404,Supplier_404,Electronics,Mexico,Inactive,2026-01-14,2026-01-16
+SUP-000405,Supplier_405,Raw Materials,USA,Probation,2026-01-14,2026-01-16
+SUP-000406,Supplier_406,Raw Materials,India,Active,2026-01-12,2026-01-13
+SUP-000407,Supplier_407,Raw Materials,India,Active,2026-01-15,2026-01-16
+SUP-000408,Supplier_408,Machinery,Germany,Active,2026-01-08,2026-01-10
+SUP-000409,Supplier_409,Raw Materials,India,Active,2026-01-10,2026-01-11
+SUP-000410,Supplier_410,Logistics,Mexico,Probation,2026-01-15,2026-01-16
+SUP-000411,Supplier_411,Machinery,Japan,Active,2026-01-05,2026-01-06
+SUP-000412,Supplier_412,Machinery,Germany,Active,2026-01-10,2026-01-12
+SUP-000413,Supplier_413,Logistics,Germany,Active,2026-01-11,2026-01-11
+SUP-000414,Supplier_414,Packaging,Mexico,Active,2026-01-05,2026-01-06
+SUP-000415,Supplier_415,Electronics,India,Active,2026-01-03,2026-01-05
+SUP-000416,Supplier_416,Raw Materials,Japan,Active,2026-01-02,2026-01-02
+SUP-000417,Supplier_417,Logistics,Japan,Probation,2026-01-14,2026-01-15
+SUP-000418,Supplier_418,Raw Materials,USA,Active,2026-01-11,2026-01-13
+SUP-000419,Supplier_419,Logistics,Japan,Active,2026-01-07,2026-01-09
+SUP-000420,Supplier_420,Electronics,India,Active,2026-01-14,2026-01-15
+SUP-000421,Supplier_421,Machinery,Mexico,Active,2026-01-05,2026-01-07
+SUP-000422,Supplier_422,Packaging,Mexico,Active,2026-01-08,2026-01-10
+SUP-000423,Supplier_423,Packaging,Germany,Active,2026-01-13,2026-01-15
+SUP-000424,Supplier_424,Electronics,Japan,Active,2026-01-08,2026-01-10
+SUP-000425,Supplier_425,Raw Materials,USA,Active,2026-01-02,2026-01-02
+SUP-000426,Supplier_426,Electronics,Mexico,Probation,2026-01-08,2026-01-09
+SUP-000427,Supplier_427,Machinery,Germany,Inactive,2026-01-15,2026-01-15
+SUP-000428,Supplier_428,Electronics,Germany,Active,2026-01-06,2026-01-08
+SUP-000429,Supplier_429,Logistics,Mexico,Inactive,2026-01-07,2026-01-07
+SUP-000430,Supplier_430,Packaging,Japan,Active,2026-01-14,2026-01-14
+SUP-000431,Supplier_431,Logistics,Japan,Inactive,2026-01-10,2026-01-10
+SUP-000432,Supplier_432,Packaging,Japan,Active,2026-01-08,2026-01-10
+SUP-000433,Supplier_433,Machinery,Mexico,Active,2026-01-03,2026-01-03
+SUP-000434,Supplier_434,Logistics,Japan,Active,2026-01-03,2026-01-05
+SUP-000435,Supplier_435,Electronics,USA,Active,2026-01-01,2026-01-01
+SUP-000436,Supplier_436,Electronics,USA,Active,2026-01-04,2026-01-04
+SUP-000437,Supplier_437,Raw Materials,USA,Active,2026-01-01,2026-01-02
+SUP-000438,Supplier_438,Packaging,India,Inactive,2026-01-06,2026-01-08
+SUP-000439,Supplier_439,Machinery,Mexico,Active,2026-01-02,2026-01-04
+SUP-000440,Supplier_440,Logistics,India,Active,2026-01-16,2026-01-16
+SUP-000441,Supplier_441,Logistics,Japan,Active,2026-01-04,2026-01-05
+SUP-000442,Supplier_442,Logistics,India,Probation,2026-01-16,2026-01-17
+SUP-000443,Supplier_443,Electronics,India,Active,2026-01-02,2026-01-04
+SUP-000444,Supplier_444,Raw Materials,Mexico,Active,2026-01-10,2026-01-10
+SUP-000445,Supplier_445,Logistics,India,Active,2026-01-01,2026-01-03
+SUP-000446,Supplier_446,Packaging,India,Active,2026-01-02,2026-01-03
+SUP-000447,Supplier_447,Machinery,India,Active,2026-01-05,2026-01-07
+SUP-000448,Supplier_448,Logistics,Mexico,Inactive,2026-01-10,2026-01-10
+SUP-000449,Supplier_449,Raw Materials,Mexico,Active,2026-01-01,2026-01-03
+SUP-000450,Supplier_450,Raw Materials,Germany,Active,2026-01-09,2026-01-09
+SUP-000451,Supplier_451,Packaging,Mexico,Active,2026-01-03,2026-01-05
+SUP-000452,Supplier_452,Machinery,India,Active,2026-01-12,2026-01-13
+SUP-000453,Supplier_453,Machinery,Mexico,Active,2026-01-14,2026-01-15
+SUP-000454,Supplier_454,Electronics,Germany,Inactive,2026-01-12,2026-01-14
+SUP-000455,Supplier_455,Machinery,Germany,Active,2026-01-13,2026-01-13
+SUP-000456,Supplier_456,Electronics,Germany,Active,2026-01-04,2026-01-04
+SUP-000457,Supplier_457,Machinery,Mexico,Active,2026-01-12,2026-01-12
+SUP-000458,Supplier_458,Logistics,Germany,Active,2026-01-14,2026-01-16
+SUP-000459,Supplier_459,Electronics,India,Probation,2026-01-04,2026-01-06
+SUP-000460,Supplier_460,Raw Materials,USA,Probation,2026-01-07,2026-01-08
+SUP-000461,Supplier_461,Logistics,India,Inactive,2026-01-16,2026-01-17
+SUP-000462,Supplier_462,Raw Materials,Germany,Active,2026-01-10,2026-01-11
+SUP-000463,Supplier_463,Raw Materials,India,Active,2026-01-10,2026-01-12
+SUP-000464,Supplier_464,Machinery,Mexico,Active,2026-01-14,2026-01-14
+SUP-000465,Supplier_465,Machinery,Japan,Active,2026-01-12,2026-01-12
+SUP-000466,Supplier_466,Logistics,USA,Active,2026-01-01,2026-01-03
+SUP-000467,Supplier_467,Packaging,Germany,Active,2026-01-16,2026-01-17
+SUP-000468,Supplier_468,Logistics,USA,Active,2026-01-01,2026-01-03
+SUP-000469,Supplier_469,Packaging,USA,Active,2026-01-08,2026-01-10
+SUP-000470,Supplier_470,Electronics,India,Active,2026-01-09,2026-01-10
+SUP-000471,Supplier_471,Logistics,Mexico,Active,2026-01-07,2026-01-08
+SUP-000472,Supplier_472,Raw Materials,Mexico,Active,2026-01-01,2026-01-01
+SUP-000473,Supplier_473,Machinery,Mexico,Active,2026-01-04,2026-01-04
+SUP-000474,Supplier_474,Raw Materials,India,Probation,2026-01-15,2026-01-15
+SUP-000475,Supplier_475,Machinery,USA,Active,2026-01-13,2026-01-14
+SUP-000476,Supplier_476,Machinery,Mexico,Active,2026-01-15,2026-01-17
+SUP-000477,Supplier_477,Electronics,Germany,Active,2026-01-13,2026-01-13
+SUP-000478,Supplier_478,Logistics,Germany,Active,2026-01-03,2026-01-03
+SUP-000479,Supplier_479,Raw Materials,Mexico,Active,2026-01-10,2026-01-10
+SUP-000480,Supplier_480,Packaging,India,Active,2026-01-11,2026-01-12
+SUP-000481,Supplier_481,Machinery,Japan,Probation,2026-01-16,2026-01-17
+SUP-000482,Supplier_482,Raw Materials,Germany,Active,2026-01-05,2026-01-06
+SUP-000483,Supplier_483,Electronics,USA,Active,2026-01-07,2026-01-09
+SUP-000484,Supplier_484,Raw Materials,Germany,Inactive,2026-01-16,2026-01-16
+SUP-000485,Supplier_485,Logistics,India,Active,2026-01-03,2026-01-05
+SUP-000486,Supplier_486,Logistics,USA,Active,2026-01-16,2026-01-16
+SUP-000487,Supplier_487,Logistics,Germany,Active,2026-01-01,2026-01-02
+SUP-000488,Supplier_488,Machinery,India,Active,2026-01-07,2026-01-07
+SUP-000489,Supplier_489,Logistics,USA,Probation,2026-01-12,2026-01-12
+SUP-000490,Supplier_490,Machinery,Mexico,Active,2026-01-08,2026-01-09
+SUP-000491,Supplier_491,Packaging,Mexico,Active,2026-01-07,2026-01-07
+SUP-000492,Supplier_492,Machinery,USA,Active,2026-01-03,2026-01-05
+SUP-000493,Supplier_493,Electronics,Germany,Active,2026-01-09,2026-01-11
+SUP-000494,Supplier_494,Packaging,Japan,Active,2026-01-16,2026-01-16
+SUP-000495,Supplier_495,Logistics,USA,Active,2026-01-13,2026-01-14
+SUP-000496,Supplier_496,Packaging,Mexico,Active,2026-01-16,2026-01-18
+SUP-000497,Supplier_497,Raw Materials,USA,Active,2026-01-02,2026-01-04
+SUP-000498,Supplier_498,Logistics,India,Active,2026-01-12,2026-01-12
+SUP-000499,Supplier_499,Logistics,India,Active,2026-01-09,2026-01-11
+SUP-000500,Supplier_500,Packaging,Mexico,Probation,2026-01-03,2026-01-04
+SUP-000501,Supplier_501,Raw Materials,Germany,Active,2026-01-12,2026-01-12
+SUP-000502,Supplier_502,Machinery,Mexico,Active,2026-01-09,2026-01-09
+SUP-000503,Supplier_503,Logistics,Mexico,Active,2026-01-06,2026-01-06
+SUP-000504,Supplier_504,Logistics,Mexico,Active,2026-01-01,2026-01-02
+SUP-000505,Supplier_505,Logistics,Germany,Active,2026-01-16,2026-01-18
+SUP-000506,Supplier_506,Raw Materials,India,Inactive,2026-01-10,2026-01-11
+SUP-000507,Supplier_507,Raw Materials,Mexico,Probation,2026-01-09,2026-01-11
+SUP-000508,Supplier_508,Packaging,USA,Probation,2026-01-10,2026-01-10
+SUP-000509,Supplier_509,Electronics,Mexico,Inactive,2026-01-14,2026-01-16
+SUP-000510,Supplier_510,Electronics,Germany,Active,2026-01-05,2026-01-05
+SUP-000511,Supplier_511,Raw Materials,USA,Active,2026-01-03,2026-01-05
+SUP-000512,Supplier_512,Packaging,Japan,Active,2026-01-15,2026-01-17
+SUP-000513,Supplier_513,Electronics,Japan,Probation,2026-01-01,2026-01-01
+SUP-000514,Supplier_514,Raw Materials,India,Active,2026-01-16,2026-01-17
+SUP-000515,Supplier_515,Machinery,USA,Active,2026-01-11,2026-01-12
+SUP-000516,Supplier_516,Raw Materials,Mexico,Active,2026-01-16,2026-01-17
+SUP-000517,Supplier_517,Raw Materials,USA,Active,2026-01-08,2026-01-10
+SUP-000518,Supplier_518,Machinery,USA,Active,2026-01-06,2026-01-07
+SUP-000519,Supplier_519,Logistics,USA,Active,2026-01-01,2026-01-02
+SUP-000520,Supplier_520,Logistics,Germany,Active,2026-01-14,2026-01-15
+SUP-000521,Supplier_521,Logistics,Germany,Active,2026-01-07,2026-01-09
+SUP-000522,Supplier_522,Machinery,USA,Active,2026-01-02,2026-01-04
+SUP-000523,Supplier_523,Raw Materials,Japan,Active,2026-01-12,2026-01-14
+SUP-000524,Supplier_524,Logistics,Mexico,Active,2026-01-07,2026-01-08
+SUP-000525,Supplier_525,Packaging,India,Active,2026-01-11,2026-01-11
+SUP-000526,Supplier_526,Packaging,Mexico,Probation,2026-01-02,2026-01-03
+SUP-000527,Supplier_527,Electronics,India,Active,2026-01-10,2026-01-10
+SUP-000528,Supplier_528,Packaging,USA,Active,2026-01-05,2026-01-06
+SUP-000529,Supplier_529,Raw Materials,USA,Active,2026-01-15,2026-01-16
+SUP-000530,Supplier_530,Logistics,India,Active,2026-01-05,2026-01-07
+SUP-000531,Supplier_531,Packaging,USA,Inactive,2026-01-01,2026-01-01
+SUP-000532,Supplier_532,Raw Materials,USA,Active,2026-01-07,2026-01-07
+SUP-000533,Supplier_533,Electronics,Mexico,Active,2026-01-09,2026-01-10
+SUP-000534,Supplier_534,Raw Materials,USA,Active,2026-01-04,2026-01-06
+SUP-000535,Supplier_535,Electronics,Mexico,Active,2026-01-03,2026-01-03
+SUP-000536,Supplier_536,Machinery,USA,Active,2026-01-03,2026-01-05
+SUP-000537,Supplier_537,Electronics,India,Active,2026-01-11,2026-01-12
+SUP-000538,Supplier_538,Raw Materials,Japan,Active,2026-01-13,2026-01-14
+SUP-000539,Supplier_539,Packaging,Germany,Inactive,2026-01-04,2026-01-06
+SUP-000540,Supplier_540,Raw Materials,Japan,Active,2026-01-04,2026-01-04
+SUP-000541,Supplier_541,Packaging,Japan,Active,2026-01-12,2026-01-14
+SUP-000542,Supplier_542,Machinery,Mexico,Active,2026-01-01,2026-01-02
+SUP-000543,Supplier_543,Packaging,Japan,Active,2026-01-10,2026-01-10
+SUP-000544,Supplier_544,Electronics,India,Active,2026-01-16,2026-01-18
+SUP-000545,Supplier_545,Machinery,USA,Active,2026-01-07,2026-01-09
+SUP-000546,Supplier_546,Logistics,Japan,Active,2026-01-13,2026-01-15
+SUP-000547,Supplier_547,Logistics,Japan,Active,2026-01-09,2026-01-09
+SUP-000548,Supplier_548,Packaging,Japan,Active,2026-01-11,2026-01-13
+SUP-000549,Supplier_549,Machinery,USA,Active,2026-01-02,2026-01-03
+SUP-000550,Supplier_550,Logistics,USA,Active,2026-01-01,2026-01-01
+SUP-000551,Supplier_551,Raw Materials,Japan,Active,2026-01-11,2026-01-11
+SUP-000552,Supplier_552,Packaging,Germany,Active,2026-01-13,2026-01-13
+SUP-000553,Supplier_553,Packaging,USA,Inactive,2026-01-01,2026-01-01
+SUP-000554,Supplier_554,Machinery,Mexico,Inactive,2026-01-11,2026-01-12
+SUP-000555,Supplier_555,Machinery,India,Active,2026-01-01,2026-01-01
+SUP-000556,Supplier_556,Packaging,Germany,Active,2026-01-09,2026-01-09
+SUP-000557,Supplier_557,Logistics,USA,Active,2026-01-12,2026-01-14
+SUP-000558,Supplier_558,Machinery,Germany,Active,2026-01-12,2026-01-12
+SUP-000559,Supplier_559,Machinery,Germany,Active,2026-01-14,2026-01-15
+SUP-000560,Supplier_560,Electronics,Mexico,Active,2026-01-13,2026-01-14
+SUP-000561,Supplier_561,Packaging,India,Active,2026-01-14,2026-01-14
+SUP-000562,Supplier_562,Raw Materials,USA,Active,2026-01-11,2026-01-13
+SUP-000563,Supplier_563,Logistics,Mexico,Active,2026-01-08,2026-01-10
+SUP-000564,Supplier_564,Electronics,USA,Active,2026-01-10,2026-01-11
+SUP-000565,Supplier_565,Electronics,India,Active,2026-01-11,2026-01-13
+SUP-000566,Supplier_566,Raw Materials,Japan,Active,2026-01-08,2026-01-08
+SUP-000567,Supplier_567,Raw Materials,USA,Active,2026-01-08,2026-01-08
+SUP-000568,Supplier_568,Packaging,India,Probation,2026-01-02,2026-01-02
+SUP-000569,Supplier_569,Raw Materials,India,Probation,2026-01-07,2026-01-08
+SUP-000570,Supplier_570,Machinery,India,Active,2026-01-02,2026-01-03
+SUP-000571,Supplier_571,Electronics,Mexico,Active,2026-01-14,2026-01-16
+SUP-000572,Supplier_572,Logistics,Germany,Active,2026-01-15,2026-01-15
+SUP-000573,Supplier_573,Electronics,Japan,Probation,2026-01-03,2026-01-04
+SUP-000574,Supplier_574,Logistics,Mexico,Active,2026-01-10,2026-01-11
+SUP-000575,Supplier_575,Raw Materials,India,Active,2026-01-12,2026-01-13
+SUP-000576,Supplier_576,Machinery,India,Active,2026-01-12,2026-01-14
+SUP-000577,Supplier_577,Packaging,Germany,Inactive,2026-01-04,2026-01-04
+SUP-000578,Supplier_578,Electronics,Mexico,Active,2026-01-07,2026-01-09
+SUP-000579,Supplier_579,Machinery,Mexico,Active,2026-01-09,2026-01-11
+SUP-000580,Supplier_580,Packaging,Mexico,Active,2026-01-05,2026-01-06
+SUP-000581,Supplier_581,Raw Materials,India,Active,2026-01-11,2026-01-12
+SUP-000582,Supplier_582,Packaging,Japan,Active,2026-01-03,2026-01-04
+SUP-000583,Supplier_583,Raw Materials,Germany,Active,2026-01-12,2026-01-14
+SUP-000584,Supplier_584,Electronics,Mexico,Active,2026-01-03,2026-01-05
+SUP-000585,Supplier_585,Machinery,USA,Active,2026-01-16,2026-01-17
+SUP-000586,Supplier_586,Raw Materials,Mexico,Active,2026-01-12,2026-01-14
+SUP-000587,Supplier_587,Packaging,USA,Active,2026-01-07,2026-01-09
+SUP-000588,Supplier_588,Logistics,India,Active,2026-01-03,2026-01-05
+SUP-000589,Supplier_589,Packaging,India,Active,2026-01-10,2026-01-10
+SUP-000590,Supplier_590,Packaging,USA,Active,2026-01-15,2026-01-15
+SUP-000591,Supplier_591,Packaging,Mexico,Active,2026-01-03,2026-01-03
+SUP-000592,Supplier_592,Machinery,Germany,Active,2026-01-03,2026-01-04
+SUP-000593,Supplier_593,Logistics,USA,Active,2026-01-07,2026-01-07
+SUP-000594,Supplier_594,Machinery,Mexico,Active,2026-01-13,2026-01-15
+SUP-000595,Supplier_595,Packaging,USA,Probation,2026-01-15,2026-01-15
+SUP-000596,Supplier_596,Logistics,India,Active,2026-01-08,2026-01-10
+SUP-000597,Supplier_597,Logistics,India,Active,2026-01-04,2026-01-06
+SUP-000598,Supplier_598,Packaging,Mexico,Inactive,2026-01-11,2026-01-11
+SUP-000599,Supplier_599,Machinery,Japan,Active,2026-01-16,2026-01-16
+SUP-000600,Supplier_600,Logistics,Mexico,Inactive,2026-01-05,2026-01-07
+SUP-000601,Supplier_601,Machinery,Mexico,Active,2026-01-01,2026-01-03
+SUP-000602,Supplier_602,Packaging,USA,Inactive,2026-01-11,2026-01-11
+SUP-000603,Supplier_603,Machinery,India,Active,2026-01-06,2026-01-07
+SUP-000604,Supplier_604,Raw Materials,Mexico,Active,2026-01-08,2026-01-08
+SUP-000605,Supplier_605,Raw Materials,USA,Active,2026-01-03,2026-01-03
+SUP-000606,Supplier_606,Electronics,Mexico,Active,2026-01-04,2026-01-04
+SUP-000607,Supplier_607,Machinery,USA,Active,2026-01-04,2026-01-06
+SUP-000608,Supplier_608,Electronics,India,Active,2026-01-07,2026-01-08
+SUP-000609,Supplier_609,Machinery,Japan,Active,2026-01-11,2026-01-13
+SUP-000610,Supplier_610,Packaging,USA,Active,2026-01-06,2026-01-08
+SUP-000611,Supplier_611,Logistics,Japan,Inactive,2026-01-04,2026-01-06
+SUP-000612,Supplier_612,Electronics,India,Active,2026-01-15,2026-01-17
+SUP-000613,Supplier_613,Logistics,Japan,Active,2026-01-08,2026-01-08
+SUP-000614,Supplier_614,Electronics,USA,Probation,2026-01-05,2026-01-07
+SUP-000615,Supplier_615,Packaging,Germany,Active,2026-01-04,2026-01-04
+SUP-000616,Supplier_616,Packaging,Mexico,Active,2026-01-12,2026-01-12
+SUP-000617,Supplier_617,Raw Materials,India,Active,2026-01-16,2026-01-16
+SUP-000618,Supplier_618,Packaging,USA,Active,2026-01-04,2026-01-04
+SUP-000619,Supplier_619,Raw Materials,USA,Active,2026-01-12,2026-01-14
+SUP-000620,Supplier_620,Packaging,USA,Inactive,2026-01-16,2026-01-18
+SUP-000621,Supplier_621,Packaging,USA,Active,2026-01-12,2026-01-14
+SUP-000622,Supplier_622,Machinery,India,Probation,2026-01-15,2026-01-17
+SUP-000623,Supplier_623,Packaging,Mexico,Active,2026-01-06,2026-01-08
+SUP-000624,Supplier_624,Electronics,Germany,Active,2026-01-09,2026-01-09
+SUP-000625,Supplier_625,Packaging,Germany,Active,2026-01-02,2026-01-02
+SUP-000626,Supplier_626,Packaging,USA,Active,2026-01-10,2026-01-10
+SUP-000627,Supplier_627,Logistics,USA,Probation,2026-01-13,2026-01-13
+SUP-000628,Supplier_628,Raw Materials,India,Active,2026-01-03,2026-01-03
+SUP-000629,Supplier_629,Machinery,USA,Active,2026-01-08,2026-01-09
+SUP-000630,Supplier_630,Raw Materials,Mexico,Active,2026-01-12,2026-01-12
+SUP-000631,Supplier_631,Logistics,Germany,Active,2026-01-09,2026-01-11
+SUP-000632,Supplier_632,Logistics,Germany,Active,2026-01-02,2026-01-04
+SUP-000633,Supplier_633,Packaging,Japan,Active,2026-01-16,2026-01-16
+SUP-000634,Supplier_634,Machinery,USA,Active,2026-01-01,2026-01-01
+SUP-000635,Supplier_635,Packaging,Japan,Active,2026-01-09,2026-01-10
+SUP-000636,Supplier_636,Logistics,Mexico,Active,2026-01-07,2026-01-07
+SUP-000637,Supplier_637,Machinery,Japan,Active,2026-01-15,2026-01-17
+SUP-000638,Supplier_638,Logistics,Germany,Active,2026-01-02,2026-01-03
+SUP-000639,Supplier_639,Packaging,USA,Active,2026-01-10,2026-01-10
+SUP-000640,Supplier_640,Raw Materials,India,Active,2026-01-09,2026-01-11
+SUP-000641,Supplier_641,Logistics,USA,Active,2026-01-11,2026-01-11
+SUP-000642,Supplier_642,Logistics,Germany,Inactive,2026-01-03,2026-01-03
+SUP-000643,Supplier_643,Machinery,USA,Active,2026-01-10,2026-01-10
+SUP-000644,Supplier_644,Logistics,Japan,Active,2026-01-12,2026-01-13
+SUP-000645,Supplier_645,Packaging,Mexico,Active,2026-01-06,2026-01-08
+SUP-000646,Supplier_646,Raw Materials,Germany,Inactive,2026-01-08,2026-01-10
+SUP-000647,Supplier_647,Packaging,India,Active,2026-01-09,2026-01-10
+SUP-000648,Supplier_648,Packaging,Mexico,Active,2026-01-14,2026-01-15
+SUP-000649,Supplier_649,Packaging,India,Inactive,2026-01-12,2026-01-13
+SUP-000650,Supplier_650,Raw Materials,India,Probation,2026-01-05,2026-01-05
+SUP-000651,Supplier_651,Electronics,Mexico,Active,2026-01-05,2026-01-07
+SUP-000652,Supplier_652,Machinery,Germany,Active,2026-01-06,2026-01-06
+SUP-000653,Supplier_653,Logistics,India,Active,2026-01-02,2026-01-03
+SUP-000654,Supplier_654,Packaging,USA,Active,2026-01-08,2026-01-08
+SUP-000655,Supplier_655,Packaging,USA,Probation,2026-01-10,2026-01-11
+SUP-000656,Supplier_656,Packaging,Japan,Active,2026-01-01,2026-01-02
+SUP-000657,Supplier_657,Logistics,India,Active,2026-01-03,2026-01-03
+SUP-000658,Supplier_658,Packaging,Japan,Active,2026-01-16,2026-01-18
+SUP-000659,Supplier_659,Machinery,Mexico,Active,2026-01-14,2026-01-14
+SUP-000660,Supplier_660,Machinery,Germany,Active,2026-01-15,2026-01-15
+SUP-000661,Supplier_661,Machinery,Japan,Active,2026-01-15,2026-01-17
+SUP-000662,Supplier_662,Raw Materials,Germany,Active,2026-01-08,2026-01-10
+SUP-000663,Supplier_663,Electronics,India,Active,2026-01-12,2026-01-13
+SUP-000664,Supplier_664,Raw Materials,Japan,Active,2026-01-12,2026-01-14
+SUP-000665,Supplier_665,Logistics,USA,Active,2026-01-12,2026-01-14
+SUP-000666,Supplier_666,Packaging,Germany,Inactive,2026-01-02,2026-01-03
+SUP-000667,Supplier_667,Raw Materials,India,Active,2026-01-14,2026-01-15
+SUP-000668,Supplier_668,Packaging,Mexico,Active,2026-01-02,2026-01-04
+SUP-000669,Supplier_669,Raw Materials,Japan,Inactive,2026-01-09,2026-01-10
+SUP-000670,Supplier_670,Machinery,USA,Inactive,2026-01-04,2026-01-05
+SUP-000671,Supplier_671,Packaging,USA,Active,2026-01-15,2026-01-15
+SUP-000672,Supplier_672,Machinery,India,Active,2026-01-11,2026-01-12
+SUP-000673,Supplier_673,Electronics,Mexico,Active,2026-01-02,2026-01-03
+SUP-000674,Supplier_674,Logistics,Japan,Active,2026-01-06,2026-01-08
+SUP-000675,Supplier_675,Machinery,Germany,Active,2026-01-13,2026-01-15
+SUP-000676,Supplier_676,Raw Materials,USA,Active,2026-01-05,2026-01-06
+SUP-000677,Supplier_677,Logistics,Mexico,Active,2026-01-01,2026-01-03
+SUP-000678,Supplier_678,Packaging,Japan,Inactive,2026-01-04,2026-01-04
+SUP-000679,Supplier_679,Raw Materials,Japan,Probation,2026-01-16,2026-01-17
+SUP-000680,Supplier_680,Raw Materials,Mexico,Active,2026-01-03,2026-01-04
+SUP-000681,Supplier_681,Raw Materials,India,Active,2026-01-04,2026-01-05
+SUP-000682,Supplier_682,Logistics,USA,Active,2026-01-12,2026-01-13
+SUP-000683,Supplier_683,Raw Materials,Mexico,Active,2026-01-02,2026-01-04
+SUP-000684,Supplier_684,Packaging,USA,Active,2026-01-12,2026-01-13
+SUP-000685,Supplier_685,Packaging,USA,Active,2026-01-09,2026-01-09
+SUP-000686,Supplier_686,Electronics,India,Active,2026-01-08,2026-01-10
+SUP-000687,Supplier_687,Machinery,India,Active,2026-01-13,2026-01-13
+SUP-000688,Supplier_688,Packaging,Germany,Active,2026-01-15,2026-01-15
+SUP-000689,Supplier_689,Raw Materials,Mexico,Inactive,2026-01-09,2026-01-11
+SUP-000690,Supplier_690,Raw Materials,Mexico,Active,2026-01-12,2026-01-13
+SUP-000691,Supplier_691,Packaging,USA,Active,2026-01-16,2026-01-17
+SUP-000692,Supplier_692,Packaging,Japan,Active,2026-01-16,2026-01-17
+SUP-000693,Supplier_693,Machinery,Japan,Inactive,2026-01-01,2026-01-03
+SUP-000694,Supplier_694,Packaging,Japan,Active,2026-01-11,2026-01-12
+SUP-000695,Supplier_695,Raw Materials,Mexico,Active,2026-01-10,2026-01-12
+SUP-000696,Supplier_696,Logistics,USA,Active,2026-01-12,2026-01-14
+SUP-000697,Supplier_697,Electronics,India,Active,2026-01-15,2026-01-16
+SUP-000698,Supplier_698,Packaging,Mexico,Active,2026-01-09,2026-01-09
+SUP-000699,Supplier_699,Logistics,Germany,Active,2026-01-12,2026-01-13
+SUP-000700,Supplier_700,Packaging,Japan,Inactive,2026-01-14,2026-01-16
+SUP-000701,Supplier_701,Raw Materials,USA,Active,2026-01-06,2026-01-07
+SUP-000702,Supplier_702,Electronics,Japan,Active,2026-01-06,2026-01-07
+SUP-000703,Supplier_703,Packaging,Germany,Active,2026-01-10,2026-01-12
+SUP-000704,Supplier_704,Electronics,Japan,Active,2026-01-09,2026-01-10
+SUP-000705,Supplier_705,Electronics,Germany,Probation,2026-01-05,2026-01-05
+SUP-000706,Supplier_706,Packaging,Japan,Active,2026-01-08,2026-01-10
+SUP-000707,Supplier_707,Electronics,Germany,Active,2026-01-03,2026-01-04
+SUP-000708,Supplier_708,Machinery,USA,Inactive,2026-01-04,2026-01-06
+SUP-000709,Supplier_709,Electronics,USA,Active,2026-01-03,2026-01-04
+SUP-000710,Supplier_710,Packaging,Mexico,Active,2026-01-06,2026-01-08
+SUP-000711,Supplier_711,Packaging,Germany,Inactive,2026-01-10,2026-01-12
+SUP-000712,Supplier_712,Machinery,Japan,Active,2026-01-07,2026-01-07
+SUP-000713,Supplier_713,Packaging,India,Active,2026-01-11,2026-01-12
+SUP-000714,Supplier_714,Logistics,Germany,Active,2026-01-05,2026-01-07
+SUP-000715,Supplier_715,Machinery,Germany,Active,2026-01-14,2026-01-15
+SUP-000716,Supplier_716,Electronics,USA,Active,2026-01-15,2026-01-16
+SUP-000717,Supplier_717,Raw Materials,Germany,Active,2026-01-06,2026-01-07
+SUP-000718,Supplier_718,Logistics,India,Probation,2026-01-11,2026-01-11
+SUP-000719,Supplier_719,Machinery,India,Active,2026-01-07,2026-01-09
+SUP-000720,Supplier_720,Raw Materials,Japan,Inactive,2026-01-08,2026-01-09
+SUP-000721,Supplier_721,Electronics,USA,Active,2026-01-07,2026-01-07
+SUP-000722,Supplier_722,Raw Materials,Germany,Active,2026-01-16,2026-01-18
+SUP-000723,Supplier_723,Electronics,Mexico,Active,2026-01-04,2026-01-06
+SUP-000724,Supplier_724,Raw Materials,USA,Active,2026-01-11,2026-01-11
+SUP-000725,Supplier_725,Packaging,Mexico,Active,2026-01-13,2026-01-15
+SUP-000726,Supplier_726,Raw Materials,India,Active,2026-01-05,2026-01-06
+SUP-000727,Supplier_727,Logistics,India,Active,2026-01-01,2026-01-01
+SUP-000728,Supplier_728,Packaging,Japan,Active,2026-01-08,2026-01-09
+SUP-000729,Supplier_729,Raw Materials,USA,Active,2026-01-11,2026-01-13
+SUP-000730,Supplier_730,Packaging,Germany,Active,2026-01-06,2026-01-07
+SUP-000731,Supplier_731,Raw Materials,Japan,Active,2026-01-14,2026-01-16
+SUP-000732,Supplier_732,Machinery,India,Inactive,2026-01-08,2026-01-09
+SUP-000733,Supplier_733,Raw Materials,India,Active,2026-01-09,2026-01-09
+SUP-000734,Supplier_734,Logistics,USA,Active,2026-01-03,2026-01-04
+SUP-000735,Supplier_735,Raw Materials,Mexico,Probation,2026-01-15,2026-01-15
+SUP-000736,Supplier_736,Raw Materials,Germany,Active,2026-01-06,2026-01-08
+SUP-000737,Supplier_737,Logistics,Germany,Probation,2026-01-09,2026-01-11
+SUP-000738,Supplier_738,Packaging,India,Active,2026-01-04,2026-01-06
+SUP-000739,Supplier_739,Logistics,Germany,Active,2026-01-01,2026-01-02
+SUP-000740,Supplier_740,Logistics,Japan,Probation,2026-01-04,2026-01-05
+SUP-000741,Supplier_741,Electronics,Germany,Probation,2026-01-16,2026-01-18
+SUP-000742,Supplier_742,Electronics,USA,Active,2026-01-02,2026-01-03
+SUP-000743,Supplier_743,Machinery,Japan,Active,2026-01-03,2026-01-03
+SUP-000744,Supplier_744,Packaging,India,Probation,2026-01-13,2026-01-13
+SUP-000745,Supplier_745,Machinery,India,Active,2026-01-07,2026-01-08
+SUP-000746,Supplier_746,Logistics,India,Active,2026-01-01,2026-01-01
+SUP-000747,Supplier_747,Electronics,Mexico,Active,2026-01-05,2026-01-05
+SUP-000748,Supplier_748,Machinery,India,Probation,2026-01-12,2026-01-12
+SUP-000749,Supplier_749,Logistics,India,Active,2026-01-07,2026-01-09
+SUP-000750,Supplier_750,Machinery,Mexico,Active,2026-01-08,2026-01-08
+SUP-000751,Supplier_751,Machinery,USA,Probation,2026-01-05,2026-01-05
+SUP-000752,Supplier_752,Logistics,Japan,Active,2026-01-13,2026-01-15
+SUP-000753,Supplier_753,Electronics,India,Active,2026-01-14,2026-01-14
+SUP-000754,Supplier_754,Electronics,India,Active,2026-01-01,2026-01-02
+SUP-000755,Supplier_755,Packaging,India,Active,2026-01-03,2026-01-05
+SUP-000756,Supplier_756,Packaging,USA,Inactive,2026-01-02,2026-01-03
+SUP-000757,Supplier_757,Raw Materials,USA,Active,2026-01-16,2026-01-17
+SUP-000758,Supplier_758,Packaging,India,Probation,2026-01-08,2026-01-09
+SUP-000759,Supplier_759,Raw Materials,Germany,Active,2026-01-14,2026-01-16
+SUP-000760,Supplier_760,Logistics,Germany,Active,2026-01-10,2026-01-11
+SUP-000761,Supplier_761,Raw Materials,USA,Active,2026-01-09,2026-01-09
+SUP-000762,Supplier_762,Packaging,USA,Active,2026-01-06,2026-01-07
+SUP-000763,Supplier_763,Logistics,USA,Active,2026-01-04,2026-01-05
+SUP-000764,Supplier_764,Logistics,USA,Active,2026-01-13,2026-01-13
+SUP-000765,Supplier_765,Logistics,USA,Active,2026-01-14,2026-01-14
+SUP-000766,Supplier_766,Machinery,India,Active,2026-01-11,2026-01-13
+SUP-000767,Supplier_767,Packaging,Germany,Active,2026-01-15,2026-01-15
+SUP-000768,Supplier_768,Electronics,Germany,Inactive,2026-01-14,2026-01-15
+SUP-000769,Supplier_769,Raw Materials,Germany,Active,2026-01-07,2026-01-09
+SUP-000770,Supplier_770,Electronics,Mexico,Inactive,2026-01-10,2026-01-12
+SUP-000771,Supplier_771,Logistics,Japan,Active,2026-01-01,2026-01-01
+SUP-000772,Supplier_772,Machinery,Mexico,Active,2026-01-03,2026-01-05
+SUP-000773,Supplier_773,Packaging,USA,Inactive,2026-01-01,2026-01-03
+SUP-000774,Supplier_774,Raw Materials,Japan,Probation,2026-01-11,2026-01-11
+SUP-000775,Supplier_775,Machinery,Germany,Active,2026-01-04,2026-01-06
+SUP-000776,Supplier_776,Raw Materials,India,Active,2026-01-07,2026-01-09
+SUP-000777,Supplier_777,Logistics,Mexico,Active,2026-01-05,2026-01-07
+SUP-000778,Supplier_778,Packaging,Japan,Active,2026-01-06,2026-01-06
+SUP-000779,Supplier_779,Electronics,India,Probation,2026-01-12,2026-01-13
+SUP-000780,Supplier_780,Raw Materials,USA,Active,2026-01-02,2026-01-04
+SUP-000781,Supplier_781,Raw Materials,Germany,Active,2026-01-02,2026-01-03
+SUP-000782,Supplier_782,Packaging,Japan,Active,2026-01-15,2026-01-17
+SUP-000783,Supplier_783,Logistics,Japan,Active,2026-01-16,2026-01-17
+SUP-000784,Supplier_784,Electronics,India,Probation,2026-01-12,2026-01-14
+SUP-000785,Supplier_785,Machinery,India,Inactive,2026-01-06,2026-01-07
+SUP-000786,Supplier_786,Electronics,USA,Active,2026-01-15,2026-01-17
+SUP-000787,Supplier_787,Electronics,Germany,Active,2026-01-14,2026-01-15
+SUP-000788,Supplier_788,Electronics,Germany,Active,2026-01-15,2026-01-16
+SUP-000789,Supplier_789,Electronics,USA,Active,2026-01-01,2026-01-01
+SUP-000790,Supplier_790,Packaging,Japan,Probation,2026-01-10,2026-01-12
+SUP-000791,Supplier_791,Packaging,Japan,Active,2026-01-14,2026-01-16
+SUP-000792,Supplier_792,Electronics,Germany,Active,2026-01-11,2026-01-13
+SUP-000793,Supplier_793,Logistics,Germany,Probation,2026-01-04,2026-01-04
+SUP-000794,Supplier_794,Machinery,Germany,Probation,2026-01-12,2026-01-14
+SUP-000795,Supplier_795,Electronics,USA,Probation,2026-01-03,2026-01-04
+SUP-000796,Supplier_796,Raw Materials,USA,Active,2026-01-12,2026-01-12
+SUP-000797,Supplier_797,Packaging,USA,Active,2026-01-05,2026-01-06
+SUP-000798,Supplier_798,Raw Materials,Mexico,Active,2026-01-01,2026-01-02
+SUP-000799,Supplier_799,Packaging,Japan,Active,2026-01-12,2026-01-13
+SUP-000800,Supplier_800,Packaging,Mexico,Active,2026-01-12,2026-01-13
+SUP-000801,Supplier_801,Raw Materials,USA,Active,2026-01-16,2026-01-17
+SUP-000802,Supplier_802,Packaging,USA,Active,2026-01-13,2026-01-15
+SUP-000803,Supplier_803,Logistics,USA,Probation,2026-01-05,2026-01-07
+SUP-000804,Supplier_804,Logistics,Japan,Active,2026-01-06,2026-01-07
+SUP-000805,Supplier_805,Packaging,USA,Active,2026-01-06,2026-01-08
+SUP-000806,Supplier_806,Raw Materials,Mexico,Active,2026-01-15,2026-01-17
+SUP-000807,Supplier_807,Electronics,India,Inactive,2026-01-03,2026-01-03
+SUP-000808,Supplier_808,Electronics,Japan,Active,2026-01-01,2026-01-03
+SUP-000809,Supplier_809,Electronics,Japan,Probation,2026-01-03,2026-01-03
+SUP-000810,Supplier_810,Packaging,Japan,Active,2026-01-12,2026-01-13
+SUP-000811,Supplier_811,Machinery,Mexico,Active,2026-01-15,2026-01-15
+SUP-000812,Supplier_812,Packaging,Mexico,Active,2026-01-02,2026-01-04
+SUP-000813,Supplier_813,Packaging,India,Active,2026-01-15,2026-01-17
+SUP-000814,Supplier_814,Raw Materials,India,Active,2026-01-11,2026-01-11
+SUP-000815,Supplier_815,Electronics,Japan,Active,2026-01-02,2026-01-04
+SUP-000816,Supplier_816,Logistics,Germany,Probation,2026-01-09,2026-01-09
+SUP-000817,Supplier_817,Logistics,Mexico,Active,2026-01-16,2026-01-16
+SUP-000818,Supplier_818,Raw Materials,Mexico,Probation,2026-01-07,2026-01-08
+SUP-000819,Supplier_819,Logistics,Japan,Active,2026-01-08,2026-01-10
+SUP-000820,Supplier_820,Packaging,Japan,Active,2026-01-02,2026-01-02
+SUP-000821,Supplier_821,Logistics,Germany,Active,2026-01-14,2026-01-14
+SUP-000822,Supplier_822,Packaging,Mexico,Active,2026-01-11,2026-01-12
+SUP-000823,Supplier_823,Raw Materials,India,Active,2026-01-10,2026-01-10
+SUP-000824,Supplier_824,Electronics,Mexico,Active,2026-01-08,2026-01-10
+SUP-000825,Supplier_825,Machinery,Mexico,Active,2026-01-14,2026-01-16
+SUP-000826,Supplier_826,Electronics,Japan,Active,2026-01-10,2026-01-12
+SUP-000827,Supplier_827,Electronics,Japan,Probation,2026-01-01,2026-01-03
+SUP-000828,Supplier_828,Packaging,Japan,Active,2026-01-03,2026-01-03
+SUP-000829,Supplier_829,Electronics,Germany,Active,2026-01-09,2026-01-09
+SUP-000830,Supplier_830,Electronics,India,Probation,2026-01-08,2026-01-10
+SUP-000831,Supplier_831,Raw Materials,India,Active,2026-01-09,2026-01-10
+SUP-000832,Supplier_832,Electronics,USA,Active,2026-01-07,2026-01-07
+SUP-000833,Supplier_833,Electronics,USA,Active,2026-01-16,2026-01-17
+SUP-000834,Supplier_834,Raw Materials,India,Inactive,2026-01-11,2026-01-13
+SUP-000835,Supplier_835,Logistics,Mexico,Active,2026-01-04,2026-01-04
+SUP-000836,Supplier_836,Machinery,USA,Active,2026-01-07,2026-01-08
+SUP-000837,Supplier_837,Electronics,Germany,Active,2026-01-07,2026-01-07
+SUP-000838,Supplier_838,Machinery,Mexico,Active,2026-01-11,2026-01-11
+SUP-000839,Supplier_839,Packaging,India,Active,2026-01-05,2026-01-05
+SUP-000840,Supplier_840,Raw Materials,Mexico,Inactive,2026-01-02,2026-01-02
+SUP-000841,Supplier_841,Raw Materials,Germany,Active,2026-01-14,2026-01-15
+SUP-000842,Supplier_842,Machinery,Mexico,Probation,2026-01-04,2026-01-04
+SUP-000843,Supplier_843,Raw Materials,USA,Active,2026-01-08,2026-01-08
+SUP-000844,Supplier_844,Raw Materials,India,Active,2026-01-02,2026-01-03
+SUP-000845,Supplier_845,Raw Materials,India,Active,2026-01-03,2026-01-05
+SUP-000846,Supplier_846,Electronics,USA,Active,2026-01-15,2026-01-16
+SUP-000847,Supplier_847,Raw Materials,Mexico,Inactive,2026-01-01,2026-01-01
+SUP-000848,Supplier_848,Logistics,USA,Active,2026-01-03,2026-01-04
+SUP-000849,Supplier_849,Raw Materials,Japan,Active,2026-01-13,2026-01-15
+SUP-000850,Supplier_850,Logistics,Germany,Active,2026-01-13,2026-01-15
+SUP-000851,Supplier_851,Machinery,Japan,Active,2026-01-12,2026-01-12
+SUP-000852,Supplier_852,Logistics,Germany,Probation,2026-01-12,2026-01-14
+SUP-000853,Supplier_853,Packaging,Germany,Active,2026-01-06,2026-01-08
+SUP-000854,Supplier_854,Machinery,India,Active,2026-01-05,2026-01-06
+SUP-000855,Supplier_855,Packaging,Japan,Active,2026-01-15,2026-01-15
+SUP-000856,Supplier_856,Raw Materials,India,Active,2026-01-11,2026-01-11
+SUP-000857,Supplier_857,Logistics,Mexico,Active,2026-01-09,2026-01-10
+SUP-000858,Supplier_858,Logistics,Japan,Active,2026-01-14,2026-01-14
+SUP-000859,Supplier_859,Machinery,Japan,Active,2026-01-03,2026-01-03
+SUP-000860,Supplier_860,Machinery,Japan,Active,2026-01-06,2026-01-06
+SUP-000861,Supplier_861,Logistics,India,Probation,2026-01-09,2026-01-11
+SUP-000862,Supplier_862,Logistics,Japan,Inactive,2026-01-12,2026-01-14
+SUP-000863,Supplier_863,Packaging,Germany,Active,2026-01-10,2026-01-12
+SUP-000864,Supplier_864,Machinery,USA,Active,2026-01-07,2026-01-09
+SUP-000865,Supplier_865,Raw Materials,Mexico,Active,2026-01-14,2026-01-16
+SUP-000866,Supplier_866,Machinery,USA,Active,2026-01-05,2026-01-05
+SUP-000867,Supplier_867,Raw Materials,India,Active,2026-01-10,2026-01-10
+SUP-000868,Supplier_868,Packaging,Mexico,Inactive,2026-01-12,2026-01-13
+SUP-000869,Supplier_869,Logistics,India,Active,2026-01-14,2026-01-15
+SUP-000870,Supplier_870,Packaging,Mexico,Probation,2026-01-02,2026-01-03
+SUP-000871,Supplier_871,Raw Materials,Germany,Active,2026-01-15,2026-01-17
+SUP-000872,Supplier_872,Raw Materials,Japan,Active,2026-01-13,2026-01-14
+SUP-000873,Supplier_873,Raw Materials,Germany,Inactive,2026-01-03,2026-01-04
+SUP-000874,Supplier_874,Raw Materials,India,Active,2026-01-15,2026-01-16
+SUP-000875,Supplier_875,Machinery,Mexico,Active,2026-01-14,2026-01-14
+SUP-000876,Supplier_876,Logistics,Japan,Active,2026-01-10,2026-01-12
+SUP-000877,Supplier_877,Packaging,Mexico,Active,2026-01-10,2026-01-10
+SUP-000878,Supplier_878,Electronics,India,Active,2026-01-13,2026-01-13
+SUP-000879,Supplier_879,Packaging,Japan,Active,2026-01-03,2026-01-04
+SUP-000880,Supplier_880,Raw Materials,Mexico,Active,2026-01-11,2026-01-12
+SUP-000881,Supplier_881,Electronics,USA,Active,2026-01-02,2026-01-03
+SUP-000882,Supplier_882,Packaging,Mexico,Active,2026-01-09,2026-01-10
+SUP-000883,Supplier_883,Logistics,USA,Active,2026-01-06,2026-01-08
+SUP-000884,Supplier_884,Logistics,USA,Active,2026-01-12,2026-01-13
+SUP-000885,Supplier_885,Packaging,Mexico,Active,2026-01-02,2026-01-03
+SUP-000886,Supplier_886,Electronics,USA,Probation,2026-01-07,2026-01-09
+SUP-000887,Supplier_887,Packaging,India,Active,2026-01-07,2026-01-09
+SUP-000888,Supplier_888,Machinery,Germany,Active,2026-01-02,2026-01-02
+SUP-000889,Supplier_889,Machinery,Mexico,Active,2026-01-05,2026-01-07
+SUP-000890,Supplier_890,Logistics,Germany,Active,2026-01-12,2026-01-14
+SUP-000891,Supplier_891,Logistics,India,Active,2026-01-07,2026-01-07
+SUP-000892,Supplier_892,Electronics,Germany,Inactive,2026-01-06,2026-01-08
+SUP-000893,Supplier_893,Machinery,USA,Probation,2026-01-04,2026-01-05
+SUP-000894,Supplier_894,Packaging,India,Probation,2026-01-12,2026-01-12
+SUP-000895,Supplier_895,Electronics,India,Inactive,2026-01-06,2026-01-06
+SUP-000896,Supplier_896,Machinery,India,Active,2026-01-13,2026-01-15
+SUP-000897,Supplier_897,Logistics,India,Inactive,2026-01-03,2026-01-03
+SUP-000898,Supplier_898,Electronics,USA,Active,2026-01-16,2026-01-18
+SUP-000899,Supplier_899,Packaging,Mexico,Active,2026-01-04,2026-01-04
+SUP-000900,Supplier_900,Packaging,Germany,Active,2026-01-13,2026-01-13
+SUP-000901,Supplier_901,Machinery,Germany,Active,2026-01-03,2026-01-04
+SUP-000902,Supplier_902,Packaging,India,Probation,2026-01-08,2026-01-10
+SUP-000903,Supplier_903,Electronics,Mexico,Inactive,2026-01-11,2026-01-12
+SUP-000904,Supplier_904,Machinery,USA,Active,2026-01-10,2026-01-10
+SUP-000905,Supplier_905,Machinery,Mexico,Inactive,2026-01-02,2026-01-03
+SUP-000906,Supplier_906,Machinery,Mexico,Active,2026-01-16,2026-01-18
+SUP-000907,Supplier_907,Raw Materials,Mexico,Probation,2026-01-06,2026-01-08
+SUP-000908,Supplier_908,Electronics,USA,Active,2026-01-06,2026-01-06
+SUP-000909,Supplier_909,Raw Materials,Germany,Active,2026-01-11,2026-01-13
+SUP-000910,Supplier_910,Raw Materials,India,Probation,2026-01-15,2026-01-16
+SUP-000911,Supplier_911,Machinery,Japan,Active,2026-01-05,2026-01-06
+SUP-000912,Supplier_912,Machinery,USA,Inactive,2026-01-02,2026-01-04
+SUP-000913,Supplier_913,Logistics,Japan,Active,2026-01-14,2026-01-14
+SUP-000914,Supplier_914,Machinery,Germany,Active,2026-01-16,2026-01-17
+SUP-000915,Supplier_915,Machinery,Japan,Active,2026-01-08,2026-01-10
+SUP-000916,Supplier_916,Packaging,Japan,Active,2026-01-10,2026-01-10
+SUP-000917,Supplier_917,Packaging,USA,Active,2026-01-04,2026-01-04
+SUP-000918,Supplier_918,Machinery,Germany,Active,2026-01-13,2026-01-15
+SUP-000919,Supplier_919,Raw Materials,Mexico,Inactive,2026-01-16,2026-01-17
+SUP-000920,Supplier_920,Raw Materials,Mexico,Active,2026-01-05,2026-01-05
+SUP-000921,Supplier_921,Machinery,India,Active,2026-01-14,2026-01-16
+SUP-000922,Supplier_922,Machinery,India,Active,2026-01-14,2026-01-14
+SUP-000923,Supplier_923,Electronics,India,Active,2026-01-15,2026-01-15
+SUP-000924,Supplier_924,Machinery,Germany,Active,2026-01-02,2026-01-04
+SUP-000925,Supplier_925,Machinery,Germany,Active,2026-01-02,2026-01-03
+SUP-000926,Supplier_926,Raw Materials,Germany,Active,2026-01-10,2026-01-12
+SUP-000927,Supplier_927,Raw Materials,India,Active,2026-01-03,2026-01-04
+SUP-000928,Supplier_928,Logistics,India,Inactive,2026-01-08,2026-01-08
+SUP-000929,Supplier_929,Machinery,Germany,Active,2026-01-01,2026-01-03
+SUP-000930,Supplier_930,Electronics,Mexico,Probation,2026-01-02,2026-01-04
+SUP-000931,Supplier_931,Electronics,India,Active,2026-01-12,2026-01-12
+SUP-000932,Supplier_932,Raw Materials,Germany,Active,2026-01-10,2026-01-12
+SUP-000933,Supplier_933,Machinery,India,Active,2026-01-13,2026-01-15
+SUP-000934,Supplier_934,Logistics,Japan,Probation,2026-01-04,2026-01-04
+SUP-000935,Supplier_935,Raw Materials,Japan,Active,2026-01-07,2026-01-09
+SUP-000936,Supplier_936,Packaging,India,Active,2026-01-07,2026-01-08
+SUP-000937,Supplier_937,Raw Materials,Japan,Active,2026-01-09,2026-01-09
+SUP-000938,Supplier_938,Electronics,Mexico,Active,2026-01-16,2026-01-17
+SUP-000939,Supplier_939,Packaging,Japan,Active,2026-01-10,2026-01-10
+SUP-000940,Supplier_940,Packaging,India,Active,2026-01-15,2026-01-17
+SUP-000941,Supplier_941,Raw Materials,Germany,Active,2026-01-11,2026-01-13
+SUP-000942,Supplier_942,Machinery,India,Active,2026-01-13,2026-01-15
+SUP-000943,Supplier_943,Machinery,Japan,Active,2026-01-03,2026-01-03
+SUP-000944,Supplier_944,Raw Materials,India,Active,2026-01-12,2026-01-13
+SUP-000945,Supplier_945,Machinery,Germany,Active,2026-01-16,2026-01-17
+SUP-000946,Supplier_946,Packaging,India,Active,2026-01-14,2026-01-15
+SUP-000947,Supplier_947,Electronics,India,Active,2026-01-06,2026-01-06
+SUP-000948,Supplier_948,Logistics,Japan,Active,2026-01-01,2026-01-02
+SUP-000949,Supplier_949,Packaging,India,Probation,2026-01-14,2026-01-14
+SUP-000950,Supplier_950,Raw Materials,Germany,Active,2026-01-11,2026-01-11
+SUP-000951,Supplier_951,Raw Materials,USA,Active,2026-01-08,2026-01-10
+SUP-000952,Supplier_952,Packaging,USA,Active,2026-01-04,2026-01-05
+SUP-000953,Supplier_953,Electronics,USA,Active,2026-01-02,2026-01-04
+SUP-000954,Supplier_954,Packaging,India,Active,2026-01-09,2026-01-09
+SUP-000955,Supplier_955,Packaging,Germany,Active,2026-01-03,2026-01-05
+SUP-000956,Supplier_956,Logistics,USA,Probation,2026-01-05,2026-01-06
+SUP-000957,Supplier_957,Electronics,USA,Inactive,2026-01-04,2026-01-05
+SUP-000958,Supplier_958,Machinery,USA,Probation,2026-01-08,2026-01-09
+SUP-000959,Supplier_959,Logistics,Germany,Active,2026-01-12,2026-01-12
+SUP-000960,Supplier_960,Electronics,Japan,Active,2026-01-08,2026-01-08
+SUP-000961,Supplier_961,Raw Materials,India,Active,2026-01-04,2026-01-04
+SUP-000962,Supplier_962,Packaging,Mexico,Active,2026-01-06,2026-01-08
+SUP-000963,Supplier_963,Machinery,Mexico,Inactive,2026-01-08,2026-01-10
+SUP-000964,Supplier_964,Machinery,Mexico,Inactive,2026-01-04,2026-01-04
+SUP-000965,Supplier_965,Raw Materials,USA,Active,2026-01-05,2026-01-07
+SUP-000966,Supplier_966,Electronics,Japan,Active,2026-01-08,2026-01-10
+SUP-000967,Supplier_967,Electronics,Germany,Active,2026-01-02,2026-01-02
+SUP-000968,Supplier_968,Packaging,Japan,Active,2026-01-06,2026-01-06
+SUP-000969,Supplier_969,Raw Materials,India,Active,2026-01-01,2026-01-03
+SUP-000970,Supplier_970,Logistics,USA,Probation,2026-01-05,2026-01-06
+SUP-000971,Supplier_971,Electronics,Mexico,Active,2026-01-06,2026-01-08
+SUP-000972,Supplier_972,Packaging,Germany,Active,2026-01-09,2026-01-11
+SUP-000973,Supplier_973,Machinery,USA,Active,2026-01-04,2026-01-04
+SUP-000974,Supplier_974,Electronics,India,Active,2026-01-11,2026-01-13
+SUP-000975,Supplier_975,Electronics,Germany,Active,2026-01-15,2026-01-16
+SUP-000976,Supplier_976,Packaging,USA,Active,2026-01-11,2026-01-12
+SUP-000977,Supplier_977,Logistics,USA,Active,2026-01-16,2026-01-18
+SUP-000978,Supplier_978,Logistics,Mexico,Active,2026-01-09,2026-01-11
+SUP-000979,Supplier_979,Logistics,USA,Active,2026-01-06,2026-01-06
+SUP-000980,Supplier_980,Packaging,Mexico,Active,2026-01-04,2026-01-06
+SUP-000981,Supplier_981,Logistics,India,Active,2026-01-10,2026-01-12
+SUP-000982,Supplier_982,Machinery,USA,Active,2026-01-08,2026-01-10
+SUP-000983,Supplier_983,Packaging,India,Active,2026-01-16,2026-01-17
+SUP-000984,Supplier_984,Raw Materials,India,Active,2026-01-14,2026-01-14
+SUP-000985,Supplier_985,Packaging,Germany,Inactive,2026-01-01,2026-01-01
+SUP-000986,Supplier_986,Packaging,India,Active,2026-01-01,2026-01-03
+SUP-000987,Supplier_987,Raw Materials,Japan,Probation,2026-01-07,2026-01-09
+SUP-000988,Supplier_988,Packaging,Japan,Active,2026-01-08,2026-01-08
+SUP-000989,Supplier_989,Electronics,Germany,Active,2026-01-14,2026-01-15
+SUP-000990,Supplier_990,Machinery,USA,Active,2026-01-15,2026-01-17
+SUP-000991,Supplier_991,Raw Materials,Japan,Inactive,2026-01-09,2026-01-11
+SUP-000992,Supplier_992,Logistics,Germany,Active,2026-01-06,2026-01-08
+SUP-000993,Supplier_993,Logistics,USA,Active,2026-01-02,2026-01-02
+SUP-000994,Supplier_994,Packaging,USA,Active,2026-01-05,2026-01-07
+SUP-000995,Supplier_995,Machinery,Mexico,Active,2026-01-07,2026-01-09
+SUP-000996,Supplier_996,Raw Materials,Germany,Inactive,2026-01-06,2026-01-08
+SUP-000997,Supplier_997,Packaging,Mexico,Active,2026-01-04,2026-01-06
+SUP-000998,Supplier_998,Logistics,Mexico,Probation,2026-01-08,2026-01-09
+SUP-000999,Supplier_999,Machinery,India,Active,2026-01-16,2026-01-16
+SUP-001000,Supplier_1000,Electronics,Mexico,Active,2026-01-10,2026-01-10
