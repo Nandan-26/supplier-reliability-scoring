@@ -261,6 +261,16 @@ BEGIN
     );
 END;
 
+CREATE TRIGGER IF NOT EXISTS trg_prevent_cancelling_po_with_shipments
+BEFORE UPDATE OF status ON purchase_orders
+WHEN NEW.status = 'Cancelled'
+BEGIN
+    SELECT RAISE(ABORT, 'A purchase order with shipments cannot be cancelled.')
+    WHERE EXISTS (
+        SELECT 1 FROM shipments WHERE po_id = OLD.po_id
+    );
+END;
+
 CREATE TRIGGER IF NOT EXISTS trg_check_cumulative_delivered_qty_insert
 BEFORE INSERT ON delivery_events
 BEGIN
