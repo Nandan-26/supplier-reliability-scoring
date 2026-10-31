@@ -24,7 +24,7 @@ A Python and SQLite assessment project that generates synthetic procurement data
 | Compliance | 10% | Penalties for recorded compliance risk signals |
 | Disruption | 10% | Penalties for recorded disruption risk signals |
 
-Scores are intended to remain between 0 and 100. Cost measures adherence to the agreed PO price, not whether a supplier is inexpensive. Missing evidence is not proof of good performance: dimension scores must be interpreted together with sample counts and confidence labels. Compliance and disruption use a neutral 50-point fallback with `No Data` confidence when no relevant signals are recorded.
+Scores are intended to remain between 0 and 100. Cost measures adherence to the agreed PO price, not whether a supplier is inexpensive. Missing evidence is not proof of good performance: dimension scores must be interpreted together with sample counts and confidence labels. All six dimensions use a neutral 50-point fallback with `No Data` confidence when no evidence is available. For observed records, dimension confidence is based on evidence counts (delivery/quality/capacity/risk: 5 or more for High; cost: 3 or more for High); the overall confidence tier uses the combined sample-count heuristic (15 or more High, 5–14 Medium, otherwise Low/Sparse). These are project heuristics, not statistical confidence intervals.
 
 ## 3. Point-in-time scoring
 
