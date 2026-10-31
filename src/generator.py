@@ -447,16 +447,14 @@ def generate_synthetic_data(
 
     # 8. Risk Signals
     risk_signals_data = []
-    risk_counter = 1
     for sup_id, profile in supplier_profiles.items():
         if profile in ["worsening_delivery", "quality_issues"] and rng.random() < 0.7:
-            signal_id = f"RSK-{sup_id}-2026-{risk_counter:02d}"
+            signal_id = f"RSK-{sup_id}-2026-01"
             signal_date = (base_date + timedelta(days=rng.randint(20, 80))).strftime("%Y-%m-%d")
             category = rng.choice(["Compliance", "Disruption"])
             severity = rng.choice(["Medium", "High", "Critical"])
             desc = f"Reported {category.lower()} issue."
             risk_signals_data.append((signal_id, sup_id, signal_date, category, severity, desc, "synthetic_generator", signal_date))
-            risk_counter += 1
 
     if risk_signals_data:
         with conn:
