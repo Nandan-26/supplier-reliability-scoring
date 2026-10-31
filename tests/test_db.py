@@ -171,3 +171,49 @@ def test_invoice_date_cannot_precede_latest_delivery():
             cursor.execute("INSERT INTO invoices VALUES ('INV-1', 'PO-1', '2026-01-08', 'Matched', '2026-01-08');")
     finally:
         conn.close()
+
+
+def test_score_bounds_confidence_and_one_score_per_supplier_per_run():
+    conn = get_connection(TEST_DB_PATH)
+    try:
+        conn.execute(
+            "INSERT INTO suppliers VALUES (?, ?, ?, ?, ?, ?, ?);",
+            ("SUP-SCORE", "Score Supplier", "Tech", "USA", "Active",
+             "2026-01-01", "2026-01-01")
+        )
+        conn.execute(
+            "INSERT INTO score_runs VALUES (?, ?, ?, ?, ?, ?, ?);",
+            ("RUN-SCORE", "2026-01-31 12:00:00", "2026-01-31",
+             "v1.1", "abc123", "1.1.0", None)
+        )
+        with pytest.raises(sqlite3.IntegrityError):
+            conn.execute("""
+                INSERT INTO supplier_scores
+                    (score_id, run_id, supplier_id, delivery_score)
+                VALUES ('SCR-BAD', 'RUN-SCORE', 'SUP-SCORE', 101);
+            """)
+        with pytest.raises(sqlite3.IntegrityError):
+            conn.execute("""
+                INSERT INTO supplier_scores
+                    (score_id, run_id, supplier_id, delivery_score,
+                     delivery_confidence, overall_confidence_tier)
+                VALUES ('SCR-BAD-CONF', 'RUN-SCORE', 'SUP-SCORE', 90,
+                        'Unknown', 'High');
+            """)
+        conn.execute("""
+            INSERT INTO supplier_scores
+                (score_id, run_id, supplier_id, delivery_score,
+                 delivery_confidence, overall_confidence_tier)
+            VALUES ('SCR-VALID', 'RUN-SCORE', 'SUP-SCORE', 90,
+                    'High', 'High');
+        """)
+        with pytest.raises(sqlite3.IntegrityError):
+            conn.execute("""
+                INSERT INTO supplier_scores
+                    (score_id, run_id, supplier_id, delivery_score,
+                     delivery_confidence, overall_confidence_tier)
+                VALUES ('SCR-DUP', 'RUN-SCORE', 'SUP-SCORE', 80,
+                        'High', 'High');
+            """)
+    finally:
+        conn.close()
