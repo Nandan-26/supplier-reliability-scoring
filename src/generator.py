@@ -539,7 +539,7 @@ def generate_synthetic_data(
                 mismatches.append((sup_id, prof, rate))
 
     validation_results = {}
-    for tbl in ["suppliers", "purchase_orders", "shipments", "inspections", "invoices", "invoice_lines"]:
+    for tbl in ["suppliers", "purchase_orders", "shipments", "inspections", "invoices", "invoice_lines", "quarantine_log"]:
         cursor.execute(f"SELECT COUNT(*) FROM {tbl};")
         validation_results[tbl] = cursor.fetchone()[0]
 
