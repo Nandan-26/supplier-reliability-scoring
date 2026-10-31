@@ -265,7 +265,7 @@ def calculate_supplier_scores(
                 delivery_sample = del_total
                 delivery_conf = "High" if delivery_sample >= 5 else "Low (Sparse Data)"
             else:
-                delivery_score = 50.0
+                delivery_score = NO_DATA_SCORE
                 delivery_sample = 0
                 delivery_conf = "No Data"
 
@@ -278,7 +278,7 @@ def calculate_supplier_scores(
                 quality_sample = insp_count
                 quality_conf = "High" if quality_sample >= 5 else "Low (Sparse Data)"
             else:
-                quality_score = 50.0
+                quality_score = NO_DATA_SCORE
                 quality_sample = 0
                 quality_conf = "No Data"
 
@@ -290,7 +290,7 @@ def calculate_supplier_scores(
                 cost_sample = cost_total
                 cost_conf = "High" if cost_sample >= 3 else "Low (Sparse Data)"
             else:
-                cost_score = 50.0
+                cost_score = NO_DATA_SCORE
                 cost_sample = 0
                 cost_conf = "No Data"
 
@@ -303,7 +303,7 @@ def calculate_supplier_scores(
                 capacity_sample = cap_line_count
                 capacity_conf = "High" if capacity_sample >= 5 else "Low (Sparse Data)"
             else:
-                capacity_score = 50.0
+                capacity_score = NO_DATA_SCORE
                 capacity_sample = 0
                 capacity_conf = "No Data"
 
@@ -311,7 +311,7 @@ def calculate_supplier_scores(
             sup_risks = risk_map.get(sup_id, [])
 
             comp_signals = [sev for cat, sev in sup_risks if cat == 'Compliance']
-            comp_score = 50.0 if not comp_signals else 100.0
+            comp_score = NO_DATA_SCORE if not comp_signals else 100.0
             for sev in comp_signals:
                 comp_score -= severity_penalties.get(sev, 15.0)
             compliance_score = max(0.0, comp_score)
@@ -319,7 +319,7 @@ def calculate_supplier_scores(
             compliance_conf = "No Data" if compliance_sample == 0 else "Medium"
 
             disp_signals = [sev for cat, sev in sup_risks if cat == 'Disruption']
-            disp_score = 50.0 if not disp_signals else 100.0
+            disp_score = NO_DATA_SCORE if not disp_signals else 100.0
             for sev in disp_signals:
                 disp_score -= severity_penalties.get(sev, 15.0)
             disruption_score = max(0.0, disp_score)
