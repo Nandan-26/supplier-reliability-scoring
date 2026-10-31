@@ -225,3 +225,70 @@ def test_delivery_partials_evaluation():
         conn.close()
 
     assert del_score == 0.0
+
+def test_delivery_score_never_exceeds_100_with_multiple_events():
+    conn = get_connection(TEST_DB_PATH)
+    conn.row_factory = sqlite3.Row
+    try:
+        cursor = conn.cursor()
+        cursor.execute(
+            "INSERT INTO suppliers VALUES "
+            "('SUP-DEL-BOUND', 'Delivery Bound Test', 'Tech', 'USA', "
+            "'Active', '2026-01-01', '2026-01-01');"
+        )
+        cursor.execute(
+            "INSERT INTO sites VALUES "
+            "('SITE-DEL-BOUND', 'SUP-DEL-BOUND', 'Plant', 'USA', 1, '2026-01-01');"
+        )
+        cursor.execute(
+            "INSERT INTO contracts VALUES "
+            "('CON-DEL-BOUND', 'SUP-DEL-BOUND', '2026-01-01', "
+            "'2026-12-31', 'Net30', '2026-01-01');"
+        )
+        cursor.execute(
+            "INSERT INTO purchase_orders VALUES "
+            "('PO-DEL-BOUND', 'SUP-DEL-BOUND', 'SITE-DEL-BOUND', "
+            "'CON-DEL-BOUND', '2026-01-02', 'Fulfilled', '2026-01-02');"
+        )
+        cursor.execute(
+            "INSERT INTO po_lines VALUES "
+            "('LINE-DEL-BOUND', 'PO-DEL-BOUND', 'ITEM-1', 100, 10.0, "
+            "'2026-01-10', '2026-01-02');"
+        )
+        cursor.execute(
+            "INSERT INTO shipments VALUES "
+            "('SHP-DEL-BOUND', 'LINE-DEL-BOUND', 'PO-DEL-BOUND', 100, "
+            "'2026-01-05', '2026-01-09', '2026-01-05');"
+        )
+        cursor.execute(
+            "INSERT INTO delivery_events VALUES "
+            "('DEL-BOUND-1', 'SHP-DEL-BOUND', '2026-01-09', 50, "
+            "'Partial 1', '2026-01-09');"
+        )
+        cursor.execute(
+            "INSERT INTO delivery_events VALUES "
+            "('DEL-BOUND-2', 'SHP-DEL-BOUND', '2026-01-09', 50, "
+            "'Partial 2', '2026-01-09');"
+        )
+        conn.commit()
+    finally:
+        conn.close()
+
+    run_id = calculate_supplier_scores(
+        as_of_date="2026-12-31",
+        db_path=TEST_DB_PATH,
+    )
+
+    conn = get_connection(TEST_DB_PATH)
+    try:
+        row = conn.execute(
+            "SELECT delivery_score FROM supplier_scores "
+            "WHERE run_id = ? AND supplier_id = 'SUP-DEL-BOUND';",
+            (run_id,),
+        ).fetchone()
+    finally:
+        conn.close()
+
+    assert row is not None
+    assert 0.0 <= row[0] <= 100.0
+    assert row[0] == 100.0
