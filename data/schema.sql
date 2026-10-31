@@ -422,3 +422,10 @@ CREATE UNIQUE INDEX IF NOT EXISTS uq_supplier_scores_run_supplier
 ON supplier_scores(run_id, supplier_id);
 
 CREATE INDEX IF NOT EXISTS idx_risk_signals_supplier ON risk_signals(supplier_id, category);
+CREATE INDEX IF NOT EXISTS idx_suppliers_point_in_time ON suppliers(created_at, system_available_at);
+CREATE INDEX IF NOT EXISTS idx_purchase_orders_supplier_dates ON purchase_orders(supplier_id, order_date, system_available_at);
+CREATE INDEX IF NOT EXISTS idx_shipments_po_line_composite ON shipments(po_id, po_line_id, system_available_at);
+CREATE INDEX IF NOT EXISTS idx_delivery_events_point_in_time ON delivery_events(actual_delivery_date, system_available_at, shipment_id);
+CREATE INDEX IF NOT EXISTS idx_inspections_point_in_time ON inspections(inspection_date, system_available_at, delivery_event_id);
+CREATE INDEX IF NOT EXISTS idx_invoice_lines_point_in_time ON invoice_lines(system_available_at, po_id, po_line_id);
+CREATE INDEX IF NOT EXISTS idx_risk_signals_point_in_time ON risk_signals(signal_date, system_available_at, supplier_id);
