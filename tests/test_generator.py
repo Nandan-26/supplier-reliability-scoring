@@ -221,9 +221,8 @@ def test_invoice_lines_are_limited_to_delivered_quantities_and_dates():
         date_violations = conn.execute("""
             SELECT i.invoice_id
             FROM invoices i
-            JOIN delivery_events de
-            JOIN shipments s ON s.shipment_id = de.shipment_id
-                            AND s.po_id = i.po_id
+            JOIN shipments s ON s.po_id = i.po_id
+            JOIN delivery_events de ON de.shipment_id = s.shipment_id
             GROUP BY i.invoice_id, i.invoice_date
             HAVING i.invoice_date < MAX(de.actual_delivery_date);
         """).fetchall()
