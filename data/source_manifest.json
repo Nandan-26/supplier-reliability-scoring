@@ -1,7 +1,7 @@
 {
-  "created_at_utc": "2026-10-31T20:39:08.056175+00:00",
+  "created_at_utc": "2026-10-31T20:42:56.904221+00:00",
   "database": "data/supplier_scoring.db",
-  "database_sha256": "04220d5775830d0bdfbc37e7d32c3ff695b01e6c5cf0df8f3c1b0d4c5816e146",
+  "database_sha256": "45c3334a3598bc6fcb749bbe9d7a67a18ce93c6906dd91177a98d6561fdcdcb7",
   "configured_default_seed": 20261022,
   "seed_note": "score_runs.random_seed records the generation seed when known; NULL means the scorer could not verify it. configured_default_seed is the generator default, not proof that an older database used that seed.",
   "table_row_counts": {
@@ -23,12 +23,8 @@
   "source_files": {
     "src/generator.py": "fc918c473dfb1594105b6d362e8c2a2378683df0e968985d8d9b2c52ab319f49",
     "src/scoring.py": "3f0ef82129469d3c343b678165ae385db125bda54642bdda5f340c8c62047ed3",
-    "src/export_artifacts.py": "6d2cc3c58115985d978f8fcc8f495b89c6df88c77e412215b9fc59d00a7b6f45",
-    "data/schema.sql": "96e0d6ba20728cd7bddce838889e4f05c45508b447e9e642589e4f1100f08ecf",
-    "scripts/validate_full_dataset.py": "a88850ca6125657e50bbd91b3c57f6c42fcfa990e60f2f83ecdb4e74c0f55937",
-    "scripts/refresh_dataset.py": "8bc712f4348e385a1b5266805d3f4cae917be1baac884579cbd75d042ca5d28a",
-    "README.md": "663c194999573b15e5c4a3a41e6544b8d4c1793fa01398a2d64dc19e5e3cc04a",
-    "data/DATA_DICTIONARY.md": "0e3f22bf98cc5310a12f7850d3d3ce227f3c822fdbf2318d8eea124a934068c9"
+    "src/export_artifacts.py": "31e8eb9d18b1c633353db8ad5109b8c13974f634b283763effdac1b3d82ba784",
+    "data/schema.sql": "96e0d6ba20728cd7bddce838889e4f05c45508b447e9e642589e4f1100f08ecf"
   },
   "csv_exports": [
     "data/exports/contracts.csv",
@@ -48,6 +44,6 @@
   ],
   "validation_summary": "data/validation_summary.json",
   "generation_metadata": "data/generation_metadata.json",
-  "generation_metadata_sha256": "4f683974b7d8db20a1c1ef266a3f14603b7682a5c325a2a71c9cfd8842527104",
-  "historical_snapshot": "data/archive/pre_refresh_20261031T203905Z"
+  "generation_metadata_sha256": "ea5ea1fe26b9ec894303fd8ea9069ed6fac047e5cfd35500d8a3b9c42d21ed9e",
+  "historical_snapshot": "data/archive/pre_refresh_20261031T204253Z"
 }
