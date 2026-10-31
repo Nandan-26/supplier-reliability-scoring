@@ -6,7 +6,7 @@ The previous committed database and its matching exports were preserved before t
 - Archived database: `data/archive/pre_refresh_20261031T203556Z/supplier_scoring.db`
 - Active database: `data/supplier_scoring.db`
 - Active generation seed: `20261022`
-- Active score run: `RUN-655a258a`
+- The current active score run ID is recorded in `data/generation_metadata.json`.
 
 The archived dataset passed SQLite integrity and foreign-key checks but contained historical business-rule and score anomalies. The most important counts were:
 
