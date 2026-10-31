@@ -49,6 +49,25 @@ def main():
         )
         check(export_summary["overall_passed"],
               "Artifact exporter did not pass isolated full-dataset validation.")
+
+        # Audit the committed historical DB read-only. Exports and reports go
+        # to the temporary directory; the tracked DB and CSVs are untouched.
+        historical_dir = root / "historical_audit"
+        historical_db = Path(__file__).resolve().parents[1] / "data" / "supplier_scoring.db"
+        export_artifacts(
+            db_path=historical_db,
+            exports_dir=historical_dir / "exports",
+            validation_path=historical_dir / "validation_summary.json",
+            manifest_path=historical_dir / "source_manifest.json",
+        )
+        historical_summary = json.loads(
+            (historical_dir / "validation_summary.json").read_text(encoding="utf-8")
+        )
+        check(historical_summary["sqlite_integrity_passed"],
+              "Committed historical database failed SQLite integrity check.")
+        check(historical_summary["foreign_key_check_passed"],
+              "Committed historical database has foreign-key violations.")
+
         con = sqlite3.connect(db)
         try:
             check(con.execute("PRAGMA integrity_check").fetchone()[0] == "ok", "SQLite integrity check failed.")
@@ -129,6 +148,12 @@ def main():
             "business_rule_violations": violations, "score_rows_checked": len(rows),
             "artifact_exporter_overall_passed": export_summary["overall_passed"],
             "artifact_export_count": len(export_summary["table_row_counts"]),
+            "historical_database_audit": {
+                "overall_passed": historical_summary["overall_passed"],
+                "business_rule_violation_counts": historical_summary["business_rule_violation_counts"],
+                "historical_score_checks_passed": historical_summary["historical_score_checks_passed"],
+                "latest_run_passed": historical_summary["latest_run_passed"],
+            },
             "delivery_rates_by_profile": {k: round(v[0]/v[1], 4) for k,v in delivery_groups.items()},
             "defect_rates_by_profile": {k: round(v[0]/v[1], 4) for k,v in quality_groups.items()},
             "malformed_examples_detected": len(malformed),
