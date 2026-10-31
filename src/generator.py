@@ -240,6 +240,7 @@ def generate_synthetic_data(
 
     shipment_counter = 1
     line_index = 0
+    consecutive_exhausted_lines = 0
 
     while shipment_counter <= num_shipments:
         po_line_id, po_id, ordered_qty, req_delivery_str = all_po_lines[line_index % len(all_po_lines)]
@@ -249,8 +250,14 @@ def generate_synthetic_data(
         remaining_qty = ordered_qty - current_shipped
 
         if remaining_qty <= 0:
-            # If line is fully fulfilled, skip to next line
+            consecutive_exhausted_lines += 1
+            if consecutive_exhausted_lines >= len(all_po_lines):
+                raise ValueError(
+                    "num_shipments exceeds the remaining quantity capacity of non-cancelled PO lines."
+                )
             continue
+
+        consecutive_exhausted_lines = 0
 
         # Determine shipment quantity (partial or final remainder)
         if remaining_qty > 50 and rng.random() < 0.4:
