@@ -1,12 +1,28 @@
-# Historical Score Anomaly Report
+# Historical Dataset Audit — Pre-Refresh Snapshot
 
 ## Scope
 
-This report describes the committed historical export `data/exports/supplier_scores.csv` inspected during the repository audit. The original database and its historical score rows were not modified during this audit.
+This report describes the preserved database at `data/archive/pre_refresh_20261031T203556Z/supplier_scoring.db` and its matching CSV exports. The snapshot was archived before the active dataset was regenerated. Its rows have not been edited or silently corrected.
 
-## Findings
+The archived database passes SQLite integrity and foreign-key checks, but several business-rule and score-range checks fail.
 
-The export contains four scoring runs with 1,000 supplier rows each. All observed out-of-range values are in the legacy run `RUN-c52cdf63`:
+## Historical business-rule violations
+
+| Check | Violating records |
+|---|---:|
+| Cancelled purchase orders with shipments | 776 |
+| Cancelled purchase orders with invoices | 248 |
+| Fulfilled purchase orders with incomplete shipped quantities | 3,967 |
+| Deliveries inspected beyond their received quantity | 5,000 |
+| Invoice lines exceeding delivered quantity | 2,831 |
+| Invoices dated before the latest delivery on their PO | 1,161 |
+| PO lines shipped beyond ordered quantity | 0 |
+| Delivery quantity exceeding shipment quantity | 0 |
+| Duplicate supplier score rows within a run | 0 |
+
+## Historical score anomalies
+
+The archived score export contains four scoring runs with 1,000 supplier rows each. All out-of-range score values are in the legacy run `RUN-c52cdf63`:
 
 | Score column | Out-of-range values | Run |
 |---|---:|---|
@@ -15,19 +31,17 @@ The export contains four scoring runs with 1,000 supplier rows each. All observe
 | Other five dimension scores | 0 | All runs |
 | `final_score` in the other three runs | 0 | Other three runs |
 
-Examples include delivery scores above 100 (for example 112.50 and 109.09) and a final score of 100.03. Scores are not clamped or silently rewritten in this historical export.
+Examples include delivery scores of 112.50 and 109.09 and a final score of 100.03. The three later runs have no scores outside 0–100. The latest archived scoring run passes its score-range check, but historical score validation and overall validation fail.
 
-The three later historical runs in the export have no scores outside the 0–100 range. The updated scoring implementation additionally calculates delivery performance from distinct PO-line outcomes and checks all dimension and final scores are within 0–100 in the isolated full-dataset validation.
+## Preservation and remediation decision
 
-## Handling decision
+- The original database, exports, ground-truth file, malformed-case file, validation summary, and source manifest are preserved together in this archive.
+- The historical score rows and operational records were not rewritten.
+- The active `data/supplier_scoring.db` and `data/exports/` now contain a newly generated dataset using the corrected generator and scoring implementation.
+- The active dataset has its own `data/validation_summary.json`, which reports all current business checks and score-range checks passing.
 
-- Preserve the original historical rows for audit traceability.
-- Do not interpret `RUN-c52cdf63` as a valid normalized score run.
-- Use the updated scoring implementation for new scoring runs.
-- The existing `data/validation_summary.json` correctly reports historical score-range validation as failed while the latest historical run passes. Its overall historical status therefore remains failed until a separately approved correction or archival policy is applied.
+Do not use the archived legacy scores as current normalized supplier scores. They are retained only for audit and comparison.
 
 ## Verification
 
-The GitHub Actions full-dataset validator creates a fresh database in a temporary directory, generates 1,000 suppliers, 10,000 purchase orders, 15,000 shipments, and 20,000 inspection lots, runs scoring, and checks the 1,000 resulting supplier scores. It also checks relational integrity, lifecycle and quantity rules, invoice timing, profile-level ground truth, and malformed-record quarantine. The temporary database is deleted at the end; the committed historical database is not overwritten.
-
-See the [validation workflow](https://github.com/Nandan-26/supplier-reliability-scoring/actions) for the latest run.
+The current GitHub Actions workflow validates both a fresh full-size temporary dataset and the archived historical database. It does not modify this archive.
