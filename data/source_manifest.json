@@ -1,7 +1,7 @@
 {
-  "created_at_utc": "2026-10-31T22:23:39.292334+00:00",
+  "created_at_utc": "2026-10-31T22:27:42.017121+00:00",
   "database": "data/supplier_scoring.db",
-  "database_sha256": "7ef434c535ce0b6281da4987e75580e88fa6744236d643e399e10d9083133fb3",
+  "database_sha256": "a9db08804f43dce381ef3ba43a2271e43466549aa81046c593cd73cef519d6ba",
   "configured_default_seed": 20261022,
   "seed_note": "score_runs.random_seed records the generation seed when known; NULL means the scorer could not verify it. configured_default_seed is the generator default, not proof that an older database used that seed.",
   "table_row_counts": {
@@ -22,7 +22,7 @@
   },
   "source_files": {
     "src/generator.py": "a7b997284dd9ed276856a7a8a4eae730242759a6ae67f0ca5dea2cce94863ce4",
-    "src/scoring.py": "3f0ef82129469d3c343b678165ae385db125bda54642bdda5f340c8c62047ed3",
+    "src/scoring.py": "794e84a20fffa009c4362b5266d3bd5d26296bf3744cca57b211112b956b2842",
     "src/export_artifacts.py": "31e8eb9d18b1c633353db8ad5109b8c13974f634b283763effdac1b3d82ba784",
     "data/schema.sql": "96e0d6ba20728cd7bddce838889e4f05c45508b447e9e642589e4f1100f08ecf"
   },
@@ -44,6 +44,6 @@
   ],
   "validation_summary": "data/validation_summary.json",
   "generation_metadata": "data/generation_metadata.json",
-  "generation_metadata_sha256": "371e044957637092bcaba4de02ea2668781a4c12cc8d5cb6a2aeb11f76f20c91",
-  "historical_snapshot": "data/archive/pre_refresh_20261031T222335Z"
+  "generation_metadata_sha256": "38d1d16f977856da4d651fa1ed22a39fdb1a9ca529c4a359da3333965be2e655",
+  "historical_snapshot": "data/archive/pre_refresh_20261031T222740Z"
 }
