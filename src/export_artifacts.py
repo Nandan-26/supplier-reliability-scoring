@@ -42,6 +42,10 @@ SOURCE_FILES = [
     ROOT / "src" / "scoring.py",
     ROOT / "src" / "export_artifacts.py",
     ROOT / "data" / "schema.sql",
+    ROOT / "scripts" / "validate_full_dataset.py",
+    ROOT / "scripts" / "refresh_dataset.py",
+    ROOT / "README.md",
+    ROOT / "data" / "DATA_DICTIONARY.md",
 ]
 
 
@@ -396,9 +400,10 @@ def main(
             "database_sha256": sha256(db_path),
             "configured_default_seed": 20261022,
             "seed_note": (
-                "The generator's default seed is documented here. "
-                "The database does not prove which seed was used to "
-                "create its current contents."
+                "score_runs.random_seed records the generation seed when "
+                "known; NULL means the scorer could not verify it. "
+                "configured_default_seed is the generator default, not "
+                "proof that an older database used that seed."
             ),
             "table_row_counts": row_counts,
             "source_files": {
@@ -410,6 +415,15 @@ def main(
                 display_path(validation_path)
             ),
         }
+
+        generation_metadata_path = db_path.parent / "generation_metadata.json"
+        if generation_metadata_path.exists():
+            source_manifest["generation_metadata"] = display_path(
+                generation_metadata_path
+            )
+            source_manifest["generation_metadata_sha256"] = sha256(
+                generation_metadata_path
+            )
 
         manifest_path.write_text(
             json.dumps(source_manifest, indent=2),
