@@ -292,3 +292,31 @@ def test_delivery_score_never_exceeds_100_with_multiple_events():
     assert row is not None
     assert 0.0 <= row[0] <= 100.0
     assert row[0] == 100.0
+
+
+def test_compliance_and_disruption_without_signals_are_neutral_and_unobserved():
+    run_id = calculate_supplier_scores(as_of_date="2026-12-31", db_path=TEST_DB_PATH)
+    conn = get_connection(TEST_DB_PATH)
+    try:
+        row = conn.execute("""
+            SELECT compliance_score, compliance_sample_count, compliance_confidence,
+                   disruption_score, disruption_sample_count, disruption_confidence
+            FROM supplier_scores
+            WHERE run_id = ? AND supplier_id = 'SUP-0001';
+        """, (run_id,)).fetchone()
+    finally:
+        conn.close()
+
+    assert row is not None
+    assert row[0] == 50.0
+    assert row[1] == 0
+    assert row[2] == "No Data"
+    assert row[3] == 50.0
+    assert row[4] == 0
+    assert row[5] == "No Data"
+
+
+@pytest.mark.parametrize("invalid_date", ["2026-2-01", "not-a-date", "", None])
+def test_invalid_as_of_date_is_rejected(invalid_date):
+    with pytest.raises(ValueError, match="as_of_date"):
+        calculate_supplier_scores(as_of_date=invalid_date, db_path=TEST_DB_PATH)
