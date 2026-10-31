@@ -262,6 +262,14 @@ def calculate_supplier_scores(
 
         scores_data = []
         severity_penalties = SEVERITY_PENALTIES
+        # Keep the required human-readable score key unique across appended
+        # scoring runs while preserving older historical SCR-* identifiers.
+        cursor.execute("""
+            SELECT COALESCE(MAX(CAST(SUBSTR(score_id, 13) AS INTEGER)), 0)
+            FROM supplier_scores
+            WHERE score_id GLOB 'SCORE-2026-[0-9]*';
+        """)
+        next_score_number = cursor.fetchone()[0] + 1
 
         for sup_id in suppliers:
             # --- DELIVERY SCORE ---
@@ -359,7 +367,8 @@ def calculate_supplier_scores(
             else:
                 overall_conf = "Low (Sparse Data)"
 
-            score_id = f"SCR-{uuid.uuid4().hex[:8]}"
+            score_id = f"SCORE-2026-{next_score_number:06d}"
+            next_score_number += 1
             # Exactly 23 values matching the 23 columns in supplier_scores
             scores_data.append((
                 score_id, run_id, sup_id,
