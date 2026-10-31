@@ -90,6 +90,7 @@ def calculate_supplier_scores(
             WITH line_delivery AS (
                 SELECT
                     po.supplier_id,
+                    pl.po_id,
                     pl.po_line_id,
                     pl.ordered_qty,
                     pl.requested_delivery_date,
@@ -104,7 +105,7 @@ def calculate_supplier_scores(
                   AND po.system_available_at <= ?
                   AND pl.requested_delivery_date <= ?
                   AND pl.system_available_at <= ?
-                GROUP BY po.supplier_id, pl.po_line_id
+                GROUP BY po.supplier_id, pl.po_id, pl.po_line_id
             )
             SELECT
                 supplier_id,
@@ -130,7 +131,8 @@ def calculate_supplier_scores(
                 JOIN shipments s ON po.po_id = s.po_id
                 JOIN delivery_events de ON s.shipment_id = de.shipment_id
                 JOIN inspections ins ON de.delivery_event_id = ins.delivery_event_id
-                WHERE po.order_date <= ?
+                WHERE po.status != 'Cancelled'
+                  AND po.order_date <= ?
                   AND po.system_available_at <= ?
                   AND ins.inspection_date <= ?
                   AND ins.system_available_at <= ?
@@ -168,7 +170,6 @@ def calculate_supplier_scores(
               AND i.invoice_date <= ?
               AND i.system_available_at <= ?
               AND il.system_available_at <= ?
-              AND i.system_available_at <= ?
             GROUP BY po.supplier_id;
             """,
             (as_of_date, as_of_date, as_of_date, as_of_date, as_of_date)
