@@ -16,7 +16,7 @@ All records in this project are synthetic. Dates use ISO `YYYY-MM-DD` text unles
 | `invoice_lines` | One row per invoice line; `invoice_line_id` | `invoice_id`, `po_id`, `po_line_id`, `invoiced_qty`, `billed_unit_price` | Quantity and billed price charged for a PO line. |
 | `risk_signals` | One row per risk signal; `risk_signal_id` | `supplier_id`, `signal_date`, `category`, `severity`, `description` | Compliance or disruption evidence associated with a supplier. |
 | `quarantine_log` | One row per quarantined record; `quarantine_id` | `source_table`, `raw_payload`, `error_reason`, `logged_at` | Rejected source payloads and detected validation reasons. The generator stores each rejected example here and also exports the annotated examples to `data/malformed_cases.json`. |
-| `score_runs` | One row per scoring execution; `run_id` | `run_timestamp`, `as_of_date`, `config_version`, `config_hash`, `generator_version`, `random_seed` | Records the scoring run configuration and point-in-time date. |
+| `score_runs` | One row per scoring execution; `run_id` | `run_timestamp`, `as_of_date`, `config_version`, `config_hash`, `generator_version`, `random_seed` | Records the scoring run configuration and point-in-time date. `random_seed` is NULL when the scorer cannot verify which generation seed created the database. |
 | `supplier_scores` | One row per supplier per run; `score_id` | Six dimension scores, per-dimension sample counts/confidence, `final_score`, `overall_confidence_tier` | Persisted result for a supplier in a specific scoring run. |
 
 ## Point-in-time fields
