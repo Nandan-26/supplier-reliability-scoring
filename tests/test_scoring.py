@@ -356,3 +356,21 @@ def test_supplier_created_or_available_after_as_of_date_is_not_scored():
 
     assert future_rows == 0
     assert eligible_rows == 20
+
+
+def test_score_run_metadata_does_not_claim_an_unknown_generation_seed():
+    run_id = calculate_supplier_scores(as_of_date="2026-12-31", db_path=TEST_DB_PATH)
+    conn = get_connection(TEST_DB_PATH)
+    try:
+        row = conn.execute("""
+            SELECT random_seed, config_version, config_hash, generator_version
+            FROM score_runs WHERE run_id = ?;
+        """, (run_id,)).fetchone()
+    finally:
+        conn.close()
+
+    assert row is not None
+    assert row[0] is None
+    assert row[1] == "v1.1"
+    assert len(row[2]) == 12
+    assert row[3] == "1.1.0"
