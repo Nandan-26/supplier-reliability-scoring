@@ -319,7 +319,10 @@ def calculate_supplier_scores(
                 comp_score -= severity_penalties.get(sev, 15.0)
             compliance_score = max(0.0, comp_score)
             compliance_sample = len(comp_signals)
-            compliance_conf = "No Data" if compliance_sample == 0 else "Medium"
+            compliance_conf = (
+                "No Data" if compliance_sample == 0
+                else ("High" if compliance_sample >= 5 else "Low (Sparse Data)")
+            )
 
             disp_signals = [sev for cat, sev in sup_risks if cat == 'Disruption']
             disp_score = NO_DATA_SCORE if not disp_signals else 100.0
@@ -327,7 +330,10 @@ def calculate_supplier_scores(
                 disp_score -= severity_penalties.get(sev, 15.0)
             disruption_score = max(0.0, disp_score)
             disruption_sample = len(disp_signals)
-            disruption_conf = "No Data" if disruption_sample == 0 else "Medium"
+            disruption_conf = (
+                "No Data" if disruption_sample == 0
+                else ("High" if disruption_sample >= 5 else "Low (Sparse Data)")
+            )
 
             # --- FINAL WEIGHTED SCORE ---
             final_score = round(
