@@ -73,6 +73,8 @@ The tests cover schema constraints, requested generation counts, reproducibility
 
 ## 8. Validation artifacts
 
+See [`data/DATA_DICTIONARY.md`](data/DATA_DICTIONARY.md) for the table grains, key fields, relationships, and point-in-time field meanings.
+
 `python -m src.export_artifacts` writes:
 - `data/exports/*.csv` — CSV exports of database tables.
 - `data/validation_summary.json` — SQLite integrity, foreign-key, expected-count, and score-range checks.
