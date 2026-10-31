@@ -212,4 +212,157 @@ CREATE INDEX IF NOT EXISTS idx_invoices_date ON invoices(invoice_date, system_av
 CREATE INDEX IF NOT EXISTS idx_shipments_po_line ON shipments(po_line_id);
 CREATE INDEX IF NOT EXISTS idx_delivery_events_shipment ON delivery_events(shipment_id);
 CREATE INDEX IF NOT EXISTS idx_inspections_delivery ON inspections(delivery_event_id);
+
+-- Business-rule triggers: enforce cumulative quantities across child rows.
+CREATE TRIGGER IF NOT EXISTS trg_prevent_cancelled_po_shipment
+BEFORE INSERT ON shipments
+BEGIN
+    SELECT RAISE(ABORT, 'Cancelled purchase orders cannot receive shipments.')
+    WHERE EXISTS (
+        SELECT 1 FROM purchase_orders
+        WHERE po_id = NEW.po_id AND status = 'Cancelled'
+    );
+END;
+
+CREATE TRIGGER IF NOT EXISTS trg_check_cumulative_shipped_qty_insert
+BEFORE INSERT ON shipments
+BEGIN
+    SELECT RAISE(ABORT, 'Cumulative shipped quantity cannot exceed ordered quantity.')
+    WHERE COALESCE((
+        SELECT SUM(shipped_qty) FROM shipments
+        WHERE po_id = NEW.po_id AND po_line_id = NEW.po_line_id
+    ), 0) + NEW.shipped_qty > (
+        SELECT ordered_qty FROM po_lines
+        WHERE po_id = NEW.po_id AND po_line_id = NEW.po_line_id
+    ) + 0.000001;
+END;
+
+CREATE TRIGGER IF NOT EXISTS trg_check_cumulative_shipped_qty_update
+BEFORE UPDATE OF shipped_qty, po_id, po_line_id ON shipments
+BEGIN
+    SELECT RAISE(ABORT, 'Cumulative shipped quantity cannot exceed ordered quantity.')
+    WHERE COALESCE((
+        SELECT SUM(shipped_qty) FROM shipments
+        WHERE po_id = NEW.po_id AND po_line_id = NEW.po_line_id
+          AND shipment_id != OLD.shipment_id
+    ), 0) + NEW.shipped_qty > (
+        SELECT ordered_qty FROM po_lines
+        WHERE po_id = NEW.po_id AND po_line_id = NEW.po_line_id
+    ) + 0.000001;
+END;
+
+CREATE TRIGGER IF NOT EXISTS trg_prevent_cancelled_po_shipment_update
+BEFORE UPDATE OF po_id ON shipments
+BEGIN
+    SELECT RAISE(ABORT, 'Cancelled purchase orders cannot receive shipments.')
+    WHERE EXISTS (
+        SELECT 1 FROM purchase_orders
+        WHERE po_id = NEW.po_id AND status = 'Cancelled'
+    );
+END;
+
+CREATE TRIGGER IF NOT EXISTS trg_check_cumulative_delivered_qty_insert
+BEFORE INSERT ON delivery_events
+BEGIN
+    SELECT RAISE(ABORT, 'Cumulative delivered quantity cannot exceed shipped quantity.')
+    WHERE COALESCE((
+        SELECT SUM(delivered_qty) FROM delivery_events
+        WHERE shipment_id = NEW.shipment_id
+    ), 0) + NEW.delivered_qty > (
+        SELECT shipped_qty FROM shipments WHERE shipment_id = NEW.shipment_id
+    ) + 0.000001;
+END;
+
+CREATE TRIGGER IF NOT EXISTS trg_check_cumulative_delivered_qty_update
+BEFORE UPDATE OF delivered_qty, shipment_id ON delivery_events
+BEGIN
+    SELECT RAISE(ABORT, 'Cumulative delivered quantity cannot exceed shipped quantity.')
+    WHERE COALESCE((
+        SELECT SUM(delivered_qty) FROM delivery_events
+        WHERE shipment_id = NEW.shipment_id
+          AND delivery_event_id != OLD.delivery_event_id
+    ), 0) + NEW.delivered_qty > (
+        SELECT shipped_qty FROM shipments WHERE shipment_id = NEW.shipment_id
+    ) + 0.000001;
+END;
+
+CREATE TRIGGER IF NOT EXISTS trg_check_cumulative_inspected_qty_insert
+BEFORE INSERT ON inspections
+BEGIN
+    SELECT RAISE(ABORT, 'Cumulative inspected quantity cannot exceed delivered quantity.')
+    WHERE COALESCE((
+        SELECT SUM(inspected_qty) FROM inspections
+        WHERE delivery_event_id = NEW.delivery_event_id
+    ), 0) + NEW.inspected_qty > (
+        SELECT delivered_qty FROM delivery_events
+        WHERE delivery_event_id = NEW.delivery_event_id
+    ) + 0.000001;
+END;
+
+CREATE TRIGGER IF NOT EXISTS trg_check_cumulative_inspected_qty_update
+BEFORE UPDATE OF inspected_qty, delivery_event_id ON inspections
+BEGIN
+    SELECT RAISE(ABORT, 'Cumulative inspected quantity cannot exceed delivered quantity.')
+    WHERE COALESCE((
+        SELECT SUM(inspected_qty) FROM inspections
+        WHERE delivery_event_id = NEW.delivery_event_id
+          AND inspection_id != OLD.inspection_id
+    ), 0) + NEW.inspected_qty > (
+        SELECT delivered_qty FROM delivery_events
+        WHERE delivery_event_id = NEW.delivery_event_id
+    ) + 0.000001;
+END;
+
+CREATE TRIGGER IF NOT EXISTS trg_check_invoice_date_after_delivery
+BEFORE INSERT ON invoices
+BEGIN
+    SELECT RAISE(ABORT, 'Invoice date cannot be earlier than the latest delivery on the PO.')
+    WHERE (
+        SELECT MAX(de.actual_delivery_date)
+        FROM shipments s
+        JOIN delivery_events de ON de.shipment_id = s.shipment_id
+        WHERE s.po_id = NEW.po_id
+    ) IS NOT NULL
+    AND NEW.invoice_date < (
+        SELECT MAX(de.actual_delivery_date)
+        FROM shipments s
+        JOIN delivery_events de ON de.shipment_id = s.shipment_id
+        WHERE s.po_id = NEW.po_id
+    );
+END;
+
+CREATE TRIGGER IF NOT EXISTS trg_check_cumulative_invoiced_qty_insert
+BEFORE INSERT ON invoice_lines
+BEGIN
+    SELECT RAISE(ABORT, 'Cumulative invoiced quantity cannot exceed delivered quantity.')
+    WHERE COALESCE((
+        SELECT SUM(invoiced_qty) FROM invoice_lines
+        WHERE po_id = NEW.po_id AND po_line_id = NEW.po_line_id
+    ), 0) + NEW.invoiced_qty > COALESCE((
+        SELECT SUM(de.delivered_qty)
+        FROM shipments s
+        JOIN delivery_events de ON de.shipment_id = s.shipment_id
+        WHERE s.po_id = NEW.po_id AND s.po_line_id = NEW.po_line_id
+    ), 0) + 0.000001;
+END;
+
+CREATE TRIGGER IF NOT EXISTS trg_check_cumulative_invoiced_qty_update
+BEFORE UPDATE OF invoiced_qty, po_id, po_line_id ON invoice_lines
+BEGIN
+    SELECT RAISE(ABORT, 'Cumulative invoiced quantity cannot exceed delivered quantity.')
+    WHERE COALESCE((
+        SELECT SUM(invoiced_qty) FROM invoice_lines
+        WHERE po_id = NEW.po_id AND po_line_id = NEW.po_line_id
+          AND invoice_line_id != OLD.invoice_line_id
+    ), 0) + NEW.invoiced_qty > COALESCE((
+        SELECT SUM(de.delivered_qty)
+        FROM shipments s
+        JOIN delivery_events de ON de.shipment_id = s.shipment_id
+        WHERE s.po_id = NEW.po_id AND s.po_line_id = NEW.po_line_id
+    ), 0) + 0.000001;
+END;
+
+CREATE UNIQUE INDEX IF NOT EXISTS uq_supplier_scores_run_supplier
+ON supplier_scores(run_id, supplier_id);
+
 CREATE INDEX IF NOT EXISTS idx_risk_signals_supplier ON risk_signals(supplier_id, category);
