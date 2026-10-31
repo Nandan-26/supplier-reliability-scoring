@@ -450,14 +450,14 @@ def test_risk_dimension_confidence_uses_sample_size():
     conn = get_connection(TEST_DB_PATH)
     try:
         conn.executemany(
-            "INSERT INTO risk_signals VALUES (?, ?, ?, ?, ?, ?, ?);",
+            "INSERT INTO risk_signals VALUES (?, ?, ?, ?, ?, ?, ?, ?);",
             [
                 (f"RS-TEST-{i}", "SUP-000001", "2026-01-20",
-                 "Compliance", "Low", "Test compliance signal", "2026-01-20")
+                 "Compliance", "Low", "Test compliance signal", "unit_test", "2026-01-20")
                 for i in range(1, 6)
             ] + [
                 ("RS-TEST-D", "SUP-000001", "2026-01-20",
-                 "Disruption", "Low", "Test disruption signal", "2026-01-20")
+                 "Disruption", "Low", "Test disruption signal", "unit_test", "2026-01-20")
             ]
         )
         conn.commit()
