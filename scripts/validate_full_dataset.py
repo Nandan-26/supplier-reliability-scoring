@@ -1,4 +1,4 @@
-"""Isolated full-size data validation; never touches committed database files."""
+"""Validate a fresh full-size dataset and audit committed data without modifying it."""
 import json
 import re
 import sqlite3
