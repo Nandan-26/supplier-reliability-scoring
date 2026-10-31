@@ -305,49 +305,74 @@ def generate_synthetic_data(
             "INSERT INTO delivery_events (delivery_event_id, shipment_id, actual_delivery_date, delivered_qty, receiver_notes, system_available_at) VALUES (?, ?, ?, ?, ?, ?);",
             delivery_events_data
         )
+        cursor.execute("""
+            UPDATE purchase_orders
+            SET status = 'Fulfilled'
+            WHERE status != 'Cancelled'
+              AND NOT EXISTS (
+                  SELECT 1
+                  FROM po_lines pl
+                  LEFT JOIN (
+                      SELECT po_line_id, po_id, SUM(shipped_qty) AS total_shipped
+                      FROM shipments
+                      GROUP BY po_line_id, po_id
+                  ) shipped
+                    ON shipped.po_line_id = pl.po_line_id
+                   AND shipped.po_id = pl.po_id
+                  WHERE pl.po_id = purchase_orders.po_id
+                    AND COALESCE(shipped.total_shipped, 0) < pl.ordered_qty
+              );
+        """)
 
-    # 3. Handle inspection counts properly (distinguish separate lots vs repeat checks without inflating quality scores)
-    cursor.execute("SELECT delivery_event_id, delivered_qty, actual_delivery_date FROM delivery_events;")
+    # 3. Split deliveries into inspection lots. The sum inspected for each
+    # delivery cannot exceed the quantity actually received.
+    cursor.execute("""
+        SELECT de.delivery_event_id, de.delivered_qty, de.actual_delivery_date,
+               po.supplier_id
+        FROM delivery_events de
+        JOIN shipments s ON de.shipment_id = s.shipment_id
+        JOIN purchase_orders po ON s.po_id = po.po_id
+        ORDER BY de.delivery_event_id;
+    """)
     delivery_records = cursor.fetchall()
     if not delivery_records:
         raise ValueError("No delivery events generated. Cannot generate inspections.")
 
     inspections_data = []
+    lot_counts = [
+        num_inspections // len(delivery_records)
+        + (1 if index < num_inspections % len(delivery_records) else 0)
+        for index in range(len(delivery_records))
+    ]
     insp_counter = 1
-    del_index = 0
 
-    while insp_counter <= num_inspections:
-        del_id, del_qty, del_date_str = delivery_records[del_index % len(delivery_records)]
-        del_index += 1
-
-        cursor.execute("""
-            SELECT po.supplier_id FROM delivery_events de
-            JOIN shipments s ON de.shipment_id = s.shipment_id
-            JOIN purchase_orders po ON s.po_id = po.po_id
-            WHERE de.delivery_event_id = ?;
-        """, (del_id,))
-        row = cursor.fetchone()
-        if not row:
+    for (del_id, del_qty, del_date_str, sup_id), lot_count in zip(delivery_records, lot_counts):
+        if lot_count == 0:
             continue
-        sup_id = row[0]
         profile = supplier_profiles[sup_id]
-
-        insp_id = f"INS-{insp_counter:06d}"
         del_dt = datetime.strptime(del_date_str, "%Y-%m-%d")
-        insp_date = (del_dt + timedelta(days=rng.randint(0, 1))).strftime("%Y-%m-%d")
+        remaining_qty = float(del_qty)
 
-        # If we need more inspections than delivery events, split quantity into lots or record audit checks
-        inspected_qty = float(del_qty)
+        for lot_index in range(lot_count):
+            if lot_index == lot_count - 1:
+                inspected_qty = round(remaining_qty, 6)
+            else:
+                inspected_qty = round(float(del_qty) / lot_count, 6)
+                remaining_qty = round(remaining_qty - inspected_qty, 6)
 
-        if profile == "quality_issues":
-            defective_qty = round(inspected_qty * rng.uniform(0.1, 0.35), 1)
-            status = "Failed"
-        else:
-            defective_qty = round(inspected_qty * rng.uniform(0.0, 0.02), 1)
-            status = "Passed" if defective_qty == 0 else "Conditionally Accepted"
+            insp_date = (del_dt + timedelta(days=rng.randint(0, 1))).strftime("%Y-%m-%d")
+            if profile == "quality_issues":
+                defective_qty = round(inspected_qty * rng.uniform(0.1, 0.35), 6)
+                status = "Failed"
+            else:
+                defective_qty = round(inspected_qty * rng.uniform(0.0, 0.02), 6)
+                status = "Passed" if defective_qty == 0 else "Conditionally Accepted"
 
-        inspections_data.append((insp_id, del_id, insp_date, inspected_qty, defective_qty, status, insp_date))
-        insp_counter += 1
+            inspections_data.append((
+                f"INS-{insp_counter:06d}", del_id, insp_date,
+                inspected_qty, defective_qty, status, insp_date
+            ))
+            insp_counter += 1
 
     with conn:
         cursor.executemany(
@@ -355,34 +380,50 @@ def generate_synthetic_data(
             inspections_data
         )
 
-    # 7. Invoices & Invoice Lines
-    cursor.execute("SELECT po_id, order_date FROM purchase_orders;")
-    all_pos = cursor.fetchall()
-
+    # 7. Invoice delivered quantities only, and date invoices no earlier
+    # than the latest delivery represented on the purchase order.
+    cursor.execute("""
+        SELECT po.po_id, po.order_date, MAX(de.actual_delivery_date)
+        FROM purchase_orders po
+        JOIN shipments s ON s.po_id = po.po_id
+        JOIN delivery_events de ON de.shipment_id = s.shipment_id
+        WHERE po.status != 'Cancelled'
+        GROUP BY po.po_id, po.order_date
+        ORDER BY po.po_id;
+    """)
+    eligible_pos = cursor.fetchall()
     invoices_data = []
     invoice_lines_data = []
-    inv_counter = 1
+    invoice_limit = len(eligible_pos) // 2
 
-    for po_id, order_date_str in all_pos:
-        if inv_counter > len(all_pos) // 2:
-            break
+    for inv_counter, (po_id, order_date_str, latest_delivery_str) in enumerate(eligible_pos[:invoice_limit], start=1):
         invoice_id = f"INV-{inv_counter:05d}"
         order_dt = datetime.strptime(order_date_str, "%Y-%m-%d")
-        invoice_date_dt = order_dt + timedelta(days=rng.randint(5, 30))
+        latest_delivery_dt = datetime.strptime(latest_delivery_str, "%Y-%m-%d")
+        invoice_date_dt = max(order_dt + timedelta(days=rng.randint(5, 30)), latest_delivery_dt)
         invoice_date = invoice_date_dt.strftime("%Y-%m-%d")
         status = rng.choices(["Matched", "Discrepancy", "Paid"], weights=[75, 15, 10])[0]
         sys_avail = (invoice_date_dt + timedelta(days=rng.randint(0, 1))).strftime("%Y-%m-%d")
-
         invoices_data.append((invoice_id, po_id, invoice_date, status, sys_avail))
 
-        cursor.execute("SELECT po_line_id, ordered_qty, unit_price FROM po_lines WHERE po_id = ?;", (po_id,))
-        lines = cursor.fetchall()
-        for po_line_id, ordered_qty, unit_price in lines:
+        cursor.execute("""
+            SELECT pl.po_line_id, pl.unit_price, SUM(de.delivered_qty)
+            FROM po_lines pl
+            JOIN shipments s ON s.po_line_id = pl.po_line_id AND s.po_id = pl.po_id
+            JOIN delivery_events de ON de.shipment_id = s.shipment_id
+            WHERE pl.po_id = ?
+            GROUP BY pl.po_line_id, pl.unit_price
+            ORDER BY pl.po_line_id;
+        """, (po_id,))
+        delivered_lines = cursor.fetchall()
+
+        for po_line_id, unit_price, delivered_qty in delivered_lines:
             inv_line_id = f"IL-{inv_counter:05d}-{po_line_id}"
             billed_price = unit_price if status != "Discrepancy" else round(unit_price * rng.uniform(1.05, 1.25), 2)
-            invoice_lines_data.append((inv_line_id, invoice_id, po_id, po_line_id, ordered_qty, billed_price, sys_avail))
-
-        inv_counter += 1
+            invoice_lines_data.append((
+                inv_line_id, invoice_id, po_id, po_line_id,
+                float(delivered_qty), billed_price, sys_avail
+            ))
 
     with conn:
         cursor.executemany(
