@@ -151,11 +151,12 @@ def main():
             patterns = {
                 "suppliers": ("supplier_id", r"SUP-\d{6}"),
                 "purchase_orders": ("po_id", r"PO-2026-\d{6}"),
-                "shipments": ("shipment_id", r"SHP-\d{6}"),
+                "sites": ("site_id", r"SITE-SUP-\d{6}-\d{2}"),
+                "shipments": ("shipment_id", r"SHP-2026-\d{6}"),
                 "delivery_events": ("delivery_event_id", r"DEL-\d{6}"),
                 "inspections": ("inspection_id", r"INS-\d{6}"),
                 "invoices": ("invoice_id", r"INV-\d{5}"),
-                "risk_signals": ("risk_signal_id", r"RSK-SUP-\d{6}-2026-\d{2}"),
+                "risk_signals": ("risk_signal_id", r"RSK-SUP-\d{6}-2026-\d{2,}"),
             }
             for table, (column, pattern) in patterns.items():
                 ids = [x[0] for x in con.execute(f"SELECT {column} FROM {table}")]
