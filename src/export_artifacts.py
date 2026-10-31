@@ -218,6 +218,14 @@ def main():
                 SELECT COUNT(*) FROM quarantine_log
                 WHERE TRIM(error_reason) = ''
             """).fetchone()[0],
+            "duplicate_supplier_scores_within_run": con.execute("""
+                SELECT COUNT(*) FROM (
+                    SELECT run_id, supplier_id
+                    FROM supplier_scores
+                    GROUP BY run_id, supplier_id
+                    HAVING COUNT(*) > 1
+                )
+            """).fetchone()[0],
             "inspection_quantity_over_delivery": con.execute("""
                 SELECT COUNT(*)
                 FROM (
@@ -300,12 +308,28 @@ def main():
                     "latest_run_passed": latest_invalid == 0,
                 })
 
+            latest_run_metadata = con.execute(
+                'SELECT as_of_date FROM "score_runs" WHERE run_id = ?',
+                (latest_run_id,),
+            ).fetchone()
+            latest_run_count = con.execute(
+                'SELECT COUNT(*) FROM "supplier_scores" WHERE run_id = ?',
+                (latest_run_id,),
+            ).fetchone()[0]
+            latest_run_unique_count = con.execute(
+                'SELECT COUNT(DISTINCT supplier_id) FROM "supplier_scores" WHERE run_id = ?',
+                (latest_run_id,),
+            ).fetchone()[0]
+            eligible_supplier_count = 0
+            if latest_run_metadata:
+                eligible_supplier_count = con.execute("""
+                    SELECT COUNT(*) FROM suppliers
+                    WHERE created_at <= ? AND system_available_at <= ?
+                """, (latest_run_metadata[0], latest_run_metadata[0])).fetchone()[0]
+
             latest_run_passed = (
-                con.execute(
-                    'SELECT COUNT(*) FROM "supplier_scores" '
-                    'WHERE "run_id" = ?',
-                    (latest_run_id,),
-                ).fetchone()[0] > 0
+                latest_run_count == eligible_supplier_count
+                and latest_run_unique_count == eligible_supplier_count
                 and all(item["latest_run_passed"] for item in score_checks)
             )
 
