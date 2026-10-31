@@ -1,4 +1,4 @@
-logo
+﻿logo
 more
 question-ai-logo
 managemanage
@@ -296,23 +296,23 @@ cases. It should not be used as an input to the scoring calculation.
 
 9. Project structure
 supplier_scoring/
-├── data/
-│   ├── ground_truth.json
-│   ├── malformed_cases.json
-│   ├── schema.sql
-│   └── supplier_scoring.db
-├── src/
-│   ├── __init__.py
-│   ├── db.py
-│   ├── generator.py
-│   └── scoring.py
-├── tests/
-│   ├── __init__.py
-│   ├── test_db.py
-│   ├── test_generator.py
-│   └── test_scoring.py
-├── requirements.txt
-└── README.md
+â”œâ”€â”€ data/
+â”‚   â”œâ”€â”€ ground_truth.json
+â”‚   â”œâ”€â”€ malformed_cases.json
+â”‚   â”œâ”€â”€ schema.sql
+â”‚   â””â”€â”€ supplier_scoring.db
+â”œâ”€â”€ src/
+â”‚   â”œâ”€â”€ __init__.py
+â”‚   â”œâ”€â”€ db.py
+â”‚   â”œâ”€â”€ generator.py
+â”‚   â””â”€â”€ scoring.py
+â”œâ”€â”€ tests/
+â”‚   â”œâ”€â”€ __init__.py
+â”‚   â”œâ”€â”€ test_db.py
+â”‚   â”œâ”€â”€ test_generator.py
+â”‚   â””â”€â”€ test_scoring.py
+â”œâ”€â”€ requirements.txt
+â””â”€â”€ README.md
 This describes the expected layout. If the SQLite database is excluded
 from version control, recreate it with the generation command above.
 
@@ -354,4 +354,16 @@ python -m pip install -r requirements.txt
 python -c "from src.generator import generate_synthetic_data; generate_synthetic_data()"
 python -m pytest -v
 python -c "from src.scoring import calculate_supplier_scores; print(calculate_supplier_scores(as_of_date='2026-12-31'))"
-⋮⋮⋮⋮⋮⋮⋮⋮
+
+### Current validation results
+
+The latest scoring run (`RUN-ba968b47`) passed the score-range checks: all 1,000 supplier scores were within the expected 0–100 range. SQLite integrity and foreign-key checks also passed, and the expected supplier, purchase-order, shipment, and inspection record counts were verified.
+
+The validation report also identifies historical out-of-range scores from earlier runs: 58 delivery-score values and 2 final-score values. These historical records have been retained rather than silently modified. Therefore, the latest scoring run passes validation, but the overall database validation report remains failed until the historical anomalies are investigated.
+
+The malformed challenge cases are maintained separately in `data/malformed_cases.json`; the current generator does not insert them into `quarantine_log`.
+
+To regenerate the CSV exports and validation artifacts, run `python -m src.export_artifacts`.
+
+Review `data/validation_summary.json` for detailed validation results and `data/source_manifest.json` for dataset counts and source-file hashes.
+
