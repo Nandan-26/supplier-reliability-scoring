@@ -44,6 +44,12 @@ def calculate_supplier_scores(
     to eliminate per-supplier loop overhead and prevent execution hangs.
     """
     validate_weights(weights)
+    try:
+        parsed_as_of_date = datetime.strptime(as_of_date, "%Y-%m-%d")
+    except (TypeError, ValueError) as exc:
+        raise ValueError("as_of_date must be a valid date in YYYY-MM-DD format.") from exc
+    if parsed_as_of_date.strftime("%Y-%m-%d") != as_of_date:
+        raise ValueError("as_of_date must use the YYYY-MM-DD format.")
 
     conn = get_connection(db_path)
     conn.row_factory = sqlite3.Row
@@ -85,7 +91,8 @@ def calculate_supplier_scores(
                 JOIN po_lines pl ON po.po_id = pl.po_id
                 LEFT JOIN shipments s ON pl.po_line_id = s.po_line_id AND s.system_available_at <= ?
                 LEFT JOIN delivery_events de ON s.shipment_id = de.shipment_id AND de.actual_delivery_date <= ? AND de.system_available_at <= ?
-                WHERE pl.requested_delivery_date <= ?
+                WHERE po.status != 'Cancelled'
+                  AND pl.requested_delivery_date <= ?
                   AND pl.system_available_at <= ?
                 GROUP BY po.supplier_id, pl.po_line_id
             )
@@ -175,7 +182,8 @@ def calculate_supplier_scores(
             FROM purchase_orders po
             JOIN po_lines pl ON po.po_id = pl.po_id
             LEFT JOIN line_delivered ld ON pl.po_line_id = ld.po_line_id AND po.supplier_id = ld.supplier_id
-            WHERE pl.requested_delivery_date <= ?
+            WHERE po.status != 'Cancelled'
+              AND pl.requested_delivery_date <= ?
               AND pl.system_available_at <= ?
             GROUP BY po.supplier_id;
             """,
@@ -256,20 +264,20 @@ def calculate_supplier_scores(
             sup_risks = risk_map.get(sup_id, [])
 
             comp_signals = [sev for cat, sev in sup_risks if cat == 'Compliance']
-            comp_score = 100.0
+            comp_score = 50.0 if not comp_signals else 100.0
             for sev in comp_signals:
                 comp_score -= severity_penalties.get(sev, 15.0)
             compliance_score = max(0.0, comp_score)
             compliance_sample = len(comp_signals)
-            compliance_conf = "High" if compliance_sample == 0 else "Medium"
+            compliance_conf = "No Data" if compliance_sample == 0 else "Medium"
 
             disp_signals = [sev for cat, sev in sup_risks if cat == 'Disruption']
-            disp_score = 100.0
+            disp_score = 50.0 if not disp_signals else 100.0
             for sev in disp_signals:
                 disp_score -= severity_penalties.get(sev, 15.0)
             disruption_score = max(0.0, disp_score)
             disruption_sample = len(disp_signals)
-            disruption_conf = "High" if disruption_sample == 0 else "Medium"
+            disruption_conf = "No Data" if disruption_sample == 0 else "Medium"
 
             # --- FINAL WEIGHTED SCORE ---
             final_score = round(
