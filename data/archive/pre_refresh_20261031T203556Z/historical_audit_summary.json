@@ -1,0 +1,53 @@
+{
+  "snapshot": "data/archive/pre_refresh_20261031T203556Z",
+  "audit_source": "GitHub Actions full-dataset validation workflow",
+  "audit_result": "FAIL",
+  "sqlite_integrity_passed": true,
+  "foreign_key_check_passed": true,
+  "business_rule_violation_counts": {
+    "cancelled_purchase_orders_have_no_shipments": 776,
+    "cancelled_purchase_orders_have_no_invoices": 248,
+    "over_shipped_po_lines": 0,
+    "delivery_quantity_over_shipment": 0,
+    "fulfilled_purchase_orders_with_short_lines": 3967,
+    "quarantine_rows_without_reason": 0,
+    "duplicate_supplier_scores_within_run": 0,
+    "inspection_quantity_over_delivery": 5000,
+    "invoice_quantity_over_delivery": 2831,
+    "invoice_before_latest_delivery": 1161
+  },
+  "score_range_checks": {
+    "delivery_score": {
+      "historical_out_of_range": 58,
+      "latest_run_out_of_range": 0
+    },
+    "quality_score": {
+      "historical_out_of_range": 0,
+      "latest_run_out_of_range": 0
+    },
+    "cost_score": {
+      "historical_out_of_range": 0,
+      "latest_run_out_of_range": 0
+    },
+    "capacity_score": {
+      "historical_out_of_range": 0,
+      "latest_run_out_of_range": 0
+    },
+    "compliance_score": {
+      "historical_out_of_range": 0,
+      "latest_run_out_of_range": 0
+    },
+    "disruption_score": {
+      "historical_out_of_range": 0,
+      "latest_run_out_of_range": 0
+    },
+    "final_score": {
+      "historical_out_of_range": 2,
+      "latest_run_out_of_range": 0
+    }
+  },
+  "latest_run_passed": true,
+  "historical_score_checks_passed": false,
+  "overall_passed": false,
+  "note": "This audit summary documents the archived dataset. No historical database rows were modified."
+}
