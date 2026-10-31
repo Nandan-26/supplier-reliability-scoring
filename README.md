@@ -34,7 +34,7 @@ The scoring function accepts an explicit `YYYY-MM-DD` as-of date. Business-event
 
 - Purchase orders are either cancelled or initially issued. Cancelled orders are excluded from shipment generation.
 - Fulfilled status is derived after shipment generation when every PO line has been shipped in full. Incomplete non-cancelled orders remain issued.
-- Shipment quantities are cumulative per PO line and do not exceed the ordered quantity.
+- SQLite triggers enforce cumulative shipment quantities per PO line, cumulative receipt quantities per shipment, cumulative inspected quantities per delivery, and cumulative invoiced quantities per PO line. They also block shipments for cancelled POs and invoices dated before the latest delivery on the PO.
 - Inspection records are treated as disjoint inspection lots. For each delivery event, the sum of inspected quantities is limited to the received quantity.
 - Invoices are generated only for non-cancelled POs with delivery evidence. Invoice lines use delivered quantities, and the invoice date is no earlier than the latest delivery on that PO.
 - Detected malformed challenge examples are written to `quarantine_log` with their raw payload and reasons, and are also exported to `data/malformed_cases.json`.
