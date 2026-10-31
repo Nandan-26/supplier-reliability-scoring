@@ -34,7 +34,7 @@ def validate_weights(weights: dict[str, float]) -> None:
         raise ValueError(f"Weights must contain exactly these dimensions: {required_keys}")
 
     for k, v in weights.items():
-        if not isinstance(v, (int, float)) or not math.isfinite(v) or v < 0:
+        if isinstance(v, bool) or not isinstance(v, (int, float)) or not math.isfinite(v) or v < 0:
             raise ValueError(f"Weight for '{k}' must be a finite, non-negative number, got {v}")
 
     total_weight = sum(weights.values())
