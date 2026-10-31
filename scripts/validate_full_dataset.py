@@ -49,6 +49,8 @@ def main():
             for table, expected in EXPECTED.items():
                 check(counts[table] == expected, f"{table}: expected {expected}, got {counts[table]}")
             check(counts["supplier_scores"] == 1000, "Expected one score per supplier in the full run.")
+            check(counts["quarantine_log"] == 3,
+                  f"Expected three detected malformed records in quarantine, got {counts['quarantine_log']}.")
 
             queries = {
                 "cancelled_po_shipments": """SELECT COUNT(*) FROM shipments s JOIN purchase_orders p ON p.po_id=s.po_id WHERE p.status='Cancelled'""",
