@@ -90,13 +90,20 @@ Historical score anomalies are retained for traceability and are documented in [
 ```text
 supplier-reliability-scoring/
 ├── data/
+│   ├── archive/
+│   │   └── pre_refresh_20261031T203556Z/
 │   ├── exports/
 │   ├── schema.sql
+│   ├── DATA_DICTIONARY.md
+│   ├── generation_metadata.json
 │   ├── ground_truth.json
 │   ├── malformed_cases.json
 │   ├── supplier_scoring.db
 │   ├── validation_summary.json
 │   └── source_manifest.json
+├── scripts/
+│   ├── refresh_dataset.py
+│   └── validate_full_dataset.py
 ├── src/
 │   ├── db.py
 │   ├── generator.py
@@ -106,6 +113,9 @@ supplier-reliability-scoring/
 │   ├── test_db.py
 │   ├── test_generator.py
 │   └── test_scoring.py
+├── .github/workflows/
+│   ├── tests.yml
+│   └── refresh_dataset.yml
 ├── requirements.txt
 └── README.md
 ```
