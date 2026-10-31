@@ -1,6 +1,6 @@
 {
-  "created_at_utc": "2026-10-31T12:47:04.328473+00:00",
-  "database": "data\\supplier_scoring.db",
+  "created_at_utc": "2026-10-31T20:35:59.882066+00:00",
+  "database": "data/supplier_scoring.db",
   "sqlite_integrity_check": "ok",
   "sqlite_integrity_passed": true,
   "foreign_key_violation_count": 0,
@@ -21,18 +21,36 @@
       "actual": 15000,
       "passed": true
     },
+    "delivery_events": {
+      "expected": 15000,
+      "actual": 15000,
+      "passed": true
+    },
     "inspections": {
       "expected": 20000,
       "actual": 20000,
       "passed": true
     }
   },
+  "business_rule_violation_counts": {
+    "cancelled_purchase_orders_have_no_shipments": 0,
+    "cancelled_purchase_orders_have_no_invoices": 0,
+    "over_shipped_po_lines": 0,
+    "delivery_quantity_over_shipment": 0,
+    "fulfilled_purchase_orders_with_short_lines": 0,
+    "quarantine_rows_without_reason": 0,
+    "duplicate_supplier_scores_within_run": 0,
+    "inspection_quantity_over_delivery": 0,
+    "invoice_quantity_over_delivery": 0,
+    "invoice_before_latest_delivery": 0
+  },
+  "business_rule_checks_passed": true,
   "score_range_checks": [
     {
       "column": "delivery_score",
-      "historical_values_outside_0_to_100": 58,
+      "historical_values_outside_0_to_100": 0,
       "latest_run_values_outside_0_to_100": 0,
-      "historical_passed": false,
+      "historical_passed": true,
       "latest_run_passed": true
     },
     {
@@ -72,32 +90,32 @@
     },
     {
       "column": "final_score",
-      "historical_values_outside_0_to_100": 2,
+      "historical_values_outside_0_to_100": 0,
       "latest_run_values_outside_0_to_100": 0,
-      "historical_passed": false,
+      "historical_passed": true,
       "latest_run_passed": true
     }
   ],
-  "latest_run_id": "RUN-ba968b47",
+  "latest_run_id": "RUN-655a258a",
   "latest_run_timestamp_column": "run_timestamp",
   "latest_run_passed": true,
   "table_row_counts": {
     "contracts": 1000,
     "delivery_events": 15000,
     "inspections": 20000,
-    "invoice_lines": 7476,
-    "invoices": 5000,
+    "invoice_lines": 7104,
+    "invoices": 4763,
     "po_lines": 14901,
     "purchase_orders": 10000,
-    "quarantine_log": 0,
-    "risk_signals": 296,
-    "score_runs": 4,
+    "quarantine_log": 3,
+    "risk_signals": 264,
+    "score_runs": 1,
     "shipments": 15000,
     "sites": 1485,
-    "supplier_scores": 4000,
+    "supplier_scores": 1000,
     "suppliers": 1000
   },
   "foreign_key_violations": [],
-  "historical_score_checks_passed": false,
-  "overall_passed": false
+  "historical_score_checks_passed": true,
+  "overall_passed": true
 }

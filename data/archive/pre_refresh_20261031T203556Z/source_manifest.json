@@ -1,0 +1,46 @@
+{
+  "created_at_utc": "2026-10-31T12:47:04.329331+00:00",
+  "database": "data\\supplier_scoring.db",
+  "database_sha256": "3c779f9948e9bb44866ab59774921bb8d386a418a26239cfc262770da04228b8",
+  "configured_default_seed": 20261022,
+  "seed_note": "The generator's default seed is documented here. The database does not prove which seed was used to create its current contents.",
+  "table_row_counts": {
+    "contracts": 1000,
+    "delivery_events": 15000,
+    "inspections": 20000,
+    "invoice_lines": 7476,
+    "invoices": 5000,
+    "po_lines": 14901,
+    "purchase_orders": 10000,
+    "quarantine_log": 0,
+    "risk_signals": 296,
+    "score_runs": 4,
+    "shipments": 15000,
+    "sites": 1485,
+    "supplier_scores": 4000,
+    "suppliers": 1000
+  },
+  "source_files": {
+    "src\\generator.py": "1583bacfd7deea29670190bb7827bb74876129487f7fbad4d731ade6470c792d",
+    "src\\scoring.py": "fcb29d18ca705b73d325450daf1c36870e78e573f3c19fdb4df55aac34220bbe",
+    "src\\export_artifacts.py": "1ccf8d14a7550077ff2833f15452d17a35eb0818f28e438f1848b5ef6e9c6055",
+    "data\\schema.sql": "bd9830fce491493b629f8872e6fdfc4556b20ef2a2092e81ef02507fcabc3fef"
+  },
+  "csv_exports": [
+    "data\\exports\\contracts.csv",
+    "data\\exports\\delivery_events.csv",
+    "data\\exports\\inspections.csv",
+    "data\\exports\\invoice_lines.csv",
+    "data\\exports\\invoices.csv",
+    "data\\exports\\po_lines.csv",
+    "data\\exports\\purchase_orders.csv",
+    "data\\exports\\quarantine_log.csv",
+    "data\\exports\\risk_signals.csv",
+    "data\\exports\\score_runs.csv",
+    "data\\exports\\shipments.csv",
+    "data\\exports\\sites.csv",
+    "data\\exports\\supplier_scores.csv",
+    "data\\exports\\suppliers.csv"
+  ],
+  "validation_summary": "data\\validation_summary.json"
+}
