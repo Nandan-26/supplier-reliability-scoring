@@ -102,11 +102,11 @@ def test_rigorous_as_of_date_leakage_protection():
         cursor.execute("INSERT OR IGNORE INTO purchase_orders VALUES ('PO-FUTURE', 'SUP-0001', 'SITE-SUP-0001-1', 'CON-SUP-0001', '2026-01-02', 'Fulfilled', '2026-01-02');")
         cursor.execute("INSERT OR IGNORE INTO po_lines VALUES ('LINE-FUTURE', 'PO-FUTURE', 'ITEM-1', 100, 10.0, '2026-06-01', '2026-01-02');")
 
-        cursor.execute("INSERT INTO shipments VALUES ('SHP-FUT', 'LINE-FUTURE', 'PO-FUTURE', 100, '2026-05-25', '2026-06-01', '2026-06-01');")
-        cursor.execute("INSERT INTO delivery_events VALUES ('DEL-FUT', 'SHP-FUT', '2026-06-01', 100, 'Late', '2026-06-01');")
+        cursor.execute("INSERT INTO shipments VALUES ('SHP-FUT', 'LINE-FUTURE', 'PO-FUTURE', 50, '2026-05-25', '2026-06-01', '2026-06-01');")
+        cursor.execute("INSERT INTO delivery_events VALUES ('DEL-FUT', 'SHP-FUT', '2026-06-01', 50, 'Late', '2026-06-01');")
 
-        cursor.execute("INSERT INTO shipments VALUES ('SHP-LATE', 'LINE-FUTURE', 'PO-FUTURE', 100, '2026-01-03', '2026-01-05', '2026-07-01');")
-        cursor.execute("INSERT INTO delivery_events VALUES ('DEL-LATE', 'SHP-LATE', '2026-01-05', 100, 'Late reported', '2026-07-01');")
+        cursor.execute("INSERT INTO shipments VALUES ('SHP-LATE', 'LINE-FUTURE', 'PO-FUTURE', 50, '2026-01-03', '2026-01-05', '2026-07-01');")
+        cursor.execute("INSERT INTO delivery_events VALUES ('DEL-LATE', 'SHP-LATE', '2026-01-05', 50, 'Late reported', '2026-07-01');")
 
         conn.commit()
     finally:
