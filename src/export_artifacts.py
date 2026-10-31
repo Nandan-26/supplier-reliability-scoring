@@ -44,7 +44,6 @@ SOURCE_FILES = [
     ROOT / "data" / "schema.sql",
     ROOT / "scripts" / "validate_full_dataset.py",
     ROOT / "scripts" / "refresh_dataset.py",
-    ROOT / "README.md",
     ROOT / "data" / "DATA_DICTIONARY.md",
 ]
 
