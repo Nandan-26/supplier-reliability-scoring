@@ -478,3 +478,76 @@ def test_weights_reject_non_finite_and_boolean_values(bad_weight):
     invalid["delivery"] = bad_weight
     with pytest.raises(ValueError):
         validate_weights(invalid)
+
+
+def test_late_available_po_line_is_excluded_from_all_operational_dimensions():
+    before_run = calculate_supplier_scores(
+        as_of_date="2026-02-01", db_path=TEST_DB_PATH
+    )
+    conn = get_connection(TEST_DB_PATH)
+    try:
+        before = conn.execute("""
+            SELECT delivery_score, delivery_sample_count,
+                   quality_score, quality_sample_count,
+                   cost_score, cost_sample_count,
+                   capacity_score, capacity_sample_count
+            FROM supplier_scores
+            WHERE run_id=? AND supplier_id='SUP-0001';
+        """, (before_run,)).fetchone()
+
+        conn.execute(
+            "INSERT INTO purchase_orders VALUES (?, ?, ?, ?, ?, ?, ?);",
+            ("PO-LATE-ARRIVAL", "SUP-0001", "SITE-SUP-0001-1",
+             "CON-SUP-0001", "2026-01-02", "Issued", "2026-01-02")
+        )
+        conn.execute(
+            "INSERT INTO po_lines VALUES (?, ?, ?, ?, ?, ?, ?);",
+            ("LINE-LATE-ARRIVAL", "PO-LATE-ARRIVAL", "ITEM-LATE",
+             100, 10.0, "2026-01-10", "2026-07-01")
+        )
+        conn.execute(
+            "INSERT INTO shipments VALUES (?, ?, ?, ?, ?, ?, ?);",
+            ("SHP-LATE-ARRIVAL", "LINE-LATE-ARRIVAL", "PO-LATE-ARRIVAL",
+             100, "2026-01-05", "2026-01-10", "2026-01-05")
+        )
+        conn.execute(
+            "INSERT INTO delivery_events VALUES (?, ?, ?, ?, ?, ?);",
+            ("DEL-LATE-ARRIVAL", "SHP-LATE-ARRIVAL", "2026-01-09",
+             100, "Late-reported source line", "2026-01-09")
+        )
+        conn.execute(
+            "INSERT INTO inspections VALUES (?, ?, ?, ?, ?, ?, ?);",
+            ("INS-LATE-ARRIVAL", "DEL-LATE-ARRIVAL", "2026-01-10",
+             100, 20, "Failed", "2026-01-10")
+        )
+        conn.execute(
+            "INSERT INTO invoices VALUES (?, ?, ?, ?, ?);",
+            ("INV-LATE-ARRIVAL", "PO-LATE-ARRIVAL", "2026-01-10",
+             "Discrepancy", "2026-01-10")
+        )
+        conn.execute(
+            "INSERT INTO invoice_lines VALUES (?, ?, ?, ?, ?, ?, ?);",
+            ("IL-LATE-ARRIVAL", "INV-LATE-ARRIVAL", "PO-LATE-ARRIVAL",
+             "LINE-LATE-ARRIVAL", 100, 12.0, "2026-01-10")
+        )
+        conn.commit()
+    finally:
+        conn.close()
+
+    after_run = calculate_supplier_scores(
+        as_of_date="2026-02-01", db_path=TEST_DB_PATH
+    )
+    conn = get_connection(TEST_DB_PATH)
+    try:
+        after = conn.execute("""
+            SELECT delivery_score, delivery_sample_count,
+                   quality_score, quality_sample_count,
+                   cost_score, cost_sample_count,
+                   capacity_score, capacity_sample_count
+            FROM supplier_scores
+            WHERE run_id=? AND supplier_id='SUP-0001';
+        """, (after_run,)).fetchone()
+    finally:
+        conn.close()
+
+    assert after == before
