@@ -157,6 +157,7 @@ def main():
                 "inspections": ("inspection_id", r"INS-\d{6}"),
                 "invoices": ("invoice_id", r"INV-\d{5}"),
                 "risk_signals": ("risk_signal_id", r"RSK-SUP-\d{6}-2026-\d{2,}"),
+                "supplier_scores": ("score_id", r"SCORE-2026-\d{6}"),
             }
             for table, (column, pattern) in patterns.items():
                 ids = [x[0] for x in con.execute(f"SELECT {column} FROM {table}")]
