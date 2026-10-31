@@ -190,7 +190,8 @@ def generate_synthetic_data(
         contract_id = f"CON-{sup_id}"
         order_date_dt = base_date + timedelta(days=rng.randint(0, 90))
         order_date = order_date_dt.strftime("%Y-%m-%d")
-        status = rng.choices(["Issued", "Fulfilled", "Cancelled"], weights=[15, 80, 5])[0]
+        # Fulfilled is derived after shipment generation; cancelled POs never ship.
+        status = "Cancelled" if rng.random() < 0.05 else "Issued"
         sys_avail = (order_date_dt + timedelta(days=rng.randint(0, 1))).strftime("%Y-%m-%d")
 
         po_data.append((po_id, sup_id, site_id, contract_id, order_date, status, sys_avail))
@@ -216,11 +217,16 @@ def generate_synthetic_data(
             po_lines_data
         )
 
-    cursor.execute("SELECT po_line_id, po_id, ordered_qty, requested_delivery_date FROM po_lines;")
+    cursor.execute("""
+        SELECT pl.po_line_id, pl.po_id, pl.ordered_qty, pl.requested_delivery_date
+        FROM po_lines pl
+        JOIN purchase_orders po ON po.po_id = pl.po_id
+        WHERE po.status != 'Cancelled'
+        ORDER BY pl.po_line_id;
+    """)
     all_po_lines = cursor.fetchall()
-    # 5. Prevent infinite loops when no PO lines exist
     if not all_po_lines:
-        raise ValueError("No PO lines generated. Cannot generate shipments.")
+        raise ValueError("No eligible PO lines generated. Cannot generate shipments.")
 
     # 2. Prevent unrealistic duplicate shipments & manage cumulative partial quantities
     shipments_data = []
