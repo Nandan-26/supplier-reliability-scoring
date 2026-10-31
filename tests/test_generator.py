@@ -231,3 +231,26 @@ def test_invoice_lines_are_limited_to_delivered_quantities_and_dates():
     assert cancelled_invoice_count == 0
     assert quantity_violations == []
     assert date_violations == []
+
+
+def test_detected_malformed_records_are_persisted_in_quarantine():
+    generate_synthetic_data(
+        db_path=TEST_DB_PATH, ground_truth_path=TEST_GT_PATH,
+        malformed_path=TEST_MAL_PATH, num_suppliers=20, num_pos=50,
+        num_shipments=50, num_inspections=50, seed=4242
+    )
+    with open(TEST_MAL_PATH, "r", encoding="utf-8") as stream:
+        malformed = json.load(stream)
+
+    conn = get_connection(TEST_DB_PATH)
+    try:
+        rows = conn.execute("""
+            SELECT source_table, raw_payload, error_reason
+            FROM quarantine_log ORDER BY quarantine_id;
+        """).fetchall()
+    finally:
+        conn.close()
+
+    assert len(rows) == len(malformed) == 3
+    assert all(row[2] for row in rows)
+    assert all(json.loads(row[1]) for row in rows)
