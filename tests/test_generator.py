@@ -150,3 +150,85 @@ def test_malformed_case_db_detection():
     assert len(errors) >= 2
     assert any("Orphaned" in err for err in errors)
     assert any("Impossible date" in err for err in errors)
+
+
+def test_cancelled_purchase_orders_have_no_shipments():
+    generate_synthetic_data(
+        db_path=TEST_DB_PATH, ground_truth_path=TEST_GT_PATH,
+        malformed_path=TEST_MAL_PATH, num_suppliers=40, num_pos=200,
+        num_shipments=100, num_inspections=100, seed=314
+    )
+    conn = get_connection(TEST_DB_PATH)
+    try:
+        cancelled_shipments = conn.execute("""
+            SELECT COUNT(*)
+            FROM shipments s
+            JOIN purchase_orders po ON po.po_id = s.po_id
+            WHERE po.status = 'Cancelled';
+        """).fetchone()[0]
+    finally:
+        conn.close()
+    assert cancelled_shipments == 0
+
+
+def test_inspection_lots_do_not_exceed_delivered_quantity():
+    generate_synthetic_data(
+        db_path=TEST_DB_PATH, ground_truth_path=TEST_GT_PATH,
+        malformed_path=TEST_MAL_PATH, num_suppliers=40, num_pos=200,
+        num_shipments=100, num_inspections=200, seed=2718
+    )
+    conn = get_connection(TEST_DB_PATH)
+    try:
+        inspection_count = conn.execute(
+            "SELECT COUNT(*) FROM inspections;"
+        ).fetchone()[0]
+        violations = conn.execute("""
+            SELECT de.delivery_event_id
+            FROM delivery_events de
+            JOIN inspections i ON i.delivery_event_id = de.delivery_event_id
+            GROUP BY de.delivery_event_id, de.delivered_qty
+            HAVING SUM(i.inspected_qty) > de.delivered_qty + 0.000001;
+        """).fetchall()
+    finally:
+        conn.close()
+    assert inspection_count == 200
+    assert violations == []
+
+
+def test_invoice_lines_are_limited_to_delivered_quantities_and_dates():
+    generate_synthetic_data(
+        db_path=TEST_DB_PATH, ground_truth_path=TEST_GT_PATH,
+        malformed_path=TEST_MAL_PATH, num_suppliers=40, num_pos=200,
+        num_shipments=100, num_inspections=100, seed=1618
+    )
+    conn = get_connection(TEST_DB_PATH)
+    try:
+        cancelled_invoice_count = conn.execute("""
+            SELECT COUNT(*)
+            FROM invoices i
+            JOIN purchase_orders po ON po.po_id = i.po_id
+            WHERE po.status = 'Cancelled';
+        """).fetchone()[0]
+        quantity_violations = conn.execute("""
+            SELECT il.invoice_line_id
+            FROM invoice_lines il
+            JOIN shipments s
+              ON s.po_line_id = il.po_line_id AND s.po_id = il.po_id
+            JOIN delivery_events de ON de.shipment_id = s.shipment_id
+            GROUP BY il.invoice_line_id, il.invoiced_qty
+            HAVING il.invoiced_qty > SUM(de.delivered_qty) + 0.000001;
+        """).fetchall()
+        date_violations = conn.execute("""
+            SELECT i.invoice_id
+            FROM invoices i
+            JOIN delivery_events de
+            JOIN shipments s ON s.shipment_id = de.shipment_id
+                            AND s.po_id = i.po_id
+            GROUP BY i.invoice_id, i.invoice_date
+            HAVING i.invoice_date < MAX(de.actual_delivery_date);
+        """).fetchall()
+    finally:
+        conn.close()
+    assert cancelled_invoice_count == 0
+    assert quantity_violations == []
+    assert date_violations == []
