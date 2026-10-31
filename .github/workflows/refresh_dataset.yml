@@ -1,0 +1,51 @@
+name: Refresh committed supplier dataset
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "src/**"
+      - "data/schema.sql"
+      - "scripts/refresh_dataset.py"
+      - "requirements.txt"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: supplier-dataset-refresh-main
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    if: ${{ !contains(github.event.head_commit.message, '[data-refresh]') }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: python -m pip install -r requirements.txt
+
+      - name: Archive the previous dataset and generate a fresh validated dataset
+        run: python scripts/refresh_dataset.py
+
+      - name: Commit the refreshed data and preserved historical snapshot
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A data/
+          if git diff --cached --quiet; then
+            echo "No dataset artifact changes to commit."
+          else
+            git commit -m "[data-refresh] Publish validated supplier dataset and archive previous data"
+            git push origin HEAD:main
+          fi
