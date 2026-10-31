@@ -96,7 +96,7 @@ def generate_synthetic_data(
     # 1. Suppliers & Profiles
     suppliers_data = []
     for i in range(1, num_suppliers + 1):
-        sup_id = f"SUP-{i:04d}"
+        sup_id = f"SUP-{i:06d}"
         name = f"Supplier_{i}"
         category = rng.choice(categories)
         country = rng.choice(countries)
@@ -178,7 +178,7 @@ def generate_synthetic_data(
     sparse_suppliers = [s for s, p in supplier_profiles.items() if p == "sparse_history"]
 
     for i in range(1, num_pos + 1):
-        po_id = f"PO-{i:05d}"
+        po_id = f"PO-2026-{i:06d}"
         if rng.random() < 0.95 and active_suppliers:
             sup_id = rng.choice(active_suppliers)
         elif sparse_suppliers:
@@ -448,7 +448,7 @@ def generate_synthetic_data(
     risk_counter = 1
     for sup_id, profile in supplier_profiles.items():
         if profile in ["worsening_delivery", "quality_issues"] and rng.random() < 0.7:
-            signal_id = f"RS-{risk_counter:04d}"
+            signal_id = f"RSK-{sup_id}-2026-{risk_counter:02d}"
             signal_date = (base_date + timedelta(days=rng.randint(20, 80))).strftime("%Y-%m-%d")
             category = rng.choice(["Compliance", "Disruption"])
             severity = rng.choice(["Medium", "High", "Critical"])
