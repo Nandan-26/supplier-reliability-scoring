@@ -116,3 +116,58 @@ def test_inspection_quantity_constraint():
             )
     finally:
         conn.close()
+
+
+def test_cumulative_procurement_quantity_triggers():
+    conn = get_connection(TEST_DB_PATH)
+    cursor = conn.cursor()
+    try:
+        cursor.execute("INSERT INTO suppliers VALUES ('SUP-1', 'Supplier A', 'Tech', 'USA', 'Active', '2026-01-01', '2026-01-01');")
+        cursor.execute("INSERT INTO sites VALUES ('SITE-A', 'SUP-1', 'Main', 'NY', 1, '2026-01-01');")
+        cursor.execute("INSERT INTO contracts VALUES ('CON-1', 'SUP-1', '2026-01-01', '2026-12-31', 'Terms', '2026-01-01');")
+        cursor.execute("INSERT INTO purchase_orders VALUES ('PO-1', 'SUP-1', 'SITE-A', 'CON-1', '2026-01-02', 'Issued', '2026-01-02');")
+        cursor.execute("INSERT INTO po_lines VALUES ('LINE-1', 'PO-1', 'ITEM-X', 100, 10.0, '2026-01-10', '2026-01-02');")
+        cursor.execute("INSERT INTO shipments VALUES ('SHP-1', 'LINE-1', 'PO-1', 60, '2026-01-05', '2026-01-10', '2026-01-05');")
+
+        with pytest.raises(sqlite3.IntegrityError, match="Cumulative shipped"):
+            cursor.execute("INSERT INTO shipments VALUES ('SHP-2', 'LINE-1', 'PO-1', 50, '2026-01-05', '2026-01-10', '2026-01-05');")
+
+        cursor.execute("INSERT INTO delivery_events VALUES ('DEL-1', 'SHP-1', '2026-01-09', 60, 'Partial', '2026-01-09');")
+        with pytest.raises(sqlite3.IntegrityError, match="Cumulative delivered"):
+            cursor.execute("INSERT INTO delivery_events VALUES ('DEL-2', 'SHP-1', '2026-01-09', 50, 'Over receipt', '2026-01-09');")
+
+        cursor.execute("INSERT INTO inspections VALUES ('INS-1', 'DEL-1', '2026-01-10', 40, 0, 'Passed', '2026-01-10');")
+        with pytest.raises(sqlite3.IntegrityError, match="Cumulative inspected"):
+            cursor.execute("INSERT INTO inspections VALUES ('INS-2', 'DEL-1', '2026-01-10', 30, 0, 'Passed', '2026-01-10');")
+
+        cursor.execute("INSERT INTO invoices VALUES ('INV-1', 'PO-1', '2026-01-10', 'Matched', '2026-01-10');")
+        cursor.execute("INSERT INTO invoice_lines VALUES ('IL-1', 'INV-1', 'PO-1', 'LINE-1', 40, 10.0, '2026-01-10');")
+        with pytest.raises(sqlite3.IntegrityError, match="Cumulative invoiced"):
+            cursor.execute("INSERT INTO invoice_lines VALUES ('IL-2', 'INV-1', 'PO-1', 'LINE-1', 30, 10.0, '2026-01-10');")
+
+        cursor.execute("INSERT INTO purchase_orders VALUES ('PO-2', 'SUP-1', 'SITE-A', 'CON-1', '2026-01-02', 'Cancelled', '2026-01-02');")
+        cursor.execute("INSERT INTO po_lines VALUES ('LINE-2', 'PO-2', 'ITEM-X', 100, 10.0, '2026-01-10', '2026-01-02');")
+        with pytest.raises(sqlite3.IntegrityError, match="Cancelled purchase"):
+            cursor.execute("INSERT INTO shipments VALUES ('SHP-3', 'LINE-2', 'PO-2', 10, '2026-01-05', '2026-01-10', '2026-01-05');")
+
+        with pytest.raises(sqlite3.IntegrityError, match="cannot be cancelled"):
+            cursor.execute("UPDATE purchase_orders SET status='Cancelled' WHERE po_id='PO-1';")
+    finally:
+        conn.close()
+
+
+def test_invoice_date_cannot_precede_latest_delivery():
+    conn = get_connection(TEST_DB_PATH)
+    cursor = conn.cursor()
+    try:
+        cursor.execute("INSERT INTO suppliers VALUES ('SUP-1', 'Supplier A', 'Tech', 'USA', 'Active', '2026-01-01', '2026-01-01');")
+        cursor.execute("INSERT INTO sites VALUES ('SITE-A', 'SUP-1', 'Main', 'NY', 1, '2026-01-01');")
+        cursor.execute("INSERT INTO contracts VALUES ('CON-1', 'SUP-1', '2026-01-01', '2026-12-31', 'Terms', '2026-01-01');")
+        cursor.execute("INSERT INTO purchase_orders VALUES ('PO-1', 'SUP-1', 'SITE-A', 'CON-1', '2026-01-02', 'Issued', '2026-01-02');")
+        cursor.execute("INSERT INTO po_lines VALUES ('LINE-1', 'PO-1', 'ITEM-X', 100, 10.0, '2026-01-10', '2026-01-02');")
+        cursor.execute("INSERT INTO shipments VALUES ('SHP-1', 'LINE-1', 'PO-1', 100, '2026-01-05', '2026-01-10', '2026-01-05');")
+        cursor.execute("INSERT INTO delivery_events VALUES ('DEL-1', 'SHP-1', '2026-01-09', 100, 'Received', '2026-01-09');")
+        with pytest.raises(sqlite3.IntegrityError, match="Invoice date"):
+            cursor.execute("INSERT INTO invoices VALUES ('INV-1', 'PO-1', '2026-01-08', 'Matched', '2026-01-08');")
+    finally:
+        conn.close()
