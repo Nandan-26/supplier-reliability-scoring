@@ -39,7 +39,7 @@ Business-event dates (for example `actual_delivery_date`, `invoice_date`, and `s
 | Purchase order | `PO-2026-000001` | `PO-2026-000001` | Year plus six-digit sequence |
 | Shipment | `SHP-2026-000001` | `SHP-2026-000001` | Year plus six-digit sequence |
 | Risk signal | `RSK-<supplier-id>-2026-01` | `RSK-SUP-000001-2026-01` | Supplier-scoped sequence |
-| Supplier score | `SCORE-2026-000001` | Required by brief | **Not yet implemented**; current scorer still uses a random `SCR-` identifier |
+| Supplier score | `SCORE-2026-000001` | `SCORE-2026-000001` | Sequential six-digit ID across appended scoring runs |
 
 ## Field-level validation notes (implemented constraints)
 
@@ -54,6 +54,6 @@ Business-event dates (for example `actual_delivery_date`, `invoice_date`, and `s
 
 ## Known data-model gaps against the full brief
 
-The current schema does not yet provide a dedicated lifecycle event-history entity, a risk-signal source/provenance field, or the requested deterministic `SCORE-2026-000001` score key. The table above is a concise dictionary, not yet a complete field-by-field specification of every column, type, nullability, unit, enum and validation expression. These are outstanding implementation items, not silently assumed capabilities.
+The current schema does not yet provide a dedicated lifecycle event-history entity or a risk-signal source/provenance field. The table above is a concise dictionary, not yet a complete field-by-field specification of every column, type, nullability, unit, enum and validation expression. These are outstanding implementation items, not silently assumed capabilities.
 
 See [EDGE_CASE_CATALOGUE.md](EDGE_CASE_CATALOGUE.md) for the five required edge-case definitions and their expected handling.
