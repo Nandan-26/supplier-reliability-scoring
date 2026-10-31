@@ -37,7 +37,7 @@ The scoring function accepts an explicit `YYYY-MM-DD` as-of date. Business-event
 - Shipment quantities are cumulative per PO line and do not exceed the ordered quantity.
 - Inspection records are treated as disjoint inspection lots. For each delivery event, the sum of inspected quantities is limited to the received quantity.
 - Invoices are generated only for non-cancelled POs with delivery evidence. Invoice lines use delivered quantities, and the invoice date is no earlier than the latest delivery on that PO.
-- Malformed challenge examples are exported separately; the generator does not currently populate `quarantine_log`.
+- Detected malformed challenge examples are written to `quarantine_log` with their raw payload and reasons, and are also exported to `data/malformed_cases.json`.
 
 The requested inspection count is distributed across generated delivery events. When more inspections than deliveries are requested, each delivery is split into multiple quantity lots rather than inspected repeatedly at its full quantity.
 
@@ -67,7 +67,10 @@ python -m src.export_artifacts
 
 ```powershell
 python -m pytest -v
+python scripts/validate_full_dataset.py
 ```
+
+The full-dataset validator generates the 1,000-supplier dataset in a temporary directory, checks business rules, profile-level ground truth, relational integrity and score ranges, then removes the temporary database. It does not overwrite the committed database or exports.
 
 The tests cover schema constraints, requested generation counts, reproducibility, shipment relationships, malformed-case detection, scoring ranges, missing history, point-in-time leakage, capacity aggregation, inspection aggregation, and delivery scoring. A test result applies only to the code and environment in which it was actually run.
 
@@ -112,6 +115,6 @@ supplier-reliability-scoring/
 - All source records are synthetic; they do not establish real supplier performance.
 - The scoring weights and penalty values are assumptions, not calibrated policy.
 - Confidence is a simple heuristic and should not be treated as a statistical confidence interval.
-- The current quarantine table is defined in the schema, but malformed examples are written to JSON rather than inserted into that table.
+- The quarantine log stores the generator's representative malformed examples; it is not a general-purpose production ingestion or remediation queue.
 - The invoice model is simplified and does not represent every real-world advance-billing, credit-note, or multi-stage payment workflow.
 - A production implementation would need access controls, audit logging, data-retention policies, monitoring, policy ownership, and human review of consequential supplier decisions.
