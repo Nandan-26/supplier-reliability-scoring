@@ -320,3 +320,39 @@ def test_compliance_and_disruption_without_signals_are_neutral_and_unobserved():
 def test_invalid_as_of_date_is_rejected(invalid_date):
     with pytest.raises(ValueError, match="as_of_date"):
         calculate_supplier_scores(as_of_date=invalid_date, db_path=TEST_DB_PATH)
+
+
+def test_supplier_created_or_available_after_as_of_date_is_not_scored():
+    conn = get_connection(TEST_DB_PATH)
+    try:
+        conn.execute(
+            "INSERT INTO suppliers VALUES (?, ?, ?, ?, ?, ?, ?);",
+            (
+                "SUP-FUTURE", "Future Supplier", "Tech", "USA", "Active",
+                "2026-03-01", "2026-03-03"
+            )
+        )
+        conn.commit()
+    finally:
+        conn.close()
+
+    run_id = calculate_supplier_scores(
+        as_of_date="2026-02-28", db_path=TEST_DB_PATH
+    )
+
+    conn = get_connection(TEST_DB_PATH)
+    try:
+        future_rows = conn.execute(
+            "SELECT COUNT(*) FROM supplier_scores "
+            "WHERE run_id = ? AND supplier_id = 'SUP-FUTURE';",
+            (run_id,)
+        ).fetchone()[0]
+        eligible_rows = conn.execute(
+            "SELECT COUNT(*) FROM supplier_scores WHERE run_id = ?;",
+            (run_id,)
+        ).fetchone()[0]
+    finally:
+        conn.close()
+
+    assert future_rows == 0
+    assert eligible_rows == 20
