@@ -14,6 +14,7 @@ EXPECTED_COUNTS = {
     "suppliers": 1000,
     "purchase_orders": 10000,
     "shipments": 15000,
+    "delivery_events": 15000,
     "inspections": 20000,
 }
 
@@ -172,6 +173,50 @@ def main():
                 FROM shipments s
                 JOIN purchase_orders po ON po.po_id = s.po_id
                 WHERE po.status = 'Cancelled'
+            """).fetchone()[0],
+            "cancelled_purchase_orders_have_no_invoices": con.execute("""
+                SELECT COUNT(*)
+                FROM invoices i
+                JOIN purchase_orders po ON po.po_id = i.po_id
+                WHERE po.status = 'Cancelled'
+            """).fetchone()[0],
+            "over_shipped_po_lines": con.execute("""
+                SELECT COUNT(*) FROM (
+                    SELECT pl.po_id, pl.po_line_id
+                    FROM po_lines pl
+                    JOIN shipments s
+                      ON s.po_id = pl.po_id AND s.po_line_id = pl.po_line_id
+                    GROUP BY pl.po_id, pl.po_line_id, pl.ordered_qty
+                    HAVING SUM(s.shipped_qty) > pl.ordered_qty + 0.000001
+                )
+            """).fetchone()[0],
+            "delivery_quantity_over_shipment": con.execute("""
+                SELECT COUNT(*) FROM (
+                    SELECT s.shipment_id
+                    FROM shipments s
+                    JOIN delivery_events de ON de.shipment_id = s.shipment_id
+                    GROUP BY s.shipment_id, s.shipped_qty
+                    HAVING SUM(de.delivered_qty) > s.shipped_qty + 0.000001
+                )
+            """).fetchone()[0],
+            "fulfilled_purchase_orders_with_short_lines": con.execute("""
+                SELECT COUNT(*)
+                FROM purchase_orders po
+                WHERE po.status = 'Fulfilled'
+                  AND EXISTS (
+                    SELECT 1
+                    FROM po_lines pl
+                    LEFT JOIN (
+                        SELECT po_id, po_line_id, SUM(shipped_qty) AS qty
+                        FROM shipments GROUP BY po_id, po_line_id
+                    ) sh ON sh.po_id = pl.po_id AND sh.po_line_id = pl.po_line_id
+                    WHERE pl.po_id = po.po_id
+                      AND COALESCE(sh.qty, 0) < pl.ordered_qty - 0.000001
+                  )
+            """).fetchone()[0],
+            "quarantine_rows_without_reason": con.execute("""
+                SELECT COUNT(*) FROM quarantine_log
+                WHERE TRIM(error_reason) = ''
             """).fetchone()[0],
             "inspection_quantity_over_delivery": con.execute("""
                 SELECT COUNT(*)
