@@ -374,3 +374,64 @@ def test_score_run_metadata_does_not_claim_an_unknown_generation_seed():
     assert row[1] == "v1.1"
     assert len(row[2]) == 12
     assert row[3] == "1.1.0"
+
+
+def test_delivery_join_respects_composite_po_line_key():
+    conn = get_connection(TEST_DB_PATH)
+    try:
+        conn.execute(
+            "INSERT INTO suppliers VALUES (?, ?, ?, ?, ?, ?, ?);",
+            ("SUP-DUPLINE", "Duplicate Line Supplier", "Tech", "USA",
+             "Active", "2026-01-01", "2026-01-01")
+        )
+        conn.execute(
+            "INSERT INTO sites VALUES (?, ?, ?, ?, ?, ?);",
+            ("SITE-DUPLINE", "SUP-DUPLINE", "Plant", "USA", 1, "2026-01-01")
+        )
+        conn.execute(
+            "INSERT INTO contracts VALUES (?, ?, ?, ?, ?, ?);",
+            ("CON-DUPLINE", "SUP-DUPLINE", "2026-01-01", "2026-12-31",
+             "Net30", "2026-01-01")
+        )
+        for index, status in ((1, "Fulfilled"), (2, "Fulfilled")):
+            po_id = f"PO-DUPLINE-{index}"
+            shipment_id = f"SHP-DUPLINE-{index}"
+            delivery_id = f"DEL-DUPLINE-{index}"
+            conn.execute(
+                "INSERT INTO purchase_orders VALUES (?, ?, ?, ?, ?, ?, ?);",
+                (po_id, "SUP-DUPLINE", "SITE-DUPLINE", "CON-DUPLINE",
+                 "2026-01-02", status, "2026-01-02")
+            )
+            conn.execute(
+                "INSERT INTO po_lines VALUES (?, ?, ?, ?, ?, ?, ?);",
+                ("LINE-SHARED", po_id, "ITEM-1", 100, 10.0,
+                 "2026-01-10", "2026-01-02")
+            )
+            conn.execute(
+                "INSERT INTO shipments VALUES (?, ?, ?, ?, ?, ?, ?);",
+                (shipment_id, "LINE-SHARED", po_id, 100, "2026-01-05",
+                 "2026-01-10", "2026-01-05")
+            )
+            actual_date = "2026-01-09" if index == 1 else "2026-01-15"
+            conn.execute(
+                "INSERT INTO delivery_events VALUES (?, ?, ?, ?, ?, ?);",
+                (delivery_id, shipment_id, actual_date, 100, "Test", actual_date)
+            )
+        conn.commit()
+    finally:
+        conn.close()
+
+    run_id = calculate_supplier_scores(
+        as_of_date="2026-01-31", db_path=TEST_DB_PATH
+    )
+    conn = get_connection(TEST_DB_PATH)
+    try:
+        row = conn.execute(
+            "SELECT delivery_score, delivery_sample_count FROM supplier_scores "
+            "WHERE run_id=? AND supplier_id='SUP-DUPLINE';",
+            (run_id,)
+        ).fetchone()
+    finally:
+        conn.close()
+
+    assert row == (50.0, 2)
