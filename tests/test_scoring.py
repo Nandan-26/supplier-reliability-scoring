@@ -58,6 +58,15 @@ def test_score_ranges_and_persistence():
         conn.close()
 
     assert len(scores) == 20
+    conn = get_connection(TEST_DB_PATH)
+    try:
+        score_ids = [row[0] for row in conn.execute(
+            "SELECT score_id FROM supplier_scores WHERE run_id=? ORDER BY supplier_id;",
+            (run_id,)
+        ).fetchall()]
+    finally:
+        conn.close()
+    assert score_ids == [f"SCORE-2026-{i:06d}" for i in range(1, 21)]
     for row in scores:
         for score in row:
             assert score is not None
