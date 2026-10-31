@@ -490,6 +490,30 @@ def generate_synthetic_data(
     with open(malformed_path, "w", encoding="utf-8") as f:
         json.dump(validated_malformed_cases, f, indent=2)
 
+    # Preserve rejected source payloads and the detected reasons in the
+    # quarantine table; malformed examples never enter business tables.
+    quarantine_rows = []
+    for index, case in enumerate(validated_malformed_cases, start=1):
+        reasons = case.get("detected_reasons", [])
+        if not reasons:
+            raise ValueError(
+                f"Malformed example {index} was not detected and cannot be quarantined."
+            )
+        quarantine_rows.append((
+            f"QTN-{index:06d}",
+            case["source_table"],
+            json.dumps(case["raw_payload"], sort_keys=True),
+            "; ".join(reasons),
+            base_date.strftime("%Y-%m-%d"),
+        ))
+    if quarantine_rows:
+        with conn:
+            cursor.executemany("""
+                INSERT INTO quarantine_log
+                    (quarantine_id, source_table, raw_payload, error_reason, logged_at)
+                VALUES (?, ?, ?, ?, ?);
+            """, quarantine_rows)
+
     cursor.execute("PRAGMA foreign_key_check;")
     fk_violations = cursor.fetchall()
     if fk_violations:
