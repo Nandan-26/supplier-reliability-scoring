@@ -11,6 +11,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from src.generator import generate_synthetic_data
 from src.scoring import calculate_supplier_scores
+from src.export_artifacts import main as export_artifacts
 
 EXPECTED = {"suppliers": 1000, "purchase_orders": 10000, "shipments": 15000, "inspections": 20000}
 SCORES = ("delivery_score", "quality_score", "cost_score", "capacity_score", "compliance_score", "disruption_score", "final_score")
@@ -37,6 +38,17 @@ def main():
         check(len(malformed) >= 3 and all(x.get("detected_reasons") for x in malformed),
               "Malformed examples are missing validation reasons.")
         run_id = calculate_supplier_scores(as_of_date="2026-12-31", db_path=db)
+        export_artifacts(
+            db_path=db,
+            exports_dir=root / "exports",
+            validation_path=root / "validation_summary.json",
+            manifest_path=root / "source_manifest.json",
+        )
+        export_summary = json.loads(
+            (root / "validation_summary.json").read_text(encoding="utf-8")
+        )
+        check(export_summary["overall_passed"],
+              "Artifact exporter did not pass isolated full-dataset validation.")
         con = sqlite3.connect(db)
         try:
             check(con.execute("PRAGMA integrity_check").fetchone()[0] == "ok", "SQLite integrity check failed.")
@@ -115,6 +127,8 @@ def main():
             "result": "PASS", "seed": 20261022, "run_id": run_id,
             "generated_counts": generated, "table_counts": counts,
             "business_rule_violations": violations, "score_rows_checked": len(rows),
+            "artifact_exporter_overall_passed": export_summary["overall_passed"],
+            "artifact_export_count": len(export_summary["table_row_counts"]),
             "delivery_rates_by_profile": {k: round(v[0]/v[1], 4) for k,v in delivery_groups.items()},
             "defect_rates_by_profile": {k: round(v[0]/v[1], 4) for k,v in quality_groups.items()},
             "malformed_examples_detected": len(malformed),
