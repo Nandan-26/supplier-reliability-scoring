@@ -53,7 +53,13 @@ def main():
         # Audit the committed historical DB read-only. Exports and reports go
         # to the temporary directory; the tracked DB and CSVs are untouched.
         historical_dir = root / "historical_audit"
-        historical_db = Path(__file__).resolve().parents[1] / "data" / "supplier_scoring.db"
+        data_dir = Path(__file__).resolve().parents[1] / "data"
+        archive_databases = sorted((data_dir / "archive").glob("*/supplier_scoring.db"))
+        historical_db = (
+            archive_databases[0]
+            if archive_databases
+            else data_dir / "supplier_scoring.db"
+        )
         export_artifacts(
             db_path=historical_db,
             exports_dir=historical_dir / "exports",
@@ -149,6 +155,7 @@ def main():
             "artifact_exporter_overall_passed": export_summary["overall_passed"],
             "artifact_export_count": len(export_summary["table_row_counts"]),
             "historical_database_audit": {
+                "database_audited": str(historical_db.relative_to(data_dir.parent)),
                 "overall_passed": historical_summary["overall_passed"],
                 "business_rule_violation_counts": historical_summary["business_rule_violation_counts"],
                 "historical_score_checks_passed": historical_summary["historical_score_checks_passed"],
