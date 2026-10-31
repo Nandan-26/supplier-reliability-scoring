@@ -138,8 +138,8 @@ def test_capacity_multi_delivery_inflation():
         cursor.execute("INSERT OR IGNORE INTO po_lines VALUES ('LINE-CAP', 'PO-CAP', 'ITEM-1', 100, 10.0, '2026-01-10', '2026-01-02');")
 
         cursor.execute("INSERT INTO shipments VALUES ('SHP-CAP', 'LINE-CAP', 'PO-CAP', 100, '2026-01-05', '2026-01-09', '2026-01-05');")
-        cursor.execute("INSERT INTO delivery_events VALUES ('DEL-CAP-1', 'SHP-CAP', '2026-01-09', 100, 'Part 1', '2026-01-09');")
-        cursor.execute("INSERT INTO delivery_events VALUES ('DEL-CAP-2', 'SHP-CAP', '2026-01-09', 100, 'Part 2', '2026-01-09');")
+        cursor.execute("INSERT INTO delivery_events VALUES ('DEL-CAP-1', 'SHP-CAP', '2026-01-09', 50, 'Part 1', '2026-01-09');")
+        cursor.execute("INSERT INTO delivery_events VALUES ('DEL-CAP-2', 'SHP-CAP', '2026-01-09', 50, 'Part 2', '2026-01-09');")
 
         conn.commit()
     finally:
