@@ -36,7 +36,7 @@ def archive_existing_dataset():
         DATA / "malformed_cases.json",
         DATA / "validation_summary.json",
         DATA / "source_manifest.json",
-        DATA / "historical_score_anomalies.md",
+        DATA / "generation_metadata.json",
     ]
     moved = []
     for source in paths:
@@ -116,7 +116,9 @@ def main():
         encoding="utf-8",
     )
 
-    historical_report = f"""# Historical Dataset Archive
+    report_path = DATA / "historical_score_anomalies.md"
+    if not report_path.exists():
+        historical_report = f"""# Historical Dataset Archive
 
 The previous committed database and exports were preserved before the active dataset was regenerated.
 
@@ -126,14 +128,11 @@ The previous committed database and exports were preserved before the active dat
 - Active dataset seed: `{SEED}`
 - Active scoring run: `{run_id}`
 
-The archive contains the previous SQLite database, CSV exports, ground-truth file, malformed-case file, validation summary, source manifest, and historical anomaly report. The archive is retained for audit and comparison; it is not used for current scoring.
+The archive contains the previous SQLite database, CSV exports, ground-truth file, malformed-case file, validation summary, source manifest, and generation metadata. The archive is retained for audit and comparison; it is not used for current scoring.
 
 The active dataset passed SQLite integrity, foreign-key, expected-count, business-rule, historical score-range, and latest-run validation.
 """
-    (DATA / "historical_score_anomalies.md").write_text(
-        historical_report,
-        encoding="utf-8",
-    )
+        report_path.write_text(historical_report, encoding="utf-8")
 
     print(json.dumps({
         "result": "PASS",
