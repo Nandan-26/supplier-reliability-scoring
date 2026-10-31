@@ -1,0 +1,53 @@
+{
+  "created_at_utc": "2026-10-31T20:35:59.882523+00:00",
+  "database": "data/supplier_scoring.db",
+  "database_sha256": "3558c67dd33d4b790c96d458ed87c81fd3706cb82a78abddfc00a7af30d13496",
+  "configured_default_seed": 20261022,
+  "seed_note": "score_runs.random_seed records the generation seed when known; NULL means the scorer could not verify it. configured_default_seed is the generator default, not proof that an older database used that seed.",
+  "table_row_counts": {
+    "contracts": 1000,
+    "delivery_events": 15000,
+    "inspections": 20000,
+    "invoice_lines": 7104,
+    "invoices": 4763,
+    "po_lines": 14901,
+    "purchase_orders": 10000,
+    "quarantine_log": 3,
+    "risk_signals": 264,
+    "score_runs": 1,
+    "shipments": 15000,
+    "sites": 1485,
+    "supplier_scores": 1000,
+    "suppliers": 1000
+  },
+  "source_files": {
+    "src/generator.py": "fc918c473dfb1594105b6d362e8c2a2378683df0e968985d8d9b2c52ab319f49",
+    "src/scoring.py": "3f0ef82129469d3c343b678165ae385db125bda54642bdda5f340c8c62047ed3",
+    "src/export_artifacts.py": "6d2cc3c58115985d978f8fcc8f495b89c6df88c77e412215b9fc59d00a7b6f45",
+    "data/schema.sql": "96e0d6ba20728cd7bddce838889e4f05c45508b447e9e642589e4f1100f08ecf",
+    "scripts/validate_full_dataset.py": "cde5227ffd4384dbda302307616f12f0fb697dd59ff2fe3468a37704b7b968e6",
+    "scripts/refresh_dataset.py": "d73c5a03c6ec3337623007167500663d5bc5b036b16c1d25b35ba65024c59c3b",
+    "README.md": "6cdf70a8fe3725a2b38ac4720bf16e799f150d37db703ce2fbec321447cb3a4f",
+    "data/DATA_DICTIONARY.md": "0e3f22bf98cc5310a12f7850d3d3ce227f3c822fdbf2318d8eea124a934068c9"
+  },
+  "csv_exports": [
+    "data/exports/contracts.csv",
+    "data/exports/delivery_events.csv",
+    "data/exports/inspections.csv",
+    "data/exports/invoice_lines.csv",
+    "data/exports/invoices.csv",
+    "data/exports/po_lines.csv",
+    "data/exports/purchase_orders.csv",
+    "data/exports/quarantine_log.csv",
+    "data/exports/risk_signals.csv",
+    "data/exports/score_runs.csv",
+    "data/exports/shipments.csv",
+    "data/exports/sites.csv",
+    "data/exports/supplier_scores.csv",
+    "data/exports/suppliers.csv"
+  ],
+  "validation_summary": "data/validation_summary.json",
+  "generation_metadata": "data/generation_metadata.json",
+  "generation_metadata_sha256": "f53c3164cc5aef4444f249385ab6a783f40833e07341297404ecb38758cb67ec",
+  "historical_snapshot": "data/archive/pre_refresh_20261031T203556Z"
+}

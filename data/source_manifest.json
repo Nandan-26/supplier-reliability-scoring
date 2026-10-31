@@ -1,7 +1,7 @@
 {
-  "created_at_utc": "2026-10-31T20:35:59.882523+00:00",
+  "created_at_utc": "2026-10-31T20:39:08.056175+00:00",
   "database": "data/supplier_scoring.db",
-  "database_sha256": "3558c67dd33d4b790c96d458ed87c81fd3706cb82a78abddfc00a7af30d13496",
+  "database_sha256": "04220d5775830d0bdfbc37e7d32c3ff695b01e6c5cf0df8f3c1b0d4c5816e146",
   "configured_default_seed": 20261022,
   "seed_note": "score_runs.random_seed records the generation seed when known; NULL means the scorer could not verify it. configured_default_seed is the generator default, not proof that an older database used that seed.",
   "table_row_counts": {
@@ -25,9 +25,9 @@
     "src/scoring.py": "3f0ef82129469d3c343b678165ae385db125bda54642bdda5f340c8c62047ed3",
     "src/export_artifacts.py": "6d2cc3c58115985d978f8fcc8f495b89c6df88c77e412215b9fc59d00a7b6f45",
     "data/schema.sql": "96e0d6ba20728cd7bddce838889e4f05c45508b447e9e642589e4f1100f08ecf",
-    "scripts/validate_full_dataset.py": "cde5227ffd4384dbda302307616f12f0fb697dd59ff2fe3468a37704b7b968e6",
-    "scripts/refresh_dataset.py": "d73c5a03c6ec3337623007167500663d5bc5b036b16c1d25b35ba65024c59c3b",
-    "README.md": "6cdf70a8fe3725a2b38ac4720bf16e799f150d37db703ce2fbec321447cb3a4f",
+    "scripts/validate_full_dataset.py": "a88850ca6125657e50bbd91b3c57f6c42fcfa990e60f2f83ecdb4e74c0f55937",
+    "scripts/refresh_dataset.py": "8bc712f4348e385a1b5266805d3f4cae917be1baac884579cbd75d042ca5d28a",
+    "README.md": "663c194999573b15e5c4a3a41e6544b8d4c1793fa01398a2d64dc19e5e3cc04a",
     "data/DATA_DICTIONARY.md": "0e3f22bf98cc5310a12f7850d3d3ce227f3c822fdbf2318d8eea124a934068c9"
   },
   "csv_exports": [
@@ -48,6 +48,6 @@
   ],
   "validation_summary": "data/validation_summary.json",
   "generation_metadata": "data/generation_metadata.json",
-  "generation_metadata_sha256": "f53c3164cc5aef4444f249385ab6a783f40833e07341297404ecb38758cb67ec",
-  "historical_snapshot": "data/archive/pre_refresh_20261031T203556Z"
+  "generation_metadata_sha256": "4f683974b7d8db20a1c1ef266a3f14603b7682a5c325a2a71c9cfd8842527104",
+  "historical_snapshot": "data/archive/pre_refresh_20261031T203905Z"
 }
