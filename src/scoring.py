@@ -70,8 +70,16 @@ def calculate_supplier_scores(
             (run_id, run_timestamp, as_of_date, config_version, config_hash, generator_version, 20261022)
         )
 
-        # Get all suppliers
-        cursor.execute("SELECT supplier_id FROM suppliers;")
+        # Score only suppliers that existed and were visible to the system by
+        # the requested as-of date. Future-created suppliers are not historical
+        # suppliers for this run.
+        cursor.execute("""
+            SELECT supplier_id
+            FROM suppliers
+            WHERE created_at <= ?
+              AND system_available_at <= ?
+            ORDER BY supplier_id;
+        """, (as_of_date, as_of_date))
         suppliers = [row["supplier_id"] for row in cursor.fetchall()]
 
         # --- VECTORIZED PRE-AGGREGATION (All Suppliers in Single Queries) ---
@@ -92,6 +100,8 @@ def calculate_supplier_scores(
                 LEFT JOIN shipments s ON pl.po_line_id = s.po_line_id AND s.system_available_at <= ?
                 LEFT JOIN delivery_events de ON s.shipment_id = de.shipment_id AND de.actual_delivery_date <= ? AND de.system_available_at <= ?
                 WHERE po.status != 'Cancelled'
+                  AND po.order_date <= ?
+                  AND po.system_available_at <= ?
                   AND pl.requested_delivery_date <= ?
                   AND pl.system_available_at <= ?
                 GROUP BY po.supplier_id, pl.po_line_id
@@ -103,7 +113,7 @@ def calculate_supplier_scores(
             FROM line_delivery
             GROUP BY supplier_id;
             """,
-            (as_of_date, as_of_date, as_of_date, as_of_date, as_of_date)
+            (as_of_date, as_of_date, as_of_date, as_of_date, as_of_date, as_of_date, as_of_date)
         )
         delivery_map = {row["supplier_id"]: (row["total_lines"], row["on_time_lines"]) for row in cursor.fetchall()}
 
@@ -120,7 +130,9 @@ def calculate_supplier_scores(
                 JOIN shipments s ON po.po_id = s.po_id
                 JOIN delivery_events de ON s.shipment_id = de.shipment_id
                 JOIN inspections ins ON de.delivery_event_id = ins.delivery_event_id
-                WHERE ins.inspection_date <= ?
+                WHERE po.order_date <= ?
+                  AND po.system_available_at <= ?
+                  AND ins.inspection_date <= ?
                   AND ins.system_available_at <= ?
                   AND de.actual_delivery_date <= ?
                   AND de.system_available_at <= ?
@@ -135,7 +147,7 @@ def calculate_supplier_scores(
             FROM ins_summary
             GROUP BY supplier_id;
             """,
-            (as_of_date, as_of_date, as_of_date, as_of_date, as_of_date)
+            (as_of_date, as_of_date, as_of_date, as_of_date, as_of_date, as_of_date, as_of_date)
         )
         quality_map = {row["supplier_id"]: (row["total_inspected"], row["total_defective"], row["insp_count"]) for row in cursor.fetchall()}
 
@@ -150,12 +162,16 @@ def calculate_supplier_scores(
             JOIN po_lines pl ON po.po_id = pl.po_id
             JOIN invoice_lines il ON pl.po_line_id = il.po_line_id AND pl.po_id = il.po_id
             JOIN invoices i ON il.invoice_id = i.invoice_id AND il.po_id = i.po_id
-            WHERE i.invoice_date <= ?
+            WHERE po.status != 'Cancelled'
+              AND po.order_date <= ?
+              AND po.system_available_at <= ?
+              AND i.invoice_date <= ?
+              AND i.system_available_at <= ?
               AND il.system_available_at <= ?
               AND i.system_available_at <= ?
             GROUP BY po.supplier_id;
             """,
-            (as_of_date, as_of_date, as_of_date)
+            (as_of_date, as_of_date, as_of_date, as_of_date, as_of_date)
         )
         cost_map = {row["supplier_id"]: (row["total_invoices"], row["matching_invoices"]) for row in cursor.fetchall()}
 
@@ -163,7 +179,8 @@ def calculate_supplier_scores(
         cursor.execute(
             """
             WITH line_delivered AS (
-                SELECT po.supplier_id, s.po_line_id, COALESCE(SUM(del_agg.delivered_qty), 0) as delivered_qty
+                SELECT po.supplier_id, s.po_id, s.po_line_id,
+                       COALESCE(SUM(del_agg.delivered_qty), 0) as delivered_qty
                 FROM purchase_orders po
                 JOIN shipments s ON po.po_id = s.po_id
                 LEFT JOIN (
@@ -173,23 +190,34 @@ def calculate_supplier_scores(
                     GROUP BY de.shipment_id
                 ) del_agg ON s.shipment_id = del_agg.shipment_id
                 WHERE s.system_available_at <= ?
-                GROUP BY po.supplier_id, s.po_line_id
+                GROUP BY po.supplier_id, s.po_id, s.po_line_id
             )
             SELECT
                 po.supplier_id,
                 SUM(pl.ordered_qty) as total_ordered,
-                COALESCE(SUM(ld.delivered_qty), 0) as total_delivered
+                COALESCE(SUM(ld.delivered_qty), 0) as total_delivered,
+                COUNT(DISTINCT pl.po_line_id || ':' || pl.po_id) as line_count
             FROM purchase_orders po
             JOIN po_lines pl ON po.po_id = pl.po_id
-            LEFT JOIN line_delivered ld ON pl.po_line_id = ld.po_line_id AND po.supplier_id = ld.supplier_id
+            LEFT JOIN line_delivered ld
+              ON pl.po_line_id = ld.po_line_id
+             AND pl.po_id = ld.po_id
+             AND po.supplier_id = ld.supplier_id
             WHERE po.status != 'Cancelled'
+              AND po.order_date <= ?
+              AND po.system_available_at <= ?
               AND pl.requested_delivery_date <= ?
               AND pl.system_available_at <= ?
             GROUP BY po.supplier_id;
             """,
-            (as_of_date, as_of_date, as_of_date, as_of_date, as_of_date)
+            (as_of_date, as_of_date, as_of_date, as_of_date, as_of_date, as_of_date, as_of_date)
         )
-        capacity_map = {row["supplier_id"]: (row["total_ordered"], row["total_delivered"]) for row in cursor.fetchall()}
+        capacity_map = {
+            row["supplier_id"]: (
+                row["total_ordered"], row["total_delivered"], row["line_count"]
+            )
+            for row in cursor.fetchall()
+        }
 
         # 5. Risk Signals (Compliance & Disruption) per Supplier
         cursor.execute(
@@ -248,13 +276,13 @@ def calculate_supplier_scores(
                 cost_conf = "No Data"
 
             # --- CAPACITY SCORE ---
-            cap_data = capacity_map.get(sup_id, (0.0, 0.0))
-            cap_ordered, cap_delivered = cap_data[0], cap_data[1]
+            cap_data = capacity_map.get(sup_id, (0.0, 0.0, 0))
+            cap_ordered, cap_delivered, cap_line_count = cap_data
             if cap_ordered > 0:
                 fulfillment_ratio = min(1.0, cap_delivered / cap_ordered)
                 capacity_score = round(fulfillment_ratio * 100.0, 2)
-                capacity_sample = 1
-                capacity_conf = "High"
+                capacity_sample = cap_line_count
+                capacity_conf = "High" if capacity_sample >= 5 else "Low (Sparse Data)"
             else:
                 capacity_score = 50.0
                 capacity_sample = 0
