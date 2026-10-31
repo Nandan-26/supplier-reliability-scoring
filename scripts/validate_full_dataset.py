@@ -50,10 +50,25 @@ def main():
         check(export_summary["overall_passed"],
               "Artifact exporter did not pass isolated full-dataset validation.")
 
-        # Audit the committed historical DB read-only. Exports and reports go
-        # to the temporary directory; the tracked DB and CSVs are untouched.
-        historical_dir = root / "historical_audit"
+        # Audit the active committed database separately from the fresh
+        # temporary dataset. All generated reports and CSVs remain temporary.
         data_dir = Path(__file__).resolve().parents[1] / "data"
+        active_dir = root / "active_database_audit"
+        active_db = data_dir / "supplier_scoring.db"
+        export_artifacts(
+            db_path=active_db,
+            exports_dir=active_dir / "exports",
+            validation_path=active_dir / "validation_summary.json",
+            manifest_path=active_dir / "source_manifest.json",
+        )
+        active_summary = json.loads(
+            (active_dir / "validation_summary.json").read_text(encoding="utf-8")
+        )
+        check(active_summary["overall_passed"],
+              "Committed active database failed full artifact validation.")
+
+        # Audit the archived pre-refresh database without modifying it.
+        historical_dir = root / "historical_audit"
         archive_databases = sorted((data_dir / "archive").glob("*/supplier_scoring.db"))
         historical_db = (
             archive_databases[0]
@@ -154,6 +169,13 @@ def main():
             "business_rule_violations": violations, "score_rows_checked": len(rows),
             "artifact_exporter_overall_passed": export_summary["overall_passed"],
             "artifact_export_count": len(export_summary["table_row_counts"]),
+            "active_database_audit": {
+                "database_audited": str(active_db.relative_to(data_dir.parent)),
+                "overall_passed": active_summary["overall_passed"],
+                "business_rule_violation_counts": active_summary["business_rule_violation_counts"],
+                "historical_score_checks_passed": active_summary["historical_score_checks_passed"],
+                "latest_run_passed": active_summary["latest_run_passed"],
+            },
             "historical_database_audit": {
                 "database_audited": str(historical_db.relative_to(data_dir.parent)),
                 "overall_passed": historical_summary["overall_passed"],
