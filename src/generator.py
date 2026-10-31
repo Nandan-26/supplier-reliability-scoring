@@ -561,7 +561,7 @@ def generate_synthetic_data(
     print("Synthetic Data Generation & Validation Complete successfully!")
     print(f"Table Counts: {validation_results}")
     if mismatches:
-        print(f"Warning: {len(mismatches)} profiles showed higher delivery rates than expected.")
+        print(f"Warning: {len(mismatches)} profile delivery rates fell outside the expected tolerance.")
     return validation_results
 
 if __name__ == "__main__":
