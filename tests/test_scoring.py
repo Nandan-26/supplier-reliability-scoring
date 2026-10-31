@@ -97,9 +97,9 @@ def test_rigorous_as_of_date_leakage_protection():
     try:
         cursor = conn.cursor()
         cursor.execute("INSERT OR IGNORE INTO suppliers VALUES ('SUP-000001', 'Test Sup', 'Tech', 'USA', 'Active', '2026-01-01', '2026-01-01');")
-        cursor.execute("INSERT OR IGNORE INTO sites VALUES ('SITE-SUP-000001-1', 'SUP-000001', 'Plant', 'USA', 1, '2026-01-01');")
+        cursor.execute("INSERT OR IGNORE INTO sites VALUES ('SITE-SUP-000001-01', 'SUP-000001', 'Plant', 'USA', 1, '2026-01-01');")
         cursor.execute("INSERT OR IGNORE INTO contracts VALUES ('CON-SUP-000001', 'SUP-000001', '2026-01-01', '2026-12-31', 'Net30', '2026-01-01');")
-        cursor.execute("INSERT OR IGNORE INTO purchase_orders VALUES ('PO-FUTURE', 'SUP-000001', 'SITE-SUP-000001-1', 'CON-SUP-000001', '2026-01-02', 'Fulfilled', '2026-01-02');")
+        cursor.execute("INSERT OR IGNORE INTO purchase_orders VALUES ('PO-FUTURE', 'SUP-000001', 'SITE-SUP-000001-01', 'CON-SUP-000001', '2026-01-02', 'Fulfilled', '2026-01-02');")
         cursor.execute("INSERT OR IGNORE INTO po_lines VALUES ('LINE-FUTURE', 'PO-FUTURE', 'ITEM-1', 100, 10.0, '2026-06-01', '2026-01-02');")
 
         cursor.execute("INSERT INTO shipments VALUES ('SHP-FUT', 'LINE-FUTURE', 'PO-FUTURE', 50, '2026-05-25', '2026-06-01', '2026-06-01');")
@@ -497,7 +497,7 @@ def test_late_available_po_line_is_excluded_from_all_operational_dimensions():
 
         conn.execute(
             "INSERT INTO purchase_orders VALUES (?, ?, ?, ?, ?, ?, ?);",
-            ("PO-LATE-ARRIVAL", "SUP-000001", "SITE-SUP-000001-1",
+            ("PO-LATE-ARRIVAL", "SUP-000001", "SITE-SUP-000001-01",
              "CON-SUP-000001", "2026-01-02", "Issued", "2026-01-02")
         )
         conn.execute(
