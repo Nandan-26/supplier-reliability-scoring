@@ -29,3 +29,31 @@ Business-event dates (for example `actual_delivery_date`, `invoice_date`, and `s
 - A sample count of zero means no supporting records were observed for that dimension.
 - A fallback score is not an observed performance result; read it with the confidence label.
 - `overall_confidence_tier` is a simple project heuristic, not a statistical confidence interval.
+
+## Identifier conventions
+
+| Entity | Required format | Example | Notes |
+|---|---|---|---|
+| Supplier | `SUP-000001` | `SUP-000001` | Six-digit immutable sequence |
+| Site | `SITE-<supplier-id>-01` | `SITE-SUP-000001-01` | Supplier ID is embedded; two-digit site sequence |
+| Purchase order | `PO-2026-000001` | `PO-2026-000001` | Year plus six-digit sequence |
+| Shipment | `SHP-2026-000001` | `SHP-2026-000001` | Year plus six-digit sequence |
+| Risk signal | `RSK-<supplier-id>-2026-01` | `RSK-SUP-000001-2026-01` | Supplier-scoped sequence |
+| Supplier score | `SCORE-2026-000001` | Required by brief | **Not yet implemented**; current scorer still uses a random `SCR-` identifier |
+
+## Field-level validation notes (implemented constraints)
+
+- IDs are text primary keys or members of composite keys; they must be non-empty and unique within their declared key.
+- Supplier status is one of `Active`, `Inactive`, `Probation`.
+- PO lifecycle values used by the generator are `Issued`, `Fulfilled`, and `Cancelled`; `Fulfilled` is derived only when all PO lines are fully shipped. Cancelled POs cannot have shipments or invoices.
+- Risk category is `Compliance` or `Disruption`; severity is `Low`, `Medium`, `High`, or `Critical`.
+- Quantity fields are numeric and non-negative. Defective quantity cannot exceed inspected quantity; cumulative shipment, delivery, inspection, and invoice quantities are constrained by their parent quantities.
+- Monetary fields are numeric; invoice billed unit price is compared with the PO line unit price for the cost-adherence score.
+- Dates use ISO `YYYY-MM-DD`; actual delivery cannot be earlier than dispatch, invoice date cannot precede the latest delivery on its PO, and effective contract dates must be ordered.
+- `system_available_at` is the system-observed availability date and is separate from the business-event date. Both are required for point-in-time scoring.
+
+## Known data-model gaps against the full brief
+
+The current schema does not yet provide a dedicated lifecycle event-history entity, a risk-signal source/provenance field, or the requested deterministic `SCORE-2026-000001` score key. The table above is a concise dictionary, not yet a complete field-by-field specification of every column, type, nullability, unit, enum and validation expression. These are outstanding implementation items, not silently assumed capabilities.
+
+See [EDGE_CASE_CATALOGUE.md](EDGE_CASE_CATALOGUE.md) for the five required edge-case definitions and their expected handling.
