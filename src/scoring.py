@@ -150,11 +150,14 @@ def calculate_supplier_scores(
                     ins.defective_qty
                 FROM purchase_orders po
                 JOIN shipments s ON po.po_id = s.po_id
+                JOIN po_lines pl
+                  ON pl.po_id = s.po_id AND pl.po_line_id = s.po_line_id
                 JOIN delivery_events de ON s.shipment_id = de.shipment_id
                 JOIN inspections ins ON de.delivery_event_id = ins.delivery_event_id
                 WHERE po.status != 'Cancelled'
                   AND po.order_date <= ?
                   AND po.system_available_at <= ?
+                  AND pl.system_available_at <= ?
                   AND ins.inspection_date <= ?
                   AND ins.system_available_at <= ?
                   AND de.actual_delivery_date <= ?
@@ -170,7 +173,7 @@ def calculate_supplier_scores(
             FROM ins_summary
             GROUP BY supplier_id;
             """,
-            (as_of_date, as_of_date, as_of_date, as_of_date, as_of_date, as_of_date, as_of_date)
+            (as_of_date, as_of_date, as_of_date, as_of_date, as_of_date, as_of_date, as_of_date, as_of_date)
         )
         quality_map = {row["supplier_id"]: (row["total_inspected"], row["total_defective"], row["insp_count"]) for row in cursor.fetchall()}
 
@@ -188,12 +191,13 @@ def calculate_supplier_scores(
             WHERE po.status != 'Cancelled'
               AND po.order_date <= ?
               AND po.system_available_at <= ?
+              AND pl.system_available_at <= ?
               AND i.invoice_date <= ?
               AND i.system_available_at <= ?
               AND il.system_available_at <= ?
             GROUP BY po.supplier_id;
             """,
-            (as_of_date, as_of_date, as_of_date, as_of_date, as_of_date)
+            (as_of_date, as_of_date, as_of_date, as_of_date, as_of_date, as_of_date)
         )
         cost_map = {row["supplier_id"]: (row["total_invoices"], row["matching_invoices"]) for row in cursor.fetchall()}
 
