@@ -522,21 +522,34 @@ def generate_synthetic_data(
     # 6. Calculate actual metrics and compare with profile expectations
     cursor.execute("""
         SELECT po.supplier_id,
-               SUM(CASE WHEN de.actual_delivery_date <= s.expected_delivery_date THEN 1 ELSE 0 END) * 1.0 / COUNT(*) as on_time_rate
+               SUM(CASE WHEN de.actual_delivery_date <= s.expected_delivery_date THEN 1 ELSE 0 END),
+               COUNT(*)
         FROM delivery_events de
         JOIN shipments s ON de.shipment_id = s.shipment_id
         JOIN purchase_orders po ON s.po_id = po.po_id
         GROUP BY po.supplier_id
     """)
-    actual_delivery_rates = {row[0]: row[1] for row in cursor.fetchall()}
+    actual_delivery_counts = {
+        row[0]: (row[1], row[2]) for row in cursor.fetchall()
+    }
+
+    profile_delivery_totals = {}
+    for sup_id, (on_time_count, total_count) in actual_delivery_counts.items():
+        profile = ground_truth[sup_id]["profile"]
+        totals = profile_delivery_totals.setdefault(profile, [0, 0])
+        totals[0] += on_time_count
+        totals[1] += total_count
 
     mismatches = []
-    for sup_id, expected_data in ground_truth.items():
-        prof = expected_data["profile"]
-        if sup_id in actual_delivery_rates and prof == "worsening_delivery":
-            rate = actual_delivery_rates[sup_id]
-            if rate > 0.85: # Worsening delivery should have notably lower on-time rate
-                mismatches.append((sup_id, prof, rate))
+    for profile, (on_time_count, total_count) in profile_delivery_totals.items():
+        observed_rate = on_time_count / total_count
+        expected_rate = next(
+            item["expected_on_time_rate"]
+            for item in ground_truth.values()
+            if item["profile"] == profile
+        )
+        if abs(observed_rate - expected_rate) > 0.06:
+            mismatches.append((profile, expected_rate, observed_rate))
 
     validation_results = {}
     for tbl in ["suppliers", "purchase_orders", "shipments", "inspections", "invoices", "invoice_lines", "quarantine_log"]:
