@@ -29,6 +29,24 @@ def test_exact_requested_counts():
     assert counts["shipments"] == 150
     assert counts["inspections"] == 200
 
+
+def test_risk_signal_provenance_and_supplier_scoped_ids():
+    generate_synthetic_data(
+        db_path=TEST_DB_PATH, ground_truth_path=TEST_GT_PATH,
+        malformed_path=TEST_MAL_PATH, num_suppliers=40,
+        num_pos=100, num_shipments=150, num_inspections=200, seed=42
+    )
+    conn = get_connection(TEST_DB_PATH)
+    try:
+        rows = conn.execute(
+            "SELECT risk_signal_id, supplier_id, source FROM risk_signals"
+        ).fetchall()
+    finally:
+        conn.close()
+    for signal_id, supplier_id, source in rows:
+        assert signal_id.startswith(f"RSK-{supplier_id}-2026-")
+        assert source == "synthetic_generator"
+
 def test_repeated_generation_runs_safe():
     # Run twice to verify safe reset and foreign key preservation
     counts1 = generate_synthetic_data(
