@@ -140,7 +140,7 @@ def generate_synthetic_data(
     for sup_id in supplier_profiles:
         num_sites = rng.randint(1, 2)
         for s in range(1, num_sites + 1):
-            site_id = f"SITE-{sup_id}-{s}"
+            site_id = f"SITE-{sup_id}-{s:02d}"
             site_name = f"Plant {s} for {sup_id}"
             location = rng.choice(countries)
             is_active = 1
@@ -293,7 +293,7 @@ def generate_synthetic_data(
         if actual_dt < dispatch_dt:
             actual_dt = dispatch_dt
 
-        shipment_id = f"SHP-{shipment_counter:06d}"
+        shipment_id = f"SHP-2026-{shipment_counter:06d}"
         delivery_event_id = f"DEL-{shipment_counter:06d}"
 
         sys_avail_shp = (dispatch_dt + timedelta(days=rng.randint(0, 1))).strftime("%Y-%m-%d")
