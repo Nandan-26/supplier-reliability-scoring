@@ -87,7 +87,7 @@ def test_rigorous_as_of_date_leakage_protection():
     conn.row_factory = sqlite3.Row
     try:
         cursor = conn.cursor()
-        cursor.execute("SELECT final_score, delivery_sample_count FROM supplier_scores WHERE run_id = ? AND supplier_id = 'SUP-0001';", (run_id_initial,))
+        cursor.execute("SELECT final_score, delivery_sample_count FROM supplier_scores WHERE run_id = ? AND supplier_id = 'SUP-000001';", (run_id_initial,))
         initial_row = cursor.fetchone()
     finally:
         conn.close()
@@ -96,10 +96,10 @@ def test_rigorous_as_of_date_leakage_protection():
     conn.row_factory = sqlite3.Row
     try:
         cursor = conn.cursor()
-        cursor.execute("INSERT OR IGNORE INTO suppliers VALUES ('SUP-0001', 'Test Sup', 'Tech', 'USA', 'Active', '2026-01-01', '2026-01-01');")
-        cursor.execute("INSERT OR IGNORE INTO sites VALUES ('SITE-SUP-0001-1', 'SUP-0001', 'Plant', 'USA', 1, '2026-01-01');")
-        cursor.execute("INSERT OR IGNORE INTO contracts VALUES ('CON-SUP-0001', 'SUP-0001', '2026-01-01', '2026-12-31', 'Net30', '2026-01-01');")
-        cursor.execute("INSERT OR IGNORE INTO purchase_orders VALUES ('PO-FUTURE', 'SUP-0001', 'SITE-SUP-0001-1', 'CON-SUP-0001', '2026-01-02', 'Fulfilled', '2026-01-02');")
+        cursor.execute("INSERT OR IGNORE INTO suppliers VALUES ('SUP-000001', 'Test Sup', 'Tech', 'USA', 'Active', '2026-01-01', '2026-01-01');")
+        cursor.execute("INSERT OR IGNORE INTO sites VALUES ('SITE-SUP-000001-01', 'SUP-000001', 'Plant', 'USA', 1, '2026-01-01');")
+        cursor.execute("INSERT OR IGNORE INTO contracts VALUES ('CON-SUP-000001', 'SUP-000001', '2026-01-01', '2026-12-31', 'Net30', '2026-01-01');")
+        cursor.execute("INSERT OR IGNORE INTO purchase_orders VALUES ('PO-FUTURE', 'SUP-000001', 'SITE-SUP-000001-01', 'CON-SUP-000001', '2026-01-02', 'Fulfilled', '2026-01-02');")
         cursor.execute("INSERT OR IGNORE INTO po_lines VALUES ('LINE-FUTURE', 'PO-FUTURE', 'ITEM-1', 100, 10.0, '2026-06-01', '2026-01-02');")
 
         cursor.execute("INSERT INTO shipments VALUES ('SHP-FUT', 'LINE-FUTURE', 'PO-FUTURE', 50, '2026-05-25', '2026-06-01', '2026-06-01');")
@@ -118,7 +118,7 @@ def test_rigorous_as_of_date_leakage_protection():
     conn.row_factory = sqlite3.Row
     try:
         cursor = conn.cursor()
-        cursor.execute("SELECT final_score, delivery_sample_count FROM supplier_scores WHERE run_id = ? AND supplier_id = 'SUP-0001';", (run_id_recalc,))
+        cursor.execute("SELECT final_score, delivery_sample_count FROM supplier_scores WHERE run_id = ? AND supplier_id = 'SUP-000001';", (run_id_recalc,))
         recalc_row = cursor.fetchone()
     finally:
         conn.close()
@@ -302,7 +302,7 @@ def test_compliance_and_disruption_without_signals_are_neutral_and_unobserved():
             SELECT compliance_score, compliance_sample_count, compliance_confidence,
                    disruption_score, disruption_sample_count, disruption_confidence
             FROM supplier_scores
-            WHERE run_id = ? AND supplier_id = 'SUP-0001';
+            WHERE run_id = ? AND supplier_id = 'SUP-000001';
         """, (run_id,)).fetchone()
     finally:
         conn.close()
@@ -443,11 +443,11 @@ def test_risk_dimension_confidence_uses_sample_size():
         conn.executemany(
             "INSERT INTO risk_signals VALUES (?, ?, ?, ?, ?, ?, ?);",
             [
-                (f"RS-TEST-{i}", "SUP-0001", "2026-01-20",
+                (f"RS-TEST-{i}", "SUP-000001", "2026-01-20",
                  "Compliance", "Low", "Test compliance signal", "2026-01-20")
                 for i in range(1, 6)
             ] + [
-                ("RS-TEST-D", "SUP-0001", "2026-01-20",
+                ("RS-TEST-D", "SUP-000001", "2026-01-20",
                  "Disruption", "Low", "Test disruption signal", "2026-01-20")
             ]
         )
@@ -464,7 +464,7 @@ def test_risk_dimension_confidence_uses_sample_size():
             SELECT compliance_sample_count, compliance_confidence,
                    disruption_sample_count, disruption_confidence
             FROM supplier_scores
-            WHERE run_id=? AND supplier_id='SUP-0001';
+            WHERE run_id=? AND supplier_id='SUP-000001';
         """, (run_id,)).fetchone()
     finally:
         conn.close()
@@ -492,13 +492,13 @@ def test_late_available_po_line_is_excluded_from_all_operational_dimensions():
                    cost_score, cost_sample_count,
                    capacity_score, capacity_sample_count
             FROM supplier_scores
-            WHERE run_id=? AND supplier_id='SUP-0001';
+            WHERE run_id=? AND supplier_id='SUP-000001';
         """, (before_run,)).fetchone()
 
         conn.execute(
             "INSERT INTO purchase_orders VALUES (?, ?, ?, ?, ?, ?, ?);",
-            ("PO-LATE-ARRIVAL", "SUP-0001", "SITE-SUP-0001-1",
-             "CON-SUP-0001", "2026-01-02", "Issued", "2026-01-02")
+            ("PO-LATE-ARRIVAL", "SUP-000001", "SITE-SUP-000001-01",
+             "CON-SUP-000001", "2026-01-02", "Issued", "2026-01-02")
         )
         conn.execute(
             "INSERT INTO po_lines VALUES (?, ?, ?, ?, ?, ?, ?);",
@@ -545,7 +545,7 @@ def test_late_available_po_line_is_excluded_from_all_operational_dimensions():
                    cost_score, cost_sample_count,
                    capacity_score, capacity_sample_count
             FROM supplier_scores
-            WHERE run_id=? AND supplier_id='SUP-0001';
+            WHERE run_id=? AND supplier_id='SUP-000001';
         """, (after_run,)).fetchone()
     finally:
         conn.close()
