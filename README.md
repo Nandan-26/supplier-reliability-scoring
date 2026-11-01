@@ -1,5 +1,7 @@
 # Supplier Reliability & Risk Scoring Engine
 
+[![Python tests](https://github.com/Nandan-26/supplier-reliability-scoring/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/Nandan-26/supplier-reliability-scoring/actions/workflows/tests.yml)
+
 A Python and SQLite assessment project that generates synthetic procurement data and calculates point-in-time supplier scores across delivery, quality, cost, capacity, compliance, and disruption.
 
 > **Scope:** This is a synthetic assessment project, not a production procurement system. Scoring weights, thresholds, and fallback values are illustrative assumptions and require business validation before operational use.
@@ -12,7 +14,8 @@ A Python and SQLite assessment project that generates synthetic procurement data
 4. Requires provenance on risk signals (`source`) and uses sequential `SCORE-2026-000001` identifiers for supplier score rows.
 5. Calculates supplier scores for a requested as-of date.
 6. Persists each scoring run and its supplier-level results.
-7. Records purchase-order initial states and status transitions in `purchase_order_status_events` using SQLite triggers.\n8. Exports CSV tables, a validation summary, and a source manifest.
+7. Records purchase-order initial states and status transitions in `purchase_order_status_events` using SQLite triggers.
+8. Exports CSV tables, a validation summary, and a source manifest.
 
 ## 2. Scoring dimensions
 
@@ -68,7 +71,9 @@ python -m src.export_artifacts
 
 ```powershell
 python -m pytest -v
-python scripts/validate_full_dataset.py\npython scripts/check_reproducibility.py\npython scripts/evaluate_ground_truth.py
+python scripts/validate_full_dataset.py
+python scripts/check_reproducibility.py
+python scripts/evaluate_ground_truth.py
 ```
 
 The full-dataset validator generates the 1,000-supplier dataset in a temporary directory, checks business rules, all five labelled edge-case fixtures, PO lifecycle history, profile-level ground truth, relational integrity, score ranges, and the CSV/manifest/validation exporter. CI also runs `check_reproducibility.py` at the full 1,000-supplier scale: it generates twice in isolated directories and compares every table row count, deterministic CSV SHA-256, ground-truth JSON and malformed-record JSON. `evaluate_ground_truth.py` compares expected supplier profiles with observed delivery/quality metrics and the latest score classifications, then reports differences, confusion counts, precision and recall. It then audits the active committed database and the archived pre-refresh database independently. Temporary validation files are removed; neither committed database is modified by this test.
@@ -82,7 +87,8 @@ See [`data/DATA_DICTIONARY.md`](data/DATA_DICTIONARY.md) for field-level types, 
 `python -m src.export_artifacts` writes:
 - `data/exports/*.csv` — CSV exports of database tables.
 - `data/validation_summary.json` — SQLite integrity, foreign-key, expected-count, and score-range checks.
-- `data/source_manifest.json` — source hashes, database hash, counts, and export paths.\n- `data/ground_truth_evaluation.json` — latest-run expected-vs-observed supplier metrics, classification comparison, and binary at-risk confusion counts; the prior report is archived before each refresh.
+- `data/source_manifest.json` — source hashes, database hash, counts, and export paths.
+- `data/ground_truth_evaluation.json` — latest-run expected-vs-observed supplier metrics, classification comparison, and binary at-risk confusion counts; the prior report is archived before each refresh.
 
 Historical score anomalies are retained for traceability and are documented in [the historical score anomaly report](data/historical_score_anomalies.md). A latest scoring run can pass while the overall historical validation remains failed; inspect the individual checks rather than treating the latest-run result as a complete pass.
 
