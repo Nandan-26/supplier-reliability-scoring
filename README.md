@@ -140,7 +140,12 @@ The following figures are read from the committed active-dataset and retained in
 
 ![Synthetic evaluation metrics](docs/images/evaluation-snapshot.svg)
 
-Active-dataset confusion counts: **TP 381 · FP 17 · TN 583 · FN 19**. Independent-holdout confusion counts: **TP 382 · FP 16 · TN 584 · FN 18**. Do not merge these counts because the reports evaluate different generated datasets.
+| Evaluation set | True positive | False positive | True negative | False negative |
+|---|---:|---:|---:|---:|
+| Active dataset (seed 20261022) | 381 | 17 | 583 | 19 |
+| Independent holdout (seed 20261023) | 382 | 16 | 584 | 18 |
+
+Do not merge these counts because the reports evaluate different generated datasets. Each refresh regenerates both reports before exporting the source manifest, which records each report path and SHA-256 checksum. The validation summary and source manifest are emitted by the same export pass and their timestamps are checked for consistency.
 
 ## Sample supplier decisions
 
