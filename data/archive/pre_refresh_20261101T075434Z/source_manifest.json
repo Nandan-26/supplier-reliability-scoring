@@ -1,0 +1,61 @@
+{
+  "created_at_utc": "2026-11-01T06:55:52.353586+00:00",
+  "database": "data/supplier_scoring.db",
+  "database_sha256": "5ade435caacbc074a3acd836758001a17b4ad5ec7831b86c33c2e1b8473655f2",
+  "configured_default_seed": 20261022,
+  "seed_note": "score_runs.random_seed records the generation seed when known; NULL means the scorer could not verify it. configured_default_seed is the generator default, not proof that an older database used that seed.",
+  "table_row_counts": {
+    "contracts": 1000,
+    "delivery_events": 15000,
+    "inspections": 20000,
+    "invoice_lines": 7104,
+    "invoices": 4763,
+    "po_lines": 14901,
+    "purchase_order_status_events": 15175,
+    "purchase_orders": 10000,
+    "quarantine_log": 8,
+    "risk_signals": 264,
+    "score_runs": 1,
+    "shipments": 15000,
+    "sites": 1485,
+    "supplier_scores": 1000,
+    "suppliers": 1000
+  },
+  "source_files": {
+    "src/generator.py": "7557ae9c178d1a5dae2f90aab1351bef6f54682dcae56333a4358b83b58072b6",
+    "src/scoring.py": "794e84a20fffa009c4362b5266d3bd5d26296bf3744cca57b211112b956b2842",
+    "src/export_artifacts.py": "31e8eb9d18b1c633353db8ad5109b8c13974f634b283763effdac1b3d82ba784",
+    "data/schema.sql": "d35ef264f3bf5ce8b2d77291cf9ddd6d58ca43da7d0bb3d79240e702645388d5"
+  },
+  "csv_exports": [
+    "data/exports/contracts.csv",
+    "data/exports/delivery_events.csv",
+    "data/exports/inspections.csv",
+    "data/exports/invoice_lines.csv",
+    "data/exports/invoices.csv",
+    "data/exports/po_lines.csv",
+    "data/exports/purchase_order_status_events.csv",
+    "data/exports/purchase_orders.csv",
+    "data/exports/quarantine_log.csv",
+    "data/exports/risk_signals.csv",
+    "data/exports/score_runs.csv",
+    "data/exports/shipments.csv",
+    "data/exports/sites.csv",
+    "data/exports/supplier_scores.csv",
+    "data/exports/suppliers.csv"
+  ],
+  "validation_summary": "data/validation_summary.json",
+  "generation_metadata": "data/generation_metadata.json",
+  "generation_metadata_sha256": "56974bb086a26ac47a36af82680f85c2a8aab9321dc06a97f570defa0012defb",
+  "ground_truth_evaluation": "data/ground_truth_evaluation.json",
+  "historical_snapshot": "data/archive/pre_refresh_20261101T065548Z",
+  "holdout_evaluation": "data/holdout_evaluation.json",
+  "holdout_evaluation_seed": 20261023,
+  "holdout_evaluation_type": "independent_synthetic_holdout",
+  "holdout_source_workflow": {
+    "run_number": 129,
+    "run_id": 41282726822,
+    "commit": "e1e7a3be4a6c182d482dc7a882329452f0111dec",
+    "url": "https://github.com/Nandan-26/supplier-reliability-scoring/actions/runs/41282726822"
+  }
+}

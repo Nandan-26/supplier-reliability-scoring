@@ -1,0 +1,1001 @@
+﻿score_id,classification,decision_reason,policy_version
+SCORE-2026-000001,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000002,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000003,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000004,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000005,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000006,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000007,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000008,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000009,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000010,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000011,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000012,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000013,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000014,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000015,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000016,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000017,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000018,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000019,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000020,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000021,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000022,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000023,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000024,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000025,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000026,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000027,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000028,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000029,Insufficient Evidence,Insufficient delivery or quality history (minimum 5 observations required in each); do not make a firm supplier decision.,guardrails-v1
+SCORE-2026-000030,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000031,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000032,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000033,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000034,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000035,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000036,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000037,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000038,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000039,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000040,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000041,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000042,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000043,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000044,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000045,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000046,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000047,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000048,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000049,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000050,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000051,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000052,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000053,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000054,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000055,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000056,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000057,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000058,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000059,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000060,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000061,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000062,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000063,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000064,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000065,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000066,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000067,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000068,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000069,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000070,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000071,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000072,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000073,Insufficient Evidence,Insufficient delivery or quality history (minimum 5 observations required in each); do not make a firm supplier decision.,guardrails-v1
+SCORE-2026-000074,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000075,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000076,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000077,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000078,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000079,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000080,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000081,Insufficient Evidence,Insufficient delivery or quality history (minimum 5 observations required in each); do not make a firm supplier decision.,guardrails-v1
+SCORE-2026-000082,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000083,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000084,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000085,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000086,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000087,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000088,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000089,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000090,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000091,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000092,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000093,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000094,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000095,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000096,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000097,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000098,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000099,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000100,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000101,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000102,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000103,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000104,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000105,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000106,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000107,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000108,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000109,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000110,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000111,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000112,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000113,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000114,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000115,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000116,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000117,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000118,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000119,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000120,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000121,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000122,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000123,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000124,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000125,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000126,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000127,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000128,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000129,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000130,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000131,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000132,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000133,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000134,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000135,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000136,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000137,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000138,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000139,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000140,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000141,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000142,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000143,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000144,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000145,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000146,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000147,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000148,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000149,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000150,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000151,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000152,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000153,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000154,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000155,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000156,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000157,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000158,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000159,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000160,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000161,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000162,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000163,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000164,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000165,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000166,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000167,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000168,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000169,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000170,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000171,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000172,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000173,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000174,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000175,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000176,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000177,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000178,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000179,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000180,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000181,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000182,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000183,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000184,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000185,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000186,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000187,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000188,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000189,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000190,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000191,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000192,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000193,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000194,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000195,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000196,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000197,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000198,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000199,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000200,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000201,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000202,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000203,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000204,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000205,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000206,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000207,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000208,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000209,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000210,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000211,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000212,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000213,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000214,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000215,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000216,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000217,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000218,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000219,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000220,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000221,Insufficient Evidence,Insufficient delivery or quality history (minimum 5 observations required in each); do not make a firm supplier decision.,guardrails-v1
+SCORE-2026-000222,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000223,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000224,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000225,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000226,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000227,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000228,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000229,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000230,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000231,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000232,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000233,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000234,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000235,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000236,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000237,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000238,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000239,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000240,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000241,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000242,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000243,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000244,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000245,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000246,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000247,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000248,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000249,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000250,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000251,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000252,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000253,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000254,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000255,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000256,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000257,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000258,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000259,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000260,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000261,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000262,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000263,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000264,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000265,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000266,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000267,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000268,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000269,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000270,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000271,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000272,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000273,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000274,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000275,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000276,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000277,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000278,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000279,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000280,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000281,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000282,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000283,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000284,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000285,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000286,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000287,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000288,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000289,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000290,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000291,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000292,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000293,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000294,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000295,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000296,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000297,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000298,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000299,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000300,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000301,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000302,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000303,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000304,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000305,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000306,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000307,Insufficient Evidence,Insufficient delivery or quality history (minimum 5 observations required in each); do not make a firm supplier decision.,guardrails-v1
+SCORE-2026-000308,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000309,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000310,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000311,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000312,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000313,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000314,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000315,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000316,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000317,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000318,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000319,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000320,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000321,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000322,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000323,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000324,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000325,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000326,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000327,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000328,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000329,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000330,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000331,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000332,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000333,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000334,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000335,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000336,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000337,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000338,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000339,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000340,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000341,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000342,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000343,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000344,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000345,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000346,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000347,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000348,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000349,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000350,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000351,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000352,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000353,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000354,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000355,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000356,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000357,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000358,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000359,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000360,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000361,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000362,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000363,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000364,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000365,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000366,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000367,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000368,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000369,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000370,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000371,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000372,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000373,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000374,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000375,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000376,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000377,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000378,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000379,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000380,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000381,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000382,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000383,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000384,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000385,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000386,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000387,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000388,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000389,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000390,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000391,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000392,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000393,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000394,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000395,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000396,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000397,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000398,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000399,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000400,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000401,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000402,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000403,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000404,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000405,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000406,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000407,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000408,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000409,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000410,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000411,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000412,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000413,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000414,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000415,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000416,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000417,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000418,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000419,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000420,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000421,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000422,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000423,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000424,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000425,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000426,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000427,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000428,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000429,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000430,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000431,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000432,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000433,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000434,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000435,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000436,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000437,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000438,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000439,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000440,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000441,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000442,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000443,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000444,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000445,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000446,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000447,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000448,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000449,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000450,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000451,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000452,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000453,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000454,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000455,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000456,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000457,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000458,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000459,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000460,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000461,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000462,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000463,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000464,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000465,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000466,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000467,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000468,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000469,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000470,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000471,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000472,Insufficient Evidence,Insufficient delivery or quality history (minimum 5 observations required in each); do not make a firm supplier decision.,guardrails-v1
+SCORE-2026-000473,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000474,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000475,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000476,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000477,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000478,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000479,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000480,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000481,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000482,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000483,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000484,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000485,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000486,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000487,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000488,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000489,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000490,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000491,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000492,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000493,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000494,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000495,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000496,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000497,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000498,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000499,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000500,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000501,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000502,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000503,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000504,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000505,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000506,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000507,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000508,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000509,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000510,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000511,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000512,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000513,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000514,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000515,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000516,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000517,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000518,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000519,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000520,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000521,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000522,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000523,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000524,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000525,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000526,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000527,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000528,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000529,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000530,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000531,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000532,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000533,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000534,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000535,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000536,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000537,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000538,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000539,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000540,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000541,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000542,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000543,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000544,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000545,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000546,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000547,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000548,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000549,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000550,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000551,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000552,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000553,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000554,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000555,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000556,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000557,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000558,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000559,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000560,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000561,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000562,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000563,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000564,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000565,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000566,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000567,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000568,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000569,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000570,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000571,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000572,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000573,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000574,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000575,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000576,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000577,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000578,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000579,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000580,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000581,Watch,"No critical dimension guardrail is breached, but composite score is below 80.",guardrails-v1
+SCORE-2026-000582,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000583,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000584,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000585,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000586,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000587,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000588,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000589,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000590,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000591,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000592,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000593,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000594,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000595,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000596,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000597,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000598,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000599,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000600,Insufficient Evidence,Insufficient delivery or quality history (minimum 5 observations required in each); do not make a firm supplier decision.,guardrails-v1
+SCORE-2026-000601,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000602,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000603,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000604,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000605,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000606,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000607,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000608,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000609,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000610,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000611,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000612,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000613,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000614,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000615,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000616,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000617,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000618,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000619,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000620,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000621,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000622,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000623,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000624,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000625,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000626,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000627,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000628,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000629,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000630,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000631,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000632,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000633,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000634,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000635,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000636,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000637,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000638,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000639,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000640,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000641,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000642,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000643,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000644,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000645,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000646,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000647,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000648,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000649,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000650,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000651,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000652,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000653,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000654,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000655,Watch,"No critical dimension guardrail is breached, but composite score is below 80.",guardrails-v1
+SCORE-2026-000656,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000657,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000658,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000659,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000660,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000661,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000662,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000663,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000664,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000665,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000666,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000667,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000668,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000669,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000670,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000671,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000672,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000673,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000674,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000675,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000676,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000677,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000678,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000679,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000680,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000681,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000682,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000683,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000684,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000685,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000686,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000687,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000688,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000689,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000690,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000691,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000692,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000693,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000694,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000695,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000696,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000697,Watch,"No critical dimension guardrail is breached, but composite score is below 80.",guardrails-v1
+SCORE-2026-000698,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000699,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000700,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000701,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000702,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000703,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000704,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000705,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000706,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000707,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000708,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000709,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000710,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000711,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000712,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000713,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000714,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000715,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000716,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000717,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000718,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000719,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000720,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000721,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000722,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000723,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000724,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000725,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000726,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000727,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000728,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000729,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000730,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000731,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000732,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000733,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000734,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000735,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000736,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000737,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000738,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000739,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000740,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000741,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000742,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000743,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000744,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000745,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000746,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000747,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000748,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000749,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000750,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000751,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000752,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000753,At Risk,Dimension guardrail breached: delivery score below 75; quality score below 90.,guardrails-v1
+SCORE-2026-000754,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000755,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000756,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000757,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000758,At Risk,Dimension guardrail breached: delivery score below 75; quality score below 90.,guardrails-v1
+SCORE-2026-000759,Insufficient Evidence,Insufficient delivery or quality history (minimum 5 observations required in each); do not make a firm supplier decision.,guardrails-v1
+SCORE-2026-000760,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000761,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000762,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000763,At Risk,Dimension guardrail breached: delivery score below 75; quality score below 90.,guardrails-v1
+SCORE-2026-000764,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000765,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000766,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000767,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000768,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000769,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000770,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000771,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000772,At Risk,Dimension guardrail breached: delivery score below 75; quality score below 90.,guardrails-v1
+SCORE-2026-000773,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000774,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000775,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000776,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000777,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000778,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000779,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000780,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000781,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000782,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000783,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000784,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000785,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000786,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000787,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000788,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000789,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000790,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000791,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000792,At Risk,Dimension guardrail breached: delivery score below 75; quality score below 90.,guardrails-v1
+SCORE-2026-000793,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000794,At Risk,Dimension guardrail breached: delivery score below 75; quality score below 90.,guardrails-v1
+SCORE-2026-000795,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000796,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000797,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000798,At Risk,Dimension guardrail breached: delivery score below 75; quality score below 90.,guardrails-v1
+SCORE-2026-000799,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000800,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000801,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000802,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000803,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000804,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000805,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000806,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000807,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000808,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000809,At Risk,Dimension guardrail breached: delivery score below 75; quality score below 90.,guardrails-v1
+SCORE-2026-000810,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000811,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000812,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000813,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000814,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000815,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000816,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000817,At Risk,Dimension guardrail breached: delivery score below 75; quality score below 90.,guardrails-v1
+SCORE-2026-000818,At Risk,Dimension guardrail breached: delivery score below 75; quality score below 90.,guardrails-v1
+SCORE-2026-000819,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000820,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000821,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000822,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000823,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000824,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000825,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000826,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000827,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000828,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000829,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000830,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000831,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000832,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000833,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000834,At Risk,Dimension guardrail breached: delivery score below 75; quality score below 90.,guardrails-v1
+SCORE-2026-000835,At Risk,Dimension guardrail breached: delivery score below 75; quality score below 90.,guardrails-v1
+SCORE-2026-000836,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000837,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000838,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000839,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000840,At Risk,Dimension guardrail breached: delivery score below 75; quality score below 90.,guardrails-v1
+SCORE-2026-000841,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000842,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000843,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000844,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000845,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000846,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000847,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000848,Insufficient Evidence,Insufficient delivery or quality history (minimum 5 observations required in each); do not make a firm supplier decision.,guardrails-v1
+SCORE-2026-000849,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000850,At Risk,Dimension guardrail breached: delivery score below 75; quality score below 90.,guardrails-v1
+SCORE-2026-000851,At Risk,Dimension guardrail breached: delivery score below 75; quality score below 90.,guardrails-v1
+SCORE-2026-000852,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000853,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000854,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000855,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000856,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000857,At Risk,Dimension guardrail breached: delivery score below 75; quality score below 90.,guardrails-v1
+SCORE-2026-000858,At Risk,Dimension guardrail breached: delivery score below 75; quality score below 90.,guardrails-v1
+SCORE-2026-000859,At Risk,Dimension guardrail breached: delivery score below 75; quality score below 90.,guardrails-v1
+SCORE-2026-000860,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000861,At Risk,Dimension guardrail breached: delivery score below 75; quality score below 90.,guardrails-v1
+SCORE-2026-000862,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000863,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000864,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000865,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000866,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000867,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000868,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000869,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000870,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000871,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000872,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000873,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000874,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000875,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000876,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000877,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000878,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000879,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000880,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000881,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000882,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000883,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000884,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000885,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000886,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000887,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000888,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000889,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000890,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000891,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000892,At Risk,Dimension guardrail breached: delivery score below 75; quality score below 90.,guardrails-v1
+SCORE-2026-000893,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000894,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000895,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000896,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000897,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000898,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000899,At Risk,Dimension guardrail breached: quality score below 90.,guardrails-v1
+SCORE-2026-000900,At Risk,Dimension guardrail breached: delivery score below 75; quality score below 90.,guardrails-v1
+SCORE-2026-000901,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000902,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000903,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000904,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000905,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000906,Insufficient Evidence,Insufficient delivery or quality history (minimum 5 observations required in each); do not make a firm supplier decision.,guardrails-v1
+SCORE-2026-000907,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000908,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000909,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000910,Insufficient Evidence,Insufficient delivery or quality history (minimum 5 observations required in each); do not make a firm supplier decision.,guardrails-v1
+SCORE-2026-000911,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000912,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000913,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000914,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000915,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000916,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000917,Insufficient Evidence,Insufficient delivery or quality history (minimum 5 observations required in each); do not make a firm supplier decision.,guardrails-v1
+SCORE-2026-000918,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000919,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000920,Insufficient Evidence,Insufficient delivery or quality history (minimum 5 observations required in each); do not make a firm supplier decision.,guardrails-v1
+SCORE-2026-000921,Insufficient Evidence,Insufficient delivery or quality history (minimum 5 observations required in each); do not make a firm supplier decision.,guardrails-v1
+SCORE-2026-000922,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000923,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000924,Insufficient Evidence,Insufficient delivery or quality history (minimum 5 observations required in each); do not make a firm supplier decision.,guardrails-v1
+SCORE-2026-000925,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000926,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000927,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000928,Insufficient Evidence,Insufficient delivery or quality history (minimum 5 observations required in each); do not make a firm supplier decision.,guardrails-v1
+SCORE-2026-000929,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000930,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000931,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000932,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000933,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000934,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000935,Insufficient Evidence,Insufficient delivery or quality history (minimum 5 observations required in each); do not make a firm supplier decision.,guardrails-v1
+SCORE-2026-000936,Insufficient Evidence,Insufficient delivery or quality history (minimum 5 observations required in each); do not make a firm supplier decision.,guardrails-v1
+SCORE-2026-000937,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000938,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000939,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000940,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000941,Insufficient Evidence,Insufficient delivery or quality history (minimum 5 observations required in each); do not make a firm supplier decision.,guardrails-v1
+SCORE-2026-000942,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000943,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000944,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000945,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000946,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000947,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000948,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000949,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000950,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000951,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000952,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000953,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000954,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000955,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000956,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000957,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000958,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000959,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000960,Insufficient Evidence,Insufficient delivery or quality history (minimum 5 observations required in each); do not make a firm supplier decision.,guardrails-v1
+SCORE-2026-000961,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000962,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000963,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000964,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000965,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000966,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000967,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000968,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000969,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000970,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000971,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000972,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000973,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000974,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000975,Insufficient Evidence,Insufficient delivery or quality history (minimum 5 observations required in each); do not make a firm supplier decision.,guardrails-v1
+SCORE-2026-000976,Insufficient Evidence,Insufficient delivery or quality history (minimum 5 observations required in each); do not make a firm supplier decision.,guardrails-v1
+SCORE-2026-000977,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000978,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000979,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000980,Insufficient Evidence,Insufficient delivery or quality history (minimum 5 observations required in each); do not make a firm supplier decision.,guardrails-v1
+SCORE-2026-000981,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000982,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000983,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000984,Insufficient Evidence,Insufficient delivery or quality history (minimum 5 observations required in each); do not make a firm supplier decision.,guardrails-v1
+SCORE-2026-000985,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000986,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000987,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000988,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000989,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000990,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000991,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000992,At Risk,Dimension guardrail breached: delivery score below 75.,guardrails-v1
+SCORE-2026-000993,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000994,Insufficient Evidence,Insufficient delivery or quality history (minimum 5 observations required in each); do not make a firm supplier decision.,guardrails-v1
+SCORE-2026-000995,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000996,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000997,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
+SCORE-2026-000998,Insufficient Evidence,Insufficient delivery or quality history (minimum 5 observations required in each); do not make a firm supplier decision.,guardrails-v1
+SCORE-2026-000999,Insufficient Evidence,Insufficient delivery or quality history (minimum 5 observations required in each); do not make a firm supplier decision.,guardrails-v1
+SCORE-2026-001000,Reliable,Composite score is at least 80 and no delivery/quality guardrail is breached.,guardrails-v1
