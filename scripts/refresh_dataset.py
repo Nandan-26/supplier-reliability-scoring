@@ -89,8 +89,7 @@ def main():
     )
     if not validation["overall_passed"]:
         raise RuntimeError(
-            "Fresh dataset failed validation; the historical snapshot remains "
-            f"preserved at {archive.relative_to(ROOT)}."
+            "Fresh generated dataset failed validation; inspect the validation summary before publishing."
         )
 
     manifest_path = DATA / "source_manifest.json"
