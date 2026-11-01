@@ -82,7 +82,7 @@ See [`data/DATA_DICTIONARY.md`](data/DATA_DICTIONARY.md) for table grains, key f
 `python -m src.export_artifacts` writes:
 - `data/exports/*.csv` — CSV exports of database tables.
 - `data/validation_summary.json` — SQLite integrity, foreign-key, expected-count, and score-range checks.
-- `data/source_manifest.json` — source hashes, database hash, counts, and export paths.
+- `data/source_manifest.json` — source hashes, database hash, counts, and export paths.\n- `data/ground_truth_evaluation.json` — latest-run expected-vs-observed supplier metrics, classification comparison, and binary at-risk confusion counts; the prior report is archived before each refresh.
 
 Historical score anomalies are retained for traceability and are documented in [the historical score anomaly report](data/historical_score_anomalies.md). A latest scoring run can pass while the overall historical validation remains failed; inspect the individual checks rather than treating the latest-run result as a complete pass.
 
