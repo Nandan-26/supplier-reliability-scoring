@@ -317,10 +317,10 @@ def test_compliance_and_disruption_without_adverse_signals_score_100():
         conn.close()
 
     assert row is not None
-    assert row[0] == 50.0
+    assert row[0] == 100.0
     assert row[1] == 0
     assert row[2] == "No Data"
-    assert row[3] == 50.0
+    assert row[3] == 100.0
     assert row[4] == 0
     assert row[5] == "No Data"
 
