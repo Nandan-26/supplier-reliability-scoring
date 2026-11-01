@@ -1,26 +1,70 @@
 # Supplier Reliability & Risk Scoring Engine
 
-[![Python tests](https://github.com/Nandan-26/supplier-reliability-scoring/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/Nandan-26/supplier-reliability-scoring/actions/workflows/tests.yml)
+<p align="center">
+  <strong>A reproducible supplier risk analytics pipeline built with Python and SQLite.</strong><br/>
+  Generate procurement data, validate relationships, score suppliers as of a historical date, and evaluate risk decisions against separate synthetic labels.
+</p>
 
-A Python and SQLite assessment project that generates synthetic procurement data and calculates point-in-time supplier scores across delivery, quality, cost, capacity, compliance, and disruption.
+<p align="center">
+  <a href="https://github.com/Nandan-26/supplier-reliability-scoring/actions/workflows/tests.yml"><img src="https://github.com/Nandan-26/supplier-reliability-scoring/actions/workflows/tests.yml/badge.svg?branch=main" alt="Python tests"/></a>
+  <img src="https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white" alt="Python 3.10+"/>
+  <img src="https://img.shields.io/badge/Database-SQLite-003B57?logo=sqlite&logoColor=white" alt="SQLite"/>
+  <img src="https://img.shields.io/badge/Tests-55%20passing-2ea44f" alt="55 tests passed in local fresh-clone verification"/>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-green.svg" alt="MIT License"/></a>
+</p>
 
-> **Scope:** This is a synthetic assessment project, not a production procurement system. Scoring weights, thresholds, and fallback values are illustrative assumptions and require business validation before operational use.
+**Supplier Reliability Scoring** evaluates procurement partners across delivery, quality, cost, capacity, compliance, and disruption. The engine combines point-in-time data selection, relational integrity rules, evidence-aware decisions, and reproducible evaluation.
+
+> **Important scope note:** This is a synthetic assessment project, not a production procurement system. The reported precision and recall measure agreement with generated labels; they do not establish performance on real supplier data. Scoring weights and guardrails are illustrative business rules that require domain validation before operational use.
+
+## Project at a glance
+
+| Dataset / engineering evidence | Current project result |
+|---|---:|
+| Synthetic suppliers | 1,000 |
+| Purchase orders | 10,000 |
+| Shipments | 15,000 |
+| Inspection records | 20,000 |
+| Automated tests | 55 passed locally in a fresh clone |
+| Supplier score dimensions | 6 |
+| Labelled challenge edge cases | 5 |
+
+### Evaluation highlights
+
+| Evaluation set | Seed | Precision | Recall |
+|---|---:|---:|---:|
+| Active synthetic dataset | 20261022 | **95.73%** | **95.25%** |
+| Independent synthetic holdout | 20261023 | **95.98%** | **95.50%** |
+
+The two evaluation sets are independent and must not be combined. See the detailed [evaluation artifacts](#evaluation-results) and [limitations](#limitations).
+
+### Visual walkthrough
+
+<p align="center">
+  <img src="docs/images/architecture.svg" alt="Supplier scoring architecture" width="100%"/>
+</p>
+
+<p align="center">
+  <img src="docs/images/supplier-score-sample.svg" alt="Sample supplier score output from exported records" width="100%"/>
+</p>
+
+<p align="center">
+  <img src="docs/images/evaluation-snapshot.svg" alt="Active and independent holdout synthetic evaluation results" width="100%"/>
+</p>
+
+### Quick links
+
+- [Setup and run](#setup)
+- [Scoring methodology](#scoring-dimensions)
+- [Validation and evaluation](#validation-artifacts)
+- [Data dictionary](data/DATA_DICTIONARY.md)
+- [Metric definitions](docs/METRICS.md)
+- [Five labelled edge cases](data/EDGE_CASE_CATALOGUE.md)
+- [License](LICENSE)
 
 ## Architecture
 
-```mermaid
-flowchart TD
-    A[Synthetic procurement profiles and source records] --> B[Data generator]
-    B --> C[SQLite relational database]
-    B --> D[Malformed-record validation and quarantine]
-    C --> E[Point-in-time supplier scoring]
-    E --> F[Delivery and quality guardrails]
-    F --> G[Persisted supplier decisions]
-    C --> H[CSV exports and validation manifest]
-    G --> I[Ground-truth and independent holdout evaluation]
-    H --> J[Reproducible reports]
-    I --> J
-```
+The architecture diagram above shows the flow from generated procurement records through validation, SQLite persistence, scoring guardrails, and independent evaluation.
 
 ## 1. What the project does
 
@@ -96,6 +140,22 @@ python scripts/evaluate_ground_truth.py
 The full-dataset validator generates the 1,000-supplier dataset in a temporary directory, checks business rules, all five labelled edge-case fixtures, PO lifecycle history, profile-level ground truth, relational integrity, score ranges, and the CSV/manifest/validation exporter. CI also runs `check_reproducibility.py` at the full 1,000-supplier scale: it generates twice in isolated directories and compares every table row count, deterministic CSV SHA-256, ground-truth JSON and malformed-record JSON. `evaluate_ground_truth.py` compares expected supplier profiles with observed delivery/quality metrics and the latest score classifications, then reports differences, confusion counts, precision and recall. The independent holdout evaluator uses a separate seed and dataset. Temporary validation files are removed; validation databases are isolated from the repository's generated artifacts.
 
 The independent holdout check generates a separate 1,000-supplier dataset with seed `20261023` and evaluates the fixed observed-delivery (<75) and observed-quality (<90) risk guardrails without tuning them on the committed seed. CI requires at least 90% precision and 90% recall on that holdout. The committed result and confusion counts are documented separately below. The tests cover schema constraints, requested generation counts, reproducibility, shipment relationships, malformed-case detection, scoring ranges, missing history, point-in-time leakage, capacity aggregation, inspection aggregation, and delivery scoring. A test result applies only to the code and environment in which it was actually run.
+
+## Evaluation results
+
+The following figures are read from the committed active-dataset and retained independent-holdout JSON reports. The active dataset uses seed `20261022`; the separate holdout uses seed `20261023`.
+
+![Synthetic evaluation metrics](docs/images/evaluation-snapshot.svg)
+
+Active-dataset confusion counts: **TP 381 · FP 17 · TN 583 · FN 19**. Independent-holdout confusion counts: **TP 382 · FP 16 · TN 584 · FN 18**. Do not merge these counts because the reports evaluate different generated datasets.
+
+## Sample supplier decisions
+
+The preview below uses rows from the committed `supplier_scores.csv` and `supplier_decisions.csv` exports. It intentionally includes a supplier with a high composite score but insufficient delivery evidence to demonstrate why evidence guardrails matter.
+
+![Supplier score sample](docs/images/supplier-score-sample.svg)
+
+For the complete data, inspect [supplier_scores.csv](data/exports/supplier_scores.csv) and [supplier_decisions.csv](data/exports/supplier_decisions.csv).
 
 ## 8. Validation artifacts
 
