@@ -1,0 +1,76 @@
+{
+  "purpose": "Deliberately invalid fixtures; isolated from clean operational tables and scoring inputs.",
+  "ground_truth_separate_from_features": true,
+  "fixtures": [
+    {
+      "edge_case_id": "EC-01",
+      "title": "Shipment without PO",
+      "source_entity": "Shipment",
+      "expected_result": "QUARANTINE",
+      "expected_score_impact": "EXCLUDE",
+      "payload": {
+        "shipment_id": "EC01-SHP-0001",
+        "po_id": "PO-MISSING",
+        "po_line_id": "LINE-MISSING",
+        "po_exists": false,
+        "po_line_exists": false,
+        "shipped_qty": 25,
+        "dispatch_date": "2026-03-01",
+        "expected_delivery_date": "2026-03-05"
+      }
+    },
+    {
+      "edge_case_id": "EC-02",
+      "title": "Delivery before dispatch",
+      "source_entity": "DeliveryEvent",
+      "expected_result": "QUARANTINE",
+      "expected_score_impact": "EXCLUDE",
+      "payload": {
+        "delivery_event_id": "EC02-DEL-0001",
+        "shipment_id": "SHP-2026-000001",
+        "dispatch_date": "2026-04-10",
+        "actual_delivery_date": "2026-04-08",
+        "delivered_qty": 25
+      }
+    },
+    {
+      "edge_case_id": "EC-03",
+      "title": "Future evidence used in score",
+      "source_entity": "SupplierScore",
+      "expected_result": "QUARANTINE",
+      "expected_score_impact": "MUST_NOT_INFLUENCE_SCORE",
+      "payload": {
+        "score_id": "EC03-SCORE-0001",
+        "as_of_date": "2026-06-30",
+        "contributing_event_date": "2026-07-02",
+        "system_available_at": "2026-07-03"
+      }
+    },
+    {
+      "edge_case_id": "EC-04",
+      "title": "Risk signal missing source and timestamp",
+      "source_entity": "RiskSignal",
+      "expected_result": "QUARANTINE",
+      "expected_score_impact": "EXCLUDE",
+      "payload": {
+        "risk_signal_id": "EC04-RSK-0001",
+        "supplier_id": "SUP-000001",
+        "signal_date": null,
+        "source": ""
+      }
+    },
+    {
+      "edge_case_id": "EC-05",
+      "title": "PO references another supplier's site",
+      "source_entity": "PurchaseOrder",
+      "expected_result": "QUARANTINE",
+      "expected_score_impact": "EXCLUDE",
+      "payload": {
+        "po_id": "EC05-PO-0001",
+        "po_supplier_id": "SUP-000001",
+        "site_id": "SITE-SUP-000002-01",
+        "site_supplier_id": "SUP-000002"
+      }
+    }
+  ]
+}
