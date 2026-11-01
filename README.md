@@ -54,12 +54,13 @@ The two evaluation sets are independent and must not be combined. See the detail
 
 ### Quick links
 
-- [Setup and run](#setup)
-- [Scoring methodology](#scoring-dimensions)
+- [Setup and run](#5-setup)
+- [Scoring methodology](#2-scoring-dimensions)
 - [Validation and evaluation](#validation-artifacts)
 - [Data dictionary](data/DATA_DICTIONARY.md)
 - [Metric definitions](docs/METRICS.md)
 - [Five labelled edge cases](data/EDGE_CASE_CATALOGUE.md)
+- [Contributing](CONTRIBUTING.md)
 - [License](LICENSE)
 
 ## Architecture
