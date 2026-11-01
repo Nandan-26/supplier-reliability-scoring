@@ -44,14 +44,6 @@ The two evaluation sets are independent and must not be combined. See the detail
   <img src="docs/images/architecture.svg" alt="Supplier scoring architecture" width="100%"/>
 </p>
 
-<p align="center">
-  <img src="docs/images/supplier-score-sample.svg" alt="Sample supplier score output from exported records" width="100%"/>
-</p>
-
-<p align="center">
-  <img src="docs/images/evaluation-snapshot.svg" alt="Active and independent holdout synthetic evaluation results" width="100%"/>
-</p>
-
 ### Quick links
 
 - [Setup and run](#5-setup)
