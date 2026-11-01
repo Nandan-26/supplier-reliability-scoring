@@ -150,7 +150,7 @@ supplier-reliability-scoring/
 
 ## 10. Current dataset and historical archive
 
-The active `data/supplier_scoring.db` and `data/exports/` contain a validated dataset generated with seed `20261022`. Refresh metadata distinguishes the synthetic data-generator version from the scoring-engine and scoring-policy versions. The run metadata is in `data/generation_metadata.json`; the validation result is in `data/validation_summary.json`; source hashes and export paths are in `data/source_manifest.json`.
+The generated `data/supplier_scoring.db` (created locally and in CI, but not committed) and committed `data/exports/` correspond to a dataset generated with seed `20261022`. Refresh metadata distinguishes the synthetic data-generator version from the scoring-engine and scoring-policy versions. The run metadata is in `data/generation_metadata.json`; the validation result is in `data/validation_summary.json`; source hashes and export paths are in `data/source_manifest.json`.
 
 The previous committed dataset is preserved under [`data/archive/pre_refresh_20261101T065548Z/`](data/archive/pre_refresh_20261101T065548Z/), the archive path recorded in `data/generation_metadata.json` and `data/source_manifest.json`. Its legacy issues are summarized in [the historical archive report](data/historical_score_anomalies.md) and its original detailed report remains inside the archive. Do not use those legacy scores as current normalized scores.
 
