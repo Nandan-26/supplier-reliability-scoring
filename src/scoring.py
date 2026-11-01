@@ -45,8 +45,12 @@ def classify_supplier(score: float, overall_confidence: str, delivery_score: flo
                       quality_score: float, delivery_sample_count: int,
                       quality_sample_count: int) -> tuple[str, str]:
     """Return the persisted operational decision and its human-readable reason."""
-    if overall_confidence == "Low (Sparse Data)":
-        return "Insufficient Evidence", "Overall evidence is sparse; do not make a firm supplier decision."
+    if (overall_confidence == "Low (Sparse Data)"
+            or delivery_sample_count < 5 or quality_sample_count < 5):
+        return "Insufficient Evidence", (
+            "Insufficient delivery or quality history (minimum 5 observations required in each); "
+            "do not make a firm supplier decision."
+        )
     breached = []
     if delivery_sample_count > 0 and delivery_score < 75:
         breached.append("delivery score below 75")
