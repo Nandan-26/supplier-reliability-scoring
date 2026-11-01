@@ -120,6 +120,7 @@ def main():
     manifest_path = DATA / "source_manifest.json"
     manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
     manifest["generation_metadata"] = "data/generation_metadata.json"
+    manifest["ground_truth_evaluation"] = "data/ground_truth_evaluation.json"
     manifest["historical_snapshot"] = str(archive.relative_to(ROOT))
     manifest_path.write_text(
         json.dumps(manifest, indent=2),
