@@ -36,7 +36,7 @@
 | Active synthetic dataset | 20261022 | **95.73%** | **95.25%** |
 | Independent synthetic holdout | 20261023 | **95.98%** | **95.50%** |
 
-The two evaluation sets are independent and must not be combined. See the detailed [evaluation artifacts](#evaluation-results) and [limitations](#limitations).
+The two evaluation sets are independent and must not be combined. See the detailed [evaluation artifacts](#evaluation-results) and [limitations](#11-limitations).
 
 ### Visual walkthrough
 
@@ -48,7 +48,7 @@ The two evaluation sets are independent and must not be combined. See the detail
 
 - [Setup and run](#5-setup)
 - [Scoring methodology](#2-scoring-dimensions)
-- [Validation and evaluation](#validation-artifacts)
+- [Validation and evaluation](#8-validation-artifacts)
 - [Data dictionary](data/DATA_DICTIONARY.md)
 - [Metric definitions](docs/METRICS.md)
 - [Five labelled edge cases](data/EDGE_CASE_CATALOGUE.md)
