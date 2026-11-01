@@ -16,6 +16,7 @@ sys.path.insert(0, str(ROOT))
 from src.generator import generate_synthetic_data
 from src.scoring import calculate_supplier_scores
 from src.export_artifacts import main as export_artifacts
+from scripts.evaluate_ground_truth import evaluate as evaluate_ground_truth
 
 DATA = ROOT / "data"
 DB = DATA / "supplier_scoring.db"
@@ -37,6 +38,7 @@ def archive_existing_dataset():
         DATA / "validation_summary.json",
         DATA / "source_manifest.json",
         DATA / "generation_metadata.json",
+        DATA / "ground_truth_evaluation.json",
     ]
     moved = []
     for source in paths:
@@ -75,6 +77,12 @@ def main():
             (SEED, run_id),
         )
 
+    evaluation_report = evaluate_ground_truth(
+        DB,
+        DATA / "ground_truth.json",
+        DATA / "ground_truth_evaluation.json",
+    )
+
     metadata = {
         "generated_at_utc": datetime.now(timezone.utc).isoformat(),
         "generator_version": "1.1.0",
@@ -82,6 +90,8 @@ def main():
         "random_seed": SEED,
         "as_of_date": AS_OF_DATE,
         "score_run_id": run_id,
+        "ground_truth_evaluation": "data/ground_truth_evaluation.json",
+        "ground_truth_evaluation_suppliers": evaluation_report["supplier_count_evaluated"],
         "generated_counts": generated,
         "historical_snapshot": str(archive.relative_to(ROOT)),
         "historical_files_archived": archived_paths,
@@ -144,6 +154,8 @@ The active dataset passed SQLite integrity, foreign-key, expected-count, busines
         "random_seed": SEED,
         "validation_overall_passed": validation["overall_passed"],
         "validation_summary": str((DATA / "validation_summary.json").relative_to(ROOT)),
+        "ground_truth_evaluation": str((DATA / "ground_truth_evaluation.json").relative_to(ROOT)),
+        "ground_truth_evaluation_suppliers": evaluation_report["supplier_count_evaluated"],
     }, indent=2))
 
 
