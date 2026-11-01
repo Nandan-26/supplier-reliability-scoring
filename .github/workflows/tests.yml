@@ -22,3 +22,5 @@ jobs:
         run: python -m pytest -v
       - name: Validate a fresh full-size dataset in an isolated temporary directory
         run: python scripts/validate_full_dataset.py
+      - name: Verify full-scale reproducibility with table and artifact SHA-256 checksums
+        run: python scripts/check_reproducibility.py --output $RUNNER_TEMP/reproducibility_report.json
