@@ -9,6 +9,8 @@ import sqlite3
 from src.db import get_connection
 
 ROOT_DIR = Path(__file__).resolve().parent.parent
+SCORING_ENGINE_VERSION = "2.0.0"
+SCORING_CONFIG_VERSION = "v2.0"
 
 DEFAULT_WEIGHTS = {
     "delivery": 0.25,
@@ -67,7 +69,7 @@ def calculate_supplier_scores(
     as_of_date: str,
     db_path: str | Path = ROOT_DIR / "data" / "supplier_scoring.db",
     weights: dict[str, float] = DEFAULT_WEIGHTS,
-    config_version: str = "v2.0"
+    config_version: str = SCORING_CONFIG_VERSION
 ) -> str:
     """
     Calculate supplier reliability scores as of a specific date using vectorized set-based queries
@@ -114,7 +116,7 @@ def calculate_supplier_scores(
         config_hash = hashlib.sha256(
             json.dumps(config_payload, sort_keys=True).encode("utf-8")
         ).hexdigest()[:12]
-        generator_version = "2.0.0"
+        generator_version = SCORING_ENGINE_VERSION
 
         # Record Score Run (ensuring interrupted runs don't corrupt prior history)
         cursor.execute(
