@@ -90,7 +90,7 @@ See [`data/DATA_DICTIONARY.md`](data/DATA_DICTIONARY.md) for field-level types, 
 - `data/validation_summary.json` — SQLite integrity, foreign-key, expected-count, and score-range checks.
 - `data/source_manifest.json` — source hashes, database hash, counts, and export paths.
 - `data/ground_truth_evaluation.json` — latest-run expected-vs-observed supplier metrics, classification comparison, and binary at-risk confusion counts; the prior report is archived before each refresh.
-- `data/holdout_evaluation.json` — committed summary of the independent seed `20261023` CI holdout. Its metrics are tied to the exact scoring-policy version and workflow run recorded in the file; do not reuse earlier V1/V2 figures after changing policy.
+- `data/holdout_evaluation.json` — a retained historical holdout snapshot. For current results, use the fresh `holdout_evaluation.json` attached to the latest successful `Python tests` workflow run.
 
 Historical score anomalies are retained for traceability and are documented in [the historical score anomaly report](data/historical_score_anomalies.md). A latest scoring run can pass while the overall historical validation remains failed; inspect the individual checks rather than treating the latest-run result as a complete pass.
 
@@ -98,7 +98,7 @@ Historical score anomalies are retained for traceability and are documented in [
 
 The independent holdout is a second synthetic dataset, generated in CI with seed `20261023` (1,000 suppliers). It is not the active committed database, which was generated with seed `20261022`. The fixed guardrail policy was evaluated without using ground-truth labels as scoring features and without tuning the thresholds on the holdout labels.
 
-The CI workflow regenerates the active-dataset evaluation and the independent holdout on every pull request. The current policy-versioned outputs are published as the `supplier-risk-v2-evaluation-reports` workflow artifact; use the artifact attached to the latest successful run rather than copying older committed V1 metrics. The active dataset (seed `20261022`) and holdout (seed `20261023`) are different synthetic datasets. Never combine their confusion counts or compare results across policy versions. Neither evaluation establishes performance on real supplier data.
+The CI workflow regenerates the active-dataset evaluation, full-scale reproducibility report, and independent holdout on every pull request. The workflow publishes the holdout JSON and reproducibility JSON together in the `supplier-risk-v2-evaluation-reports` artifact. Each fresh holdout report records the scoring-engine version, scoring-policy version, and GitHub Actions run/commit provenance. Use the artifact attached to the latest successful run; the committed `data/holdout_evaluation.json` is retained only as a historical snapshot. The active dataset (seed `20261022`) and holdout (seed `20261023`) are different synthetic datasets. Never combine their confusion counts or compare results across policy versions. Neither evaluation establishes performance on real supplier data.
 
 ## 9. Repository layout
 
@@ -153,7 +153,7 @@ supplier-reliability-scoring/
 
 ## 10. Current dataset and historical archive
 
-The active `data/supplier_scoring.db` and `data/exports/` contain a fresh validated dataset generated with seed `20261022`. The run metadata is in `data/generation_metadata.json`; the validation result is in `data/validation_summary.json`; source hashes and export paths are in `data/source_manifest.json`.
+The active `data/supplier_scoring.db` and `data/exports/` contain a validated dataset generated with seed `20261022`. Refresh metadata distinguishes the synthetic data-generator version from the scoring-engine and scoring-policy versions. The run metadata is in `data/generation_metadata.json`; the validation result is in `data/validation_summary.json`; source hashes and export paths are in `data/source_manifest.json`.
 
 The previous committed dataset is preserved under [`data/archive/pre_refresh_20261101T065548Z/`](data/archive/pre_refresh_20261101T065548Z/), the archive path recorded in `data/generation_metadata.json` and `data/source_manifest.json`. Its legacy issues are summarized in [the historical archive report](data/historical_score_anomalies.md) and its original detailed report remains inside the archive. Do not use those legacy scores as current normalized scores.
 
