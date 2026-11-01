@@ -52,6 +52,7 @@ The two evaluation sets are independent and must not be combined. See the detail
 - [Data dictionary](data/DATA_DICTIONARY.md)
 - [Metric definitions](docs/METRICS.md)
 - [Five labelled edge cases](data/EDGE_CASE_CATALOGUE.md)
+- [AI prompt history and tool-use disclosure](ai-prompts/README.md)
 - [Contributing](CONTRIBUTING.md)
 - [License](LICENSE)
 
