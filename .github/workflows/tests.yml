@@ -24,3 +24,5 @@ jobs:
         run: python scripts/validate_full_dataset.py
       - name: Verify full-scale reproducibility with table and artifact SHA-256 checksums
         run: python scripts/check_reproducibility.py --output $RUNNER_TEMP/reproducibility_report.json
+      - name: Evaluate risk classification on an independent full-scale seed
+        run: python scripts/evaluate_holdout.py
