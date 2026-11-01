@@ -5,6 +5,7 @@ from pathlib import Path
 import sqlite3
 
 from src.db import get_connection, initialize_database
+from src.edge_cases import evaluate_edge_case_catalogue, validate_edge_case
 
 ROOT_DIR = Path(__file__).resolve().parent.parent
 
@@ -484,6 +485,35 @@ def generate_synthetic_data(
         detected_errors = validate_payload(cursor, case["source_table"], case["raw_payload"])
         case["detected_reasons"] = detected_errors
         validated_malformed_cases.append(case)
+
+    # Export all five Round 2 challenge edge cases alongside the three
+    # general malformed examples. Each is independently labelled and its
+    # detection result is retained in the exported quarantine evidence.
+    edge_fixture_path = ROOT_DIR / "data" / "edge_case_fixtures.json"
+    edge_catalogue = json.loads(edge_fixture_path.read_text(encoding="utf-8"))
+    edge_fixtures = edge_catalogue["fixtures"]
+    edge_validation = evaluate_edge_case_catalogue(edge_fixtures)
+    if not edge_validation["overall_passed"] or edge_validation["passed"] != 5:
+        raise ValueError(f"Required edge-case fixture validation failed: {edge_validation}")
+
+    edge_source_tables = {
+        "EC-01": "shipments",
+        "EC-02": "delivery_events",
+        "EC-03": "supplier_scores",
+        "EC-04": "risk_signals",
+        "EC-05": "purchase_orders",
+    }
+    for fixture in edge_fixtures:
+        errors = validate_edge_case(fixture)
+        if not errors:
+            raise ValueError(f"{fixture['edge_case_id']} was not detected.")
+        validated_malformed_cases.append({
+            "edge_case_id": fixture["edge_case_id"],
+            "expected_result": fixture["expected_result"],
+            "source_table": edge_source_tables[fixture["edge_case_id"]],
+            "raw_payload": fixture["payload"],
+            "detected_reasons": errors,
+        })
 
     malformed_path = Path(malformed_path)
     malformed_path.parent.mkdir(parents=True, exist_ok=True)
