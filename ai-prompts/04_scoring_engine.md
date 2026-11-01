@@ -1,3 +1,5 @@
+> **AI tool:** Not verified from the retained record. **Record status:** reconstructed summary; not a verbatim historical prompt. See [the prompt-history README](README.md).
+
 # Reconstructed Prompt 4 — Supplier Reliability Scoring Engine
 
 The synthetic data generator and database are now ready. I want to implement the supplier reliability scoring engine using the existing project structure, database schema, and generated source data.
