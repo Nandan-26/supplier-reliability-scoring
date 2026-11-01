@@ -34,7 +34,7 @@
 | Evaluation set | Seed | Precision | Recall |
 |---|---:|---:|---:|
 | Active synthetic dataset | 20261022 | **95.73%** | **95.25%** |
-| Independent synthetic holdout | 20261023 | **95.98%** | **95.50%** |
+| Independent synthetic holdout | 20261023 | **96.94%** | **95.00%** |
 
 The two evaluation sets are independent and must not be combined. See the detailed [evaluation artifacts](#evaluation-results) and [limitations](#11-limitations).
 
@@ -143,7 +143,7 @@ The following figures are read from the committed active-dataset and retained in
 | Evaluation set | True positive | False positive | True negative | False negative |
 |---|---:|---:|---:|---:|
 | Active dataset (seed 20261022) | 381 | 17 | 583 | 19 |
-| Independent holdout (seed 20261023) | 382 | 16 | 584 | 18 |
+| Independent holdout (seed 20261023) | 380 | 12 | 588 | 20 |
 
 Do not merge these counts because the reports evaluate different generated datasets. Each refresh regenerates both reports before exporting the source manifest, which records each report path and SHA-256 checksum. The validation summary and source manifest are emitted by the same export pass and their timestamps are checked for consistency.
 
