@@ -48,5 +48,14 @@
   "generation_metadata": "data/generation_metadata.json",
   "generation_metadata_sha256": "56974bb086a26ac47a36af82680f85c2a8aab9321dc06a97f570defa0012defb",
   "ground_truth_evaluation": "data/ground_truth_evaluation.json",
-  "historical_snapshot": "data/archive/pre_refresh_20261101T065548Z"
+  "historical_snapshot": "data/archive/pre_refresh_20261101T065548Z",
+  "holdout_evaluation": "data/holdout_evaluation.json",
+  "holdout_evaluation_seed": 20261023,
+  "holdout_evaluation_type": "independent_synthetic_holdout",
+  "holdout_source_workflow": {
+    "run_number": 129,
+    "run_id": 41282726822,
+    "commit": "e1e7a3be4a6c182d482dc7a882329452f0111dec",
+    "url": "https://github.com/Nandan-26/supplier-reliability-scoring/actions/runs/41282726822"
+  }
 }
