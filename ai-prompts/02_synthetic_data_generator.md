@@ -1,3 +1,5 @@
+> **AI tool:** Gemini (identified by the candidate). **Record status:** original prompt text.
+
 # Original Prompt 2 — Synthetic Data Generator
 
 The database setup is now working on my PC. I ran `python -m src.db` successfully, and all 6 database tests passed.
