@@ -1,7 +1,7 @@
 {
-  "created_at_utc": "2026-11-01T06:42:23.509020+00:00",
+  "created_at_utc": "2026-11-01T06:46:27.077114+00:00",
   "database": "data/supplier_scoring.db",
-  "database_sha256": "9ed084c655db96d967f79a820f30c86efffb95320d1ee21d549068baca9c9960",
+  "database_sha256": "2802a1acb8f7bdefc0958185476f4a82c3198c8cd33b687dd5688ec29c232a34",
   "configured_default_seed": 20261022,
   "seed_note": "score_runs.random_seed records the generation seed when known; NULL means the scorer could not verify it. configured_default_seed is the generator default, not proof that an older database used that seed.",
   "table_row_counts": {
@@ -13,7 +13,7 @@
     "po_lines": 14901,
     "purchase_order_status_events": 15175,
     "purchase_orders": 10000,
-    "quarantine_log": 3,
+    "quarantine_log": 8,
     "risk_signals": 264,
     "score_runs": 1,
     "shipments": 15000,
@@ -22,7 +22,7 @@
     "suppliers": 1000
   },
   "source_files": {
-    "src/generator.py": "ea9f6e90448a3a8f0379e0c5591f2b218ba47833781426b2e84a4c8c2c88111c",
+    "src/generator.py": "7557ae9c178d1a5dae2f90aab1351bef6f54682dcae56333a4358b83b58072b6",
     "src/scoring.py": "794e84a20fffa009c4362b5266d3bd5d26296bf3744cca57b211112b956b2842",
     "src/export_artifacts.py": "31e8eb9d18b1c633353db8ad5109b8c13974f634b283763effdac1b3d82ba784",
     "data/schema.sql": "d35ef264f3bf5ce8b2d77291cf9ddd6d58ca43da7d0bb3d79240e702645388d5"
@@ -46,7 +46,7 @@
   ],
   "validation_summary": "data/validation_summary.json",
   "generation_metadata": "data/generation_metadata.json",
-  "generation_metadata_sha256": "635aff9c3b1704e0a8ca13edc1fc439bb3220f4ab86ccbbd69e6f636f22610ee",
+  "generation_metadata_sha256": "d57be7d74fedb5ba11e4cd93f90548acd2973abf2f787b51df98c7b70b74d46c",
   "ground_truth_evaluation": "data/ground_truth_evaluation.json",
-  "historical_snapshot": "data/archive/pre_refresh_20261101T064221Z"
+  "historical_snapshot": "data/archive/pre_refresh_20261101T064622Z"
 }
