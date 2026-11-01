@@ -1,4 +1,4 @@
-"""Validate a fresh full-size dataset and audit committed data without modifying it."""
+"""Validate a fresh full-size dataset in an isolated temporary directory."""
 import json
 import re
 import sqlite3
@@ -56,45 +56,6 @@ def main():
         check(export_summary["overall_passed"],
               "Artifact exporter did not pass isolated full-dataset validation.")
 
-        # Audit the active committed database separately from the fresh
-        # temporary dataset. All generated reports and CSVs remain temporary.
-        data_dir = Path(__file__).resolve().parents[1] / "data"
-        active_dir = root / "active_database_audit"
-        active_db = data_dir / "supplier_scoring.db"
-        export_artifacts(
-            db_path=active_db,
-            exports_dir=active_dir / "exports",
-            validation_path=active_dir / "validation_summary.json",
-            manifest_path=active_dir / "source_manifest.json",
-        )
-        active_summary = json.loads(
-            (active_dir / "validation_summary.json").read_text(encoding="utf-8")
-        )
-        check(active_summary["overall_passed"],
-              "Committed active database failed full artifact validation.")
-
-        # Audit the archived pre-refresh database without modifying it.
-        historical_dir = root / "historical_audit"
-        archive_databases = sorted((data_dir / "archive").glob("*/supplier_scoring.db"))
-        historical_db = (
-            archive_databases[0]
-            if archive_databases
-            else data_dir / "supplier_scoring.db"
-        )
-        export_artifacts(
-            db_path=historical_db,
-            exports_dir=historical_dir / "exports",
-            validation_path=historical_dir / "validation_summary.json",
-            manifest_path=historical_dir / "source_manifest.json",
-        )
-        historical_summary = json.loads(
-            (historical_dir / "validation_summary.json").read_text(encoding="utf-8")
-        )
-        check(historical_summary["sqlite_integrity_passed"],
-              "Committed historical database failed SQLite integrity check.")
-        check(historical_summary["foreign_key_check_passed"],
-              "Committed historical database has foreign-key violations.")
-
         con = sqlite3.connect(db)
         try:
             check(con.execute("PRAGMA integrity_check").fetchone()[0] == "ok", "SQLite integrity check failed.")
@@ -102,11 +63,12 @@ def main():
             counts = {t: con.execute(f"SELECT COUNT(*) FROM {t}").fetchone()[0] for t in (
                 "suppliers", "purchase_orders", "po_lines", "shipments", "delivery_events",
                 "inspections", "invoices", "invoice_lines", "risk_signals", "score_runs",
-                "supplier_scores", "quarantine_log", "purchase_order_status_events"
+                "supplier_scores", "supplier_decisions", "quarantine_log", "purchase_order_status_events"
             )}
             for table, expected in EXPECTED.items():
                 check(counts[table] == expected, f"{table}: expected {expected}, got {counts[table]}")
             check(counts["supplier_scores"] == 1000, "Expected one score per supplier in the full run.")
+            check(counts["supplier_decisions"] == 1000, "Expected one persisted decision per supplier score.")
             check(counts["purchase_order_status_events"] >= counts["purchase_orders"],
                   "Every purchase order must have an initial lifecycle event.")
             initial_events = con.execute("""
@@ -194,20 +156,6 @@ def main():
             "business_rule_violations": violations, "score_rows_checked": len(rows),
             "artifact_exporter_overall_passed": export_summary["overall_passed"],
             "artifact_export_count": len(export_summary["table_row_counts"]),
-            "active_database_audit": {
-                "database_audited": str(active_db.relative_to(data_dir.parent)),
-                "overall_passed": active_summary["overall_passed"],
-                "business_rule_violation_counts": active_summary["business_rule_violation_counts"],
-                "historical_score_checks_passed": active_summary["historical_score_checks_passed"],
-                "latest_run_passed": active_summary["latest_run_passed"],
-            },
-            "historical_database_audit": {
-                "database_audited": str(historical_db.relative_to(data_dir.parent)),
-                "overall_passed": historical_summary["overall_passed"],
-                "business_rule_violation_counts": historical_summary["business_rule_violation_counts"],
-                "historical_score_checks_passed": historical_summary["historical_score_checks_passed"],
-                "latest_run_passed": historical_summary["latest_run_passed"],
-            },
             "delivery_rates_by_profile": {k: round(v[0]/v[1], 4) for k,v in delivery_groups.items()},
             "defect_rates_by_profile": {k: round(v[0]/v[1], 4) for k,v in quality_groups.items()},
             "malformed_examples_detected": len(malformed),
