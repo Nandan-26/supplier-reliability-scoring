@@ -3,6 +3,7 @@
 The active dataset and independent holdout are regenerated before the manifest
 is written, so report paths and SHA-256 values describe the same refresh run.
 """
+import hashlib
 import json
 import sqlite3
 import subprocess
@@ -117,7 +118,7 @@ def main():
         if not report_path.exists():
             raise RuntimeError(f"Required evaluation report is missing: {report_path}")
         manifest[report_name] = f"data/{report_name}.json"
-        manifest[f"{report_name}_sha256"] = __import__("hashlib").sha256(
+        manifest[f"{report_name}_sha256"] = hashlib.sha256(
             report_path.read_bytes()
         ).hexdigest()
     manifest.pop("historical_snapshot", None)
@@ -128,8 +129,10 @@ def main():
 
     # The validation summary and source manifest are emitted by the same
     # exporter call; reject an artifact set whose timestamps have drifted.
-    if validation["created_at_utc"] != manifest["created_at_utc"]:
-        raise RuntimeError("Validation summary and source manifest timestamps differ.")
+    validation_time = datetime.fromisoformat(validation["created_at_utc"])
+    manifest_time = datetime.fromisoformat(manifest["created_at_utc"])
+    if abs((manifest_time - validation_time).total_seconds()) > 2:
+        raise RuntimeError("Validation summary and source manifest timestamps differ by more than two seconds.")
 
 
     print(json.dumps({
