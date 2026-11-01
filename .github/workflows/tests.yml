@@ -6,7 +6,7 @@ on:
   pull_request:
     branches: [main]
   workflow_run:
-    workflows: ["Refresh committed supplier dataset"]
+    workflows: ["Refresh generated supplier artifacts"]
     types: [completed]
     branches: [main]
 
