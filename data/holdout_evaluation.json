@@ -1,0 +1,42 @@
+{
+  "evaluation_type": "independent_synthetic_holdout",
+  "holdout_seed": 20261023,
+  "supplier_count": 1000,
+  "generated_counts": {
+    "purchase_orders": 10000,
+    "shipments": 15000,
+    "inspections": 20000,
+    "quarantined_records": 8
+  },
+  "classification_policy": {
+    "at_risk": "Observed delivery score < 75 OR observed quality score < 90, unless overall confidence is Low (Sparse Data). A No Data fallback does not trigger a guardrail.",
+    "policy_status": "Fixed illustrative business rules; not tuned on the holdout labels."
+  },
+  "ground_truth_used_as_features": false,
+  "at_risk_binary_evaluation": {
+    "positive_class": "At Risk",
+    "true_positive": 382,
+    "false_positive": 16,
+    "true_negative": 584,
+    "false_negative": 18,
+    "precision": 0.9598,
+    "recall": 0.955
+  },
+  "ci_acceptance_thresholds": {
+    "minimum_precision": 0.9,
+    "minimum_recall": 0.9,
+    "passed": true
+  },
+  "source_workflow": {
+    "name": "Python tests",
+    "run_number": 129,
+    "run_id": 41282726822,
+    "commit": "e1e7a3be4a6c182d482dc7a882329452f0111dec",
+    "url": "https://github.com/Nandan-26/supplier-reliability-scoring/actions/runs/41282726822"
+  },
+  "notes": [
+    "This is separate from data/ground_truth_evaluation.json, which evaluates the committed dataset generated with seed 20261022.",
+    "Both datasets are synthetic; the metrics demonstrate reproducibility against generated labels, not validated performance on real supplier data.",
+    "The holdout script generates its dataset in a temporary directory during CI. This committed summary records the successful CI run output."
+  ]
+}
