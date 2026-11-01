@@ -32,6 +32,19 @@ def test_purchase_order_status_events_capture_initial_and_fulfilled_states():
         ).fetchone()[0]
         assert transitions == fulfilled
 
+        timestamp_mismatch = con.execute("""
+            SELECT COUNT(*)
+            FROM purchase_order_status_events ev
+            WHERE ev.previous_status = 'Issued' AND ev.new_status = 'Fulfilled'
+              AND ev.changed_at < (
+                  SELECT MAX(de.system_available_at)
+                  FROM shipments s
+                  JOIN delivery_events de ON de.shipment_id = s.shipment_id
+                  WHERE s.po_id = ev.po_id
+              )
+        """).fetchone()[0]
+        assert timestamp_mismatch == 0
+
         mismatch = con.execute("""
             SELECT COUNT(*)
             FROM purchase_orders po
