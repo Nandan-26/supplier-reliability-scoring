@@ -29,6 +29,8 @@ jobs:
         run: python scripts/validate_full_dataset.py
       - name: Verify full-scale reproducibility with table and artifact SHA-256 checksums
         run: python scripts/check_reproducibility.py --output "$RUNNER_TEMP/reproducibility_report.json"
+      - name: Generate the active database for scoring evaluation
+        run: python scripts/refresh_dataset.py
       - name: Regenerate active-dataset scores and policy evaluation
         run: |
           python -m src.scoring
