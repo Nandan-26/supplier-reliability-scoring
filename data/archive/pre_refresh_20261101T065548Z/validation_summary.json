@@ -1,0 +1,122 @@
+{
+  "created_at_utc": "2026-11-01T06:53:52.193683+00:00",
+  "database": "data/supplier_scoring.db",
+  "sqlite_integrity_check": "ok",
+  "sqlite_integrity_passed": true,
+  "foreign_key_violation_count": 0,
+  "foreign_key_check_passed": true,
+  "expected_record_counts": {
+    "suppliers": {
+      "expected": 1000,
+      "actual": 1000,
+      "passed": true
+    },
+    "purchase_orders": {
+      "expected": 10000,
+      "actual": 10000,
+      "passed": true
+    },
+    "shipments": {
+      "expected": 15000,
+      "actual": 15000,
+      "passed": true
+    },
+    "delivery_events": {
+      "expected": 15000,
+      "actual": 15000,
+      "passed": true
+    },
+    "inspections": {
+      "expected": 20000,
+      "actual": 20000,
+      "passed": true
+    }
+  },
+  "business_rule_violation_counts": {
+    "cancelled_purchase_orders_have_no_shipments": 0,
+    "cancelled_purchase_orders_have_no_invoices": 0,
+    "over_shipped_po_lines": 0,
+    "delivery_quantity_over_shipment": 0,
+    "fulfilled_purchase_orders_with_short_lines": 0,
+    "quarantine_rows_without_reason": 0,
+    "duplicate_supplier_scores_within_run": 0,
+    "inspection_quantity_over_delivery": 0,
+    "invoice_quantity_over_delivery": 0,
+    "invoice_before_latest_delivery": 0
+  },
+  "business_rule_checks_passed": true,
+  "score_range_checks": [
+    {
+      "column": "delivery_score",
+      "historical_values_outside_0_to_100": 0,
+      "latest_run_values_outside_0_to_100": 0,
+      "historical_passed": true,
+      "latest_run_passed": true
+    },
+    {
+      "column": "quality_score",
+      "historical_values_outside_0_to_100": 0,
+      "latest_run_values_outside_0_to_100": 0,
+      "historical_passed": true,
+      "latest_run_passed": true
+    },
+    {
+      "column": "cost_score",
+      "historical_values_outside_0_to_100": 0,
+      "latest_run_values_outside_0_to_100": 0,
+      "historical_passed": true,
+      "latest_run_passed": true
+    },
+    {
+      "column": "capacity_score",
+      "historical_values_outside_0_to_100": 0,
+      "latest_run_values_outside_0_to_100": 0,
+      "historical_passed": true,
+      "latest_run_passed": true
+    },
+    {
+      "column": "compliance_score",
+      "historical_values_outside_0_to_100": 0,
+      "latest_run_values_outside_0_to_100": 0,
+      "historical_passed": true,
+      "latest_run_passed": true
+    },
+    {
+      "column": "disruption_score",
+      "historical_values_outside_0_to_100": 0,
+      "latest_run_values_outside_0_to_100": 0,
+      "historical_passed": true,
+      "latest_run_passed": true
+    },
+    {
+      "column": "final_score",
+      "historical_values_outside_0_to_100": 0,
+      "latest_run_values_outside_0_to_100": 0,
+      "historical_passed": true,
+      "latest_run_passed": true
+    }
+  ],
+  "latest_run_id": "RUN-6f1f2190",
+  "latest_run_timestamp_column": "run_timestamp",
+  "latest_run_passed": true,
+  "table_row_counts": {
+    "contracts": 1000,
+    "delivery_events": 15000,
+    "inspections": 20000,
+    "invoice_lines": 7104,
+    "invoices": 4763,
+    "po_lines": 14901,
+    "purchase_order_status_events": 15175,
+    "purchase_orders": 10000,
+    "quarantine_log": 8,
+    "risk_signals": 264,
+    "score_runs": 1,
+    "shipments": 15000,
+    "sites": 1485,
+    "supplier_scores": 1000,
+    "suppliers": 1000
+  },
+  "foreign_key_violations": [],
+  "historical_score_checks_passed": true,
+  "overall_passed": true
+}

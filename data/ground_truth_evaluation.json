@@ -1,8 +1,8 @@
 {
-  "run_id": "RUN-6f1f2190",
+  "run_id": "RUN-a0498262",
   "as_of_date": "2026-12-31",
   "classification_policy": {
-    "At Risk": "delivery_score < 75 OR quality_score < 90, unless confidence is Low (Sparse Data)",
+    "At Risk": "observed delivery_score < 75 OR observed quality_score < 90, unless confidence is Low (Sparse Data); No Data fallbacks do not trigger a guardrail",
     "Reliable": "final_score >= 80 and neither dimension guardrail is breached",
     "Watch": "no dimension guardrail breached and final_score < 80",
     "Insufficient Evidence": "overall confidence is Low (Sparse Data)",
