@@ -7,13 +7,19 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 
 
-def classify(score, confidence):
+def classify(score, confidence, delivery_score, quality_score):
+    """Apply explicit dimension guardrails before the composite score bands.
+
+    A strong result in unrelated dimensions must not hide a serious delivery
+    or quality failure. These fixed business-rule thresholds are not fitted
+    to the evaluation labels.
+    """
     if confidence == "Low (Sparse Data)":
         return "Insufficient Evidence"
+    if delivery_score < 75 or quality_score < 90:
+        return "At Risk"
     if score >= 80:
         return "Reliable"
-    if score < 65:
-        return "At Risk"
     return "Watch"
 
 
@@ -67,6 +73,7 @@ def evaluate(db_path, ground_truth_path, output_path):
                 GROUP BY po.supplier_id
             )
             SELECT ss.supplier_id, ss.final_score, ss.overall_confidence_tier,
+                   ss.delivery_score, ss.quality_score,
                    COALESCE(1.0 * d.on_time_lines / NULLIF(d.total_lines, 0), 0) AS observed_on_time_rate,
                    COALESCE(q.defective / NULLIF(q.inspected, 0), 0) AS observed_defect_rate,
                    ss.delivery_sample_count, ss.quality_sample_count
@@ -92,7 +99,10 @@ def evaluate(db_path, ground_truth_path, output_path):
                 "quality_issues": "At Risk",
                 "sparse_history": "Insufficient Evidence",
             }.get(expected_profile, "Unlabelled")
-            actual_class = classify(row["final_score"], row["overall_confidence_tier"])
+            actual_class = classify(
+                row["final_score"], row["overall_confidence_tier"],
+                row["delivery_score"], row["quality_score"]
+            )
             expected_risk = expected_class == "At Risk"
             actual_risk = actual_class == "At Risk"
             if expected_risk and actual_risk: tp += 1
@@ -128,10 +138,11 @@ def evaluate(db_path, ground_truth_path, output_path):
             "run_id": run["run_id"],
             "as_of_date": run["as_of_date"],
             "classification_policy": {
-                "Reliable": "final_score >= 80 and confidence is not Low (Sparse Data)",
-                "Watch": "65 <= final_score < 80 and confidence is not Low (Sparse Data)",
-                "At Risk": "final_score < 65 and confidence is not Low (Sparse Data)",
+                "At Risk": "delivery_score < 75 OR quality_score < 90, unless confidence is Low (Sparse Data)",
+                "Reliable": "final_score >= 80 and neither dimension guardrail is breached",
+                "Watch": "no dimension guardrail breached and final_score < 80",
                 "Insufficient Evidence": "overall confidence is Low (Sparse Data)",
+                "policy_note": "Dimension guardrails are fixed domain rules, not thresholds optimized against the reported evaluation set.",
             },
             "supplier_count_evaluated": total,
             "expected_vs_observed_mean_absolute_error": {
