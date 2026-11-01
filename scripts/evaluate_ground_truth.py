@@ -75,7 +75,7 @@ def evaluate(db_path, ground_truth_path, output_path):
             LEFT JOIN quality q ON q.supplier_id = ss.supplier_id
             WHERE ss.run_id = ?
             ORDER BY ss.supplier_id
-        """, (run["as_of_date"],) * 7 + (run["as_of_date"],) * 6 + (run["run_id"],)).fetchall()
+        """, (run["as_of_date"],) * 7 + (run["as_of_date"],) * 7 + (run["run_id"],)).fetchall()
 
         details = []
         tp = fp = tn = fn = 0
