@@ -90,7 +90,7 @@ See [`data/DATA_DICTIONARY.md`](data/DATA_DICTIONARY.md) for field-level types, 
 - `data/validation_summary.json` — SQLite integrity, foreign-key, expected-count, and score-range checks.
 - `data/source_manifest.json` — source hashes, database hash, counts, and export paths.
 - `data/ground_truth_evaluation.json` — latest-run expected-vs-observed supplier metrics, classification comparison, and binary at-risk confusion counts; the prior report is archived before each refresh.
-- `data/holdout_evaluation.json` — committed summary of the independent seed `20261023` CI holdout (1,000 suppliers): 95.98% precision and 95.50% recall (382 TP, 16 FP, 584 TN, 18 FN). This is separate from the active seed `20261022` evaluation in `ground_truth_evaluation.json`; both are synthetic evaluations, not real-world validation. Source: [CI run #129](https://github.com/Nandan-26/supplier-reliability-scoring/actions/runs/41282726822).
+- `data/holdout_evaluation.json` — committed summary of the independent seed `20261023` CI holdout. Its metrics are tied to the exact scoring-policy version and workflow run recorded in the file; do not reuse earlier V1/V2 figures after changing policy.
 
 Historical score anomalies are retained for traceability and are documented in [the historical score anomaly report](data/historical_score_anomalies.md). A latest scoring run can pass while the overall historical validation remains failed; inspect the individual checks rather than treating the latest-run result as a complete pass.
 
@@ -106,7 +106,7 @@ The independent holdout is a second synthetic dataset, generated in CI with seed
 | Recall | **95.50%** |
 | CI minimum precision / recall | 90% / 90% — **passed** |
 
-See [the committed holdout report](data/holdout_evaluation.json) and [CI workflow #129](https://github.com/Nandan-26/supplier-reliability-scoring/actions/runs/41282726822). The active seed-20261022 report in [ground_truth_evaluation.json](data/ground_truth_evaluation.json) currently reports 95.05% precision and 96.00% recall (384 TP, 20 FP, 580 TN, 16 FN). These reports evaluate different generated datasets, so their confusion counts and metrics should not be combined. Both evaluations are synthetic and do not establish performance on real supplier data.
+See [the committed holdout report](data/holdout_evaluation.json) for the latest policy-versioned holdout results. The active seed-20261022 report in [ground_truth_evaluation.json](data/ground_truth_evaluation.json) evaluates a different generated dataset. Never compare or combine confusion counts across seeds or policy versions. Both evaluations are synthetic and do not establish performance on real supplier data.
 
 ## 9. Repository layout
 
@@ -173,3 +173,6 @@ The previous committed dataset is preserved under [`data/archive/pre_refresh_202
 - The quarantine log stores three general malformed examples plus five labelled challenge edge cases; it is a reproducible assessment fixture, not a general-purpose production ingestion or remediation queue.
 - The invoice model is simplified and does not represent every real-world advance-billing, credit-note, or multi-stage payment workflow.
 - A production implementation would need access controls, audit logging, data-retention policies, monitoring, policy ownership, and human review of consequential supplier decisions.
+
+
+**Synthetic-data caveat:** The generator's profile mix includes 40% adverse-profile suppliers and 10% sparse-history suppliers. This is a deliberately constructed test distribution, not an estimate of real-world supplier risk prevalence. Sparse-history suppliers must meet the minimum of five delivery observations and five quality observations before receiving a firm Reliable/Watch/At Risk decision.
