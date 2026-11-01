@@ -33,28 +33,28 @@ Column definitions below are generated from `data/schema.sql` and supplemented w
 | po_lines | po_line_id | TEXT | Yes | — | Composite PK (po_line_id, po_id) | Identifier format and/or application-level domain validation; see generator/scorer |
 | po_lines | po_id | TEXT | Yes | — | Composite PK (po_line_id, po_id) | Identifier format and/or application-level domain validation; see generator/scorer |
 | po_lines | item_code | TEXT | Yes | — | No | Identifier format and/or application-level domain validation; see generator/scorer |
-| po_lines | ordered_qty | REAL | Yes | item quantity; strictly positive | No | CHECK: `ordered_qty > 0`; cumulative shipped quantity must not exceed ordered quantity |
+| po_lines | ordered_qty | REAL | Yes | Item quantity; greater than zero | No | CHECK: `ordered_qty > 0`; cumulative shipped quantity is capped at the ordered quantity |
 | po_lines | unit_price | REAL | Yes | synthetic currency units per item; unit_price >= 0 | No | CHECK: unit_price >= 0 |
 | po_lines | requested_delivery_date | TEXT | Yes | — | No | ISO 8601 date/time representation |
 | po_lines | system_available_at | TEXT | Yes | — | No | Point-in-time filter: must be <= scoring as-of date; ISO 8601 date/time representation |
 | shipments | shipment_id | TEXT | Yes | — | Primary key | Identifier format and/or application-level domain validation; see generator/scorer |
 | shipments | po_line_id | TEXT | Yes | — | No | Identifier format and/or application-level domain validation; see generator/scorer |
 | shipments | po_id | TEXT | Yes | — | No | Identifier format and/or application-level domain validation; see generator/scorer |
-| shipments | shipped_qty | REAL | Yes | item quantity; shipped_qty >= 0 | No | CHECK: shipped_qty >= 0; Must be non-negative; cross-row quantity reconciliation applies |
+| shipments | shipped_qty | REAL | Yes | Item quantity; zero or greater | No | CHECK: `shipped_qty >= 0`; cumulative shipped quantity cannot exceed the PO-line ordered quantity |
 | shipments | dispatch_date | TEXT | Yes | — | No | ISO 8601 date/time representation |
 | shipments | expected_delivery_date | TEXT | Yes | — | No | ISO 8601 date/time representation |
 | shipments | system_available_at | TEXT | Yes | — | No | Point-in-time filter: must be <= scoring as-of date; ISO 8601 date/time representation |
 | delivery_events | delivery_event_id | TEXT | Yes | — | Primary key | Identifier format and/or application-level domain validation; see generator/scorer |
 | delivery_events | shipment_id | TEXT | Yes | — | No | Identifier format and/or application-level domain validation; see generator/scorer |
 | delivery_events | actual_delivery_date | TEXT | Yes | — | No | ISO 8601 date/time representation |
-| delivery_events | delivered_qty | REAL | Yes | item quantity; delivered_qty >= 0 | No | CHECK: delivered_qty >= 0; Must be non-negative; cross-row quantity reconciliation applies |
+| delivery_events | delivered_qty | REAL | Yes | Item quantity; zero or greater | No | CHECK: `delivered_qty >= 0`; cumulative delivered quantity cannot exceed the shipment quantity |
 | delivery_events | receiver_notes | TEXT | No | NULL allowed | No | Identifier format and/or application-level domain validation; see generator/scorer |
 | delivery_events | system_available_at | TEXT | Yes | — | No | Point-in-time filter: must be <= scoring as-of date; ISO 8601 date/time representation |
 | inspections | inspection_id | TEXT | Yes | — | Primary key | Identifier format and/or application-level domain validation; see generator/scorer |
 | inspections | delivery_event_id | TEXT | Yes | — | No | Identifier format and/or application-level domain validation; see generator/scorer |
 | inspections | inspection_date | TEXT | Yes | — | No | ISO 8601 date/time representation |
-| inspections | inspected_qty | REAL | Yes | item quantity; strictly positive | No | CHECK: `inspected_qty > 0`; cumulative inspected quantity must not exceed delivered quantity |
-| inspections | defective_qty | REAL | Yes | item quantity; defective_qty >= 0 | No | CHECK: defective_qty >= 0; Must be non-negative; cross-row quantity reconciliation applies |
+| inspections | inspected_qty | REAL | Yes | Item quantity; greater than zero | No | CHECK: `inspected_qty > 0`; cumulative inspected quantity is capped at the delivery quantity |
+| inspections | defective_qty | REAL | Yes | Item quantity; zero or greater, and no greater than inspected quantity | No | CHECK: `defective_qty >= 0` and `defective_qty <= inspected_qty` |
 | inspections | result_status | TEXT | No | Passed / Failed / Conditionally Accepted; NULL allowed | No | CHECK: result_status IN ('Passed', 'Failed', 'Conditionally Accepted') |
 | inspections | system_available_at | TEXT | Yes | — | No | Point-in-time filter: must be <= scoring as-of date; ISO 8601 date/time representation |
 | invoices | invoice_id | TEXT | Yes | — | Composite PK (invoice_id, po_id) | Identifier format and/or application-level domain validation; see generator/scorer |
