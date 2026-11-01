@@ -7,7 +7,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 
 
-def classify(score, confidence, delivery_score, quality_score):
+def classify(score, confidence, delivery_score, quality_score, delivery_sample_count, quality_sample_count):
     """Apply explicit dimension guardrails before the composite score bands.
 
     A strong result in unrelated dimensions must not hide a serious delivery
@@ -16,7 +16,10 @@ def classify(score, confidence, delivery_score, quality_score):
     """
     if confidence == "Low (Sparse Data)":
         return "Insufficient Evidence"
-    if delivery_score < 75 or quality_score < 90:
+    if (
+        (delivery_sample_count > 0 and delivery_score < 75)
+        or (quality_sample_count > 0 and quality_score < 90)
+    ):
         return "At Risk"
     if score >= 80:
         return "Reliable"
@@ -101,7 +104,8 @@ def evaluate(db_path, ground_truth_path, output_path):
             }.get(expected_profile, "Unlabelled")
             actual_class = classify(
                 row["final_score"], row["overall_confidence_tier"],
-                row["delivery_score"], row["quality_score"]
+                row["delivery_score"], row["quality_score"],
+                row["delivery_sample_count"], row["quality_sample_count"]
             )
             expected_risk = expected_class == "At Risk"
             actual_risk = actual_class == "At Risk"
@@ -138,7 +142,7 @@ def evaluate(db_path, ground_truth_path, output_path):
             "run_id": run["run_id"],
             "as_of_date": run["as_of_date"],
             "classification_policy": {
-                "At Risk": "delivery_score < 75 OR quality_score < 90, unless confidence is Low (Sparse Data)",
+                "At Risk": "observed delivery_score < 75 OR observed quality_score < 90, unless confidence is Low (Sparse Data); No Data fallbacks do not trigger a guardrail",
                 "Reliable": "final_score >= 80 and neither dimension guardrail is breached",
                 "Watch": "no dimension guardrail breached and final_score < 80",
                 "Insufficient Evidence": "overall confidence is Low (Sparse Data)",
