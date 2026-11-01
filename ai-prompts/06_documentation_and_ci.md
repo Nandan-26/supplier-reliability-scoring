@@ -1,3 +1,5 @@
+> **AI tool:** Not verified from the retained record. **Record status:** reconstructed summary; not a verbatim historical prompt. See [the prompt-history README](README.md).
+
 # Reconstructed Prompt 6 — Documentation, Reproducibility, and CI
 
 I want to prepare the Supplier Reliability Scoring Engine repository for public GitHub presentation and entry-level software/data engineering portfolio review.
