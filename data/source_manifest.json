@@ -1,7 +1,7 @@
 {
-  "created_at_utc": "2026-11-01T08:10:39.565708+00:00",
+  "created_at_utc": "2026-11-01T11:47:59.151467+00:00",
   "database": "data/supplier_scoring.db",
-  "database_sha256": "a3655e18382ce0a20941b672b463a224c5a5de01f5b4409ee548f08451893a6b",
+  "database_sha256": "e0bba72cc9437e52132ece779ae18a3f1664a521ad231c2a9a1ce2c81c5a5886",
   "configured_default_seed": 20261022,
   "seed_note": "score_runs.random_seed records the generation seed when known; NULL means the scorer could not verify it. configured_default_seed is the generator default, not proof that an older database used that seed.",
   "table_row_counts": {
@@ -48,6 +48,6 @@
   ],
   "validation_summary": "data/validation_summary.json",
   "generation_metadata": "data/generation_metadata.json",
-  "generation_metadata_sha256": "7871712754b250fc931a1830485c4a26745ff7072b6f915481b911a884e3d3fd",
+  "generation_metadata_sha256": "1edcdf62fe89028e760879b8a6217bbef139d5c68d467bcb411b3383ec2be3f6",
   "ground_truth_evaluation": "data/ground_truth_evaluation.json"
 }
