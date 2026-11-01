@@ -421,6 +421,19 @@ def main(
                 generation_metadata_path
             )
 
+        # Record both evaluation reports when they are present. The holdout
+        # report may be a retained snapshot locally; CI also publishes a fresh
+        # independently generated holdout report as a workflow artifact.
+        for report_name in (
+            "ground_truth_evaluation.json",
+            "holdout_evaluation.json",
+        ):
+            report_path = db_path.parent / report_name
+            if report_path.exists():
+                report_key = report_path.stem
+                source_manifest[report_key] = display_path(report_path)
+                source_manifest[f"{report_key}_sha256"] = sha256(report_path)
+
         manifest_path.write_text(
             json.dumps(source_manifest, indent=2),
             encoding="utf-8",
