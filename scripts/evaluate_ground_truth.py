@@ -81,6 +81,7 @@ def evaluate(db_path, ground_truth_path, output_path):
                    COALESCE(q.defective / NULLIF(q.inspected, 0), 0) AS observed_defect_rate,
                    ss.delivery_sample_count, ss.quality_sample_count
             FROM supplier_scores ss
+            JOIN supplier_decisions sd ON sd.score_id = ss.score_id
             LEFT JOIN delivery d ON d.supplier_id = ss.supplier_id
             LEFT JOIN quality q ON q.supplier_id = ss.supplier_id
             WHERE ss.run_id = ?
