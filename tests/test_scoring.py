@@ -560,3 +560,24 @@ def test_late_available_po_line_is_excluded_from_all_operational_dimensions():
         conn.close()
 
     assert after == before
+
+
+def test_no_adverse_risk_signals_score_100_and_decision_is_persisted():
+    run_id = calculate_supplier_scores(as_of_date="2026-12-31", db_path=TEST_DB_PATH)
+    conn = get_connection(TEST_DB_PATH)
+    try:
+        row = conn.execute("""
+            SELECT ss.compliance_score, ss.disruption_score,
+                   sd.classification, sd.decision_reason, sd.policy_version
+            FROM supplier_scores ss
+            JOIN supplier_decisions sd ON sd.score_id = ss.score_id
+            WHERE ss.run_id = ? AND ss.supplier_id = 'SUP-000001';
+        """, (run_id,)).fetchone()
+    finally:
+        conn.close()
+    assert row is not None
+    assert row[0] == 100.0
+    assert row[1] == 100.0
+    assert row[2] in {"Reliable", "Watch", "At Risk", "Insufficient Evidence"}
+    assert row[3]
+    assert row[4] == "guardrails-v1"
