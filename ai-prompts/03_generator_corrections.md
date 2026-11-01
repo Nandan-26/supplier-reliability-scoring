@@ -1,3 +1,5 @@
+> **AI tool:** Gemini (identified by the candidate). **Record status:** original prompt text.
+
 # Original Prompt 3 — Generator Debugging and Corrections
 
 I reviewed the generator carefully, and I found some issues we need to fix before I run it on my PC.
