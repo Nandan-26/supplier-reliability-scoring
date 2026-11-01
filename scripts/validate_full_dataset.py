@@ -124,8 +124,8 @@ def main():
             """).fetchone()[0]
             check(fulfilled_events == fulfilled_pos,
                   "Fulfilled purchase orders must have a matching lifecycle transition.")
-            check(counts["quarantine_log"] == 3,
-                  f"Expected three detected malformed records in quarantine, got {counts['quarantine_log']}.")
+            check(counts["quarantine_log"] == 8,
+                  f"Expected three general malformed records plus five labelled edge cases, got {counts['quarantine_log']}.")
 
             queries = {
                 "cancelled_po_shipments": """SELECT COUNT(*) FROM shipments s JOIN purchase_orders p ON p.po_id=s.po_id WHERE p.status='Cancelled'""",
