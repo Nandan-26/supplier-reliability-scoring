@@ -269,6 +269,9 @@ def test_detected_malformed_records_are_persisted_in_quarantine():
     finally:
         conn.close()
 
-    assert len(rows) == len(malformed) == 3
+    assert len(rows) == len(malformed) == 8
     assert all(row[2] for row in rows)
     assert all(json.loads(row[1]) for row in rows)
+    labelled = {case.get("edge_case_id") for case in malformed if case.get("edge_case_id")}
+    assert labelled == {"EC-01", "EC-02", "EC-03", "EC-04", "EC-05"}
+    assert all(case.get("detected_reasons") for case in malformed if case.get("edge_case_id"))
