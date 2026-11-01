@@ -430,3 +430,47 @@ CREATE INDEX IF NOT EXISTS idx_delivery_events_point_in_time ON delivery_events(
 CREATE INDEX IF NOT EXISTS idx_inspections_point_in_time ON inspections(inspection_date, system_available_at, delivery_event_id);
 CREATE INDEX IF NOT EXISTS idx_invoice_lines_point_in_time ON invoice_lines(system_available_at, po_id, po_line_id);
 CREATE INDEX IF NOT EXISTS idx_risk_signals_point_in_time ON risk_signals(signal_date, system_available_at, supplier_id);
+
+-- Append-only purchase-order lifecycle history. One row is recorded for
+-- initial state creation and each subsequent status transition.
+CREATE TABLE IF NOT EXISTS purchase_order_status_events (
+    event_id TEXT PRIMARY KEY,
+    po_id TEXT NOT NULL,
+    previous_status TEXT,
+    new_status TEXT NOT NULL CHECK(new_status IN ('Draft', 'Issued', 'Fulfilled', 'Cancelled')),
+    changed_at TEXT NOT NULL,
+    changed_by TEXT NOT NULL,
+    reason TEXT NOT NULL,
+    FOREIGN KEY (po_id) REFERENCES purchase_orders(po_id) ON DELETE CASCADE,
+    CHECK(previous_status IS NULL OR previous_status IN ('Draft', 'Issued', 'Fulfilled', 'Cancelled')),
+    CHECK(previous_status IS NULL OR previous_status <> new_status)
+);
+
+CREATE INDEX IF NOT EXISTS idx_po_status_events_po_time
+ON purchase_order_status_events(po_id, changed_at, event_id);
+
+CREATE TRIGGER IF NOT EXISTS trg_po_status_event_insert
+AFTER INSERT ON purchase_orders
+BEGIN
+    INSERT INTO purchase_order_status_events
+        (event_id, po_id, previous_status, new_status, changed_at, changed_by, reason)
+    VALUES (
+        'POEV-' || NEW.po_id || '-01',
+        NEW.po_id, NULL, NEW.status, NEW.system_available_at,
+        'data_generator', 'Initial purchase-order status'
+    );
+END;
+
+CREATE TRIGGER IF NOT EXISTS trg_po_status_event_update
+AFTER UPDATE OF status ON purchase_orders
+WHEN OLD.status IS NOT NEW.status
+BEGIN
+    INSERT INTO purchase_order_status_events
+        (event_id, po_id, previous_status, new_status, changed_at, changed_by, reason)
+    VALUES (
+        'POEV-' || NEW.po_id || '-' ||
+        printf('%02d', (SELECT COUNT(*) + 1 FROM purchase_order_status_events WHERE po_id = NEW.po_id)),
+        NEW.po_id, OLD.status, NEW.status, NEW.system_available_at,
+        'data_generator', 'Purchase-order lifecycle transition'
+    );
+END;
