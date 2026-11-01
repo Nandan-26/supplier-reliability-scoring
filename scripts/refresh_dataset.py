@@ -13,8 +13,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
-from src.generator import generate_synthetic_data
-from src.scoring import calculate_supplier_scores
+from src.generator import GENERATOR_VERSION, generate_synthetic_data
+from src.scoring import SCORING_CONFIG_VERSION, SCORING_ENGINE_VERSION, calculate_supplier_scores
 from src.export_artifacts import main as export_artifacts
 from scripts.evaluate_ground_truth import evaluate as evaluate_ground_truth
 
@@ -85,8 +85,10 @@ def main():
 
     metadata = {
         "generated_at_utc": datetime.now(timezone.utc).isoformat(),
-        "generator_version": "1.1.0",
-        "scoring_config_version": "v1.1",
+        "generator_version": GENERATOR_VERSION,  # Backward-compatible data-generator version.
+        "data_generator_version": GENERATOR_VERSION,
+        "scoring_engine_version": SCORING_ENGINE_VERSION,
+        "scoring_config_version": SCORING_CONFIG_VERSION,
         "random_seed": SEED,
         "as_of_date": AS_OF_DATE,
         "score_run_id": run_id,
