@@ -31,3 +31,9 @@ All metrics are calculated only from records eligible at the selected as-of date
 
 ## Point-in-time rule
 A record is eligible only when both its business-event date and system_available_at are on or before as_of_date. Every published metric must identify its as_of_date, entity grain, numerator, denominator and eligible-row filters.
+
+## Risk classification policy
+
+The composite score is accompanied by two explainable risk guardrails: an observed delivery score below 75 or an observed quality score below 90 marks a supplier At Risk, unless overall confidence is Low (Sparse Data). A dimension with zero observations does not trigger its guardrail; the neutral No Data fallback is not evidence of poor performance. Suppliers that do not breach either guardrail are classified using the composite score bands. These are illustrative business rules and should be reviewed with procurement stakeholders.
+
+The policy is checked on a separate full-scale synthetic holdout generated with seed `20261023`; the committed evaluation dataset uses seed `20261022`. Ground-truth profile labels are used only for evaluation, never as scoring features. CI requires at least 90% precision and 90% recall on the independent holdout.
