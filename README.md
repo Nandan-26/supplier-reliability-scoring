@@ -6,6 +6,22 @@ A Python and SQLite assessment project that generates synthetic procurement data
 
 > **Scope:** This is a synthetic assessment project, not a production procurement system. Scoring weights, thresholds, and fallback values are illustrative assumptions and require business validation before operational use.
 
+## Architecture
+
+```mermaid
+flowchart TD
+    A[Synthetic procurement profiles and source records] --> B[Data generator]
+    B --> C[SQLite relational database]
+    B --> D[Malformed-record validation and quarantine]
+    C --> E[Point-in-time supplier scoring]
+    E --> F[Delivery and quality guardrails]
+    F --> G[Persisted supplier decisions]
+    C --> H[CSV exports and validation manifest]
+    G --> I[Ground-truth and independent holdout evaluation]
+    H --> J[Reproducible reports]
+    I --> J
+```
+
 ## 1. What the project does
 
 1. Generates synthetic suppliers, sites, contracts, purchase orders, shipments, delivery events, inspections, invoices, and risk signals.
@@ -77,7 +93,7 @@ python scripts/check_reproducibility.py
 python scripts/evaluate_ground_truth.py
 ```
 
-The full-dataset validator generates the 1,000-supplier dataset in a temporary directory, checks business rules, all five labelled edge-case fixtures, PO lifecycle history, profile-level ground truth, relational integrity, score ranges, and the CSV/manifest/validation exporter. CI also runs `check_reproducibility.py` at the full 1,000-supplier scale: it generates twice in isolated directories and compares every table row count, deterministic CSV SHA-256, ground-truth JSON and malformed-record JSON. `evaluate_ground_truth.py` compares expected supplier profiles with observed delivery/quality metrics and the latest score classifications, then reports differences, confusion counts, precision and recall. It then audits the active committed database and the archived pre-refresh database independently. Temporary validation files are removed; neither committed database is modified by this test.
+The full-dataset validator generates the 1,000-supplier dataset in a temporary directory, checks business rules, all five labelled edge-case fixtures, PO lifecycle history, profile-level ground truth, relational integrity, score ranges, and the CSV/manifest/validation exporter. CI also runs `check_reproducibility.py` at the full 1,000-supplier scale: it generates twice in isolated directories and compares every table row count, deterministic CSV SHA-256, ground-truth JSON and malformed-record JSON. `evaluate_ground_truth.py` compares expected supplier profiles with observed delivery/quality metrics and the latest score classifications, then reports differences, confusion counts, precision and recall. The independent holdout evaluator uses a separate seed and dataset. Temporary validation files are removed; validation databases are isolated from the repository's generated artifacts.
 
 The independent holdout check generates a separate 1,000-supplier dataset with seed `20261023` and evaluates the fixed observed-delivery (<75) and observed-quality (<90) risk guardrails without tuning them on the committed seed. CI requires at least 90% precision and 90% recall on that holdout. The committed result and confusion counts are documented separately below. The tests cover schema constraints, requested generation counts, reproducibility, shipment relationships, malformed-case detection, scoring ranges, missing history, point-in-time leakage, capacity aggregation, inspection aggregation, and delivery scoring. A test result applies only to the code and environment in which it was actually run.
 
@@ -88,9 +104,23 @@ See [`data/DATA_DICTIONARY.md`](data/DATA_DICTIONARY.md) for field-level types, 
 `python -m src.export_artifacts` writes:
 - `data/exports/*.csv` — CSV exports of database tables.
 - `data/validation_summary.json` — SQLite integrity, foreign-key, expected-count, and score-range checks.
-- `data/source_manifest.json` — source hashes, database hash, counts, and export paths.
-- `data/ground_truth_evaluation.json` — latest-run expected-vs-observed supplier metrics, classification comparison, and binary at-risk confusion counts; the prior report is archived before each refresh.
+- `data/source_manifest.json` — source and evaluation-artifact SHA-256 hashes, database hash, table counts, and export paths.
+- `data/ground_truth_evaluation.json` — current active-dataset expected-vs-observed supplier metrics, classification comparison, and binary at-risk confusion counts.
 - `data/holdout_evaluation.json` — a retained historical holdout snapshot. For current results, use the fresh `holdout_evaluation.json` attached to the latest successful `Python tests` workflow run.
+### Active-dataset classification evaluation
+
+The committed active dataset uses seed `20261022` and contains 1,000 synthetic suppliers. Its current evaluation report (`data/ground_truth_evaluation.json`) records the following binary `At Risk` results:
+
+| Metric | Result |
+|---|---:|
+| True positives | 381 |
+| False positives | 17 |
+| True negatives | 583 |
+| False negatives | 19 |
+| Precision | 95.73% |
+| Recall | 95.25% |
+
+These metrics measure agreement with the generator's synthetic ground-truth labels, not performance on real procurement data. The independent holdout uses a separate seed and is evaluated separately; do not combine the two confusion matrices.
 
 Historical score anomalies are retained for traceability and are documented in [the historical score anomaly report](data/historical_score_anomalies.md). A latest scoring run can pass while a legacy validation report contains failures; inspect the individual checks rather than treating an old report as a current failure.
 
@@ -148,11 +178,11 @@ supplier-reliability-scoring/
 └── README.md
 ```
 
-## 10. Current dataset and historical archive
+## 10. Current generated dataset
 
 The generated `data/supplier_scoring.db` (created locally and in CI, but not committed) and committed `data/exports/` correspond to a dataset generated with seed `20261022`. Refresh metadata distinguishes the synthetic data-generator version from the scoring-engine and scoring-policy versions. The run metadata is in `data/generation_metadata.json`; the validation result is in `data/validation_summary.json`; source hashes and export paths are in `data/source_manifest.json`.
 
-The previous committed dataset is preserved under [`data/archive/pre_refresh_20261101T065548Z/`](data/archive/pre_refresh_20261101T065548Z/), the archive path recorded in `data/generation_metadata.json` and `data/source_manifest.json`. Its legacy issues are summarized in [the historical archive report](data/historical_score_anomalies.md) and its original detailed report remains inside the archive. Do not use those legacy scores as current normalized scores.
+No generated SQLite database or historical dataset archive is committed. The database is rebuilt locally and in CI from the versioned generator and seed; the reproducible CSV/JSON exports in `data/` describe the active synthetic dataset. Historical score anomalies from earlier development runs are summarized in [the historical score anomaly report](data/historical_score_anomalies.md) and should not be interpreted as current normalized scores.
 
 ## 11. Limitations
 
