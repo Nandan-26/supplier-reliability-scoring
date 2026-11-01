@@ -8,11 +8,11 @@ A Python and SQLite assessment project that generates synthetic procurement data
 
 1. Generates synthetic suppliers, sites, contracts, purchase orders, shipments, delivery events, inspections, invoices, and risk signals.
 2. Stores valid baseline records in SQLite with relational constraints.
-3. Detects representative malformed challenge examples, records them in `quarantine_log`, and exports the annotated payloads to `data/malformed_cases.json`.
+3. Detects malformed source payloads, records them in `quarantine_log`, and exports annotated payloads to `data/malformed_cases.json`; five labelled Round 2 assessment fixtures are independently validated in `data/edge_case_fixtures.json` and never enter clean scoring inputs.
 4. Requires provenance on risk signals (`source`) and uses sequential `SCORE-2026-000001` identifiers for supplier score rows.
 5. Calculates supplier scores for a requested as-of date.
 6. Persists each scoring run and its supplier-level results.
-7. Exports CSV tables, a validation summary, and a source manifest.
+7. Records purchase-order initial states and status transitions in `purchase_order_status_events` using SQLite triggers.\n8. Exports CSV tables, a validation summary, and a source manifest.
 
 ## 2. Scoring dimensions
 
@@ -77,7 +77,7 @@ The tests cover schema constraints, requested generation counts, reproducibility
 
 ## 8. Validation artifacts
 
-See [`data/DATA_DICTIONARY.md`](data/DATA_DICTIONARY.md) for table grains, key fields, identifier conventions, relationships, and point-in-time field meanings. The five required assessment scenarios are catalogued in [`data/EDGE_CASE_CATALOGUE.md`](data/EDGE_CASE_CATALOGUE.md); the catalogue explicitly distinguishes defined scenarios from scenarios not yet fully injected and tested.
+See [`data/DATA_DICTIONARY.md`](data/DATA_DICTIONARY.md) for table grains, key fields, identifier conventions, relationships, and point-in-time field meanings. The five labelled fixtures are in [`data/edge_case_fixtures.json`](data/edge_case_fixtures.json), validated by `src/edge_cases.py` and `tests/test_edge_cases.py`; the catalogue is [`data/EDGE_CASE_CATALOGUE.md`](data/EDGE_CASE_CATALOGUE.md). Metric definitions and denominators are documented in [`docs/METRICS.md`](docs/METRICS.md). Purchase-order status history is held in `purchase_order_status_events`.
 
 `python -m src.export_artifacts` writes:
 - `data/exports/*.csv` — CSV exports of database tables.
