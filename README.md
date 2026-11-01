@@ -98,15 +98,7 @@ Historical score anomalies are retained for traceability and are documented in [
 
 The independent holdout is a second synthetic dataset, generated in CI with seed `20261023` (1,000 suppliers). It is not the active committed database, which was generated with seed `20261022`. The fixed guardrail policy was evaluated without using ground-truth labels as scoring features and without tuning the thresholds on the holdout labels.
 
-| Holdout metric | Result |
-|---|---:|
-| True positives / false positives | 382 / 16 |
-| True negatives / false negatives | 584 / 18 |
-| Precision | **95.98%** |
-| Recall | **95.50%** |
-| CI minimum precision / recall | 90% / 90% — **passed** |
-
-See [the committed holdout report](data/holdout_evaluation.json) for the latest policy-versioned holdout results. The active seed-20261022 report in [ground_truth_evaluation.json](data/ground_truth_evaluation.json) evaluates a different generated dataset. Never compare or combine confusion counts across seeds or policy versions. Both evaluations are synthetic and do not establish performance on real supplier data.
+The CI workflow regenerates the active-dataset evaluation and the independent holdout on every pull request. The current policy-versioned outputs are published as the `supplier-risk-v2-evaluation-reports` workflow artifact; use the artifact attached to the latest successful run rather than copying older committed V1 metrics. The active dataset (seed `20261022`) and holdout (seed `20261023`) are different synthetic datasets. Never combine their confusion counts or compare results across policy versions. Neither evaluation establishes performance on real supplier data.
 
 ## 9. Repository layout
 
