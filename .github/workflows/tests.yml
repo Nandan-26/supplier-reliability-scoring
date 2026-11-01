@@ -36,6 +36,6 @@ jobs:
           name: supplier-risk-v2-evaluation-reports
           path: |
             data/ground_truth_evaluation.json
-            "$RUNNER_TEMP/holdout_evaluation.json"
-            "$RUNNER_TEMP/reproducibility_report.json"
+            ${{ runner.temp }}/holdout_evaluation.json
+            ${{ runner.temp }}/reproducibility_report.json
           if-no-files-found: error
