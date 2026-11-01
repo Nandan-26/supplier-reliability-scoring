@@ -90,6 +90,7 @@ See [`data/DATA_DICTIONARY.md`](data/DATA_DICTIONARY.md) for field-level types, 
 - `data/validation_summary.json` — SQLite integrity, foreign-key, expected-count, and score-range checks.
 - `data/source_manifest.json` — source hashes, database hash, counts, and export paths.
 - `data/ground_truth_evaluation.json` — latest-run expected-vs-observed supplier metrics, classification comparison, and binary at-risk confusion counts; the prior report is archived before each refresh.
+- `data/holdout_evaluation.json` — committed summary of the independent seed `20261023` CI holdout (1,000 suppliers): 95.98% precision and 95.50% recall (382 TP, 16 FP, 584 TN, 18 FN). This is separate from the active seed `20261022` evaluation in `ground_truth_evaluation.json`; both are synthetic evaluations, not real-world validation. Source: [CI run #129](https://github.com/Nandan-26/supplier-reliability-scoring/actions/runs/41282726822).
 
 Historical score anomalies are retained for traceability and are documented in [the historical score anomaly report](data/historical_score_anomalies.md). A latest scoring run can pass while the overall historical validation remains failed; inspect the individual checks rather than treating the latest-run result as a complete pass.
 
