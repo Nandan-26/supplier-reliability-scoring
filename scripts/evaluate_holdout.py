@@ -6,7 +6,12 @@ script does not tune them against the holdout labels.
 """
 import json
 import tempfile
+import sys
 from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
 
 from src.generator import generate_synthetic_data
 from src.scoring import calculate_supplier_scores
