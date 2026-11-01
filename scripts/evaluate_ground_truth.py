@@ -123,11 +123,12 @@ def evaluate(db_path, ground_truth_path, output_path):
             "as_of_date": run["as_of_date"],
             "classification_policy": {
                 "source": "Persisted supplier_decisions rows created by src.scoring",
-                "At Risk": "observed delivery_score < 75 OR observed quality_score < 90, unless confidence is Low (Sparse Data); No Data fallbacks do not trigger a guardrail",
-                "Reliable": "final_score >= 80 and neither dimension guardrail is breached",
-                "Watch": "no dimension guardrail breached and final_score < 80",
-                "Insufficient Evidence": "overall confidence is Low (Sparse Data)",
-                "policy_note": "Dimension guardrails are fixed domain rules, not thresholds optimized against the reported evaluation set.",
+                "Insufficient Evidence": "overall confidence is Low (Sparse Data) OR delivery_sample_count < 5 OR quality_sample_count < 5",
+                "At Risk": "delivery_sample_count >= 5 AND delivery_score < 75 OR quality_sample_count >= 5 AND quality_score < 90",
+                "Reliable": "minimum evidence is met, no dimension guardrail is breached, and final_score >= 80",
+                "Watch": "minimum evidence is met, no dimension guardrail is breached, and final_score < 80",
+                "policy_note": "Minimum evidence and dimension guardrails are fixed domain rules, not thresholds optimized against the reported evaluation set.",
+                "policy_version": "guardrails-v1",
             },
             "supplier_count_evaluated": total,
             "expected_vs_observed_mean_absolute_error": {
