@@ -8,6 +8,7 @@ from src.db import get_connection, initialize_database
 from src.edge_cases import evaluate_edge_case_catalogue, validate_edge_case
 
 ROOT_DIR = Path(__file__).resolve().parent.parent
+GENERATOR_VERSION = "1.1.0"
 
 def validate_payload(cursor: sqlite3.Cursor, table_name: str, payload: dict) -> list[str]:
     """Dynamically inspects a raw payload and verifies it against database state and business rules."""
