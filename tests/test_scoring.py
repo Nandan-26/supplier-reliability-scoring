@@ -3,7 +3,7 @@ import sqlite3
 import pytest
 from src.db import get_connection, initialize_database
 from src.generator import generate_synthetic_data
-from src.scoring import calculate_supplier_scores, validate_weights, DEFAULT_WEIGHTS
+from src.scoring import calculate_supplier_scores, validate_weights, DEFAULT_WEIGHTS, classify_supplier
 
 TEST_DB_PATH = Path("data/test_scoring.db")
 TEST_GT_PATH = Path("data/test_scoring_gt.json")
@@ -581,3 +581,23 @@ def test_no_adverse_risk_signals_score_100_and_decision_is_persisted():
     assert row[2] in {"Reliable", "Watch", "At Risk", "Insufficient Evidence"}
     assert row[3]
     assert row[4] == "guardrails-v1"
+
+
+
+@pytest.mark.parametrize(
+    "confidence,delivery_n,quality_n,expected",
+    [
+        ("High", 1, 20, "Insufficient Evidence"),
+        ("High", 20, 1, "Insufficient Evidence"),
+        ("Low (Sparse Data)", 20, 20, "Insufficient Evidence"),
+        ("High", 5, 5, "Reliable"),
+    ],
+)
+def test_decision_requires_minimum_delivery_and_quality_evidence(
+    confidence, delivery_n, quality_n, expected
+):
+    classification, reason = classify_supplier(
+        85.0, confidence, 95.0, 95.0, delivery_n, quality_n
+    )
+    assert classification == expected
+    assert reason
