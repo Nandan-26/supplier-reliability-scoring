@@ -28,22 +28,30 @@ def evaluate(db_path, ground_truth_path, output_path):
         if run is None:
             raise RuntimeError("No scoring run found. Score the database before evaluation.")
         rows = con.execute("""
-            WITH delivery AS (
-                SELECT po.supplier_id,
+            WITH line_delivery AS (
+                SELECT po.supplier_id, pl.po_id, pl.po_line_id, pl.ordered_qty,
+                       pl.requested_delivery_date,
+                       COALESCE(MAX(de.actual_delivery_date), '9999-12-31') AS final_delivery_date,
                        SUM(CASE WHEN de.actual_delivery_date <= pl.requested_delivery_date
-                                THEN de.delivered_qty ELSE 0 END) AS on_time_qty,
-                       SUM(pl.ordered_qty) AS ordered_qty
+                                THEN de.delivered_qty ELSE 0 END) AS delivered_on_time_qty
                 FROM purchase_orders po
                 JOIN po_lines pl ON pl.po_id = po.po_id
                 LEFT JOIN shipments s ON s.po_id = pl.po_id AND s.po_line_id = pl.po_line_id
+                     AND s.system_available_at <= ?
                 LEFT JOIN delivery_events de ON de.shipment_id = s.shipment_id
+                     AND de.actual_delivery_date <= ? AND de.system_available_at <= ?
                 WHERE po.status <> 'Cancelled'
                   AND po.order_date <= ? AND po.system_available_at <= ?
-                  AND pl.system_available_at <= ?
-                  AND (s.shipment_id IS NULL OR s.system_available_at <= ?)
-                  AND (de.delivery_event_id IS NULL OR
-                       (de.actual_delivery_date <= ? AND de.system_available_at <= ?))
-                GROUP BY po.supplier_id
+                  AND pl.requested_delivery_date <= ? AND pl.system_available_at <= ?
+                GROUP BY po.supplier_id, pl.po_id, pl.po_line_id
+            ),
+            delivery AS (
+                SELECT supplier_id,
+                       SUM(CASE WHEN final_delivery_date <= requested_delivery_date
+                                     OR delivered_on_time_qty >= ordered_qty
+                                THEN 1 ELSE 0 END) AS on_time_lines,
+                       COUNT(*) AS total_lines
+                FROM line_delivery GROUP BY supplier_id
             ),
             quality AS (
                 SELECT po.supplier_id, SUM(i.defective_qty) AS defective,
@@ -59,7 +67,7 @@ def evaluate(db_path, ground_truth_path, output_path):
                 GROUP BY po.supplier_id
             )
             SELECT ss.supplier_id, ss.final_score, ss.overall_confidence_tier,
-                   COALESCE(d.on_time_qty / NULLIF(d.ordered_qty, 0), 0) AS observed_on_time_rate,
+                   COALESCE(1.0 * d.on_time_lines / NULLIF(d.total_lines, 0), 0) AS observed_on_time_rate,
                    COALESCE(q.defective / NULLIF(q.inspected, 0), 0) AS observed_defect_rate,
                    ss.delivery_sample_count, ss.quality_sample_count
             FROM supplier_scores ss
@@ -67,7 +75,7 @@ def evaluate(db_path, ground_truth_path, output_path):
             LEFT JOIN quality q ON q.supplier_id = ss.supplier_id
             WHERE ss.run_id = ?
             ORDER BY ss.supplier_id
-        """, (run["as_of_date"],) * 6 + (run["as_of_date"],) * 6 + (run["run_id"],)).fetchall()
+        """, (run["as_of_date"],) * 7 + (run["as_of_date"],) * 6 + (run["run_id"],)).fetchall()
 
         details = []
         tp = fp = tn = fn = 0
