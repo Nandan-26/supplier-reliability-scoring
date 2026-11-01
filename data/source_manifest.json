@@ -1,7 +1,7 @@
 {
-  "created_at_utc": "2026-10-31T22:29:35.933988+00:00",
+  "created_at_utc": "2026-11-01T06:36:50.845349+00:00",
   "database": "data/supplier_scoring.db",
-  "database_sha256": "a81b6ddb5608d424920d58667d861f13310da9af4ed33e019b27083fc676f2d8",
+  "database_sha256": "996e66a059c2be1eaab523d6a02f777b60e867ba647defec8b05087bea38a538",
   "configured_default_seed": 20261022,
   "seed_note": "score_runs.random_seed records the generation seed when known; NULL means the scorer could not verify it. configured_default_seed is the generator default, not proof that an older database used that seed.",
   "table_row_counts": {
@@ -11,6 +11,7 @@
     "invoice_lines": 7104,
     "invoices": 4763,
     "po_lines": 14901,
+    "purchase_order_status_events": 15175,
     "purchase_orders": 10000,
     "quarantine_log": 3,
     "risk_signals": 264,
@@ -21,10 +22,10 @@
     "suppliers": 1000
   },
   "source_files": {
-    "src/generator.py": "a397a551ca389e11e1a1b936ef3a4f8ba539bb02a33a8c4cd527354ae65de5db",
+    "src/generator.py": "ea9f6e90448a3a8f0379e0c5591f2b218ba47833781426b2e84a4c8c2c88111c",
     "src/scoring.py": "794e84a20fffa009c4362b5266d3bd5d26296bf3744cca57b211112b956b2842",
     "src/export_artifacts.py": "31e8eb9d18b1c633353db8ad5109b8c13974f634b283763effdac1b3d82ba784",
-    "data/schema.sql": "29150d50aaeb0a895bf6d9a164c06f4a53717d6d6b4d2f8ba57440a0a8afd6ca"
+    "data/schema.sql": "ca88fec3da51bcde15e3da134a6f3744f0ffb0c561bff5b72061628e76817ffd"
   },
   "csv_exports": [
     "data/exports/contracts.csv",
@@ -33,6 +34,7 @@
     "data/exports/invoice_lines.csv",
     "data/exports/invoices.csv",
     "data/exports/po_lines.csv",
+    "data/exports/purchase_order_status_events.csv",
     "data/exports/purchase_orders.csv",
     "data/exports/quarantine_log.csv",
     "data/exports/risk_signals.csv",
@@ -44,6 +46,6 @@
   ],
   "validation_summary": "data/validation_summary.json",
   "generation_metadata": "data/generation_metadata.json",
-  "generation_metadata_sha256": "e1e2dfb575d0465019fd46c1a84e040f1d1f0bf9529783a3a60f7d1896a9aa40",
-  "historical_snapshot": "data/archive/pre_refresh_20261031T222933Z"
+  "generation_metadata_sha256": "355a22ac424e423c34026894e21da48bea59222b0482bdda55c586216e0a565e",
+  "historical_snapshot": "data/archive/pre_refresh_20261101T063648Z"
 }

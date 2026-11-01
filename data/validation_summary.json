@@ -1,5 +1,5 @@
 {
-  "created_at_utc": "2026-10-31T22:29:35.933607+00:00",
+  "created_at_utc": "2026-11-01T06:36:50.844951+00:00",
   "database": "data/supplier_scoring.db",
   "sqlite_integrity_check": "ok",
   "sqlite_integrity_passed": true,
@@ -96,7 +96,7 @@
       "latest_run_passed": true
     }
   ],
-  "latest_run_id": "RUN-c091a907",
+  "latest_run_id": "RUN-e4c2b88f",
   "latest_run_timestamp_column": "run_timestamp",
   "latest_run_passed": true,
   "table_row_counts": {
@@ -106,6 +106,7 @@
     "invoice_lines": 7104,
     "invoices": 4763,
     "po_lines": 14901,
+    "purchase_order_status_events": 15175,
     "purchase_orders": 10000,
     "quarantine_log": 3,
     "risk_signals": 264,
