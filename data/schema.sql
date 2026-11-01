@@ -480,3 +480,13 @@ BEGIN
         'data_generator', 'Purchase-order lifecycle transition'
     );
 END;
+
+
+-- Operational supplier decision persisted alongside every score result.
+CREATE TABLE IF NOT EXISTS supplier_decisions (
+    score_id TEXT PRIMARY KEY,
+    classification TEXT NOT NULL CHECK(classification IN ('Reliable', 'Watch', 'At Risk', 'Insufficient Evidence')),
+    decision_reason TEXT NOT NULL,
+    policy_version TEXT NOT NULL,
+    FOREIGN KEY (score_id) REFERENCES supplier_scores(score_id) ON DELETE CASCADE
+);

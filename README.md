@@ -83,14 +83,14 @@ The independent holdout check generates a separate 1,000-supplier dataset with s
 
 ## 8. Validation artifacts
 
-See [`data/DATA_DICTIONARY.md`](data/DATA_DICTIONARY.md) for field-level types, nullability, enum values, units, composite uniqueness, relationships, and validation rules. The five labelled fixtures are in [`data/edge_case_fixtures.json`](data/edge_case_fixtures.json), validated by `src/edge_cases.py` and `tests/test_edge_cases.py`; the catalogue is [`data/EDGE_CASE_CATALOGUE.md`](data/EDGE_CASE_CATALOGUE.md). Metric definitions and denominators are documented in [`docs/METRICS.md`](docs/METRICS.md). Purchase-order status history is held in `purchase_order_status_events`.
+See [`data/DATA_DICTIONARY.md`](data/DATA_DICTIONARY.md) for field-level types, nullability, enum values, units, composite uniqueness, relationships, and validation rules. The five labelled fixtures are in [`data/edge_case_fixtures.json`](data/edge_case_fixtures.json), validated by `src/edge_cases.py` and `tests/test_edge_cases.py`; the catalogue is [`data/EDGE_CASE_CATALOGUE.md`](data/EDGE_CASE_CATALOGUE.md). Metric definitions and denominators are documented in [`docs/METRICS.md`](docs/METRICS.md). Purchase-order status history is held in `purchase_order_status_events`. Operational decisions (`Reliable`, `Watch`, `At Risk`, `Insufficient Evidence`) and their explanations are persisted in `supplier_decisions` for each scoring result.
 
 `python -m src.export_artifacts` writes:
 - `data/exports/*.csv` — CSV exports of database tables.
 - `data/validation_summary.json` — SQLite integrity, foreign-key, expected-count, and score-range checks.
 - `data/source_manifest.json` — source hashes, database hash, counts, and export paths.
 - `data/ground_truth_evaluation.json` — latest-run expected-vs-observed supplier metrics, classification comparison, and binary at-risk confusion counts; the prior report is archived before each refresh.
-- `data/holdout_evaluation.json` — committed summary of the independent seed `20261023` CI holdout (1,000 suppliers): 95.98% precision and 95.50% recall (382 TP, 16 FP, 584 TN, 18 FN). This is separate from the active seed `20261022` evaluation in `ground_truth_evaluation.json`; both are synthetic evaluations, not real-world validation. Source: [CI run #129](https://github.com/Nandan-26/supplier-reliability-scoring/actions/runs/41282726822).
+- `data/holdout_evaluation.json` — committed summary of the independent seed `20261023` CI holdout. Its metrics are tied to the exact scoring-policy version and workflow run recorded in the file; do not reuse earlier V1/V2 figures after changing policy.
 
 Historical score anomalies are retained for traceability and are documented in [the historical score anomaly report](data/historical_score_anomalies.md). A latest scoring run can pass while the overall historical validation remains failed; inspect the individual checks rather than treating the latest-run result as a complete pass.
 
@@ -98,15 +98,7 @@ Historical score anomalies are retained for traceability and are documented in [
 
 The independent holdout is a second synthetic dataset, generated in CI with seed `20261023` (1,000 suppliers). It is not the active committed database, which was generated with seed `20261022`. The fixed guardrail policy was evaluated without using ground-truth labels as scoring features and without tuning the thresholds on the holdout labels.
 
-| Holdout metric | Result |
-|---|---:|
-| True positives / false positives | 382 / 16 |
-| True negatives / false negatives | 584 / 18 |
-| Precision | **95.98%** |
-| Recall | **95.50%** |
-| CI minimum precision / recall | 90% / 90% — **passed** |
-
-See [the committed holdout report](data/holdout_evaluation.json) and [CI workflow #129](https://github.com/Nandan-26/supplier-reliability-scoring/actions/runs/41282726822). The active seed-20261022 report in [ground_truth_evaluation.json](data/ground_truth_evaluation.json) currently reports 95.05% precision and 96.00% recall (384 TP, 20 FP, 580 TN, 16 FN). These reports evaluate different generated datasets, so their confusion counts and metrics should not be combined. A previously circulated 5.5% recall figure does not match the current active report or the committed independent holdout report; it should be treated as a stale result from a different earlier snapshot unless its exact source commit and dataset are identified. Both evaluations are synthetic and do not establish performance on real supplier data.
+The CI workflow regenerates the active-dataset evaluation and the independent holdout on every pull request. The current policy-versioned outputs are published as the `supplier-risk-v2-evaluation-reports` workflow artifact; use the artifact attached to the latest successful run rather than copying older committed V1 metrics. The active dataset (seed `20261022`) and holdout (seed `20261023`) are different synthetic datasets. Never combine their confusion counts or compare results across policy versions. Neither evaluation establishes performance on real supplier data.
 
 ## 9. Repository layout
 
@@ -168,8 +160,11 @@ The previous committed dataset is preserved under [`data/archive/pre_refresh_202
 ## 11. Limitations
 
 - All source records are synthetic; they do not establish real supplier performance.
-- The scoring weights and penalty values are assumptions, not calibrated policy.
+- The scoring weights and severity penalties are assumptions, not calibrated policy. No adverse compliance/disruption signals receive 100 for that dimension; a recorded signal applies a severity-based penalty. A missing signal means no adverse signal was recorded, not proof of zero risk.
 - Confidence is a simple heuristic and should not be treated as a statistical confidence interval.
 - The quarantine log stores three general malformed examples plus five labelled challenge edge cases; it is a reproducible assessment fixture, not a general-purpose production ingestion or remediation queue.
 - The invoice model is simplified and does not represent every real-world advance-billing, credit-note, or multi-stage payment workflow.
 - A production implementation would need access controls, audit logging, data-retention policies, monitoring, policy ownership, and human review of consequential supplier decisions.
+
+
+**Synthetic-data caveat:** The generator's profile mix includes 40% adverse-profile suppliers and 10% sparse-history suppliers. This is a deliberately constructed test distribution, not an estimate of real-world supplier risk prevalence. Sparse-history suppliers must meet the minimum of five delivery observations and five quality observations before receiving a firm Reliable/Watch/At Risk decision.

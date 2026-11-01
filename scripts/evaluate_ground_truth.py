@@ -7,25 +7,6 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 
 
-def classify(score, confidence, delivery_score, quality_score, delivery_sample_count, quality_sample_count):
-    """Apply explicit dimension guardrails before the composite score bands.
-
-    A strong result in unrelated dimensions must not hide a serious delivery
-    or quality failure. These fixed business-rule thresholds are not fitted
-    to the evaluation labels.
-    """
-    if confidence == "Low (Sparse Data)":
-        return "Insufficient Evidence"
-    if (
-        (delivery_sample_count > 0 and delivery_score < 75)
-        or (quality_sample_count > 0 and quality_score < 90)
-    ):
-        return "At Risk"
-    if score >= 80:
-        return "Reliable"
-    return "Watch"
-
-
 def evaluate(db_path, ground_truth_path, output_path):
     truth = json.loads(Path(ground_truth_path).read_text(encoding="utf-8"))
     con = sqlite3.connect(db_path)
@@ -76,11 +57,14 @@ def evaluate(db_path, ground_truth_path, output_path):
                 GROUP BY po.supplier_id
             )
             SELECT ss.supplier_id, ss.final_score, ss.overall_confidence_tier,
+                   sd.classification AS persisted_classification,
+                   sd.decision_reason,
                    ss.delivery_score, ss.quality_score,
                    COALESCE(1.0 * d.on_time_lines / NULLIF(d.total_lines, 0), 0) AS observed_on_time_rate,
                    COALESCE(q.defective / NULLIF(q.inspected, 0), 0) AS observed_defect_rate,
                    ss.delivery_sample_count, ss.quality_sample_count
             FROM supplier_scores ss
+            JOIN supplier_decisions sd ON sd.score_id = ss.score_id
             LEFT JOIN delivery d ON d.supplier_id = ss.supplier_id
             LEFT JOIN quality q ON q.supplier_id = ss.supplier_id
             WHERE ss.run_id = ?
@@ -102,11 +86,7 @@ def evaluate(db_path, ground_truth_path, output_path):
                 "quality_issues": "At Risk",
                 "sparse_history": "Insufficient Evidence",
             }.get(expected_profile, "Unlabelled")
-            actual_class = classify(
-                row["final_score"], row["overall_confidence_tier"],
-                row["delivery_score"], row["quality_score"],
-                row["delivery_sample_count"], row["quality_sample_count"]
-            )
+            actual_class = row["persisted_classification"]
             expected_risk = expected_class == "At Risk"
             actual_risk = actual_class == "At Risk"
             if expected_risk and actual_risk: tp += 1
@@ -142,11 +122,13 @@ def evaluate(db_path, ground_truth_path, output_path):
             "run_id": run["run_id"],
             "as_of_date": run["as_of_date"],
             "classification_policy": {
-                "At Risk": "observed delivery_score < 75 OR observed quality_score < 90, unless confidence is Low (Sparse Data); No Data fallbacks do not trigger a guardrail",
-                "Reliable": "final_score >= 80 and neither dimension guardrail is breached",
-                "Watch": "no dimension guardrail breached and final_score < 80",
-                "Insufficient Evidence": "overall confidence is Low (Sparse Data)",
-                "policy_note": "Dimension guardrails are fixed domain rules, not thresholds optimized against the reported evaluation set.",
+                "source": "Persisted supplier_decisions rows created by src.scoring",
+                "Insufficient Evidence": "overall confidence is Low (Sparse Data) OR delivery_sample_count < 5 OR quality_sample_count < 5",
+                "At Risk": "delivery_sample_count >= 5 AND delivery_score < 75 OR quality_sample_count >= 5 AND quality_score < 90",
+                "Reliable": "minimum evidence is met, no dimension guardrail is breached, and final_score >= 80",
+                "Watch": "minimum evidence is met, no dimension guardrail is breached, and final_score < 80",
+                "policy_note": "Minimum evidence and dimension guardrails are fixed domain rules, not thresholds optimized against the reported evaluation set.",
+                "policy_version": "guardrails-v1",
             },
             "supplier_count_evaluated": total,
             "expected_vs_observed_mean_absolute_error": {

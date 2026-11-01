@@ -41,11 +41,33 @@ def validate_weights(weights: dict[str, float]) -> None:
     if not math.isclose(total_weight, 1.0, rel_tol=1e-5):
         raise ValueError(f"Scoring weights must sum to 1.0, got {total_weight}")
 
+def classify_supplier(score: float, overall_confidence: str, delivery_score: float,
+                      quality_score: float, delivery_sample_count: int,
+                      quality_sample_count: int) -> tuple[str, str]:
+    """Return the persisted operational decision and its human-readable reason."""
+    if (overall_confidence == "Low (Sparse Data)"
+            or delivery_sample_count < 5 or quality_sample_count < 5):
+        return "Insufficient Evidence", (
+            "Insufficient delivery or quality history (minimum 5 observations required in each); "
+            "do not make a firm supplier decision."
+        )
+    breached = []
+    if delivery_sample_count > 0 and delivery_score < 75:
+        breached.append("delivery score below 75")
+    if quality_sample_count > 0 and quality_score < 90:
+        breached.append("quality score below 90")
+    if breached:
+        return "At Risk", "Dimension guardrail breached: " + "; ".join(breached) + "."
+    if score >= 80:
+        return "Reliable", "Composite score is at least 80 and no delivery/quality guardrail is breached."
+    return "Watch", "No critical dimension guardrail is breached, but composite score is below 80."
+
+
 def calculate_supplier_scores(
     as_of_date: str,
     db_path: str | Path = ROOT_DIR / "data" / "supplier_scoring.db",
     weights: dict[str, float] = DEFAULT_WEIGHTS,
-    config_version: str = "v1.1"
+    config_version: str = "v2.0"
 ) -> str:
     """
     Calculate supplier reliability scores as of a specific date using vectorized set-based queries
@@ -64,18 +86,35 @@ def calculate_supplier_scores(
     try:
         cursor = conn.cursor()
 
+        # Backward-compatible migration for existing V1 databases. The schema
+        # file defines this table for fresh installs; create it here as well so
+        # scoring an already-generated database upgrades it safely.
+        cursor.execute("""
+            CREATE TABLE IF NOT EXISTS supplier_decisions (
+                score_id TEXT PRIMARY KEY,
+                classification TEXT NOT NULL CHECK (
+                    classification IN ('Reliable', 'Watch', 'At Risk', 'Insufficient Evidence')
+                ),
+                decision_reason TEXT NOT NULL,
+                policy_version TEXT NOT NULL,
+                FOREIGN KEY (score_id) REFERENCES supplier_scores(score_id) ON DELETE CASCADE
+            );
+        """)
+
         run_id = f"RUN-{uuid.uuid4().hex[:8]}"
         run_timestamp = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S")
         config_payload = {
             "weights": weights,
             "severity_penalties": SEVERITY_PENALTIES,
             "no_data_score": NO_DATA_SCORE,
-            "scoring_method": "supplier-score-v1.1",
+            "no_adverse_signal_score": 100.0,
+            "decision_policy": "guardrails-v1",
+            "scoring_method": "supplier-score-v2.0",
         }
         config_hash = hashlib.sha256(
             json.dumps(config_payload, sort_keys=True).encode("utf-8")
         ).hexdigest()[:12]
-        generator_version = "1.1.0"
+        generator_version = "2.0.0"
 
         # Record Score Run (ensuring interrupted runs don't corrupt prior history)
         cursor.execute(
@@ -261,6 +300,7 @@ def calculate_supplier_scores(
             risk_map.setdefault(sup, []).append((row["category"], row["severity"]))
 
         scores_data = []
+        decision_rows = []
         severity_penalties = SEVERITY_PENALTIES
         # Keep the required human-readable score key unique across appended
         # scoring runs while preserving older historical SCR-* identifiers.
@@ -326,7 +366,7 @@ def calculate_supplier_scores(
             sup_risks = risk_map.get(sup_id, [])
 
             comp_signals = [sev for cat, sev in sup_risks if cat == 'Compliance']
-            comp_score = NO_DATA_SCORE if not comp_signals else 100.0
+            comp_score = 100.0
             for sev in comp_signals:
                 comp_score -= severity_penalties.get(sev, 15.0)
             compliance_score = max(0.0, comp_score)
@@ -337,7 +377,7 @@ def calculate_supplier_scores(
             )
 
             disp_signals = [sev for cat, sev in sup_risks if cat == 'Disruption']
-            disp_score = NO_DATA_SCORE if not disp_signals else 100.0
+            disp_score = 100.0
             for sev in disp_signals:
                 disp_score -= severity_penalties.get(sev, 15.0)
             disruption_score = max(0.0, disp_score)
@@ -367,9 +407,15 @@ def calculate_supplier_scores(
             else:
                 overall_conf = "Low (Sparse Data)"
 
+            classification, decision_reason = classify_supplier(
+                final_score, overall_conf, delivery_score, quality_score,
+                delivery_sample, quality_sample
+            )
+
             score_id = f"SCORE-2026-{next_score_number:06d}"
             next_score_number += 1
             # Exactly 23 values matching the 23 columns in supplier_scores
+            decision_rows.append((score_id, classification, decision_reason))
             scores_data.append((
                 score_id, run_id, sup_id,
                 delivery_score, delivery_sample, delivery_conf,
@@ -395,6 +441,14 @@ def calculate_supplier_scores(
             ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
             """,
             scores_data
+        )
+        cursor.executemany(
+            """
+            INSERT INTO supplier_decisions
+                (score_id, classification, decision_reason, policy_version)
+            VALUES (?, ?, ?, ?);
+            """,
+            [(row[0], row[1], row[2], "guardrails-v1") for row in decision_rows]
         )
         conn.commit()
     finally:

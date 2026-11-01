@@ -3,7 +3,7 @@ import sqlite3
 import pytest
 from src.db import get_connection, initialize_database
 from src.generator import generate_synthetic_data
-from src.scoring import calculate_supplier_scores, validate_weights, DEFAULT_WEIGHTS
+from src.scoring import calculate_supplier_scores, validate_weights, DEFAULT_WEIGHTS, classify_supplier
 
 TEST_DB_PATH = Path("data/test_scoring.db")
 TEST_GT_PATH = Path("data/test_scoring_gt.json")
@@ -303,7 +303,7 @@ def test_delivery_score_never_exceeds_100_with_multiple_events():
     assert row[0] == 100.0
 
 
-def test_compliance_and_disruption_without_signals_are_neutral_and_unobserved():
+def test_compliance_and_disruption_without_adverse_signals_score_100():
     run_id = calculate_supplier_scores(as_of_date="2026-12-31", db_path=TEST_DB_PATH)
     conn = get_connection(TEST_DB_PATH)
     try:
@@ -317,10 +317,10 @@ def test_compliance_and_disruption_without_signals_are_neutral_and_unobserved():
         conn.close()
 
     assert row is not None
-    assert row[0] == 50.0
+    assert row[0] == 100.0
     assert row[1] == 0
     assert row[2] == "No Data"
-    assert row[3] == 50.0
+    assert row[3] == 100.0
     assert row[4] == 0
     assert row[5] == "No Data"
 
@@ -380,9 +380,9 @@ def test_score_run_metadata_does_not_claim_an_unknown_generation_seed():
 
     assert row is not None
     assert row[0] is None
-    assert row[1] == "v1.1"
+    assert row[1] == "v2.0"
     assert len(row[2]) == 12
-    assert row[3] == "1.1.0"
+    assert row[3] == "2.0.0"
 
 
 def test_delivery_join_respects_composite_po_line_key():
@@ -560,3 +560,44 @@ def test_late_available_po_line_is_excluded_from_all_operational_dimensions():
         conn.close()
 
     assert after == before
+
+
+def test_no_adverse_risk_signals_score_100_and_decision_is_persisted():
+    run_id = calculate_supplier_scores(as_of_date="2026-12-31", db_path=TEST_DB_PATH)
+    conn = get_connection(TEST_DB_PATH)
+    try:
+        row = conn.execute("""
+            SELECT ss.compliance_score, ss.disruption_score,
+                   sd.classification, sd.decision_reason, sd.policy_version
+            FROM supplier_scores ss
+            JOIN supplier_decisions sd ON sd.score_id = ss.score_id
+            WHERE ss.run_id = ? AND ss.supplier_id = 'SUP-000001';
+        """, (run_id,)).fetchone()
+    finally:
+        conn.close()
+    assert row is not None
+    assert row[0] == 100.0
+    assert row[1] == 100.0
+    assert row[2] in {"Reliable", "Watch", "At Risk", "Insufficient Evidence"}
+    assert row[3]
+    assert row[4] == "guardrails-v1"
+
+
+
+@pytest.mark.parametrize(
+    "confidence,delivery_n,quality_n,expected",
+    [
+        ("High", 1, 20, "Insufficient Evidence"),
+        ("High", 20, 1, "Insufficient Evidence"),
+        ("Low (Sparse Data)", 20, 20, "Insufficient Evidence"),
+        ("High", 5, 5, "Reliable"),
+    ],
+)
+def test_decision_requires_minimum_delivery_and_quality_evidence(
+    confidence, delivery_n, quality_n, expected
+):
+    classification, reason = classify_supplier(
+        85.0, confidence, 95.0, 95.0, delivery_n, quality_n
+    )
+    assert classification == expected
+    assert reason
