@@ -13,9 +13,10 @@ A Python and SQLite assessment project that generates synthetic procurement data
 3. Detects malformed source payloads, records them in `quarantine_log`, and exports eight annotated records to `data/malformed_cases.json`: three general malformed examples plus all five labelled Round 2 edge cases. Invalid fixtures never enter clean operational or scoring tables.
 4. Requires provenance on risk signals (`source`) and uses sequential `SCORE-2026-000001` identifiers for supplier score rows.
 5. Calculates supplier scores for a requested as-of date.
-6. Persists each scoring run and its supplier-level results.
-7. Records purchase-order initial states and status transitions in `purchase_order_status_events` using SQLite triggers.
-8. Exports CSV tables, a validation summary, and a source manifest.
+6. Applies explicit delivery and quality risk guardrails before the composite score bands, so a strong unrelated dimension cannot hide a serious failure.
+7. Persists each scoring run and its supplier-level results.
+8. Records purchase-order initial states and status transitions in `purchase_order_status_events` using SQLite triggers.
+9. Exports CSV tables, a validation summary, and a source manifest.
 
 ## 2. Scoring dimensions
 
@@ -78,7 +79,7 @@ python scripts/evaluate_ground_truth.py
 
 The full-dataset validator generates the 1,000-supplier dataset in a temporary directory, checks business rules, all five labelled edge-case fixtures, PO lifecycle history, profile-level ground truth, relational integrity, score ranges, and the CSV/manifest/validation exporter. CI also runs `check_reproducibility.py` at the full 1,000-supplier scale: it generates twice in isolated directories and compares every table row count, deterministic CSV SHA-256, ground-truth JSON and malformed-record JSON. `evaluate_ground_truth.py` compares expected supplier profiles with observed delivery/quality metrics and the latest score classifications, then reports differences, confusion counts, precision and recall. It then audits the active committed database and the archived pre-refresh database independently. Temporary validation files are removed; neither committed database is modified by this test.
 
-The tests cover schema constraints, requested generation counts, reproducibility, shipment relationships, malformed-case detection, scoring ranges, missing history, point-in-time leakage, capacity aggregation, inspection aggregation, and delivery scoring. A test result applies only to the code and environment in which it was actually run.
+The independent holdout check generates a separate 1,000-supplier dataset with seed `20261023` and evaluates the fixed delivery (<75) and quality (<90) risk guardrails without tuning them on the committed seed. CI requires at least 90% precision and 90% recall on that holdout. The tests cover schema constraints, requested generation counts, reproducibility, shipment relationships, malformed-case detection, scoring ranges, missing history, point-in-time leakage, capacity aggregation, inspection aggregation, and delivery scoring. A test result applies only to the code and environment in which it was actually run.
 
 ## 8. Validation artifacts
 
