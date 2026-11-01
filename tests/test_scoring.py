@@ -303,7 +303,7 @@ def test_delivery_score_never_exceeds_100_with_multiple_events():
     assert row[0] == 100.0
 
 
-def test_compliance_and_disruption_without_signals_are_neutral_and_unobserved():
+def test_compliance_and_disruption_without_adverse_signals_score_100():
     run_id = calculate_supplier_scores(as_of_date="2026-12-31", db_path=TEST_DB_PATH)
     conn = get_connection(TEST_DB_PATH)
     try:
@@ -380,9 +380,9 @@ def test_score_run_metadata_does_not_claim_an_unknown_generation_seed():
 
     assert row is not None
     assert row[0] is None
-    assert row[1] == "v1.1"
+    assert row[1] == "v2.0"
     assert len(row[2]) == 12
-    assert row[3] == "1.1.0"
+    assert row[3] == "2.0.0"
 
 
 def test_delivery_join_respects_composite_po_line_key():
