@@ -79,7 +79,7 @@ python scripts/evaluate_ground_truth.py
 
 The full-dataset validator generates the 1,000-supplier dataset in a temporary directory, checks business rules, all five labelled edge-case fixtures, PO lifecycle history, profile-level ground truth, relational integrity, score ranges, and the CSV/manifest/validation exporter. CI also runs `check_reproducibility.py` at the full 1,000-supplier scale: it generates twice in isolated directories and compares every table row count, deterministic CSV SHA-256, ground-truth JSON and malformed-record JSON. `evaluate_ground_truth.py` compares expected supplier profiles with observed delivery/quality metrics and the latest score classifications, then reports differences, confusion counts, precision and recall. It then audits the active committed database and the archived pre-refresh database independently. Temporary validation files are removed; neither committed database is modified by this test.
 
-The independent holdout check generates a separate 1,000-supplier dataset with seed `20261023` and evaluates the fixed observed-delivery (<75) and observed-quality (<90) risk guardrails without tuning them on the committed seed. CI requires at least 90% precision and 90% recall on that holdout. The tests cover schema constraints, requested generation counts, reproducibility, shipment relationships, malformed-case detection, scoring ranges, missing history, point-in-time leakage, capacity aggregation, inspection aggregation, and delivery scoring. A test result applies only to the code and environment in which it was actually run.
+The independent holdout check generates a separate 1,000-supplier dataset with seed `20261023` and evaluates the fixed observed-delivery (<75) and observed-quality (<90) risk guardrails without tuning them on the committed seed. CI requires at least 90% precision and 90% recall on that holdout. The committed result and confusion counts are documented separately below. The tests cover schema constraints, requested generation counts, reproducibility, shipment relationships, malformed-case detection, scoring ranges, missing history, point-in-time leakage, capacity aggregation, inspection aggregation, and delivery scoring. A test result applies only to the code and environment in which it was actually run.
 
 ## 8. Validation artifacts
 
@@ -94,39 +94,67 @@ See [`data/DATA_DICTIONARY.md`](data/DATA_DICTIONARY.md) for field-level types, 
 
 Historical score anomalies are retained for traceability and are documented in [the historical score anomaly report](data/historical_score_anomalies.md). A latest scoring run can pass while the overall historical validation remains failed; inspect the individual checks rather than treating the latest-run result as a complete pass.
 
+### Independent holdout evaluation
+
+The independent holdout is a second synthetic dataset, generated in CI with seed `20261023` (1,000 suppliers). It is not the active committed database, which was generated with seed `20261022`. The fixed guardrail policy was evaluated without using ground-truth labels as scoring features and without tuning the thresholds on the holdout labels.
+
+| Holdout metric | Result |
+|---|---:|
+| True positives / false positives | 382 / 16 |
+| True negatives / false negatives | 584 / 18 |
+| Precision | **95.98%** |
+| Recall | **95.50%** |
+| CI minimum precision / recall | 90% / 90% — **passed** |
+
+See [the committed holdout report](data/holdout_evaluation.json) and [CI workflow #129](https://github.com/Nandan-26/supplier-reliability-scoring/actions/runs/41282726822). The active seed-20261022 report in [ground_truth_evaluation.json](data/ground_truth_evaluation.json) currently reports 95.05% precision and 96.00% recall (384 TP, 20 FP, 580 TN, 16 FN). These reports evaluate different generated datasets, so their confusion counts and metrics should not be combined. A previously circulated 5.5% recall figure does not match the current active report or the committed independent holdout report; it should be treated as a stale result from a different earlier snapshot unless its exact source commit and dataset are identified. Both evaluations are synthetic and do not establish performance on real supplier data.
+
 ## 9. Repository layout
 
 ```text
 supplier-reliability-scoring/
+├── .github/
+│   └── workflows/
+│       ├── refresh_dataset.yml
+│       └── tests.yml
 ├── data/
 │   ├── archive/
-│   │   └── pre_refresh_20261031T203556Z/
-│   ├── exports/
-│   ├── schema.sql
+│   │   └── pre_refresh_20261101T065548Z/
+│   ├── exports/                         # CSV exports for the active dataset
 │   ├── DATA_DICTIONARY.md
+│   ├── EDGE_CASE_CATALOGUE.md
+│   ├── edge_case_fixtures.json
 │   ├── generation_metadata.json
 │   ├── ground_truth.json
+│   ├── ground_truth_evaluation.json
+│   ├── historical_score_anomalies.md
+│   ├── holdout_evaluation.json
 │   ├── malformed_cases.json
+│   ├── schema.sql
+│   ├── source_manifest.json
 │   ├── supplier_scoring.db
-│   ├── validation_summary.json
-│   └── source_manifest.json
+│   └── validation_summary.json
+├── docs/
+│   └── METRICS.md
 ├── scripts/
+│   ├── check_reproducibility.py
 │   ├── evaluate_ground_truth.py
 │   ├── evaluate_holdout.py
 │   ├── refresh_dataset.py
 │   └── validate_full_dataset.py
 ├── src/
 │   ├── db.py
+│   ├── edge_cases.py
+│   ├── export_artifacts.py
 │   ├── generator.py
-│   ├── scoring.py
-│   └── export_artifacts.py
+│   └── scoring.py
 ├── tests/
 │   ├── test_db.py
+│   ├── test_edge_cases.py
 │   ├── test_generator.py
+│   ├── test_ground_truth_evaluation.py
+│   ├── test_lifecycle_events.py
+│   ├── test_reproducibility.py
 │   └── test_scoring.py
-├── .github/workflows/
-│   ├── tests.yml
-│   └── refresh_dataset.yml
 ├── requirements.txt
 └── README.md
 ```
@@ -135,7 +163,7 @@ supplier-reliability-scoring/
 
 The active `data/supplier_scoring.db` and `data/exports/` contain a fresh validated dataset generated with seed `20261022`. The run metadata is in `data/generation_metadata.json`; the validation result is in `data/validation_summary.json`; source hashes and export paths are in `data/source_manifest.json`.
 
-The previous committed dataset is preserved under the archive path recorded in `data/generation_metadata.json` and `data/source_manifest.json`. Its legacy issues are summarized in [the historical archive report](data/historical_score_anomalies.md) and its original detailed report remains inside the archive. Do not use those legacy scores as current normalized scores.
+The previous committed dataset is preserved under [`data/archive/pre_refresh_20261101T065548Z/`](data/archive/pre_refresh_20261101T065548Z/), the archive path recorded in `data/generation_metadata.json` and `data/source_manifest.json`. Its legacy issues are summarized in [the historical archive report](data/historical_score_anomalies.md) and its original detailed report remains inside the archive. Do not use those legacy scores as current normalized scores.
 
 ## 11. Limitations
 
