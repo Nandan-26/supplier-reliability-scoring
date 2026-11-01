@@ -1,43 +1,20 @@
-# Historical Dataset Archive and Anomaly Record
+# Historical Dataset and Anomaly Notes
 
-## Immediately preceding active dataset
+## Repository retention policy
 
-Before the latest dataset refresh, the previously committed SQLite database and its matching CSV exports were preserved unchanged at:
+Generated SQLite databases and pre-refresh snapshots are not committed. The database is recreated by `scripts/refresh_dataset.py`; deterministic CSV/JSON artifacts and provenance metadata remain version-controlled. This keeps the repository reviewable and prevents every refresh from adding another full database copy to the Git tree. Older snapshots may still exist in earlier Git commits; this cleanup removes them from the current branch tip but does not rewrite Git history.
 
-- Archive: [`data/archive/pre_refresh_20261101T081036Z/`](archive/pre_refresh_20261101T081036Z/)
-- Archived database: [`supplier_scoring.db`](archive/pre_refresh_20261101T081036Z/supplier_scoring.db)
-- Archived exports: [`exports/`](archive/pre_refresh_20261101T081036Z/exports/)
-- Archived ground truth, malformed cases, validation summary, source manifest, generation metadata, and ground-truth evaluation are retained in the same directory.
+## Previously observed legacy anomalies
 
-The active dataset is now regenerated with seed `20261022`. Its run ID, generator/scoring versions, and archive path are recorded in `data/generation_metadata.json`. The matching database hash, source hashes, row counts, and export paths are recorded in `data/source_manifest.json`.
+Earlier pre-refresh datasets contained issues including cancelled purchase orders with shipments or invoices, fulfilled orders with incomplete shipped quantities, inspection quantities above received quantities, invoice lines above delivered quantities, invoices dated before the latest delivery, and out-of-range legacy scores. These are historical findings from superseded synthetic datasets, not claims about the current active dataset. The old raw snapshots have been removed from the current repository tree to reduce size.
 
-## Earlier legacy anomaly baseline
+## Current active dataset
 
-An earlier dataset with known historical anomalies remains preserved at [`data/archive/pre_refresh_20261031T203556Z/`](archive/pre_refresh_20261031T203556Z/). Its detailed original report is available at [`historical_score_anomalies.md`](archive/pre_refresh_20261031T203556Z/historical_score_anomalies.md).
+The current active dataset and its validation status are described by:
 
-The legacy baseline had the following recorded issues:
+- `data/validation_summary.json`
+- `data/source_manifest.json`
+- `data/generation_metadata.json`
+- `data/ground_truth_evaluation.json`
 
-- 776 cancelled purchase orders with shipments
-- 248 cancelled purchase orders with invoices
-- 3,967 fulfilled purchase orders with incomplete shipped quantities
-- 5,000 deliveries with inspection quantities above received quantity
-- 2,831 invoice lines above delivered quantity
-- 1,161 invoices dated before the latest delivery on their purchase order
-- 58 out-of-range delivery scores and 2 out-of-range final scores in legacy run `RUN-c52cdf63`
-
-These findings describe the earlier archived dataset only. They must not be attributed to the current active dataset.
-
-## Current active dataset status
-
-The latest committed `data/validation_summary.json` reports:
-
-- SQLite integrity: PASS
-- Foreign-key violations: 0
-- Expected record counts: PASS
-- Business-rule violations: 0
-- Historical and latest score-range checks: PASS
-- Overall validation: PASS
-
-The active dataset contains 1,000 suppliers, 10,000 purchase orders, 15,000 shipments, 15,000 delivery events, and 20,000 inspections. Refer to the validation summary and source manifest for the complete checks and table counts.
-
-All records are synthetic. Passing these validations demonstrates internal consistency and reproducibility, not predictive performance on real supplier data.
+All records are synthetic. Passing validation demonstrates internal consistency and reproducibility, not predictive performance on real supplier data.

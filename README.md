@@ -33,7 +33,7 @@ Scores are intended to remain between 0 and 100. Cost measures adherence to the 
 
 ## 3. Point-in-time scoring
 
-The scoring function accepts an explicit `YYYY-MM-DD` as-of date. Business-event dates and `system_available_at` timestamps are both used to limit evidence to information that had occurred and was available by that date. Scoring appends a new run to the database being scored. A full data regeneration resets that database; the automated refresh workflow archives the previous database and its exports before publishing a replacement.
+The scoring function accepts an explicit `YYYY-MM-DD` as-of date. Business-event dates and `system_available_at` timestamps are both used to limit evidence to information that had occurred and was available by that date. Scoring appends a new run to the database being scored. A full data regeneration resets the target database. The automated refresh workflow regenerates the SQLite database locally and commits reproducible CSV/JSON artifacts; the generated `.db` file is intentionally excluded from Git to keep the repository lightweight.
 
 ## 4. Data-generation rules
 
@@ -66,7 +66,7 @@ python -c "from src.scoring import calculate_supplier_scores; print(calculate_su
 python -m src.export_artifacts
 ```
 
-**Important:** the generator resets all generated tables in the database path passed to it, including prior `score_runs` and `supplier_scores`. Use a new database path or a verified backup when running it manually. The tracked active dataset is refreshed by GitHub Actions after relevant source/schema changes: the previous database, CSV exports, ground truth, malformed examples, validation summary and manifest are archived under `data/archive/` before the new dataset is generated. The full-data CI validator uses a separate temporary database and audits the archived snapshot without modifying it.
+**Important:** the generator resets all generated tables in the database path passed to it, including prior `score_runs` and `supplier_scores`. Use a new database path or a verified backup when running it manually. The active dataset artifacts are refreshed by GitHub Actions after relevant source/schema changes. The workflow regenerates the SQLite database for validation but commits only the reproducible CSV/JSON artifacts; it does not create or commit historical database snapshots. The full-data CI validator uses a separate temporary database.
 
 ## 7. Run tests
 
@@ -92,7 +92,7 @@ See [`data/DATA_DICTIONARY.md`](data/DATA_DICTIONARY.md) for field-level types, 
 - `data/ground_truth_evaluation.json` — latest-run expected-vs-observed supplier metrics, classification comparison, and binary at-risk confusion counts; the prior report is archived before each refresh.
 - `data/holdout_evaluation.json` — a retained historical holdout snapshot. For current results, use the fresh `holdout_evaluation.json` attached to the latest successful `Python tests` workflow run.
 
-Historical score anomalies are retained for traceability and are documented in [the historical score anomaly report](data/historical_score_anomalies.md). A latest scoring run can pass while the overall historical validation remains failed; inspect the individual checks rather than treating the latest-run result as a complete pass.
+Historical score anomalies are retained for traceability and are documented in [the historical score anomaly report](data/historical_score_anomalies.md). A latest scoring run can pass while a legacy validation report contains failures; inspect the individual checks rather than treating an old report as a current failure.
 
 ### Independent holdout evaluation
 
@@ -109,8 +109,6 @@ supplier-reliability-scoring/
 │       ├── refresh_dataset.yml
 │       └── tests.yml
 ├── data/
-│   ├── archive/
-│   │   └── pre_refresh_20261101T065548Z/
 │   ├── exports/                         # CSV exports for the active dataset
 │   ├── DATA_DICTIONARY.md
 │   ├── EDGE_CASE_CATALOGUE.md
@@ -123,7 +121,6 @@ supplier-reliability-scoring/
 │   ├── malformed_cases.json
 │   ├── schema.sql
 │   ├── source_manifest.json
-│   ├── supplier_scoring.db
 │   └── validation_summary.json
 ├── docs/
 │   └── METRICS.md
@@ -164,6 +161,8 @@ The previous committed dataset is preserved under [`data/archive/pre_refresh_202
 - Confidence is a simple heuristic and should not be treated as a statistical confidence interval.
 - The quarantine log stores three general malformed examples plus five labelled challenge edge cases; it is a reproducible assessment fixture, not a general-purpose production ingestion or remediation queue.
 - The invoice model is simplified and does not represent every real-world advance-billing, credit-note, or multi-stage payment workflow.
+- The generated PO activity window is intentionally limited to a short synthetic period; it is suitable for deterministic validation but does not demonstrate long-term supplier deterioration. The `Watch` class is rare in the current generated sample because the illustrative policy prioritizes clear risk guardrails; its low frequency should not be interpreted as a real-world prevalence estimate.
+- No explicit many-to-many relationship is currently modeled. If supplier-to-item eligibility is added, represent it with a supplier-item bridge table.
 - A production implementation would need access controls, audit logging, data-retention policies, monitoring, policy ownership, and human review of consequential supplier decisions.
 
 

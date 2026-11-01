@@ -18,15 +18,6 @@
     "invoice_lines": 7104,
     "quarantine_log": 8
   },
-  "historical_snapshot": "data/archive/pre_refresh_20261101T081036Z",
-  "historical_files_archived": [
-    "data/archive/pre_refresh_20261101T081036Z/supplier_scoring.db",
-    "data/archive/pre_refresh_20261101T081036Z/exports",
-    "data/archive/pre_refresh_20261101T081036Z/ground_truth.json",
-    "data/archive/pre_refresh_20261101T081036Z/malformed_cases.json",
-    "data/archive/pre_refresh_20261101T081036Z/validation_summary.json",
-    "data/archive/pre_refresh_20261101T081036Z/source_manifest.json",
-    "data/archive/pre_refresh_20261101T081036Z/generation_metadata.json",
-    "data/archive/pre_refresh_20261101T081036Z/ground_truth_evaluation.json"
-  ]
+  "historical_snapshot": null,
+  "historical_files_archived": []
 }

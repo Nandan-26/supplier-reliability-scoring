@@ -49,6 +49,5 @@
   "validation_summary": "data/validation_summary.json",
   "generation_metadata": "data/generation_metadata.json",
   "generation_metadata_sha256": "7871712754b250fc931a1830485c4a26745ff7072b6f915481b911a884e3d3fd",
-  "ground_truth_evaluation": "data/ground_truth_evaluation.json",
-  "historical_snapshot": "data/archive/pre_refresh_20261101T081036Z"
+  "ground_truth_evaluation": "data/ground_truth_evaluation.json"
 }

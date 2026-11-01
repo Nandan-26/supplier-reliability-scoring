@@ -6,3 +6,6 @@ venv/
 .env
 .env.*
 !.env.example
+
+# Generated SQLite database (recreated by scripts/refresh_dataset.py)
+data/supplier_scoring.db
