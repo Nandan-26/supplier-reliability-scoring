@@ -8,7 +8,7 @@ A Python and SQLite assessment project that generates synthetic procurement data
 
 1. Generates synthetic suppliers, sites, contracts, purchase orders, shipments, delivery events, inspections, invoices, and risk signals.
 2. Stores valid baseline records in SQLite with relational constraints.
-3. Detects malformed source payloads, records them in `quarantine_log`, and exports annotated payloads to `data/malformed_cases.json`; five labelled Round 2 assessment fixtures are independently validated in `data/edge_case_fixtures.json` and never enter clean scoring inputs.
+3. Detects malformed source payloads, records them in `quarantine_log`, and exports eight annotated records to `data/malformed_cases.json`: three general malformed examples plus all five labelled Round 2 edge cases. Invalid fixtures never enter clean operational or scoring tables.
 4. Requires provenance on risk signals (`source`) and uses sequential `SCORE-2026-000001` identifiers for supplier score rows.
 5. Calculates supplier scores for a requested as-of date.
 6. Persists each scoring run and its supplier-level results.
@@ -77,7 +77,7 @@ The tests cover schema constraints, requested generation counts, reproducibility
 
 ## 8. Validation artifacts
 
-See [`data/DATA_DICTIONARY.md`](data/DATA_DICTIONARY.md) for table grains, key fields, identifier conventions, relationships, and point-in-time field meanings. The five labelled fixtures are in [`data/edge_case_fixtures.json`](data/edge_case_fixtures.json), validated by `src/edge_cases.py` and `tests/test_edge_cases.py`; the catalogue is [`data/EDGE_CASE_CATALOGUE.md`](data/EDGE_CASE_CATALOGUE.md). Metric definitions and denominators are documented in [`docs/METRICS.md`](docs/METRICS.md). Purchase-order status history is held in `purchase_order_status_events`.
+See [`data/DATA_DICTIONARY.md`](data/DATA_DICTIONARY.md) for field-level types, nullability, enum values, units, composite uniqueness, relationships, and validation rules. The five labelled fixtures are in [`data/edge_case_fixtures.json`](data/edge_case_fixtures.json), validated by `src/edge_cases.py` and `tests/test_edge_cases.py`; the catalogue is [`data/EDGE_CASE_CATALOGUE.md`](data/EDGE_CASE_CATALOGUE.md). Metric definitions and denominators are documented in [`docs/METRICS.md`](docs/METRICS.md). Purchase-order status history is held in `purchase_order_status_events`.
 
 `python -m src.export_artifacts` writes:
 - `data/exports/*.csv` — CSV exports of database tables.
@@ -132,6 +132,6 @@ The previous committed dataset is preserved under `data/archive/pre_refresh_2026
 - All source records are synthetic; they do not establish real supplier performance.
 - The scoring weights and penalty values are assumptions, not calibrated policy.
 - Confidence is a simple heuristic and should not be treated as a statistical confidence interval.
-- The quarantine log stores the generator's representative malformed examples; it is not a general-purpose production ingestion or remediation queue.
+- The quarantine log stores three general malformed examples plus five labelled challenge edge cases; it is a reproducible assessment fixture, not a general-purpose production ingestion or remediation queue.
 - The invoice model is simplified and does not represent every real-world advance-billing, credit-note, or multi-stage payment workflow.
 - A production implementation would need access controls, audit logging, data-retention policies, monitoring, policy ownership, and human review of consequential supplier decisions.
