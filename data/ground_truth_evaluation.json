@@ -1,5 +1,5 @@
 {
-  "run_id": "RUN-39b8d68c",
+  "run_id": "RUN-4df66552",
   "as_of_date": "2026-12-31",
   "classification_policy": {
     "source": "Persisted supplier_decisions rows created by src.scoring",
