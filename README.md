@@ -68,10 +68,10 @@ python -m src.export_artifacts
 
 ```powershell
 python -m pytest -v
-python scripts/validate_full_dataset.py
+python scripts/validate_full_dataset.py\npython scripts/check_reproducibility.py\npython scripts/evaluate_ground_truth.py
 ```
 
-The full-dataset validator generates the 1,000-supplier dataset in a temporary directory, checks business rules, profile-level ground truth, relational integrity, score ranges, and the CSV/manifest/validation exporter. It then audits the active committed database and the archived pre-refresh database independently. Temporary validation files are removed; neither committed database is modified by this test.
+The full-dataset validator generates the 1,000-supplier dataset in a temporary directory, checks business rules, profile-level ground truth, relational integrity, score ranges, and the CSV/manifest/validation exporter. `check_reproducibility.py` runs the generator twice in isolated directories and compares every table row count, deterministic CSV SHA-256, ground-truth JSON and malformed-record JSON. `evaluate_ground_truth.py` compares expected supplier profiles with observed delivery/quality metrics and the latest score classifications, then reports differences, confusion counts, precision and recall. It then audits the active committed database and the archived pre-refresh database independently. Temporary validation files are removed; neither committed database is modified by this test.
 
 The tests cover schema constraints, requested generation counts, reproducibility, shipment relationships, malformed-case detection, scoring ranges, missing history, point-in-time leakage, capacity aggregation, inspection aggregation, and delivery scoring. A test result applies only to the code and environment in which it was actually run.
 
