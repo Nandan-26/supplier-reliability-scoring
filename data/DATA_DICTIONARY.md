@@ -11,7 +11,7 @@ Required includes NOT NULL or primary-key membership. `Allowed / units` summariz
 | supplier_id | TEXT | Yes | — | Primary key | No inline CHECK; application/business validation applies |
 | name | TEXT | Yes | — | No | No inline CHECK; application/business validation applies |
 | category | TEXT | No | — | No | No inline CHECK; application/business validation applies |
-| country | TEXT | No | count | No | No inline CHECK; application/business validation applies |
+| country | TEXT | No | — | No | No inline CHECK; application/business validation applies |
 | status | TEXT | No | status IN ('Active', 'Inactive', 'Probation')) | No | CHECK(status IN ('Active', 'Inactive', 'Probation')) |
 | created_at | TEXT | Yes | ISO date/time | No | ISO date/time text |
 | system_available_at | TEXT | Yes | ISO date/time | No | Point-in-time availability date; ISO date/time text |
