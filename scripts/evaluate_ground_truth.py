@@ -75,7 +75,9 @@ def evaluate(db_path, ground_truth_path, output_path):
                   AND i.inspection_date <= ? AND i.system_available_at <= ?
                 GROUP BY po.supplier_id
             )
-            SELECT ss.supplier_id, ss.final_score, ss.overall_confidence_tier,\n                   sd.classification AS persisted_classification,\n                   sd.decision_reason,
+            SELECT ss.supplier_id, ss.final_score, ss.overall_confidence_tier,
+                   sd.classification AS persisted_classification,
+                   sd.decision_reason,
                    ss.delivery_score, ss.quality_score,
                    COALESCE(1.0 * d.on_time_lines / NULLIF(d.total_lines, 0), 0) AS observed_on_time_rate,
                    COALESCE(q.defective / NULLIF(q.inspected, 0), 0) AS observed_defect_rate,
@@ -138,7 +140,8 @@ def evaluate(db_path, ground_truth_path, output_path):
         report = {
             "run_id": run["run_id"],
             "as_of_date": run["as_of_date"],
-            "classification_policy": {\n                "source": "Persisted supplier_decisions rows created by src.scoring",
+            "classification_policy": {
+                "source": "Persisted supplier_decisions rows created by src.scoring",
                 "At Risk": "observed delivery_score < 75 OR observed quality_score < 90, unless confidence is Low (Sparse Data); No Data fallbacks do not trigger a guardrail",
                 "Reliable": "final_score >= 80 and neither dimension guardrail is breached",
                 "Watch": "no dimension guardrail breached and final_score < 80",
