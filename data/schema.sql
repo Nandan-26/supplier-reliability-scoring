@@ -470,7 +470,13 @@ BEGIN
     VALUES (
         'POEV-' || NEW.po_id || '-' ||
         printf('%02d', (SELECT COUNT(*) + 1 FROM purchase_order_status_events WHERE po_id = NEW.po_id)),
-        NEW.po_id, OLD.status, NEW.status, NEW.system_available_at,
+        NEW.po_id, OLD.status, NEW.status,
+        COALESCE((
+            SELECT MAX(de.system_available_at)
+            FROM shipments s
+            JOIN delivery_events de ON de.shipment_id = s.shipment_id
+            WHERE s.po_id = NEW.po_id
+        ), NEW.system_available_at),
         'data_generator', 'Purchase-order lifecycle transition'
     );
 END;
