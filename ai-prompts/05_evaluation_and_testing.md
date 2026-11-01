@@ -1,3 +1,5 @@
+> **AI tool:** Not verified from the retained record. **Record status:** reconstructed summary; not a verbatim historical prompt. See [the prompt-history README](README.md).
+
 # Reconstructed Prompt 5 — Evaluation, Ground Truth, and Testing
 
 I want to evaluate the supplier reliability scoring engine and verify that it identifies unreliable suppliers correctly.
