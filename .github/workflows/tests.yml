@@ -24,5 +24,17 @@ jobs:
         run: python scripts/validate_full_dataset.py
       - name: Verify full-scale reproducibility with table and artifact SHA-256 checksums
         run: python scripts/check_reproducibility.py --output $RUNNER_TEMP/reproducibility_report.json
+      - name: Regenerate active-dataset scores and policy evaluation
+        run: |
+          python -m src.scoring
+          python scripts/evaluate_ground_truth.py
       - name: Evaluate risk classification on an independent full-scale seed
-        run: python scripts/evaluate_holdout.py
+        run: python scripts/evaluate_holdout.py > holdout_evaluation.log
+      - name: Publish policy-versioned evaluation reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: supplier-risk-v2-evaluation-reports
+          path: |
+            data/ground_truth_evaluation.json
+            holdout_evaluation.log
+          if-no-files-found: error
