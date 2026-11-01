@@ -1,12 +1,12 @@
 {
-  "generated_at_utc": "2026-11-01T11:47:58.493570+00:00",
+  "generated_at_utc": "2026-11-01T11:48:23.811552+00:00",
   "generator_version": "1.1.0",
   "data_generator_version": "1.1.0",
   "scoring_engine_version": "2.0.0",
   "scoring_config_version": "v2.0",
   "random_seed": 20261022,
   "as_of_date": "2026-12-31",
-  "score_run_id": "RUN-1a4a8f3b",
+  "score_run_id": "RUN-5d200d79",
   "ground_truth_evaluation": "data/ground_truth_evaluation.json",
   "ground_truth_evaluation_suppliers": 1000,
   "generated_counts": {
