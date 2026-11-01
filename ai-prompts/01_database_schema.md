@@ -1,3 +1,5 @@
+> **AI tool:** Gemini (identified by the candidate). **Record status:** original prompt text.
+
 # Original Prompt 1 — Database Schema and Tests
 
 ME TO GEMINI
