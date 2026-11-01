@@ -1,10 +1,10 @@
 {
-  "generated_at_utc": "2026-11-01T06:36:50.456333+00:00",
+  "generated_at_utc": "2026-11-01T06:40:55.819553+00:00",
   "generator_version": "1.1.0",
   "scoring_config_version": "v1.1",
   "random_seed": 20261022,
   "as_of_date": "2026-12-31",
-  "score_run_id": "RUN-e4c2b88f",
+  "score_run_id": "RUN-ab401be2",
   "generated_counts": {
     "suppliers": 1000,
     "purchase_orders": 10000,
@@ -14,14 +14,14 @@
     "invoice_lines": 7104,
     "quarantine_log": 3
   },
-  "historical_snapshot": "data/archive/pre_refresh_20261101T063648Z",
+  "historical_snapshot": "data/archive/pre_refresh_20261101T064052Z",
   "historical_files_archived": [
-    "data/archive/pre_refresh_20261101T063648Z/supplier_scoring.db",
-    "data/archive/pre_refresh_20261101T063648Z/exports",
-    "data/archive/pre_refresh_20261101T063648Z/ground_truth.json",
-    "data/archive/pre_refresh_20261101T063648Z/malformed_cases.json",
-    "data/archive/pre_refresh_20261101T063648Z/validation_summary.json",
-    "data/archive/pre_refresh_20261101T063648Z/source_manifest.json",
-    "data/archive/pre_refresh_20261101T063648Z/generation_metadata.json"
+    "data/archive/pre_refresh_20261101T064052Z/supplier_scoring.db",
+    "data/archive/pre_refresh_20261101T064052Z/exports",
+    "data/archive/pre_refresh_20261101T064052Z/ground_truth.json",
+    "data/archive/pre_refresh_20261101T064052Z/malformed_cases.json",
+    "data/archive/pre_refresh_20261101T064052Z/validation_summary.json",
+    "data/archive/pre_refresh_20261101T064052Z/source_manifest.json",
+    "data/archive/pre_refresh_20261101T064052Z/generation_metadata.json"
   ]
 }

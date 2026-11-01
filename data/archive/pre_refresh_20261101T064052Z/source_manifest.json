@@ -1,0 +1,51 @@
+{
+  "created_at_utc": "2026-11-01T06:36:50.845349+00:00",
+  "database": "data/supplier_scoring.db",
+  "database_sha256": "996e66a059c2be1eaab523d6a02f777b60e867ba647defec8b05087bea38a538",
+  "configured_default_seed": 20261022,
+  "seed_note": "score_runs.random_seed records the generation seed when known; NULL means the scorer could not verify it. configured_default_seed is the generator default, not proof that an older database used that seed.",
+  "table_row_counts": {
+    "contracts": 1000,
+    "delivery_events": 15000,
+    "inspections": 20000,
+    "invoice_lines": 7104,
+    "invoices": 4763,
+    "po_lines": 14901,
+    "purchase_order_status_events": 15175,
+    "purchase_orders": 10000,
+    "quarantine_log": 3,
+    "risk_signals": 264,
+    "score_runs": 1,
+    "shipments": 15000,
+    "sites": 1485,
+    "supplier_scores": 1000,
+    "suppliers": 1000
+  },
+  "source_files": {
+    "src/generator.py": "ea9f6e90448a3a8f0379e0c5591f2b218ba47833781426b2e84a4c8c2c88111c",
+    "src/scoring.py": "794e84a20fffa009c4362b5266d3bd5d26296bf3744cca57b211112b956b2842",
+    "src/export_artifacts.py": "31e8eb9d18b1c633353db8ad5109b8c13974f634b283763effdac1b3d82ba784",
+    "data/schema.sql": "ca88fec3da51bcde15e3da134a6f3744f0ffb0c561bff5b72061628e76817ffd"
+  },
+  "csv_exports": [
+    "data/exports/contracts.csv",
+    "data/exports/delivery_events.csv",
+    "data/exports/inspections.csv",
+    "data/exports/invoice_lines.csv",
+    "data/exports/invoices.csv",
+    "data/exports/po_lines.csv",
+    "data/exports/purchase_order_status_events.csv",
+    "data/exports/purchase_orders.csv",
+    "data/exports/quarantine_log.csv",
+    "data/exports/risk_signals.csv",
+    "data/exports/score_runs.csv",
+    "data/exports/shipments.csv",
+    "data/exports/sites.csv",
+    "data/exports/supplier_scores.csv",
+    "data/exports/suppliers.csv"
+  ],
+  "validation_summary": "data/validation_summary.json",
+  "generation_metadata": "data/generation_metadata.json",
+  "generation_metadata_sha256": "355a22ac424e423c34026894e21da48bea59222b0482bdda55c586216e0a565e",
+  "historical_snapshot": "data/archive/pre_refresh_20261101T063648Z"
+}

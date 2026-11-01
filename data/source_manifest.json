@@ -1,7 +1,7 @@
 {
-  "created_at_utc": "2026-11-01T06:36:50.845349+00:00",
+  "created_at_utc": "2026-11-01T06:40:56.472891+00:00",
   "database": "data/supplier_scoring.db",
-  "database_sha256": "996e66a059c2be1eaab523d6a02f777b60e867ba647defec8b05087bea38a538",
+  "database_sha256": "f9971ce624dc1591b3a61c2c56a17bdcb1d0aa3a855b012b93b0dc63e55ccfa2",
   "configured_default_seed": 20261022,
   "seed_note": "score_runs.random_seed records the generation seed when known; NULL means the scorer could not verify it. configured_default_seed is the generator default, not proof that an older database used that seed.",
   "table_row_counts": {
@@ -25,7 +25,7 @@
     "src/generator.py": "ea9f6e90448a3a8f0379e0c5591f2b218ba47833781426b2e84a4c8c2c88111c",
     "src/scoring.py": "794e84a20fffa009c4362b5266d3bd5d26296bf3744cca57b211112b956b2842",
     "src/export_artifacts.py": "31e8eb9d18b1c633353db8ad5109b8c13974f634b283763effdac1b3d82ba784",
-    "data/schema.sql": "ca88fec3da51bcde15e3da134a6f3744f0ffb0c561bff5b72061628e76817ffd"
+    "data/schema.sql": "d35ef264f3bf5ce8b2d77291cf9ddd6d58ca43da7d0bb3d79240e702645388d5"
   },
   "csv_exports": [
     "data/exports/contracts.csv",
@@ -46,6 +46,6 @@
   ],
   "validation_summary": "data/validation_summary.json",
   "generation_metadata": "data/generation_metadata.json",
-  "generation_metadata_sha256": "355a22ac424e423c34026894e21da48bea59222b0482bdda55c586216e0a565e",
-  "historical_snapshot": "data/archive/pre_refresh_20261101T063648Z"
+  "generation_metadata_sha256": "f1fac3ba0500a86c8181a6b233c02a05f8f8fb92c59b61b65b66eed1d6d735b5",
+  "historical_snapshot": "data/archive/pre_refresh_20261101T064052Z"
 }
