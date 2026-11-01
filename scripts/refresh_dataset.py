@@ -1,10 +1,11 @@
-"""Archive the previously committed dataset, then publish a fresh validated dataset.
+"""Regenerate, evaluate, validate, and publish one coordinated artifact set.
 
-The archive is created before any generation. If the archive path already
-exists, the script stops rather than overwriting historical files.
+The active dataset and independent holdout are regenerated before the manifest
+is written, so report paths and SHA-256 values describe the same refresh run.
 """
 import json
 import sqlite3
+import subprocess
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
@@ -25,8 +26,6 @@ AS_OF_DATE = "2026-12-31"
 
 
 def main():
-    archived_paths = []
-
     generated = generate_synthetic_data(
         db_path=DB,
         ground_truth_path=DATA / "ground_truth.json",
@@ -57,6 +56,19 @@ def main():
         DATA / "ground_truth_evaluation.json",
     )
 
+    # Regenerate the independent seed-20261023 report in this same refresh.
+    # The exporter below will include its path and SHA-256 in the manifest.
+    subprocess.run(
+        [
+            sys.executable,
+            str(ROOT / "scripts" / "evaluate_holdout.py"),
+            "--output",
+            str(DATA / "holdout_evaluation.json"),
+        ],
+        check=True,
+        cwd=ROOT,
+    )
+
     metadata = {
         "generated_at_utc": datetime.now(timezone.utc).isoformat(),
         "generator_version": GENERATOR_VERSION,  # Backward-compatible data-generator version.
@@ -68,6 +80,9 @@ def main():
         "score_run_id": run_id,
         "ground_truth_evaluation": "data/ground_truth_evaluation.json",
         "ground_truth_evaluation_suppliers": evaluation_report["supplier_count_evaluated"],
+        "holdout_evaluation": str((DATA / "holdout_evaluation.json").relative_to(ROOT)),
+        "holdout_evaluation": "data/holdout_evaluation.json",
+        "holdout_seed": 20261023,
         "generated_counts": generated,
         "historical_snapshot": None,
         "historical_files_archived": [],
@@ -96,11 +111,25 @@ def main():
     manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
     manifest["generation_metadata"] = "data/generation_metadata.json"
     manifest["ground_truth_evaluation"] = "data/ground_truth_evaluation.json"
+    manifest["holdout_evaluation"] = "data/holdout_evaluation.json"
+    for report_name in ("ground_truth_evaluation", "holdout_evaluation"):
+        report_path = DATA / f"{report_name}.json"
+        if not report_path.exists():
+            raise RuntimeError(f"Required evaluation report is missing: {report_path}")
+        manifest[report_name] = f"data/{report_name}.json"
+        manifest[f"{report_name}_sha256"] = __import__("hashlib").sha256(
+            report_path.read_bytes()
+        ).hexdigest()
     manifest.pop("historical_snapshot", None)
     manifest_path.write_text(
         json.dumps(manifest, indent=2),
         encoding="utf-8",
     )
+
+    # The validation summary and source manifest are emitted by the same
+    # exporter call; reject an artifact set whose timestamps have drifted.
+    if validation["created_at_utc"] != manifest["created_at_utc"]:
+        raise RuntimeError("Validation summary and source manifest timestamps differ.")
 
 
     print(json.dumps({
