@@ -12,6 +12,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from src.generator import generate_synthetic_data
 from src.scoring import calculate_supplier_scores
 from src.export_artifacts import main as export_artifacts
+from src.edge_cases import evaluate_edge_case_catalogue
 
 EXPECTED = {"suppliers": 1000, "purchase_orders": 10000, "shipments": 15000, "inspections": 20000}
 SCORES = ("delivery_score", "quality_score", "cost_score", "capacity_score", "compliance_score", "disruption_score", "final_score")
@@ -37,6 +38,11 @@ def main():
         malformed = json.loads(malformed_path.read_text(encoding="utf-8"))
         check(len(malformed) >= 3 and all(x.get("detected_reasons") for x in malformed),
               "Malformed examples are missing validation reasons.")
+        edge_cases_path = Path(__file__).resolve().parents[1] / "data" / "edge_case_fixtures.json"
+        edge_cases = json.loads(edge_cases_path.read_text(encoding="utf-8"))["fixtures"]
+        edge_case_report = evaluate_edge_case_catalogue(edge_cases)
+        check(edge_case_report["total"] == 5 and edge_case_report["overall_passed"],
+              "One or more labelled edge-case fixtures failed detection.")
         run_id = calculate_supplier_scores(as_of_date="2026-12-31", db_path=db)
         export_artifacts(
             db_path=db,
@@ -96,11 +102,28 @@ def main():
             counts = {t: con.execute(f"SELECT COUNT(*) FROM {t}").fetchone()[0] for t in (
                 "suppliers", "purchase_orders", "po_lines", "shipments", "delivery_events",
                 "inspections", "invoices", "invoice_lines", "risk_signals", "score_runs",
-                "supplier_scores", "quarantine_log"
+                "supplier_scores", "quarantine_log", "purchase_order_status_events"
             )}
             for table, expected in EXPECTED.items():
                 check(counts[table] == expected, f"{table}: expected {expected}, got {counts[table]}")
             check(counts["supplier_scores"] == 1000, "Expected one score per supplier in the full run.")
+            check(counts["purchase_order_status_events"] >= counts["purchase_orders"],
+                  "Every purchase order must have an initial lifecycle event.")
+            initial_events = con.execute("""
+                SELECT COUNT(*) FROM purchase_order_status_events
+                WHERE previous_status IS NULL
+            """).fetchone()[0]
+            check(initial_events == counts["purchase_orders"],
+                  "Every purchase order must have exactly one initial lifecycle event.")
+            fulfilled_events = con.execute("""
+                SELECT COUNT(*) FROM purchase_order_status_events
+                WHERE previous_status = 'Issued' AND new_status = 'Fulfilled'
+            """).fetchone()[0]
+            fulfilled_pos = con.execute("""
+                SELECT COUNT(*) FROM purchase_orders WHERE status = 'Fulfilled'
+            """).fetchone()[0]
+            check(fulfilled_events == fulfilled_pos,
+                  "Fulfilled purchase orders must have a matching lifecycle transition.")
             check(counts["quarantine_log"] == 3,
                   f"Expected three detected malformed records in quarantine, got {counts['quarantine_log']}.")
 
@@ -188,6 +211,8 @@ def main():
             "delivery_rates_by_profile": {k: round(v[0]/v[1], 4) for k,v in delivery_groups.items()},
             "defect_rates_by_profile": {k: round(v[0]/v[1], 4) for k,v in quality_groups.items()},
             "malformed_examples_detected": len(malformed),
+            "edge_case_fixture_validation": edge_case_report,
+            "purchase_order_status_event_count": counts["purchase_order_status_events"],
             "database": "temporary; removed after validation",
         }, indent=2))
 
