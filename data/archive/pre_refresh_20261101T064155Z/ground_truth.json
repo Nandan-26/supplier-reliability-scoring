@@ -1,0 +1,6002 @@
+{
+  "SUP-000001": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000002": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000003": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000004": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000005": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000006": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000007": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000008": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000009": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000010": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000011": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000012": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000013": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000014": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000015": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000016": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000017": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000018": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000019": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000020": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000021": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000022": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000023": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000024": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000025": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000026": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000027": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000028": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000029": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000030": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000031": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000032": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000033": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000034": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000035": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000036": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000037": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000038": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000039": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000040": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000041": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000042": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000043": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000044": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000045": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000046": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000047": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000048": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000049": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000050": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000051": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000052": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000053": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000054": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000055": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000056": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000057": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000058": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000059": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000060": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000061": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000062": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000063": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000064": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000065": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000066": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000067": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000068": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000069": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000070": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000071": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000072": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000073": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000074": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000075": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000076": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000077": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000078": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000079": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000080": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000081": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000082": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000083": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000084": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000085": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000086": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000087": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000088": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000089": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000090": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000091": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000092": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000093": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000094": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000095": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000096": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000097": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000098": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000099": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000100": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000101": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000102": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000103": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000104": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000105": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000106": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000107": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000108": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000109": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000110": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000111": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000112": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000113": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000114": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000115": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000116": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000117": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000118": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000119": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000120": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000121": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000122": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000123": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000124": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000125": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000126": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000127": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000128": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000129": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000130": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000131": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000132": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000133": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000134": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000135": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000136": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000137": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000138": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000139": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000140": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000141": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000142": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000143": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000144": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000145": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000146": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000147": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000148": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000149": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000150": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000151": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000152": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000153": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000154": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000155": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000156": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000157": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000158": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000159": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000160": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000161": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000162": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000163": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000164": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000165": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000166": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000167": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000168": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000169": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000170": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000171": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000172": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000173": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000174": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000175": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000176": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000177": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000178": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000179": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000180": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000181": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000182": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000183": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000184": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000185": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000186": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000187": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000188": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000189": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000190": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000191": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000192": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000193": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000194": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000195": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000196": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000197": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000198": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000199": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000200": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000201": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000202": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000203": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000204": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000205": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000206": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000207": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000208": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000209": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000210": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000211": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000212": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000213": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000214": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000215": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000216": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000217": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000218": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000219": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000220": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000221": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000222": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000223": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000224": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000225": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000226": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000227": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000228": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000229": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000230": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000231": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000232": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000233": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000234": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000235": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000236": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000237": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000238": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000239": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000240": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000241": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000242": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000243": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000244": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000245": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000246": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000247": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000248": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000249": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000250": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000251": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000252": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000253": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000254": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000255": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000256": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000257": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000258": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000259": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000260": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000261": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000262": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000263": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000264": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000265": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000266": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000267": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000268": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000269": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000270": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000271": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000272": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000273": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000274": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000275": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000276": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000277": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000278": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000279": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000280": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000281": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000282": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000283": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000284": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000285": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000286": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000287": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000288": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000289": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000290": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000291": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000292": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000293": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000294": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000295": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000296": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000297": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000298": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000299": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000300": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000301": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000302": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000303": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000304": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000305": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000306": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000307": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000308": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000309": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000310": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000311": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000312": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000313": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000314": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000315": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000316": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000317": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000318": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000319": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000320": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000321": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000322": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000323": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000324": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000325": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000326": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000327": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000328": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000329": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000330": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000331": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000332": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000333": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000334": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000335": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000336": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000337": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000338": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000339": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000340": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000341": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000342": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000343": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000344": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000345": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000346": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000347": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000348": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000349": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000350": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000351": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000352": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000353": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000354": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000355": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000356": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000357": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000358": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000359": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000360": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000361": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000362": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000363": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000364": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000365": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000366": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000367": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000368": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000369": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000370": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000371": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000372": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000373": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000374": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000375": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000376": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000377": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000378": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000379": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000380": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000381": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000382": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000383": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000384": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000385": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000386": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000387": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000388": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000389": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000390": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000391": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000392": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000393": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000394": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000395": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000396": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000397": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000398": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000399": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000400": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000401": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000402": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000403": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000404": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000405": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000406": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000407": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000408": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000409": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000410": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000411": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000412": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000413": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000414": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000415": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000416": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000417": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000418": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000419": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000420": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000421": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000422": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000423": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000424": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000425": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000426": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000427": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000428": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000429": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000430": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000431": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000432": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000433": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000434": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000435": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000436": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000437": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000438": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000439": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000440": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000441": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000442": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000443": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000444": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000445": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000446": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000447": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000448": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000449": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000450": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000451": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000452": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000453": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000454": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000455": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000456": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000457": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000458": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000459": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000460": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000461": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000462": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000463": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000464": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000465": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000466": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000467": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000468": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000469": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000470": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000471": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000472": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000473": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000474": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000475": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000476": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000477": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000478": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000479": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000480": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000481": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000482": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000483": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000484": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000485": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000486": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000487": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000488": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000489": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000490": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000491": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000492": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000493": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000494": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000495": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000496": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000497": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000498": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000499": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000500": {
+    "profile": "reliable",
+    "expected_on_time_rate": 0.98,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000501": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000502": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000503": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000504": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000505": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000506": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000507": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000508": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000509": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000510": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000511": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000512": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000513": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000514": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000515": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000516": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000517": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000518": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000519": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000520": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000521": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000522": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000523": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000524": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000525": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000526": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000527": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000528": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000529": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000530": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000531": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000532": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000533": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000534": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000535": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000536": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000537": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000538": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000539": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000540": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000541": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000542": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000543": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000544": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000545": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000546": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000547": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000548": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000549": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000550": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000551": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000552": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000553": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000554": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000555": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000556": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000557": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000558": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000559": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000560": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000561": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000562": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000563": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000564": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000565": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000566": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000567": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000568": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000569": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000570": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000571": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000572": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000573": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000574": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000575": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000576": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000577": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000578": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000579": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000580": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000581": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000582": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000583": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000584": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000585": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000586": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000587": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000588": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000589": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000590": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000591": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000592": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000593": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000594": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000595": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000596": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000597": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000598": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000599": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000600": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000601": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000602": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000603": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000604": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000605": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000606": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000607": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000608": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000609": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000610": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000611": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000612": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000613": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000614": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000615": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000616": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000617": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000618": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000619": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000620": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000621": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000622": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000623": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000624": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000625": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000626": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000627": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000628": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000629": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000630": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000631": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000632": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000633": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000634": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000635": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000636": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000637": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000638": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000639": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000640": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000641": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000642": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000643": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000644": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000645": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000646": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000647": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000648": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000649": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000650": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000651": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000652": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000653": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000654": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000655": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000656": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000657": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000658": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000659": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000660": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000661": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000662": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000663": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000664": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000665": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000666": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000667": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000668": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000669": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000670": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000671": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000672": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000673": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000674": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000675": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000676": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000677": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000678": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000679": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000680": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000681": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000682": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000683": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000684": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000685": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000686": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000687": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000688": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000689": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000690": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000691": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000692": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000693": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000694": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000695": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000696": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000697": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000698": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000699": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000700": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000701": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000702": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000703": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000704": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000705": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000706": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000707": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000708": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000709": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000710": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000711": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000712": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000713": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000714": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000715": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000716": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000717": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000718": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000719": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000720": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000721": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000722": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000723": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000724": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000725": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000726": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000727": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000728": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000729": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000730": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000731": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000732": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000733": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000734": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000735": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000736": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000737": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000738": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000739": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000740": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000741": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000742": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000743": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000744": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000745": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000746": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000747": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000748": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000749": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000750": {
+    "profile": "worsening_delivery",
+    "expected_on_time_rate": 0.55,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "normal"
+  },
+  "SUP-000751": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000752": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000753": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000754": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000755": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000756": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000757": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000758": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000759": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000760": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000761": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000762": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000763": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000764": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000765": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000766": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000767": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000768": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000769": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000770": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000771": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000772": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000773": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000774": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000775": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000776": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000777": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000778": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000779": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000780": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000781": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000782": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000783": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000784": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000785": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000786": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000787": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000788": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000789": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000790": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000791": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000792": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000793": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000794": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000795": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000796": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000797": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000798": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000799": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000800": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000801": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000802": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000803": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000804": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000805": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000806": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000807": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000808": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000809": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000810": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000811": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000812": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000813": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000814": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000815": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000816": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000817": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000818": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000819": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000820": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000821": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000822": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000823": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000824": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000825": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000826": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000827": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000828": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000829": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000830": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000831": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000832": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000833": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000834": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000835": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000836": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000837": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000838": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000839": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000840": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000841": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000842": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000843": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000844": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000845": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000846": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000847": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000848": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000849": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000850": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000851": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000852": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000853": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000854": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000855": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000856": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000857": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000858": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000859": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000860": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000861": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000862": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000863": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000864": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000865": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000866": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000867": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000868": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000869": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000870": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000871": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000872": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000873": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000874": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000875": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000876": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000877": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000878": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000879": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000880": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000881": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000882": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000883": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000884": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000885": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000886": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000887": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000888": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000889": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000890": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000891": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000892": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000893": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000894": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000895": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000896": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000897": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000898": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000899": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000900": {
+    "profile": "quality_issues",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.2,
+    "transaction_density": "normal"
+  },
+  "SUP-000901": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000902": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000903": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000904": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000905": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000906": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000907": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000908": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000909": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000910": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000911": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000912": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000913": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000914": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000915": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000916": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000917": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000918": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000919": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000920": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000921": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000922": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000923": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000924": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000925": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000926": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000927": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000928": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000929": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000930": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000931": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000932": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000933": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000934": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000935": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000936": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000937": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000938": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000939": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000940": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000941": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000942": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000943": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000944": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000945": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000946": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000947": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000948": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000949": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000950": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000951": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000952": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000953": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000954": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000955": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000956": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000957": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000958": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000959": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000960": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000961": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000962": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000963": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000964": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000965": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000966": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000967": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000968": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000969": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000970": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000971": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000972": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000973": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000974": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000975": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000976": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000977": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000978": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000979": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000980": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000981": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000982": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000983": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000984": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000985": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000986": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000987": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000988": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000989": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000990": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000991": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000992": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000993": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000994": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000995": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000996": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000997": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000998": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-000999": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  },
+  "SUP-001000": {
+    "profile": "sparse_history",
+    "expected_on_time_rate": 0.85,
+    "expected_defect_rate": 0.01,
+    "transaction_density": "low"
+  }
+}
