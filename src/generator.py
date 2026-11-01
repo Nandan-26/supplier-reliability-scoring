@@ -79,7 +79,7 @@ def generate_synthetic_data(
     # 1. Safe database reset outside active transaction blocks
     cursor.execute("PRAGMA foreign_keys = OFF;")
     tables_to_clear = [
-        "supplier_scores", "score_runs", "quarantine_log", "risk_signals",
+        "supplier_scores", "score_runs", "purchase_order_status_events", "quarantine_log", "risk_signals",
         "invoice_lines", "invoices", "inspections", "delivery_events",
         "shipments", "po_lines", "purchase_orders", "contracts", "sites", "suppliers"
     ]
