@@ -29,7 +29,7 @@ jobs:
           python -m src.scoring
           python scripts/evaluate_ground_truth.py
       - name: Evaluate risk classification on an independent full-scale seed
-        run: python scripts/evaluate_holdout.py > holdout_evaluation.log
+        run: python scripts/evaluate_holdout.py | tee holdout_evaluation.log
       - name: Publish policy-versioned evaluation reports
         uses: actions/upload-artifact@v4
         with:
