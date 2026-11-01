@@ -2,41 +2,53 @@
   "evaluation_type": "independent_synthetic_holdout",
   "holdout_seed": 20261023,
   "supplier_count": 1000,
+  "run_id": "RUN-fca56147",
+  "scoring_engine_version": "2.0.0",
+  "scoring_config_version": "v2.0",
   "generated_counts": {
+    "suppliers": 1000,
     "purchase_orders": 10000,
     "shipments": 15000,
     "inspections": 20000,
-    "quarantined_records": 8
+    "invoices": 4732,
+    "invoice_lines": 7087,
+    "quarantine_log": 8
   },
   "classification_policy": {
-    "at_risk": "Observed delivery score < 75 OR observed quality score < 90, unless overall confidence is Low (Sparse Data). A No Data fallback does not trigger a guardrail.",
-    "policy_status": "Fixed illustrative business rules; not tuned on the holdout labels."
+    "source": "Persisted supplier_decisions rows created by src.scoring",
+    "Insufficient Evidence": "overall confidence is Low (Sparse Data) OR delivery_sample_count < 5 OR quality_sample_count < 5",
+    "At Risk": "delivery_sample_count >= 5 AND delivery_score < 75 OR quality_sample_count >= 5 AND quality_score < 90",
+    "Reliable": "minimum evidence is met, no dimension guardrail is breached, and final_score >= 80",
+    "Watch": "minimum evidence is met, no dimension guardrail is breached, and final_score < 80",
+    "policy_note": "Minimum evidence and dimension guardrails are fixed domain rules, not thresholds optimized against the reported evaluation set.",
+    "policy_version": "guardrails-v1"
+  },
+  "at_risk_binary_evaluation": {
+    "positive_class": "At Risk (worsening_delivery or quality_issues)",
+    "true_positive": 380,
+    "false_positive": 12,
+    "true_negative": 588,
+    "false_negative": 20,
+    "precision": 0.9694,
+    "recall": 0.95
+  },
+  "classification_counts": {
+    "Reliable": 575,
+    "Watch": 8,
+    "At Risk": 392,
+    "Insufficient Evidence": 25
   },
   "ground_truth_used_as_features": false,
-  "at_risk_binary_evaluation": {
-    "positive_class": "At Risk",
-    "true_positive": 382,
-    "false_positive": 16,
-    "true_negative": 584,
-    "false_negative": 18,
-    "precision": 0.9598,
-    "recall": 0.955
-  },
   "ci_acceptance_thresholds": {
     "minimum_precision": 0.9,
     "minimum_recall": 0.9,
     "passed": true
   },
   "source_workflow": {
-    "name": "Python tests",
-    "run_number": 129,
-    "run_id": 41282726822,
-    "commit": "e1e7a3be4a6c182d482dc7a882329452f0111dec",
-    "url": "https://github.com/Nandan-26/supplier-reliability-scoring/actions/runs/41282726822"
-  },
-  "notes": [
-    "This is separate from data/ground_truth_evaluation.json, which evaluates the committed dataset generated with seed 20261022.",
-    "Both datasets are synthetic; the metrics demonstrate reproducibility against generated labels, not validated performance on real supplier data.",
-    "The holdout script generates its dataset in a temporary directory during CI. This committed summary records the successful CI run output."
-  ]
+    "name": "Refresh generated supplier artifacts",
+    "run_number": 27,
+    "run_id": 41306399720,
+    "commit": "4c0e52cac77b4c7ed4a56579fff27b8165059094",
+    "url": "https://github.com/Nandan-26/supplier-reliability-scoring/actions/runs/41306399720"
+  }
 }
