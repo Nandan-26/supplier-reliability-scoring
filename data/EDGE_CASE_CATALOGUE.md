@@ -19,4 +19,6 @@ These are deliberate, labelled assessment scenarios. They are kept out of clean 
 
 ## Current implementation status
 
-This catalogue defines the five acceptance scenarios. It is not evidence that all five are currently injected, detected, quarantined, or tested by the generator. Check the validation summary and CI results before claiming implementation.
+All five scenarios now have separate labelled fixtures in [edge_case_fixtures.json](edge_case_fixtures.json). The isolated validator in `src/edge_cases.py` reports the detected reason(s) and expected handling without inserting deliberately invalid rows into clean operational tables or scoring inputs. Automated coverage is in `tests/test_edge_cases.py`.
+
+These fixtures are assessment test records, not production quarantine rows. EC-01 is tested as a missing PO/PO-line relationship; EC-02 as a delivery date before dispatch; EC-03 checks both event date and system availability against the score cutoff; EC-04 checks missing source and signal date; EC-05 checks the PO supplier against the referenced site's owner.
