@@ -81,7 +81,6 @@ def main():
         "score_run_id": run_id,
         "ground_truth_evaluation": "data/ground_truth_evaluation.json",
         "ground_truth_evaluation_suppliers": evaluation_report["supplier_count_evaluated"],
-        "holdout_evaluation": str((DATA / "holdout_evaluation.json").relative_to(ROOT)),
         "holdout_evaluation": "data/holdout_evaluation.json",
         "holdout_seed": 20261023,
         "generated_counts": generated,
@@ -147,6 +146,8 @@ def main():
         "validation_summary": str((DATA / "validation_summary.json").relative_to(ROOT)),
         "ground_truth_evaluation": str((DATA / "ground_truth_evaluation.json").relative_to(ROOT)),
         "ground_truth_evaluation_suppliers": evaluation_report["supplier_count_evaluated"],
+        "holdout_evaluation": str((DATA / "holdout_evaluation.json").relative_to(ROOT)),
+        "holdout_seed": 20261023,
     }, indent=2))
 
 
