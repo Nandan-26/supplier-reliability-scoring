@@ -7,25 +7,6 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 
 
-def classify(score, confidence, delivery_score, quality_score, delivery_sample_count, quality_sample_count):
-    """Apply explicit dimension guardrails before the composite score bands.
-
-    A strong result in unrelated dimensions must not hide a serious delivery
-    or quality failure. These fixed business-rule thresholds are not fitted
-    to the evaluation labels.
-    """
-    if confidence == "Low (Sparse Data)":
-        return "Insufficient Evidence"
-    if (
-        (delivery_sample_count > 0 and delivery_score < 75)
-        or (quality_sample_count > 0 and quality_score < 90)
-    ):
-        return "At Risk"
-    if score >= 80:
-        return "Reliable"
-    return "Watch"
-
-
 def evaluate(db_path, ground_truth_path, output_path):
     truth = json.loads(Path(ground_truth_path).read_text(encoding="utf-8"))
     con = sqlite3.connect(db_path)
