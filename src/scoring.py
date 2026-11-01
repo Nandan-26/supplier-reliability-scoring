@@ -86,6 +86,21 @@ def calculate_supplier_scores(
     try:
         cursor = conn.cursor()
 
+        # Backward-compatible migration for existing V1 databases. The schema
+        # file defines this table for fresh installs; create it here as well so
+        # scoring an already-generated database upgrades it safely.
+        cursor.execute("""
+            CREATE TABLE IF NOT EXISTS supplier_decisions (
+                score_id TEXT PRIMARY KEY,
+                classification TEXT NOT NULL CHECK (
+                    classification IN ('Reliable', 'Watch', 'At Risk', 'Insufficient Evidence')
+                ),
+                decision_reason TEXT NOT NULL,
+                policy_version TEXT NOT NULL,
+                FOREIGN KEY (score_id) REFERENCES supplier_scores(score_id) ON DELETE CASCADE
+            );
+        """)
+
         run_id = f"RUN-{uuid.uuid4().hex[:8]}"
         run_timestamp = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S")
         config_payload = {
