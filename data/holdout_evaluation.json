@@ -2,7 +2,7 @@
   "evaluation_type": "independent_synthetic_holdout",
   "holdout_seed": 20261023,
   "supplier_count": 1000,
-  "run_id": "RUN-b353454e",
+  "run_id": "RUN-8993f4a7",
   "scoring_engine_version": "2.0.0",
   "scoring_config_version": "v2.0",
   "generated_counts": {
@@ -46,9 +46,9 @@
   },
   "source_workflow": {
     "name": "Refresh generated supplier artifacts",
-    "run_number": 28,
-    "run_id": 41306428766,
-    "commit": "fe69de5f9696ef498803d2cc591d9d8efe601bb7",
-    "url": "https://github.com/Nandan-26/supplier-reliability-scoring/actions/runs/41306428766"
+    "run_number": 29,
+    "run_id": 42107792207,
+    "commit": "5be833d5fc6f71f5eea59767ad55e8d10fabda78",
+    "url": "https://github.com/Nandan-26/supplier-reliability-scoring/actions/runs/42107792207"
   }
 }

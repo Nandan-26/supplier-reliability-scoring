@@ -1,5 +1,5 @@
 {
-  "created_at_utc": "2026-11-01T12:26:14.714590+00:00",
+  "created_at_utc": "2026-11-05T20:55:34.794461+00:00",
   "database": "data/supplier_scoring.db",
   "sqlite_integrity_check": "ok",
   "sqlite_integrity_passed": true,
@@ -96,7 +96,7 @@
       "latest_run_passed": true
     }
   ],
-  "latest_run_id": "RUN-4df66552",
+  "latest_run_id": "RUN-221d830c",
   "latest_run_timestamp_column": "run_timestamp",
   "latest_run_passed": true,
   "table_row_counts": {

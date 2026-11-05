@@ -1,7 +1,7 @@
 {
-  "created_at_utc": "2026-11-01T12:26:14.715705+00:00",
+  "created_at_utc": "2026-11-05T20:55:34.794907+00:00",
   "database": "data/supplier_scoring.db",
-  "database_sha256": "18c1a538e5e815303230893db352fb68e0bdcb0a669cbedcd7657dcb1e15ab9e",
+  "database_sha256": "50aea4c04accb886b0fdff753621ed325e7384c8d2d28e45a14486b0d299366e",
   "configured_default_seed": 20261022,
   "seed_note": "score_runs.random_seed records the generation seed when known; NULL means the scorer could not verify it. configured_default_seed is the generator default, not proof that an older database used that seed.",
   "table_row_counts": {
@@ -48,9 +48,9 @@
   ],
   "validation_summary": "data/validation_summary.json",
   "generation_metadata": "data/generation_metadata.json",
-  "generation_metadata_sha256": "09cae6bd5e6e16528dca625c7f7da3f1bbe771058bac5a1305d67da267d053b7",
+  "generation_metadata_sha256": "70b72351f749a2926ca26231c8c5ded42b0a7fa4d9db5f53f55ea8010e929f47",
   "ground_truth_evaluation": "data/ground_truth_evaluation.json",
-  "ground_truth_evaluation_sha256": "cec0dc97a6a65fa51b69742b5942679b3d4486241237b3193bbcd0d2d82a12b5",
+  "ground_truth_evaluation_sha256": "729b5d212d4fe320e87b79c1577248ddaad2d608940c870465b76ae4b00b0e12",
   "holdout_evaluation": "data/holdout_evaluation.json",
-  "holdout_evaluation_sha256": "4c97b5c3cefbb2b095699fde5548c373a823ea8afbd493b6f5eb2eb2bf28eba9"
+  "holdout_evaluation_sha256": "1e256e7454f3860d451263119e02f2900f2d7b4765807b7c09b5906b661ebc68"
 }
