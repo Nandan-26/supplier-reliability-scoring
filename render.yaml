@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: supplier-reliability-scoring-api
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt && python -m scripts.bootstrap_api_db
+    startCommand: uvicorn src.api:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /api/v1/health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.11
+      - key: SUPPLIER_DB_PATH
+        value: data/supplier_scoring.db
+      - key: SUPPLIER_AS_OF_DATE
+        value: "2026-12-31"
