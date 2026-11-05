@@ -256,3 +256,59 @@ No generated SQLite database or historical dataset archive is committed. The dat
 
 
 **Synthetic-data caveat:** The generator's profile mix includes 40% adverse-profile suppliers and 10% sparse-history suppliers. This is a deliberately constructed test distribution, not an estimate of real-world supplier risk prevalence. Sparse-history suppliers must meet the minimum of five delivery observations and five quality observations before receiving a firm Reliable/Watch/At Risk decision.
+
+
+## 12. REST API and deployment
+
+A read-only FastAPI layer exposes the latest persisted supplier scoring run. It reuses the existing SQLite schema and scoring engine; the API does not duplicate scoring rules or modify supplier records.
+
+### API endpoints
+
+| Method | Endpoint | Purpose |
+|---|---|---|
+| GET | `/` | API information and documentation links |
+| GET | `/api/v1/health` | Database and scoring-run health |
+| GET | `/api/v1/summary` | Counts by supplier decision |
+| GET | `/api/v1/score-runs/latest` | Latest scoring-run metadata |
+| GET | `/api/v1/suppliers` | Paginated supplier list; optional classification and search filters |
+| GET | `/api/v1/suppliers/{supplier_id}` | Supplier dimension scores, evidence counts, confidence, and decision |
+
+Interactive API documentation is provided by FastAPI at `/docs`; the OpenAPI schema is at `/openapi.json`.
+
+### Run locally
+
+Install dependencies and create the database plus its initial scoring run:
+
+```bash
+python -m pip install -r requirements.txt
+python -m scripts.bootstrap_api_db
+uvicorn src.api:app --reload
+```
+
+Open `http://127.0.0.1:8000/docs`.
+
+The bootstrap command creates the documented synthetic dataset (1,000 suppliers, 10,000 purchase orders, 15,000 shipments, and 20,000 inspections) and calculates a scoring run as of `2026-12-31`. It skips an existing non-empty database. **The underlying generator resets its target database**; only run the bootstrap command against a fresh deployment database or a verified backup.
+
+To use another database location, set `SUPPLIER_DB_PATH`. Dataset sizes can be changed for local development with `SUPPLIER_NUM_SUPPLIERS`, `SUPPLIER_NUM_POS`, `SUPPLIER_NUM_SHIPMENTS`, and `SUPPLIER_NUM_INSPECTIONS`.
+
+### Run API tests
+
+```bash
+python -m pytest tests/test_api.py -v
+```
+
+The API opens SQLite in read-only mode for requests. A missing database or missing scoring run produces a service-unavailable response instead of silently creating or resetting data.
+
+### Deploy on Render
+
+The repository includes `render.yaml` for a Render web service. In Render, create a new Blueprint from this GitHub repository and select the `feature/fastapi-deployment` branch while reviewing the changes. The build command installs requirements and bootstraps a fresh SQLite database; the start command runs Uvicorn.
+
+After deployment, verify:
+
+- `https://YOUR-SERVICE.onrender.com/api/v1/health`
+- `https://YOUR-SERVICE.onrender.com/api/v1/summary`
+- `https://YOUR-SERVICE.onrender.com/docs`
+
+The included Render configuration uses a generated SQLite database. On free hosting, local filesystem data is ephemeral and may be recreated during a new build or instance replacement. This configuration is suitable for a reproducible demo, not durable production storage. Use managed PostgreSQL or an appropriately configured persistent storage solution before treating it as a production service.
+
+**Synthetic-data limitation:** API responses represent the project's generated assessment data and illustrative scoring policy. They are not real supplier performance or production procurement recommendations.
